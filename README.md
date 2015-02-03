@@ -1,2 +1,2 @@
 # Example-Plugins
-Example plugins for PocketMine-MP.
+In this repository you will find a lot of example plugins, most which have been rejected the official PocketMine site.
