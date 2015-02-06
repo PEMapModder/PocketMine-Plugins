@@ -6,5 +6,5 @@ made into example plugins simply for the benefit of all of those who want to wri
 * EventCommander
 * GreetMe
 
-### To-Do List
+### To-Do
 * 
