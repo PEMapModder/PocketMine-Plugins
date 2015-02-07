@@ -1,0 +1,8 @@
+name: Coordinates
+main: Coordinates\Main
+version: 1.0.0
+api: [1.0.0]
+load: STARTUP
+author: Gamecrafter
+description: Shows player their coordinates.
+website: https://github.com/Gamecrafter/Example-Plugins/tree/master/Coordinates
