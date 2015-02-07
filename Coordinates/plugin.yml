@@ -8,7 +8,7 @@ description: Shows player their coordinates.
 website: https://github.com/Gamecrafter/Example-Plugins/tree/master/Coordinates
 commands:
  getpos:
-  description: Gets the user's current coordinates
+  description: Gets the user's current coordinates and level name
   usage: /getpos
   permission: coordinates.command.getpos
 permissions:
