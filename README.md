@@ -3,6 +3,7 @@ A collection of Gamecrafter's rejected plugins from the PocketMine site, some ju
 made into example plugins simply for the benefit of all of those who want to write their own plugins. 
 
 ### Plugins
+* Coordinates
 * EventCommander
 * GreetMe
 
