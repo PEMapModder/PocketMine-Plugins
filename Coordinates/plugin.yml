@@ -6,3 +6,20 @@ load: STARTUP
 author: Gamecrafter
 description: Shows player their coordinates.
 website: https://github.com/Gamecrafter/Example-Plugins/tree/master/Coordinates
+commands:
+ getpos:
+  description: Gets the user's current coordinates
+  usage: /getpos
+  permission: coordinates.command.getpos
+permissions:
+ coordinates:
+  default: op
+  description: Allows access to all Coordinates features
+  children:
+   coordinates.command:
+    default: op
+    description: Allows use of all Coordinates commands
+    children:
+     coordinates.command.getpos:
+      default: true
+      description: Allows use of /getpos
