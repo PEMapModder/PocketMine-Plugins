@@ -27,6 +27,7 @@ class Main extends PluginBase{
                     $posZ = $sender->getFloorZ();
                     $level = $sender->getLevel()->getName();
                     $sender->sendMessage("x: ".$posX." y: ".$posY." z: ".$posZ." Level: ".$level);
+                    return true;
                 }
                 else{
                     $sender->sendMessage(TextFormat::RED."This command can only be used in-game.");
