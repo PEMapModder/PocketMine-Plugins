@@ -8,6 +8,7 @@ use pocketmine\event\entity\EntityExplodeEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
+use pocketmine\Server;
 
 class Main extends PluginBase implements Listener{
     
@@ -24,8 +25,10 @@ class Main extends PluginBase implements Listener{
         $entity = $event->getEntity();
         if($entity instanceof Creeper){
             $event->setCancelled();
+            $this->getServer()->broadcastMessage("Explosion cancelled!");
         }
         elseif($entity instanceof PrimedTNT){
+            $this->getServer()->broadcastMessage("Explosion cancelled!");
             $event->setCancelled();
         }
     }
