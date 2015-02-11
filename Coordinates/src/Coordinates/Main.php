@@ -30,7 +30,7 @@ class Main extends PluginBase{
                     return true;
                 }
                 else{
-                    $sender->sendMessage(TextFormat::RED."This command can only be used in-game.");
+                    $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
                 }
         }
     }
