@@ -7,6 +7,7 @@ this repository were made in either 30 minutes or less. Some may also be modifie
 * Coordinates
 * EventCommander
 * GreetMe
+* NoBoom
 
 ### To-Do
 * 
