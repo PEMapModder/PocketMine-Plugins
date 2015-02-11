@@ -25,10 +25,10 @@ class Main extends PluginBase implements Listener{
         $entity = $event->getEntity();
         if($entity instanceof Creeper){
             $event->setCancelled();
-            $this->getServer()->broadcastMessage("Explosion cancelled!");
+            $this->getServer()->broadcastMessage("Explosion has been cancelled.");
         }
         elseif($entity instanceof PrimedTNT){
-            $this->getServer()->broadcastMessage("Explosion cancelled!");
+            $this->getServer()->broadcastMessage("Explosion has been cancelled.");
             $event->setCancelled();
         }
     }
