@@ -5,9 +5,9 @@ write their own plugins. Most of the plugins here were made in either 30 minutes
 versions of other existing plugins.
 
 ### Plugins
+* Commander
 * Coordinates
 * GreetMe
-* iCommand
 * NoBoom
 
 ### To-Do
