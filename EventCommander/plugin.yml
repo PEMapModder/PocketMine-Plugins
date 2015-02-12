@@ -1,8 +1,8 @@
-name: EventCommander
-main: EventCommander\Main
+name: iCommand
+main: iCommand\Main
 version: 1.0.0
 api: [1.0.0]
 load: STARTUP
 author: Gamecrafter
 description: Execute commands on events.
-website: https://github.com/Gamecrafter/Example-Plugins/tree/master/EventCommander
+website: https://github.com/Gamecrafter/Example-Plugins/tree/master/iCommand
