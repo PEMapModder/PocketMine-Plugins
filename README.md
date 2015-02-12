@@ -6,8 +6,8 @@ versions of other existing plugins.
 
 ### Plugins
 * Coordinates
-* EventCommander
 * GreetMe
+* iCommand
 * NoBoom
 
 ### To-Do
