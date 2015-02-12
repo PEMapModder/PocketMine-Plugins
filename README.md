@@ -9,6 +9,7 @@ versions of other existing plugins.
 * Coordinates
 * GreetMe
 * NoBoom
+* Rewinder
 
 ### To-Do
 * Tutorial Wiki
