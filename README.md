@@ -1,7 +1,8 @@
 # Example-Plugins
-A collection of Gamecrafter's rejected plugins from the PocketMine site, some just made for fun. The rejected plugins have been
-made into example plugins simply for the benefit of all of those who want to write their own plugins. Most of the plugins in 
-this repository were made in either 30 minutes or less. Some may also be modified or renamed versions of other existing plugins.
+In this repository you will find some plugins that were rejected by the PocketMine site, but most of them were made just for
+fun. The rejected plugins have been made into example plugins simply for the benefit of all of those who want to write their own
+plugins. Most of the plugins here were made in either 30 minutes or less. Some may also be modified or renamed versions of other
+existing plugins.
 
 ### Plugins
 * Coordinates
@@ -10,4 +11,4 @@ this repository were made in either 30 minutes or less. Some may also be modifie
 * NoBoom
 
 ### To-Do
-* 
+* Tutorial Wiki
