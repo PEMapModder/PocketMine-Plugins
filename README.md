@@ -11,5 +11,5 @@ write their own plugins. Most of the plugins here were made in either 30 minutes
 * Rewinder
 
 ### To-Do
-* iLocate
+* GlobeFinder
 * Tutorial Wiki
