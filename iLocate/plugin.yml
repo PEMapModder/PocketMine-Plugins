@@ -1,0 +1,8 @@
+name: iLocate
+main: iLocate\Main
+version: 1.0.0
+api: [1.0.0]
+load: STARTUP
+author: Gamecrafter
+description: Locate people with their IP address, and get their real location!
+website: https://github.com/Gamecrafter/Example-Plugins/tree/master/iLocate
