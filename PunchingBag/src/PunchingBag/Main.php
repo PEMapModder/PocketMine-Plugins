@@ -2,7 +2,7 @@
 
 namespace PunchingBag;
 
-use pocketmine\entitiy\Villager;
+use pocketmine\entity\Villager;
 use pocketmine\event\entity\EntityDeathEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
