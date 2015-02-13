@@ -1,0 +1,8 @@
+name: PunchingBag
+main: PunchingBag\Main
+version: 1.0.0
+api: [1.0.0]
+load: STARTUP
+author: Gamecrafter
+description: Practice your punching by punching villagers without killing them!
+website: https://github.com/Gamecrafter/Example-Plugins/tree/master/PunchingBag
