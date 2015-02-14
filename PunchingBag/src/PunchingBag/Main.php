@@ -19,7 +19,7 @@ class Main extends PluginBase implements Listener{
         $this->getLogger()->info(TextFormat::RED."PunchingBag disabled.");
     }
     
-    public function onEntityDeathEvent(EntityDeathEvent $event){
+    public function onEntityDeath(EntityDeathEvent $event){
         $entity = $event->getEntity();
         if($entity instanceof Villager){
             $event->setCancelled();
