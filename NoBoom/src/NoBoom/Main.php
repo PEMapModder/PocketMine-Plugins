@@ -21,7 +21,7 @@ class Main extends PluginBase implements Listener{
         $this->getLogger()->info(TextFormat::RED."NoBoom disabled.");
     }
     
-    public function onEntityExplodeEvent(EntityExplodeEvent $event){
+    public function onEntityExplode(EntityExplodeEvent $event){
         $entity = $event->getEntity();
         if($entity instanceof Creeper){
             $event->setCancelled();
