@@ -4,6 +4,7 @@ made just for fun. The rejected plugins have been made into example plugins simp
 write their own plugins. Most of the plugins here were made in either 30 minutes or less.
 
 ### Plugins
+* ArmorAlert
 * Commander
 * Coordinates
 * GreetMe
