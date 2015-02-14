@@ -1,0 +1,8 @@
+name: ArmorAlert
+main: ArmorAlert\Main
+version: 1.0.0
+api: [1.0.0]
+load: STARTUP
+author: Gamecrafter
+description: Tell everyone that a player changed their armor!
+website: https://github.com/Gamecrafter/Example-Plugins/tree/master/ArmorAlert
