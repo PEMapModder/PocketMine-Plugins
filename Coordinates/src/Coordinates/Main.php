@@ -26,7 +26,7 @@ class Main extends PluginBase{
                     $posY = $sender->getFloorY();
                     $posZ = $sender->getFloorZ();
                     $level = $sender->getLevel()->getName();
-                    $sender->sendMessage("x: ".$posX." y: ".$posY." z: ".$posZ." Level: ".$level);
+                    $sender->sendMessage("X: ".$posX." Y: ".$posY." Z: ".$posZ." Level: ".$level);
                     return true;
                 }
                 else{
