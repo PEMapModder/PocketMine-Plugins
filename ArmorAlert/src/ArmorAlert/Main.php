@@ -25,8 +25,6 @@ class Main extends PluginBase implements Listener{
         if($entity instanceof Player){    
             $oldarmor = $entity->getOldItem();
             $newarmor = $entity->getNewItem();
-            $player = $event->getPlayer();
-            $name = $player->getDisplayName();
             $this->getServer()->broadcastMessage($name." changed from ".$oldarmor." to ".$newarmor.".");
         }
     }
