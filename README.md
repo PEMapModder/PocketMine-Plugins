@@ -14,5 +14,5 @@ in this repository on PocketMine.
 * PunchingBag
 
 ### To-Do
-* GlobeFinder
+* iLocator
 * Tutorial Wiki
