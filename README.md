@@ -9,6 +9,7 @@ in this repository on PocketMine.
 * Commander
 * Coordinates
 * GreetMe
+* IPTag
 * NoBoom
 * PunchingBag
 
