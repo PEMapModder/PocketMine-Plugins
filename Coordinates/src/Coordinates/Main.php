@@ -31,6 +31,7 @@ class Main extends PluginBase{
                 }
                 else{
                     $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
+                    return true;
                 }
         }
     }
