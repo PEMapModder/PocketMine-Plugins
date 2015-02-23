@@ -25,7 +25,7 @@ use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 use pocketmine\Server;
 
-class Main extends PluginBase implements Listener{
+class Loader extends PluginBase implements Listener{
     
     public function onEnable(){
         $this->saveDefaultConfig();
