@@ -1,5 +1,5 @@
 name: IPTag
-main: IPTag\Main
+main: IPTag\Loader
 version: 1.0.0
 api: [1.0.0]
 load: STARTUP
