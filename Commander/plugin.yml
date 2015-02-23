@@ -1,5 +1,5 @@
 name: Commander
-main: Commander\Main
+main: Commander\Loader
 version: 1.0.0
 api: [1.0.0]
 load: STARTUP
