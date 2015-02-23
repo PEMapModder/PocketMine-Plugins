@@ -1,5 +1,5 @@
 name: GreetMe
-main: GreetMe\Main
+main: GreetMe\Loader
 version: 1.0.0
 api: [1.0.0]
 load: STARTUP
