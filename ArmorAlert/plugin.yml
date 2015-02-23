@@ -1,5 +1,5 @@
 name: ArmorAlert
-main: ArmorAlert\Main
+main: ArmorAlert\Loader
 version: 1.0.0
 api: [1.0.0]
 load: STARTUP
