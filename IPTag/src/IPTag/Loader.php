@@ -8,7 +8,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
-class Loader extends PluginBase{
+class Loader extends PluginBase implements Listener{
     
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
