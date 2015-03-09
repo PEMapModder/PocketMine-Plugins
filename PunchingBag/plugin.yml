@@ -1,7 +1,7 @@
 name: PunchingBag
 main: PunchingBag\Loader
 version: 1.0.0
-api: [1.0.0]
+api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Practice your punching by punching villagers without killing them!
