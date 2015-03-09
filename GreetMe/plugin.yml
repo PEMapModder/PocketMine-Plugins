@@ -1,7 +1,7 @@
 name: GreetMe
 main: GreetMe\Loader
 version: 1.0.0
-api: [1.0.0]
+api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Greets players and shows them their address.
