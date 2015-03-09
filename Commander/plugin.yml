@@ -1,7 +1,7 @@
 name: Commander
 main: Commander\Loader
 version: 1.0.0
-api: [1.0.0]
+api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Execute commands with convenience!
