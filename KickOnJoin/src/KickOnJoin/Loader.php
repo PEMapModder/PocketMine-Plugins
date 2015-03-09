@@ -21,7 +21,7 @@ class Loader extends PluginBase implements Listener;
     
     public function onPlayerJoin(PlayerJoinEvent $event){
         if($this->getConfig()->get("enabled") === true){
-            $event->getPlayer()->kick()
+            $event->getPlayer()->kick();
         }
     }
 }
