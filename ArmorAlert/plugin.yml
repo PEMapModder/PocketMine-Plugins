@@ -1,7 +1,7 @@
 name: ArmorAlert
 main: ArmorAlert\Loader
 version: 1.0.0
-api: [1.0.0]
+api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Tell everyone that a player changed their armor!
