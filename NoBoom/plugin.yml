@@ -1,7 +1,7 @@
 name: NoBoom
 main: NoBoom\Loader
 version: 1.0.0
-api: [1.0.0]
+api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Prevent any explosions from taking place in your server!
