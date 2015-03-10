@@ -22,11 +22,11 @@ class Loader extends PluginBase{
         if($sender instanceof Player){
             switch($command->getName()){
                 case "getpos":
-                    if($sender->hasPermission("coordinates.command.getpos.self") && $sender instanceof Player){
+                    if($sender->hasPermission("coordinates.command.getpos.self")){
                         $sender->sendMessage("X: ".$sender->getX()." Y: ".$sender->getY()." Z: ".$sender->getZ()." Level: ".$sender->getLevel()->getName());
                         return true;
                     }
-                    elseif($sender->hasPermission("coordinates.command.getpos.other" && $sender instanceof Player)){
+                    elseif($sender->hasPermission("coordinates.command.getpos.other")){
                         if(isset($arg[0])){
                             $target = $sender->getServer()->getPlayer(strtolower($args[0]));
                             if($target != null){
@@ -44,6 +44,7 @@ class Loader extends PluginBase{
                             return true;
                         }
                     }
+                break;
             }
         }
     }
