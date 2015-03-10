@@ -9,7 +9,7 @@ website: https://github.com/Gamecrafter/Example-Plugins/tree/master/Coordinates
 commands:
  getpos:
   description: Gets the user's current coordinates and level name
-  usage: /getpos
+  usage: /getpos <player>
   permission: coordinates.command.getpos
 permissions:
  coordinates:
@@ -23,3 +23,10 @@ permissions:
      coordinates.command.getpos:
       default: true
       description: Allows use of /getpos
+      children:
+       coordinates.command.getpos.others:
+        default: true
+        description: Allows use of /getpos for others
+       coordinates.command.getpos.self:
+        default: true
+        description: Allows use of /getpos for self
