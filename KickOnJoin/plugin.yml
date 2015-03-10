@@ -5,4 +5,4 @@ api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Kick players when they join!
-website: https://github.com/Gamecrafter/Example-Plugins/tree/master/KickOnJoin
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/KickOnJoin
