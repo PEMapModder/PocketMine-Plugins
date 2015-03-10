@@ -1,3 +1,6 @@
 #Config file for KickOnJoin by Gamecrafter;
-enabled:
+enabled: false
 #Set to true to players when they join
+
+KickReason: "Server is under maintance!"
+#The reason why players being kicked
