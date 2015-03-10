@@ -5,10 +5,10 @@ api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Shows player their coordinates.
-website: https://github.com/Gamecrafter/Example-Plugins/tree/master/Coordinates
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/Coordinates
 commands:
  getpos:
-  description: Gets the user's current coordinates and level name
+  description: Gets a player's current coordinates and level name
   usage: /getpos <player>
   permission: coordinates.command.getpos
 permissions:
