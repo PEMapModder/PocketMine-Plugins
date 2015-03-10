@@ -19,20 +19,32 @@ class Loader extends PluginBase{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-        switch($command->getName()){
-            case "getpos":
-                if($sender instanceof Player){
-                    $posX = $sender->getFloorX();
-                    $posY = $sender->getFloorY();
-                    $posZ = $sender->getFloorZ();
-                    $level = $sender->getLevel()->getName();
-                    $sender->sendMessage("X: ".$posX." Y: ".$posY." Z: ".$posZ." Level: ".$level);
-                    return true;
-                }
-                else{
-                    $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
-                    return true;
-                }
+        if($sender instanceof Player){
+            switch($command->getName()){
+                case "getpos":
+                    if($sender->hasPermission("coordinates.command.getpos.self") && $sender instanceof Player){
+                        $sender->sendMessage("X: ".$sender->getX()." Y: ".$sender->getY()." Z: ".$sender->getZ()." Level: ".$sender->getLevel()->getName());
+                        return true;
+                    }
+                    elseif($sender->hasPermission("coordinates.command.getpos.other" && $sender instanceof Player)){
+                        if(isset($arg[0])){
+                            $target = $sender->getServer()->getPlayer(strtolower($args[0]));
+                            if($target != null){
+                                $sender->sendMessage($args[0]."'s location:"); 
+                                $sender->sendMessage("X: ".$target->getX()." Y: ".$target->getY()." Z: ".$target->getZ()." Level: ".$target->getLevel()->getName());
+                                return true;
+                            }
+                            else{
+                                $sender->sendMessage("Please specify a valid player.");
+                                return true;
+                            }
+                        }
+                        else{
+                            $sender->sendMessage($command->getUsage());
+                            return true;
+                        }
+                    }
+            }
         }
     }
 }
