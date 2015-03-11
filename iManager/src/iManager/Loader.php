@@ -86,7 +86,7 @@ class Loader extends PluginBase implements Listener{
                     return true;
                 }
                 else{
-                    players->kill();
+                    $players->kill();
                 }
     	    }
     	}
