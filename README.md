@@ -1,7 +1,5 @@
 # Small-Plugins
-In this repository you will find some plugins by Gamecrafter that were rejected by the PocketMine site, but most of them were
-made just for fun. The rejected plugins have been made into example plugins simply for the benefit of all of those who want to
-write their own plugins. Most of the plugins here were made in either 30 minutes or less. 
+Here is a collection of @Gamecrafter's plugins. Some of them were made for fun, while some have actually been submitted and approved on the PocketMine site. 
 
 ### Plugins
 * Commander
