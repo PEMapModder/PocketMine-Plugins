@@ -27,7 +27,7 @@ class Loader extends PluginBase{
                 }
                 elseif($sender->hasPermission("coordinates.command.getpos.other")){
                     if(isset($arg[0])){
-                        $target = strtolower($sender->getServer()->getPlayer(($args[0])));
+                        $target = strtolower($sender->getServer()->getPlayer($args[0]));
                         if($target != null){
                             $sender->sendMessage($args[0]."'s location:"); 
                             $sender->sendMessage("X: ".$target->getX()." Y: ".$target->getY()." Z: ".$target->getZ()." Level: ".$target->getLevel()->getName());
