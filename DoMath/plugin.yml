@@ -1,0 +1,46 @@
+name: DoMath
+main: DoMath\Loader
+version: 1.0.0
+api: 1.0.0
+load: STARTUP
+author: Gamecrafter
+description: Play Minecraft and do math at the same time!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/DoMath
+commands:
+ add:
+  description: Adds the specified numbers 
+  usage: /add <digit> <digit>
+  permission: domath.command.add
+ divide:
+  description: Divides the specified numbers
+  usage: /divide <digit> <digit>
+  permission: domath.command.divide
+ multiply:
+  description: Multiplies the specified numbers
+  usage: /multiply <digit> <digit>
+  permission: domath.command.multiply
+ subtract:
+  description: Subtracts the specified numbers
+  usage: /subtract <digit> <digit>
+  permission: domath.command.subtract
+permissions:
+ domath:
+  default: op
+  description: Allows access to all DoMath features
+  children:
+   domath.command:
+    default: op 
+    description: Allows use of all DoMath commands
+    children:
+     domath.command.add:
+      default: true
+      description: Allows use of /add
+     domath.command.divide:
+      default: true
+      description: Allows use of /divide
+     domath.command.multiply:
+      default: true
+      description: Allows use of /multiply
+     domath.command.subtract:
+      default: true
+      description: Allows use of /subtract
