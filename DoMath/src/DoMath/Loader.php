@@ -1,4 +1,4 @@
-TextFormat::RED.<?php
+<?php
 
 namespace DoMath;
 
