@@ -16,7 +16,7 @@ use pocketmine\Player;
 class Loader extends PluginBase implements Listener{
     
     public function onEnable(){
-	      $this->saveDefaultConfig();
+	$this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(TextFormat::GREEN."MyTag enabled.");
     }
@@ -26,43 +26,43 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-    	  switch($command->getName()){
-    	      case "tag":
-    	    	    if(isset($args[0])){
-    	    	        if($args[0] === "address"){
+    	switch($command->getName()){
+    	    case "tag":
+    	    	if(isset($args[0])){
+    	    	    if($args[0] === "address"){
     	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "chat"){
-    	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "health"){
-    	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "help"){
-    	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "hide"){
-    	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "money"){
-    	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "op"){
-    	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "pos"){
-    	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "restore"){
-    	    	    	
-    	    	        }
-    	    	        elseif($args[0] === "view"){
-    	    	    	
-    	    	        } 
     	    	    }
-    	    	    else{
-    	    	        $sender->sendMessage($command->getUsage);
+    	    	    elseif($args[0] === "chat"){
+    	    	    	
     	    	    }
+    	    	    elseif($args[0] === "health"){
+    	    	    	
+    	    	    }
+    	    	    elseif($args[0] === "help"){
+    	    	    	
+    	    	    }
+    	    	    elseif($args[0] === "hide"){
+    	    	    	
+    	    	    }
+    	    	    elseif($args[0] === "money"){
+    	    	    	
+    	    	    }
+    	    	    elseif($args[0] === "op"){
+    	    	    	
+    	    	    }
+    	    	    elseif($args[0] === "pos"){
+    	    	    	
+    	    	    }
+    	    	    elseif($args[0] === "restore"){
+    	    	    	
+    	    	    }
+    	    	    elseif($args[0] === "view"){
+    	    	    	
+    	    	    } 
+    	    	}
+    	    	else{
+    	    	    $sender->sendMessage($command->getUsage);
+    	    	}
     	      break;
     	  }
     }
@@ -72,13 +72,13 @@ class Loader extends PluginBase implements Listener{
     }
     public function onPlayerJoin(PlayerJoinEvent $event){
         if($this->getConfig()->get("auto-set") === true && $event->getPlayer()->isOp()){
-	          $event->getPlayer()->setNameTag("[".$this->getConfig()->get("op-tag")."] ".$sender->getName());
-	      }
+	    $event->getPlayer()->setNameTag("[".$this->getConfig()->get("op-tag")."] ".$sender->getName());
+	}
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
-    	  if($this->getConfig()->get("reset") === true){
-    	      $event->getPlayer()->setNameTag($event->getPlayer()->getName());	
-    	  }
+    	if($this->getConfig()->get("reset") === true){
+    	    $event->getPlayer()->setNameTag($event->getPlayer()->getName());	
+    	}
     }
 }
