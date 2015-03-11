@@ -1,0 +1,54 @@
+name: iManager
+main: iManager\Loader
+version: 1.0.0
+api: 1.0.0
+load: STARTUP
+author: Gamecrafter
+description: Manage your server like never before!
+website: https://github.com/Gamecrafter/Small-Plugins/iManager
+commands:
+ addresslist:
+  description: View everyone's IP address and port
+  permission: imanager.command.addresslist
+ healthlist:
+  description: View everyone's health
+  permission: imanager.command.healthlist
+ kickall:
+  description: Kick all the players in the server
+  permission: imanager.command.kickall
+ killall:
+  description: Kill all the players in the server
+  permission: imanager.command.killall
+ oplist:
+  description: Get a list of all online OPs
+  permission: imanager.command.oplist
+ poslist:
+  description: View everyone's location
+  permission: imanager.command.poslist
+permissions:
+ imanager:
+  default: op
+  description: Allows access to all iManager features
+  children:
+   imanager.command:
+    default: op
+    description: Allows use of all iManager commands
+    children:
+     imanager.command.addresslist:
+      default: op
+      description: Allows use of /addresslist
+     imanager.command.healthlist:
+      default: op
+      description: Allows use of /healthlist
+     imanager.command.kickall:
+      default: op
+      description: Allows use of /kickall
+     imanager.command.killall:
+      default: op
+      description: Allows use of /killall
+     imanager.command.oplist:
+      default: op
+      description: Allows use of /oplist
+     imanager.command.poslist:
+      default: op
+      description: Allows use of /poslist
