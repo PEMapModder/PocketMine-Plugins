@@ -70,6 +70,7 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerChat(PlayerChatEvent $event){
     	
     }
+    
     public function onPlayerJoin(PlayerJoinEvent $event){
         if($this->getConfig()->get("auto-set") === true && $event->getPlayer()->isOp()){
 	    $event->getPlayer()->setNameTag("[".$this->getConfig()->get("op-tag")."] ".$sender->getName());
