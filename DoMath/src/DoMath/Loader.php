@@ -1,4 +1,4 @@
-<?php
+TextFormat::RED.<?php
 
 namespace DoMath;
 
@@ -21,7 +21,7 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "add"){
             if(isset($args[0]) && isset($args[1])){
                 $answer = $args[0] + $args[1];
-                $sender->sendMessage($args[0]." + ".$args[1]." = ".$answer);
+                $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." + ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
             }
             else{
                 $sender->sendMessage($command->getUsage());
@@ -30,7 +30,7 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "divide"){
             if(isset($args[0]) && isset($args[1])){
                 $answer = $args[0] / $args[1];
-                $sender->sendMessage($args[0]." / ".$args[1]." = ".$answer);
+                $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." / ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
             } 
             else{
                 $sender->sendMessage($command->getUsage()); 
@@ -39,7 +39,7 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "multiply"){
             if(isset($args[0]) && isset($args[1])){
                 $answer = $args[0] * $args[1];
-                $sender->sendMessage($args[0]." * ".$args[1]." = ".$answer);
+                $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." * ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
             }
             else{
                 $sender->sendMessage($command->getUsage());
@@ -48,7 +48,7 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "subtract"){
             if(isset($args[0]) && isset($args[1])){
                 $answer = $args[0] - $args[1];
-                $sender->sendMessage($args[0]." - ".$args[1]." = ".$answer);
+                $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." - ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
             }
             else{
                 $sender->sendMessage($command->getUsage());
