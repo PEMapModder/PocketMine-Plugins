@@ -10,6 +10,8 @@ use pocketmine\utils\TextFormat;
 
 class Loader extends PluginBase{
     
+    public $exempt;
+    
     public function onEnable(){
         @mkdir($this->getDataFolder());
         $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
