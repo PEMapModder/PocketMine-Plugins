@@ -1,0 +1,5 @@
+#Config file for iManager by Gamecrafter
+log-chat:
+#Set to true to save all player chat in chat.txt
+preferred-economy:
+#Will be used for /moneylist
