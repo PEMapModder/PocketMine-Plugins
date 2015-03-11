@@ -11,6 +11,10 @@ use pocketmine\Player;
 
 class Loader extends PluginBase{
     
+    public $female;
+    
+    public $male;
+    
     public function onEnable(){
         @mkdir($this->getDataFolder());
         $this->female = new Config($this->getDataFolder()."female.txt", Config::ENUM);
