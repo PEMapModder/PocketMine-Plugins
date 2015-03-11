@@ -29,7 +29,7 @@ class Loader extends PluginBase{
                     if(isset($arg[0])){
                         $target = strtolower($sender->getServer()->getPlayer($args[0]));
                         if($target != null){
-                            $sender->sendMessage($args[0]."'s location:"); 
+                            $sender->sendMessage($target->getName()."'s location:"); 
                             $sender->sendMessage("X: ".$target->getX()." Y: ".$target->getY()." Z: ".$target->getZ()." Level: ".$target->getLevel()->getName());
                             return true;
                         }
