@@ -20,32 +20,34 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if($sender instanceof Player){
-            switch($command->getName()){
-                case "getpos":
-                    if($sender->hasPermission("coordinates.command.getpos.self")){
-                        $sender->sendMessage("X: ".$sender->getX()." Y: ".$sender->getY()." Z: ".$sender->getZ()." Level: ".$sender->getLevel()->getName());
-                        return true;
-                    }
-                    elseif($sender->hasPermission("coordinates.command.getpos.other")){
-                        if(isset($arg[0])){
-                            $target = strtolower($sender->getServer()->getPlayer(($args[0])));
-                            if($target != null){
-                                $sender->sendMessage($args[0]."'s location:"); 
-                                $sender->sendMessage("X: ".$target->getX()." Y: ".$target->getY()." Z: ".$target->getZ()." Level: ".$target->getLevel()->getName());
-                                return true;
-                            }
-                            else{
-                                $sender->sendMessage("Please specify a valid player.");
-                                return true;
-                            }
-                        }
-                        else{
-                            $sender->sendMessage($command->getUsage());
+            if(strtolower($command->getName() === "getpos")){
+                if($sender->hasPermission("coordinates.command.getpos.self")){
+                    $sender->sendMessage("X: ".$sender->getX()." Y: ".$sender->getY()." Z: ".$sender->getZ()." Level: ".$sender->getLevel()->getName());
+                    return true;
+                }
+                elseif($sender->hasPermission("coordinates.command.getpos.other")){
+                    if(isset($arg[0])){
+                        $target = strtolower($sender->getServer()->getPlayer(($args[0])));
+                        if($target != null){
+                            $sender->sendMessage($args[0]."'s location:"); 
+                            $sender->sendMessage("X: ".$target->getX()." Y: ".$target->getY()." Z: ".$target->getZ()." Level: ".$target->getLevel()->getName());
                             return true;
                         }
+                        else{
+                            $sender->sendMessage("Please specify a valid player.");
+                            return true;
+                            }
+                        }
+                    else{
+                        $sender->sendMessage($command->getUsage());
+                        return true;
                     }
-                break;
+                }
             }
+        }
+        else{
+            $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
+            return true;
         }
     }
 }
