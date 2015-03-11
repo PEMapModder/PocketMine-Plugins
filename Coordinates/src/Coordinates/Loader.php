@@ -36,8 +36,8 @@ class Loader extends PluginBase{
                         else{
                             $sender->sendMessage("Please specify a valid player.");
                             return true;
-                            }
                         }
+                    }
                     else{
                         $sender->sendMessage($command->getUsage());
                         return true;
