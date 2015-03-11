@@ -32,7 +32,10 @@ class Loader extends PluginBase{
         if($sender instanceof Player){
             if(strtolower($command->getName()) === "date"){
                 if(isset($args[0])){
-                    
+                    $target = strtolower($sender->getServer()->getPlayer($args[0]));
+                    if($target != null){
+                        
+                    }
                 }
                 else{
                     
@@ -40,7 +43,10 @@ class Loader extends PluginBase{
             }
             if(strtolower($command->getName()) === "dump"){
                 if(isset($args[0])){
-                    
+                    $target = strtolower($sender->getServer()->getPlayer($args[0]));
+                    if($target != null){
+                        
+                    }
                 }
                 else{
                     
