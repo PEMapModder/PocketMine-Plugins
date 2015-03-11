@@ -5,7 +5,7 @@ api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Manage your server like never before!
-website: https://github.com/Gamecrafter/Small-Plugins/iManager
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iManager
 commands:
  addresslist:
   description: View everyone's IP address and port
