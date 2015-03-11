@@ -27,13 +27,19 @@ class Loader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if($sender instanceof Player){
             if(strtolower($command->getName()) === "date"){
-                
+                if(isset($args[0])){
+                    
+                }
             }
             if(strtolower($command->getName()) === "dump"){
-                
+                if(isset($args[0])){
+                    
+                }
             }
             if(strtolower($command->getName()) === "gender"){
-                
+                if(isset($args[0])){
+                    
+                }
             }
         }
         else{
