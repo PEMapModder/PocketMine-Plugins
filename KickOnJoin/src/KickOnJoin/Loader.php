@@ -23,12 +23,10 @@ class Loader extends PluginBase implements Listener;
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-        $name = $event->getPlayer()->getName();
         $this->players->set($event->getPlayer()->getName(), false);
         if($this->getConfig()->get("enabled") === true){
-            if($this->players->get($name) === false){
-                $reason = $this->getConfig()->get("kick-reason");
-                $event->getPlayer()->kick($reason);
+            if($this->players->get($event->getPlayer()->getName()) === false){
+                $event->getPlayer()->kick($this->getConfig()->get("kick-reason"));
             }
         }
     }
