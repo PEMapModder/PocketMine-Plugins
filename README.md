@@ -6,11 +6,19 @@ write their own plugins. Most of the plugins here were made in either 30 minutes
 ### Plugins
 * Commander
 * Coordinates
+* CustomFood
+* DoMath
+* FlowControl
+* GlobalShield
 * GreetMe
+* HeartMe
 * IPTag
 * KickOnJoin
+* MyTag
 * NoBoom
 * PunchingBag
+* SignsPro
+* iManager
 
 ### To-Do
 * Tutorial Wiki
