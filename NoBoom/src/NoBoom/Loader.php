@@ -22,12 +22,11 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onEntityExplode(EntityExplodeEvent $event){
-        $entity = $event->getEntity();
-        if($entity instanceof Creeper){
+        if($event->getEntity() instanceof Creeper){
             $event->setCancelled();
             $this->getServer()->broadcastMessage("Explosion has been cancelled.");
         }
-        elseif($entity instanceof PrimedTNT){
+        elseif($event->getEntity() instanceof PrimedTNT){
             $this->getServer()->broadcastMessage("Explosion has been cancelled.");
             $event->setCancelled();
         }
