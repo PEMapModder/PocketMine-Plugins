@@ -20,7 +20,7 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if($sender instanceof Player){
-            if(strtolower($command->getName() === "getpos")){
+            if(strtolower($command->getName()) === "getpos"){
                 if($sender->hasPermission("coordinates.command.getpos.self")){
                     $sender->sendMessage("X: ".$sender->getX()." Y: ".$sender->getY()." Z: ".$sender->getZ()." Level: ".$sender->getLevel()->getName());
                     return true;
