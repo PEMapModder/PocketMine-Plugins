@@ -23,4 +23,4 @@ plugins and distribute them as your own, only use it for private use.
 ### To-do
 * Tutorial Wiki
 * Upload images
-* Upload PHAR plugins
+* Upload `.phar` plugins
