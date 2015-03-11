@@ -20,8 +20,7 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onEntityDeath(EntityDeathEvent $event){
-        $entity = $event->getEntity();
-        if($entity instanceof Villager){
+        if($event->getEntity() instanceof Villager){
             $event->setCancelled();
         }
     }
