@@ -45,6 +45,11 @@ class Loader extends PluginBase{
                     
                 }
             }
+            if(strtolower($command->getName()) === "setgender"){
+                if(isset($args[0])){
+                    
+                }
+            }
         }
         else{
             $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
