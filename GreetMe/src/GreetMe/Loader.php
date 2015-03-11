@@ -20,10 +20,6 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-        $player = $event->getPlayer(); 
-        $address = $player->getAddress();      
-        $name = $player->getDisplayName();   
-        $port = $player->getPort();
-        $player->sendMessage("Welcome, ".$name.". Your IP address is: ".$address.":".$port.".");    
+        $player->sendMessage("Welcome, ".$event->getPlayer()->getName().". Your IP address is: ".$event->getPlayer()->getAddress().":".$event->getPlayer()->getPort().".");    
     }
 }
