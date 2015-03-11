@@ -34,9 +34,15 @@ class Loader extends PluginBase{
                 if(isset($args[0])){
                     
                 }
+                else{
+                    
+                }
             }
             if(strtolower($command->getName()) === "dump"){
                 if(isset($args[0])){
+                    
+                }
+                else{
                     
                 }
             }
@@ -44,9 +50,15 @@ class Loader extends PluginBase{
                 if(isset($args[0])){
                     
                 }
+                else{
+                    
+                }
             }
             if(strtolower($command->getName()) === "setgender"){
                 if(isset($args[0])){
+                    
+                }
+                else{
                     
                 }
             }
