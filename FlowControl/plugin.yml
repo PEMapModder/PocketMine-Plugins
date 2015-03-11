@@ -5,4 +5,4 @@ api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Liquids won't spread in your worlds!
-website: https://github.com/Gamecrafter/FlowControl
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/FlowControl
