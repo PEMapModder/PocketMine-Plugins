@@ -53,7 +53,7 @@ class Loader extends PluginBase implements Listener{
             
         }
         else{
-            $sender->sendMessage("You don't have permission to use signs.");
+            $event->getPlayer()->sendMessage("You don't have permission to use signs.");
         }
     }
 }
