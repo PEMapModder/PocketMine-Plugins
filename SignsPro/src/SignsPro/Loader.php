@@ -36,10 +36,10 @@ class Loader extends PluginBase implements Listener{
             if($event->getLine(0) === ""){
                 
             }
-            elseif($event->getLine(0) === ""){
+            if($event->getLine(0) === ""){
                 
             }
-            elseif($event->getLine(0) === ""){
+            if($event->getLine(0) === ""){
                 
             }
         }
