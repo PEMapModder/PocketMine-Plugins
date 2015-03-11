@@ -20,34 +20,34 @@ class Loader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "add"){
             if(isset($args[0]) && isset($args[1])){
-                
+                $sender->sendMessage($args[0]." + ".$args[1]." = ".$args[0] + $args[1]);
             }
             else{
-                
+                $sender->sendMessage($command->getUsage());
             }
         }
         if(strtolower($command->getName()) === "divide"){
             if(isset($args[0]) && isset($args[1])){
-                
+                $sender->sendMessage($args[0]." / ".$args[1]." = ".$args[0] / $args[1]);
             } 
             else{
-                
+                $sender->sendMessage($command->getUsage()); 
             }
         }
         if(strtolower($command->getName()) === "multiply"){
             if(isset($args[0]) && isset($args[1])){
-                
+                $sender->sendMessage($args[0]." * ".$args[1]." = ".$args[0] * $args[1]);
             }
             else{
-                
+                $sender->sendMessage($command->getUsage());  
             }
         }
         if(strtolower($command->getName()) === "subtract"){
             if(isset($args[0]) && isset($args[1])){
-                
+                $sender->sendMessage($args[0]." - ".$args[1]." = ".$args[0] - $args[1]);
             }
             else{
-                
+                $sender->sendMessage($command->getUsage());
             }
         }
     }
