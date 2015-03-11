@@ -13,7 +13,7 @@ class Loader extends PluginBase implements Listener;
     public function onEnable(){
         @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
-        $this->players = new Config($this->getDataFolder()."players.yml", Config::YAML, array());
+        $this->players = new Config($this->getDataFolder()."players.txt", Config::ENUM, array());
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(TextFormat::GREEN."KickOnJoin enabled.");
     }
@@ -27,7 +27,7 @@ class Loader extends PluginBase implements Listener;
         $this->players->set($event->getPlayer()->getName(), false);
         if($this->getConfig()->get("enabled") === true){
             if($this->players->get($name) === false){
-                $reason = $this->getConfig()->get("KickReason");
+                $reason = $this->getConfig()->get("kick-reason");
                 $event->getPlayer()->kick($reason);
             }
         }
