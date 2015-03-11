@@ -1,0 +1,30 @@
+
+name: GlobalShield
+main: GlobalShield\Loader
+version: 1.0.0
+api: 1.0.0
+load: STARTUP
+author: Gamecrafter
+description: Shield all of your worlds from griefers!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GlobalShield
+permissions:
+ globalshield:
+  default: op
+  description: Allows access to all GlobalShield features
+  children:
+   globalshield.action:
+    default: op
+    description: Allows access to all GlobalShield actions
+    children:
+     globalshield.action.break:
+      default: op
+      description: Allows breaking of blocks in a protected world
+     globalshield.action.empty:
+      default: op
+      description: Allows emptying buckets in a protected world
+     globalshield.action.fill:
+      default: op
+      description: Allows filling buckets in a protected world
+     globalshield.action.place:
+      default: op
+      description: Allows placing of blocks in a protected world
