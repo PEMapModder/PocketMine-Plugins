@@ -1,0 +1,8 @@
+name: CustomFood
+main: CustomFood\Loader
+version: 1.0.0
+api: 1.0.0
+load: STARTUP
+author: Gamecrafter
+description: Customize what foods do!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/CustomFoods
