@@ -5,7 +5,7 @@ api: 1.0.0
 load: STARTUP
 author: Gamecrafter
 description: Players can date each other for roleplay!
-website: https://github.com/Gamecrafter/Small-Plugins/HeartMe
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/HeartMe
 commands:
  date:
   description: Dates the specified player
