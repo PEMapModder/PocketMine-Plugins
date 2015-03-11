@@ -115,6 +115,9 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
-    	
+    	if($this->getConfig()->get("log-chat") === true){
+    	    $this->chat->set($event->getPlayer()->getName(), $event->getMessage());
+    	    $this->chat->save();
+    	}
     }
 }
