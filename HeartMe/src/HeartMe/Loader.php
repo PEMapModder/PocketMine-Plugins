@@ -26,32 +26,19 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if($sender instanceof Player){
-            switch($command->getName()){
-                case "date":
-                    if(isset($args[0])){
-                    
-                    }
-                    else{
-                    
-                    }
-                break;
-                case "dump":
-                    if(isset($args[0])){
-                    
-                    }
-                    else{
-                    
-                    }
-                break;
-                case "gender":
-                    if(isset($args[0])){
-                   
-                    }
-                    else{
-                   
-                    }
-                break;
+            if(strtolower($command->getName()) === "date"){
+                
             }
+            if(strtolower($command->getName()) === "dump"){
+                
+            }
+            if(strtolower($command->getName()) === "gender"){
+                
+            }
+        }
+        else{
+            $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
+            return true;
         }
     }
 }
