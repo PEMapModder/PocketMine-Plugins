@@ -20,5 +20,7 @@ plugins and distribute them as your own, only use it for private use.
 * SignsPro
 * iManager
 
-### To-Do
+### To-do
 * Tutorial Wiki
+* Upload images
+* Upload PHAR plugins
