@@ -26,45 +26,49 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-    	switch($command->getName()){
-    	    case "tag":
+    	if($sender instanceof Player){
+    	    if(strtolower($command->getName()) === "tag"){
     	    	if(isset($args[0])){
     	    	    if($args[0] === "address"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "chat"){
+    	    	    if($args[0] === "chat"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "health"){
+    	    	    if($args[0] === "health"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "help"){
+    	    	    if($args[0] === "help"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "hide"){
+    	    	    if($args[0] === "hide"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "money"){
+    	    	    if($args[0] === "money"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "op"){
+    	    	    if($args[0] === "op"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "pos"){
+    	    	    if($args[0] === "pos"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "restore"){
+    	    	    if($args[0] === "restore"){
     	    	    	
     	    	    }
-    	    	    elseif($args[0] === "view"){
+    	    	    if($args[0] === "view"){
     	    	    	
-    	    	    } 
+    	    	    }
     	    	}
     	    	else{
-    	    	    $sender->sendMessage($command->getUsage);
+    	    	    $sender->sendMessage();
     	    	}
-    	      break;
-    	  }
+    	    }
+    	}
+    	else{
+    	    $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
+    	    return true;
+    	}
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
