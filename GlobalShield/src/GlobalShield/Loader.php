@@ -26,7 +26,7 @@ class Loader extends PluginBase implements Listener{
         if($event->getPlayer()->hasPermission("globalshield.action.break")){
         }
         else{
-            $event->setCancelled();
+
         }
     }
     
@@ -34,7 +34,7 @@ class Loader extends PluginBase implements Listener{
         if($event->getPlayer()->hasPermission("globalshield.action.place")){
         }
         else{
-            $event->setCancelled();
+
         }
     }
     
@@ -42,7 +42,7 @@ class Loader extends PluginBase implements Listener{
         if($event->getPlayer()->hasPermission("globalshield.action.empty")){
         }
         else{
-            $event->setCancelled();
+
         }
     }
     
@@ -50,7 +50,7 @@ class Loader extends PluginBase implements Listener{
         if($event->getPlayer()->hasPermission("globalshield.action.fill")){
         }
         else{
-            $event->setCancelled();
+
         }
     }
     
@@ -59,7 +59,7 @@ class Loader extends PluginBase implements Listener{
             
         }
         else{
-            $event->setCancelled();
+
         }
     }
 }
