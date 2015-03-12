@@ -5,7 +5,6 @@ namespace FlowControl;
 use pocketmine\event\block\BlockSpreadEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 
 class Loader extends PluginBase implements Listener{
