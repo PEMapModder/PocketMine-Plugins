@@ -34,22 +34,22 @@ class Loader extends PluginBase{
                 if(isset($args[0])){
                     $target = strtolower($sender->getServer()->getPlayer($args[0]));
                     if($target != null){
-                        
+                        $target->sendMessage($sender->getName()." wants to date you!");
                     }
                 }
                 else{
-                    
+                    $sender->sendMessage(TextFormat::RED."Please specify a valid player.");
                 }
             }
             if(strtolower($command->getName()) === "dump"){
                 if(isset($args[0])){
                     $target = strtolower($sender->getServer()->getPlayer($args[0]));
                     if($target != null){
-                        
+                        $target->sendMessage($sender->getName()." has dumped you!");
                     }
                 }
                 else{
-                    
+                    $sender->sendMessage(TextFormat::RED."Please specify a valid player.");
                 }
             }
             if(strtolower($command->getName()) === "gender"){
@@ -71,7 +71,7 @@ class Loader extends PluginBase{
         }
         else{
             $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
-            return true;
         }
+        return true;
     }
 }
