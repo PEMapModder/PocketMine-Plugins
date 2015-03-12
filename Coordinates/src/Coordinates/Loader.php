@@ -23,7 +23,6 @@ class Loader extends PluginBase{
             if(strtolower($command->getName()) === "getpos"){
                 if($sender->hasPermission("coordinates.command.getpos.self")){
                     $sender->sendMessage("X: ".$sender->getX()." Y: ".$sender->getY()." Z: ".$sender->getZ()." Level: ".$sender->getLevel()->getName());
-                    return true;
                 }
                 elseif($sender->hasPermission("coordinates.command.getpos.other")){
                     if(isset($arg[0])){
@@ -31,23 +30,20 @@ class Loader extends PluginBase{
                         if($target != null){
                             $sender->sendMessage($target->getName()."'s location:"); 
                             $sender->sendMessage("X: ".$target->getX()." Y: ".$target->getY()." Z: ".$target->getZ()." Level: ".$target->getLevel()->getName());
-                            return true;
                         }
                         else{
                             $sender->sendMessage("Please specify a valid player.");
-                            return true;
                         }
                     }
                     else{
                         $sender->sendMessage($command->getUsage());
-                        return true;
                     }
                 }
             }
         }
         else{
             $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
-            return true;
         }
+        return true;
     }
 }
