@@ -28,7 +28,51 @@ class Loader extends PluginBase implements Listener{
     
     public function onEntityRegainHealth(EntityRegainHealthEvent $event){
         if($event->getEntity() instanceof Player){
-            
+            if($event->getCause() === EntityDamageEvent::CAUSE_CONTACT){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_ENTITY_ATTACK){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_PROJECTILE){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_SUFFOCATION){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_FALL){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_FIRE){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_FIRE_TICK){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_LAVA){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_DROWNING){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_BLOCK_EXPLOSION){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_ENTITY_EXPLOSION){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_VOID){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_SUICIDE){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_SUICIDE){
+                
+            }
+            if($event->getCause() === EntityDamageEvent::CAUSE_CUSTOM){
+                
+            }
         }
     }
 }
