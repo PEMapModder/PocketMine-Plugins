@@ -4,5 +4,5 @@ version: 1.0.0
 api: 1.0.0
 load: STARTUP
 author: Gamecrafter
-description: Manage all of the players' health!
+description: Manage the player's health and what they can get damaged by!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/LifeCare
