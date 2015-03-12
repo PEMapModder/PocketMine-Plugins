@@ -21,7 +21,9 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onEntityDamage(EntityDamageEvent $event){
-      
+        if($event->getEntity instanceof Player){
+
+        }
     }
     
     public function onEntityRegainHealth(EntityRegainHealthEvent $event){
