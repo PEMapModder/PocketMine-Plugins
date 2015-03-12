@@ -1,4 +1,3 @@
-
 name: GlobalShield
 main: GlobalShield\Loader
 version: 1.0.0
@@ -25,6 +24,9 @@ permissions:
      globalshield.action.fill:
       default: op
       description: Allows filling buckets in a protected world
+     globalshield.action.interact:
+      default: op
+      description: Allows interaction with blocks in a protected world
      globalshield.action.place:
       default: op
       description: Allows placing of blocks in a protected world
