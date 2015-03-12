@@ -24,6 +24,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onBlockBreak(BlockBreakEvent $event){
         if($event->getPlayer()->hasPermission("globalshield.action.break")){
+        
         }
         else{
 
@@ -32,6 +33,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onBlockPlace(BlockPlaceEvent $event){
         if($event->getPlayer()->hasPermission("globalshield.action.place")){
+        
         }
         else{
 
@@ -40,6 +42,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerBucketEmpty(PlayerBucketEmptyEvent $event){
         if($event->getPlayer()->hasPermission("globalshield.action.empty")){
+            
         }
         else{
 
@@ -48,6 +51,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerBucketFill(PlayerBucketFillEvent $event){
         if($event->getPlayer()->hasPermission("globalshield.action.fill")){
+            
         }
         else{
 
