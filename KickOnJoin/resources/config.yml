@@ -1,5 +1,5 @@
 #Config file for KickOnJoin by Gamecrafter;
-enabled: false
+enabled: 
 #Set to true to players when they join
-kick-reason: "Server is under construction!"
+kick-reason:
 #Reason why players cannot join
