@@ -6,6 +6,7 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerBucketEmptyEvent;
 use pocketmine\event\player\PlayerBucketFillEvent;
+use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
@@ -47,6 +48,15 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerBucketFill(PlayerBucketFillEvent $event){
         if($event->getPlayer()->hasPermission("globalshield.action.fill")){
+        }
+        else{
+            $event->setCancelled();
+        }
+    }
+    
+    public function onPlayerInteract(PlayerInteractEvent $event){
+        if($event->getPlayer()->hasPermission("globalshield.action.interact")){
+            
         }
         else{
             $event->setCancelled();
