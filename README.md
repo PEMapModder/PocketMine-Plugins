@@ -18,6 +18,7 @@ plugins and distribute them as your own, only use it for private use.
 * NoBoom
 * PunchingBag
 * SignsPro
+* SimpleChat
 * iManager
 
 ### To-do
