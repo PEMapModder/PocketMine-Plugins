@@ -22,12 +22,6 @@ class Loader extends PluginBase implements Listener{
     
     public function onEntityDamage(EntityDamageEvent $event){
         if($event->getEntity() instanceof Player){
-
-        }
-    }
-    
-    public function onEntityRegainHealth(EntityRegainHealthEvent $event){
-        if($event->getEntity() instanceof Player){
             if($event->getCause() === EntityDamageEvent::CAUSE_CONTACT){
                 
             }
@@ -73,6 +67,12 @@ class Loader extends PluginBase implements Listener{
             if($event->getCause() === EntityDamageEvent::CAUSE_CUSTOM){
                 
             }
+        }
+    }
+    
+    public function onEntityRegainHealth(EntityRegainHealthEvent $event){
+        if($event->getEntity() instanceof Player){
+           
         }
     }
 }
