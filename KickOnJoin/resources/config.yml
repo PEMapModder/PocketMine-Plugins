@@ -1,5 +1,0 @@
-#Config file for KickOnJoin by Gamecrafter;
-enabled: 
-#Set to true to players when they join
-kick-reason:
-#Reason why players cannot join

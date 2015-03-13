@@ -11,13 +11,9 @@ plugins and distribute them as your own, only use it for private use.
 * FlowControl
 * GearUp
 * GlobalShield
-* GreetMe
 * HeartMe
-* KickOnJoin
 * LifeCare
 * MyTag
-* NoBoom
-* PunchingBag
 * SignsPro
 * SimpleChat
 * iManager
