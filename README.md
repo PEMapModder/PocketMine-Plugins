@@ -9,6 +9,7 @@ plugins and distribute them as your own, only use it for private use.
 * CustomFood
 * DoMath
 * FlowControl
+* GearUp
 * GlobalShield
 * GreetMe
 * HeartMe
