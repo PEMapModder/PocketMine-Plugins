@@ -6,3 +6,8 @@ load: STARTUP
 author: Gamecrafter
 description: Gear up yourself with ease!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GearUp
+commands:
+ gear:
+  description: 
+  usage: /gear <1/2/3/4/5> <player>
+  permission: gearup.command.gear
