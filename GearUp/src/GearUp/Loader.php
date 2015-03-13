@@ -34,7 +34,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setChestplate(299);
                         $sender->getInventory()->setHelmet(298);
                         $sender->getInventory()->setLeggings(300);
-                        $sender->getInventory()->setItemInHand();
+                        $sender->getInventory()->setItemInHand(268);
                         $sender->sendMessage("");
                     }
                     if($args[0] === "2"){
@@ -42,7 +42,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setChestplate(303);
                         $sender->getInventory()->setHelmet(302);
                         $sender->getInventory()->setLeggings(304);
-                        $sender->getInventory()->setItemInHand();
+                        $sender->getInventory()->setItemInHand(272);
                         $sender->sendMessage("");
                     }
                     if($args[0] === "3"){
@@ -50,7 +50,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setChestplate(307);
                         $sender->getInventory()->setHelmet(306);
                         $sender->getInventory()->setLeggings(308);
-                        $sender->getInventory()->setItemInHand();
+                        $sender->getInventory()->setItemInHand(267);
                         $sender->sendMessage("");
                     }
                     if($args[0] === "4"){
@@ -58,7 +58,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setChestplate(315);
                         $sender->getInventory()->setHelmet(314);
                         $sender->getInventory()->setLeggings(316);
-                        $sender->getInventory()->setItemInHand();
+                        $sender->getInventory()->setItemInHand(283);
                         $sender->sendMessage("");
                     }
                     if($args[0] === "5"){
@@ -66,7 +66,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setChestplate(311);
                         $sender->getInventory()->setHelmet(310);
                         $sender->getInventory()->setLeggings(312);
-                        $sender->getInventory()->setItemInHand();
+                        $sender->getInventory()->setItemInHand(276);
                         $sender->sendMessage("");
                     }
                     else{
@@ -79,6 +79,12 @@ class Loader extends PluginBase{
             }
             if(isset($args[1])){
                 $target = $sender->getServer()->getPlayer($args[1]);
+                if($target != null){
+                    
+                }
+                else{
+                    $sender->sendMessage(TextFormat::RED."Please specify a valid player.");
+                }
             }
             else{
                 
