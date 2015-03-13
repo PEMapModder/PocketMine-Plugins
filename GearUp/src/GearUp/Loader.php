@@ -19,7 +19,13 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "gear"){
-          
+            if(isset($args[0])){
+                
+            }
+            else{
+                
+            }
         }
+        return true;
     }
 }
