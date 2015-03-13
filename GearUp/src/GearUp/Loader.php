@@ -20,6 +20,26 @@ class Loader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "gear"){
             if(isset($args[0])){
+                if($args[0] === "1"){
+                    
+                }
+                if($args[0] === "2"){
+                    
+                }
+                if($args[0] === "3"){
+                    
+                }
+                if($args[0] === "4"){
+                    
+                }
+                if($args[0] === "5"){
+                    
+                }
+                else{
+                    $sender->sendMessage("");
+                }
+            }
+            if(isset($args[1])){
                 
             }
             else{
