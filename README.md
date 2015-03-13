@@ -1,6 +1,6 @@
 # Small-Plugins
-A collection of Gamecrafter's plugins for version `PocketMine-MP Alpha 1.4`. Every plugin in this repository is licensed under
-MIT.
+A collection of Gamecrafter's plugins for `PocketMine-MP` for version `Alpha 1.4` aka `Zekkou_Cake. Every plugin in this
+repository is licensed under MIT.
 
 ### Plugins
 * Commander
