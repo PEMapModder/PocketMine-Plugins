@@ -1,5 +1,5 @@
 # Small-Plugins
-Here is a collection of Gamecrafter's plugins. All plugins in this repository are licensed under MIT.
+A collection of Gamecrafter's plugins for `PocketMine-MP Alpha 1.4`. Every plugin in this repository is licensed under MIT.
 
 ### Plugins
 * Commander
