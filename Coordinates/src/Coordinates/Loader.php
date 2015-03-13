@@ -22,7 +22,13 @@ class Loader extends PluginBase{
         if($sender instanceof Player){
             if(strtolower($command->getName()) === "getpos"){
                 if(isset($args[0])){
-                    
+                    $target = $sender->getServer()->getPlayer($args[0]);
+                    if($target != null){
+                        
+                    }
+                    else{
+                        $sender->sendMessage("Please specify a valid player.");
+                    }
                 }
                 else{
                     $sender->sendMessage("X: ".$sender->getX()." Y: ".$sender->getY()." Z: ".$sender->getZ()." Level: ".$sender->getLevel()->getName());
