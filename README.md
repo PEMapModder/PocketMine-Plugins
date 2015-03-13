@@ -19,5 +19,3 @@ repository is licensed under MIT.
 
 ### To-do
 * Tutorial Wiki
-* Upload images
-* Upload `.phar` plugins
