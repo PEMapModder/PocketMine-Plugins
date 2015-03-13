@@ -1,5 +1,5 @@
 # Small-Plugins
-A collection of Gamecrafter's plugins for version PocketMine-MP `Alpha 1.4`. Every plugin in this repository is licensed under
+A collection of Gamecrafter's plugins for version `PocketMine-MP Alpha 1.4`. Every plugin in this repository is licensed under
 MIT.
 
 ### Plugins
