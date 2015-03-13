@@ -39,10 +39,20 @@ class Loader extends PluginBase implements Listener{
     	    }	
     	}
     	if(strtolower($command->getName()) === "disable"){
-    		
+    	    if(isset($args[0])){
+    	    	
+    	    }
+    	    else{
+    	    	
+    	    }
     	}
     	if(strtolower($command->getName()) === "enable"){
-    		
+    	    if(isset($args[0])){
+    	    	
+    	    }
+    	    else{
+    	    	
+    	    }
     	}
     	if(strtolower($command->getName()) === "gamemodelist"){
     	    $sender->sendMessage(TextFormat::YELLOW."Gamemode of all players that are currently online:");
