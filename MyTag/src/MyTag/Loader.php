@@ -29,34 +29,34 @@ class Loader extends PluginBase implements Listener{
     	if($sender instanceof Player){
     	    if(strtolower($command->getName()) === "tag"){
     	    	if(isset($args[0])){
-    	    	    if($args[0] === "address"){
+    	    	    if(strtolower($args[0]) === "address"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "chat"){
+    	    	    if(strtolower($args[0]) === "chat"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "health"){
+    	    	    if(strtolower($args[0]) === "health"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "help"){
+    	    	    if(strtolower($args[0]) === "help"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "hide"){
+    	    	    if(strtolower($args[0]) === "hide"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "money"){
+    	    	    if(strtolower($args[0]) === "money"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "op"){
+    	    	    if(strtolower($args[0]) === "op"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "pos"){
+    	    	    if(strtolower($args[0]) === "pos"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "restore"){
+    	    	    if(strtolower($args[0]) === "restore"){
     	    	    	
     	    	    }
-    	    	    if($args[0] === "view"){
+    	    	    if(strtolower($args[0]) === "view"){
     	    	    	
     	    	    }
     	    	}
