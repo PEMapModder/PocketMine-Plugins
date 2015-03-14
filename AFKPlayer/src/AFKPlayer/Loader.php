@@ -19,7 +19,20 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "afk"){
-            
+            if(isset($args[0])){
+                if(strtolower($args[0]) === "off"){
+                    
+                }
+                if(strtolower($args[0]) === "on"){
+                    
+                }
+                else{
+                    
+                }
+            }
+            else{
+                
+            }
         }
     }
 }
