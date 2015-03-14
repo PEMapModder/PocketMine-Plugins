@@ -1,0 +1,8 @@
+name: AFKPlayer
+main: AFKPlayer\Loader
+version: 1.0.0
+api: 1.0.0
+load: STARTUP
+author: Gamecrafter
+description: Toggle your AFK status!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/AFKPlayer
