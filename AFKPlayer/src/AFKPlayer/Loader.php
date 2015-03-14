@@ -21,10 +21,10 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "afk"){
             if(isset($args[0])){
                 if(strtolower($args[0]) === "off"){
-                    
+                    $sender->sendMessage();
                 }
                 if(strtolower($args[0]) === "on"){
-                    
+                    $sender->sendMessage();
                 }
                 else{
                     
