@@ -6,3 +6,8 @@ load: STARTUP
 author: Gamecrafter
 description: Manage the player's health and what they can get damaged by!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/LifeCare
+commands:
+ life:
+  description:
+  usage: /life <add/set/subtract>
+  permission: lifecare.command.life
