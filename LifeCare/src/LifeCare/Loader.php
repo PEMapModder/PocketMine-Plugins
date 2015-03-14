@@ -20,6 +20,11 @@ class Loader extends PluginBase implements Listener{
         $this->getLogger()->info(TextFormat::RED."LifeCare disabled.");
     }
     
+    public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+        if(strtolower($command->getName()) === "life"){
+            
+        }
+    }
     public function onEntityDamage(EntityDamageEvent $event){
         if($event->getEntity() instanceof Player){
             if($event->getCause() === EntityDamageEvent::CAUSE_CONTACT){
