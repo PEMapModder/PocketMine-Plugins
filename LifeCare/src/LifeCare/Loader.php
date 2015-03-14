@@ -2,6 +2,8 @@
 
 namespace LifeCare;
 
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\entity\EntityRegainHealthEvent;
 use pocketmine\event\Listener;
