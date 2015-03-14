@@ -16,4 +16,10 @@ class Loader extends PluginBase{
     public function onDisable(){
         $this->getLogger()->info(TextFormat::RED."AFKPlayer disabled.");
     }
+    
+    public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+        if(strtolower($command->getName()) === "afk"){
+            
+        }
+    }
 }
