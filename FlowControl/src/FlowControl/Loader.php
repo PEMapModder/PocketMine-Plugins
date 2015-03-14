@@ -20,11 +20,17 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onBlockSpread(BlockSpreadEvent $event){
-        if(($event->getBlock()->getId() === 10 || $event->getBlock()->getId() === 11) && $this->getConfig()->get("spread-lava") === false){
-            $event->setCancelled();
+        if($event->getBlock()->getId() === 8 && $this->getConfig()->get("spread-water") === false){
+            
         }
-        if(($event->getBlock()->getId() === 8 || $event->getBlock()->getId() === 9) && $this->getConfig()->get("spread-water") === false){
-            $event->setCancelled();
+        if($event->getBlock()->getId() === 9 && $this->getConfig()->get("spread-water") === false){
+            
+        }
+        if($event->getBlock()->getId() === 10 && $this->getConfig()->get("spread-lava") === false){
+            
+        }
+        if($event->getBlock()->getId() === 11 && $this->getConfig()->get("spread-lava") === false){
+            
         }
     }
 }
