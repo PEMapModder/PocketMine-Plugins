@@ -1,6 +1,8 @@
 #Config file for LifeCare by Gamecrafter;
 auto-heal:
 #Set to true to enable auto-healing
+default-health:
+#Default amount of health for a player
 maximum-health:
 #Highest amount of health possible
 mininum-health:
