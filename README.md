@@ -3,6 +3,7 @@ A collection of Gamecrafter's plugins for `Alpha_1.4`. Every plugin in this
 repository is licensed under MIT.
 
 ### Plugins
+* AFKPlayer
 * Commander
 * Coordinates
 * CustomFood
