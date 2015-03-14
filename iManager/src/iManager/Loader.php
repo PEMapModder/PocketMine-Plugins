@@ -38,24 +38,6 @@ class Loader extends PluginBase implements Listener{
                 return true;
     	    }	
     	}
-    	if(strtolower($command->getName()) === "disable"){
-    	    if(isset($args[0])){
-    	    	$target = $sender->getServer()->getPluginManager()->disablePlugin($args[0]);
-    	    	$sender->sendMessage("Disabled ".$target->getName().".");
-    	    }
-    	    else{
-    	    	$sender->sendMessage(TextFormat::RED."Invalid plugin name, check the name case.");
-    	    }
-    	}
-    	if(strtolower($command->getName()) === "enable"){
-    	    if(isset($args[0])){
-    	    	$target = $sender->getServer()->getPluginManager()->enablePlugin($args[0]);
-    	    	$sender->sendMessage("Enabled ".$target->getName().".");
-    	    }
-    	    else{
-    	    	$sender->sendMessage(TextFormat::RED."Invalid plugin name, check the name case.");
-    	    }
-    	}
     	if(strtolower($command->getName()) === "gamemodelist"){
     	    $sender->sendMessage(TextFormat::YELLOW."Gamemode of all players that are currently online:");
             foreach($sender->getServer()->getOnlinePlayers() as $players){
