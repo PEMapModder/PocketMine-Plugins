@@ -32,7 +32,7 @@ class Loader extends PluginBase{
                     }
                 }
                 else{
-                    $sender->sendMessage("X: ".$sender->getX()." Y: ".$sender->getY()." Z: ".$sender->getZ()." Level: ".$sender->getLevel()->getName());
+                    $sender->sendMessage("X: ".round($sender->getX())." Y: ".round($sender->getY())." Z: ".round($sender->getZ())." Level: ".$sender->getLevel()->getName());
                 }
             }
         }
