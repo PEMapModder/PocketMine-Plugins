@@ -33,19 +33,20 @@ class Loader extends PluginBase implements Listener{
     
     public function onSignChange(SignChangeEvent $event){
         if($event->getPlayer()->hasPermission("signspro.action.create")){
-            if($event->getLine(0) === ""){
+            if($event->getLine(0) === "[BOMB]"){
                 
             }
-            if($event->getLine(0) === ""){
+            if($event->getLine(0) === "[COMMAND]"){
                 
             }
-            if($event->getLine(0) === ""){
+            if($event->getLine(0) === "[INFO]"){
                 
             }
         }
         else{
             $sender->sendMessage("You don't have permissions to create signs.");
         }
+        return true;
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
@@ -57,5 +58,6 @@ class Loader extends PluginBase implements Listener{
                 $event->getPlayer()->sendMessage("You don't have permission to use signs.");
             }
         }
+        return true;
     }
 }
