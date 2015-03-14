@@ -22,7 +22,23 @@ class Loader extends PluginBase implements Listener{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "life"){
-            
+            if(isset($args[0])){
+                if(strtolower($args[0]) === "add"){
+                    
+                }
+                if(strtolower($args[0]) === "set"){
+                    
+                }
+                if(strtolower($args[0]) === "subtract"){
+                    
+                }
+            }
+            if(isset($args[1])){
+                
+            }
+            else{
+                
+            }
         }
     }
     public function onEntityDamage(EntityDamageEvent $event){
