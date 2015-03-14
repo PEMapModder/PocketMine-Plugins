@@ -11,14 +11,6 @@ commands:
   description: View everyone's IP address and port
   usage: /addresslist
   permission: imanager.command.addresslist
- disable:
-  description: Disables the specified plugin
-  usage: /disable <plugin>
-  permission: imanager.command.disable
- enable:
-  description: Enables the specified plugin
-  usage: /enable <plugin>
-  permission: imanager.command.enable
  healthlist:
   description: View everyone's health
   usage: /healthlist
@@ -51,12 +43,6 @@ permissions:
      imanager.command.addresslist:
       default: op
       description: Allows use of /addresslist
-     imanager.command.disable:
-      default: op
-      description: Allows use of /disable
-     imanager.command.enable:
-      default: op
-      description: Allows use of /enable
      imanager.command.healthlist:
       default: op
       description: Allows use of /healthlist
