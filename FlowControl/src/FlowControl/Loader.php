@@ -2,6 +2,8 @@
 
 namespace FlowControl;
 
+use pocketmine\block\Lava;
+use pocketmine\block\Water;
 use pocketmine\event\block\BlockSpreadEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
@@ -20,10 +22,10 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onBlockSpread(BlockSpreadEvent $event){
-        if($event->getBlock()->getName() === "Water" && $this->getConfig()->get("spread-water") === false){
+        if($event->getBlock() instanceof Water && $this->getConfig()->get("spread-water") === false){
             $event->setCancelled();
         }
-        if($event->getBlock()->getName() === "Lava" && $this->getConfig()->get("spread-lava") === false){
+        if($event->getBlock() instanceof Lava && $this->getConfig()->get("spread-lava") === false){
             $event->serCancelled();
         }
     }
