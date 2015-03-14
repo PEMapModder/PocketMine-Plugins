@@ -20,8 +20,13 @@ class Loader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "add"){
             if(isset($args[0]) && isset($args[1])){
-                $answer = $args[0] + $args[1];
-                $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." + ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                if(is_numeric($args[0]) && is_numeric($args[1])){
+                    $answer = $args[0] + $args[1];
+                    $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." + ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                }
+                else{
+                    $sender->sendMessage(TextFormat::RED."Please use numbers.");
+                }
             }
             else{
                 $sender->sendMessage($command->getUsage());
@@ -29,17 +34,27 @@ class Loader extends PluginBase{
         }
         if(strtolower($command->getName()) === "divide"){
             if(isset($args[0]) && isset($args[1])){
-                $answer = $args[0] / $args[1];
-                $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." / ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
-            } 
+                if(is_numeric($args[0]) && is_numeric($args[1])){
+                    $answer = $args[0] / $args[1];
+                    $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." / ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                } 
+                else{
+                    $sender->sendMessage(TextFormat::RED."Please use numbers.");
+                }
+            }
             else{
                 $sender->sendMessage($command->getUsage()); 
             }
         }
         if(strtolower($command->getName()) === "multiply"){
             if(isset($args[0]) && isset($args[1])){
-                $answer = $args[0] * $args[1];
-                $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." * ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                if(is_numeric($args[0]) && is_numeric($args[1])){
+                    $answer = $args[0] * $args[1];
+                    $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." * ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                }
+                else{
+                    $sender->sendMessage(TextFormat::RED."Please use numbers.");
+                }
             }
             else{
                 $sender->sendMessage($command->getUsage());
@@ -47,8 +62,13 @@ class Loader extends PluginBase{
         }
         if(strtolower($command->getName()) === "subtract"){
             if(isset($args[0]) && isset($args[1])){
-                $answer = $args[0] - $args[1];
-                $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." - ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                if(is_numeric($args[0]) && is_numeric($args[1])){
+                    $answer = $args[0] - $args[1];
+                    $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." - ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                }
+                else{
+                    $sender->sendMessage(TextFormat::RED."Please use numbers.");
+                }
             }
             else{
                 $sender->sendMessage($command->getUsage());
