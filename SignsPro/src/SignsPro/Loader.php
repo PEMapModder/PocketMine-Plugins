@@ -49,11 +49,13 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
-        if($event->getPlayer()->hasPermission("signspro.action.use")){
+        if($event->getBlock() instanceof Sign){
+            if($event->getPlayer()->hasPermission("signspro.action.use")){
             
-        }
-        else{
-            $event->getPlayer()->sendMessage("You don't have permission to use signs.");
+            }
+            else{
+                $event->getPlayer()->sendMessage("You don't have permission to use signs.");
+            }
         }
     }
 }
