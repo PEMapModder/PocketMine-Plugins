@@ -4,28 +4,22 @@ namespace iManager;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\event\player\PlayerChatEvent;
-use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 
-class Loader extends PluginBase implements Listener{
-    
-    public $chat;
-    
+class Loader extends PluginBase{
+
     public $exempt;
     
     public function onEnable(){
         @mkdir($this->getDataFolder());
-        $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
         $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
 	$this->getLogger()->info(TextFormat::GREEN."iManager enabled.");
     }
     
     public function onDisable(){
-    	$this->chat->save();
         $this->exempt->save();
         $this->getLogger()->info(TextFormat::RED."iManager disabled.");
     }
@@ -111,13 +105,6 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName().TextFormat::YELLOW.":".TextFormat::WHITE." X: ".TextFormat::RED.$players->getX().TextFormat::WHITE." Y: ".TextFormat::BLUE.$players->getY().TextFormat::WHITE." Z: ".TextFormat::GREEN.$players->getZ().TextFormat::WHITE." Level: ".TextFormat::LIGHT_PURPLE.$players->getLevel()->getName());
                 return true;	
     	    }
-    	}
-    }
-    
-    public function onPlayerChat(PlayerChatEvent $event){
-    	if($this->getConfig()->get("log-chat") === true){
-    	    $this->chat->set($event->getPlayer()->getName(), $event->getMessage());
-    	    $this->chat->save();
     	}
     }
 }
