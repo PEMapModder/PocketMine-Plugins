@@ -27,7 +27,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setChestplate(0);
                         $sender->getInventory()->setHelmet(0);
                         $sender->getInventory()->setLeggings(0);
-                        $sender->sendMessage("");
+                        $sender->sendMessage("You have cleared your armor.");
                     }
                     if($args[0] === "1"){
                         $sender->getInventory()->setBoots(301);
@@ -35,7 +35,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setHelmet(298);
                         $sender->getInventory()->setLeggings(300);
                         $sender->getInventory()->setItemInHand(268);
-                        $sender->sendMessage("");
+                        $sender->sendMessage("Equipped with full leather armor and a wooden sword.");
                     }
                     if($args[0] === "2"){
                         $sender->getInventory()->setBoots(305);
@@ -43,7 +43,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setHelmet(302);
                         $sender->getInventory()->setLeggings(304);
                         $sender->getInventory()->setItemInHand(272);
-                        $sender->sendMessage("");
+                        $sender->sendMessage("Equipped with full chain armor and a stone sword.");
                     }
                     if($args[0] === "3"){
                         $sender->getInventory()->setBoots(309);
@@ -51,7 +51,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setHelmet(306);
                         $sender->getInventory()->setLeggings(308);
                         $sender->getInventory()->setItemInHand(267);
-                        $sender->sendMessage("");
+                        $sender->sendMessage("Equipped with full iron armor and an iron sword.");
                     }
                     if($args[0] === "4"){
                         $sender->getInventory()->setBoots(317);
@@ -59,7 +59,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setHelmet(314);
                         $sender->getInventory()->setLeggings(316);
                         $sender->getInventory()->setItemInHand(283);
-                        $sender->sendMessage("");
+                        $sender->sendMessage("Equipped with full golden armor and a golden sword.");
                     }
                     if($args[0] === "5"){
                         $sender->getInventory()->setBoots(313);
@@ -67,10 +67,10 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setHelmet(310);
                         $sender->getInventory()->setLeggings(312);
                         $sender->getInventory()->setItemInHand(276);
-                        $sender->sendMessage("");
+                        $sender->sendMessage("Equipped with full diamond armor and a diamond sword.");
                     }
                     else{
-                        $sender->sendMessage("");
+                        $sender->sendMessage("That set of equipment does not exist.");
                     }
                 }
                 else{
