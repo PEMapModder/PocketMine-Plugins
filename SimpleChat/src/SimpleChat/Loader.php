@@ -20,6 +20,6 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
-        $event->setMessage(str_replace(["{ip}", "{message}", "{player}", "{port}"], [$event->getPlayer()->getAddress(), $event->getMessage(), $event->getPlayer()->getName(), $event->getPlayer()->getPort()], $this->getConfig()->get("format")));
+        $event->setFormat(str_replace(["{ip}", "{message}", "{player}", "{port}"], [$event->getPlayer()->getAddress(), $event->getMessage(), $event->getPlayer()->getName(), $event->getPlayer()->getPort()], $this->getConfig()->get("format")));
     }
 }
