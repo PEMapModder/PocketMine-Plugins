@@ -98,7 +98,7 @@ class Loader extends PluginBase implements Listener{
     	}
     	if(strtolower($command->getName()) === "oplist"){
     	    $sender->sendMessage(TextFormat::YELLOW."OPs that are currently online:");
-    	    foreach($sender->getServer()->getOps() as $players){
+    	    foreach($sender->getServer()->getOnlinePlayers() as $players){
     	    	if($players->isOp()){
     	    	    $sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName());
                     return true;
