@@ -6,3 +6,8 @@ load: STARTUP
 author: Gamecrafter
 description: Toggle your AFK status!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/AFKPlayer
+commands:
+ afk:
+  description: Toggles the user's AFK status
+  usage: /afk <off/on>
+  permission: afkplayer.command.afk
