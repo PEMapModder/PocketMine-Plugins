@@ -6,6 +6,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
+use pocketmine\Player;
 
 class Loader extends PluginBase{
 
@@ -18,21 +19,27 @@ class Loader extends PluginBase{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-        if(strtolower($command->getName()) === "afk"){
-            if(isset($args[0])){
-                if(strtolower($args[0]) === "off"){
-                    $sender->sendMessage();
-                }
-                if(strtolower($args[0]) === "on"){
-                    $sender->sendMessage();
+        if($sender instanceof Player){
+            if(strtolower($command->getName()) === "afk"){
+                if(isset($args[0])){
+                    if(strtolower($args[0]) === "off"){
+                        $sender->sendMessage();
+                    }
+                    if(strtolower($args[0]) === "on"){
+                        $sender->sendMessage();
+                    }
+                    else{
+                        $sender->sendMessage($command->getUsage());
+                    }
                 }
                 else{
-                    
+                    $sender->sendMessage($command->getUsage());
                 }
             }
-            else{
-                
-            }
         }
+        else{
+            $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
+        }
+        return true;
     }
 }
