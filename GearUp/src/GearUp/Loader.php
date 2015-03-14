@@ -4,6 +4,8 @@ namespace GearUp;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\inventory\PlayerInventory;
+use pocketmine\item\Item;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
