@@ -34,13 +34,20 @@ class Loader extends PluginBase implements Listener{
                 }
             }
             if(isset($args[1])){
-                
+                if(is_numeric($args[1])){
+                    
+                }
+                else{
+                    $sender->sendMessage(TextFormat::RED."Please use numbers.");
+                }
             }
             else{
                 
             }
         }
+        return true;
     }
+    
     public function onEntityDamage(EntityDamageEvent $event){
         if($event->getEntity() instanceof Player){
             if($event->getCause() === EntityDamageEvent::CAUSE_CONTACT){
