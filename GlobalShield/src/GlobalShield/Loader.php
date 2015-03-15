@@ -26,7 +26,6 @@ class Loader extends PluginBase implements Listener{
         foreach($this->getConfig()->get("levels") as $levels){
             if($levels = $event->getPlayer()->getLevel()->getName()){
                 if($event->getPlayer()->hasPermission("globalshield.action.break")){
-                    
                 }
                 else{
                     $event->setCancelled();
@@ -39,7 +38,6 @@ class Loader extends PluginBase implements Listener{
         foreach($this->getConfig()->get("levels") as $levels){
             if($levels = $event->getPlayer()->getLevel()->getName()){
                 if($event->getPlayer()->hasPermission("globalshield.action.place")){
-                    
                 }
                 else{
                     $event->setCancelled();
@@ -52,7 +50,6 @@ class Loader extends PluginBase implements Listener{
         foreach($this->getConfig()->get("levels") as $levels){
             if($levels = $event->getPlayer()->getLevel()->getName()){
                 if($event->getPlayer()->hasPermission("globalshield.action.empty")){
-                    
                 }
                 else{
                     $event->setCancelled();
@@ -65,7 +62,6 @@ class Loader extends PluginBase implements Listener{
         foreach($this->getConfig()->get("levels") as $levels){
             if($levels = $event->getPlayer()->getLevel()->getName()){
                 if($event->getPlayer()->hasPermission("globalshield.action.fill")){
-                    
                 }
                 else{
                     $event->setCancelled();
@@ -78,10 +74,26 @@ class Loader extends PluginBase implements Listener{
         foreach($this->getConfig()->get("levels") as $levels){
             if($levels = $event->getPlayer()->getLevel()->getName()){
                 if($event->getPlayer()->hasPermission("globalshield.action.interact")){
-                    
                 }
                 else{
-                    $event->setCancelled();
+                    if($event->getBlock()->getName() === "Furnace" && $this->getConfig()->get("furnace") === true){
+                        $event->setCancelled();                
+                    }
+                    if($event->getBlock()->getName() === "IronDoor" && $this->getConfig()->get("iron-door") === true){
+                        $event->setCancelled();
+                    }
+                    if($event->getBlock()->getName() === "Stonecutter" && $this->getConfig()->get("stonecutter") === true){
+                        $event->setCancelled();                       
+                    }
+                    if($event->getBlock()->getName() === "Trapdoor" && $this->getConfig()->get("trapdoor") === true){
+                        $event->setCancelled();              
+                    }
+                    if($event->getBlock()->getName() === "WoodDoor" && $this->getConfig()->get("wood-door") === true){
+                        $event->setCancelled();       
+                    }
+                    if($event->getBlock()->getName() === "Workbench" && $this->getConfig()->get("workbench") === true){
+                        $event->setCancelled();   
+                    }
                 }
             }
         }
