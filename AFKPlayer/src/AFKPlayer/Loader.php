@@ -28,11 +28,11 @@ class Loader extends PluginBase implements Listener{
             if(strtolower($command->getName()) === "afk"){
                 if(isset($args[0])){
                     if(strtolower($args[0]) === "off"){
-                        $sender->showPlayer($sender);
+                        $sender->showPlayer($sender->getName());
                         $sender->sendMessage("You are not AFK anymore.");
                     }
                     if(strtolower($args[0]) === "on"){
-                        $sender->hidePlayer($sender);
+                        $sender->hidePlayer($sender->getName());
                         $sender->sendMessage("You are now AFK. Run /afk off to turn it off.");
                     }
                     else{
