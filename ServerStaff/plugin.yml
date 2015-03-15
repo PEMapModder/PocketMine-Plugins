@@ -1,0 +1,13 @@
+name: ServerStaff
+main: ServerStaff\Loader
+version: 1.0.0
+api: 1.0.0
+load: STARTUP
+author: Gamecrafter
+description: Get the name of the people in the staff!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerStaff
+commands:
+ staff:
+  description: List of the players in the staff
+  usage: /staff
+  permission: serverstaff.command.staff
