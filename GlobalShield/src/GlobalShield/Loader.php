@@ -23,47 +23,67 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onBlockBreak(BlockBreakEvent $event){
-        if($event->getPlayer()->hasPermission("globalshield.action.break")){
-        
-        }
-        else{
-
+        foreach($this->getConfig()->get("levels") as $levels){
+            if($levels = $event->getPlayer()->getLevel()->getName()){
+                if($event->getPlayer()->hasPermission("globalshield.action.break")){
+                    
+                }
+                else{
+                    $event->setCancelled();
+                }
+            }
         }
     }
     
     public function onBlockPlace(BlockPlaceEvent $event){
-        if($event->getPlayer()->hasPermission("globalshield.action.place")){
-        
-        }
-        else{
-
+        foreach($this->getConfig()->get("levels") as $levels){
+            if($levels = $event->getPlayer()->getLevel()->getName()){
+                if($event->getPlayer()->hasPermission("globalshield.action.place")){
+                    
+                }
+                else{
+                    $event->setCancelled();
+                }
+            }
         }
     }
     
     public function onPlayerBucketEmpty(PlayerBucketEmptyEvent $event){
-        if($event->getPlayer()->hasPermission("globalshield.action.empty")){
-            
-        }
-        else{
-
+        foreach($this->getConfig()->get("levels") as $levels){
+            if($levels = $event->getPlayer()->getLevel()->getName()){
+                if($event->getPlayer()->hasPermission("globalshield.action.empty")){
+                    
+                }
+                else{
+                    $event->setCancelled();
+                }
+            }
         }
     }
     
     public function onPlayerBucketFill(PlayerBucketFillEvent $event){
-        if($event->getPlayer()->hasPermission("globalshield.action.fill")){
-            
-        }
-        else{
-
+        foreach($this->getConfig()->get("levels") as $levels){
+            if($levels = $event->getPlayer()->getLevel()->getName()){
+                if($event->getPlayer()->hasPermission("globalshield.action.fill")){
+                    
+                }
+                else{
+                    $event->setCancelled();
+                }
+            }
         }
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
-        if($event->getPlayer()->hasPermission("globalshield.action.interact")){
-            
-        }
-        else{
-
+        foreach($this->getConfig()->get("levels") as $levels){
+            if($levels = $event->getPlayer()->getLevel()->getName()){
+                if($event->getPlayer()->hasPermission("globalshield.action.interact")){
+                    
+                }
+                else{
+                    $event->setCancelled();
+                }
+            }
         }
     }
 }
