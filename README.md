@@ -14,8 +14,10 @@ not all the plugins here function the way it was to be intended.
 * HeartMe
 * LifeCare
 * MyTag
+* ServerStaff
 * SignsPro
 * SimpleChat
+* WarpArrow
 * iManager
 
 ### To-do
