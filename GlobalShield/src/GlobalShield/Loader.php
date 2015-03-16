@@ -76,26 +76,9 @@ class Loader extends PluginBase implements Listener{
             if($levels = $event->getPlayer()->getLevel()->getName()){
                 if($event->getPlayer()->hasPermission("globalshield.action.interact")){
                 }
-                else{
-                    if($event->getBlock()->getName() === "Furnace" && $this->getConfig()->get("furnace") === true){
-                        $event->setCancelled();                
-                    }
-                    if($event->getBlock()->getName() === "IronDoor" && $this->getConfig()->get("iron-door") === true){
-                        $event->setCancelled();
-                    }
-                    if($event->getBlock()->getName() === "Stonecutter" && $this->getConfig()->get("stonecutter") === true){
-                        $event->setCancelled();                       
-                    }
-                    if($event->getBlock()->getName() === "Trapdoor" && $this->getConfig()->get("trapdoor") === true){
-                        $event->setCancelled();              
-                    }
-                    if($event->getBlock()->getName() === "WoodDoor" && $this->getConfig()->get("wood-door") === true){
-                        $event->setCancelled();       
-                    }
-                    if($event->getBlock()->getName() === "Workbench" && $this->getConfig()->get("workbench") === true){
-                        $event->setCancelled();   
-                    }
-                }
+            }
+            else{
+                $event->setCancelled();
             }
         }
     }
