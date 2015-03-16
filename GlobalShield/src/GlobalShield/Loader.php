@@ -76,9 +76,9 @@ class Loader extends PluginBase implements Listener{
             if($levels = $event->getPlayer()->getLevel()->getName()){
                 if($event->getPlayer()->hasPermission("globalshield.action.interact")){
                 }
-            }
-            else{
-                $event->setCancelled();
+                else{
+                    $event->setCancelled();
+                }
             }
         }
     }
