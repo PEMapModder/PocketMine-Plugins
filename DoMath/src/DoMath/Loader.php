@@ -29,7 +29,7 @@ class Loader extends PluginBase{
                 }
             }
             else{
-                $sender->sendMessage($command->getUsage());
+                $sender->sendMessage(TextFormat::RED."Usage: ".$command->getUsage());
             }
         }
         if(strtolower($command->getName()) === "divide"){
@@ -43,7 +43,7 @@ class Loader extends PluginBase{
                 }
             }
             else{
-                $sender->sendMessage($command->getUsage()); 
+                $sender->sendMessage(TextFormat::RED."Usage: ".$command->getUsage()); 
             }
         }
         if(strtolower($command->getName()) === "multiply"){
@@ -57,7 +57,7 @@ class Loader extends PluginBase{
                 }
             }
             else{
-                $sender->sendMessage($command->getUsage());
+                $sender->sendMessage(TextFormat::RED."Usage: ".$command->getUsage());
             }
         }
         if(strtolower($command->getName()) === "subtract"){
@@ -71,7 +71,7 @@ class Loader extends PluginBase{
                 }
             }
             else{
-                $sender->sendMessage($command->getUsage());
+                $sender->sendMessage(TextFormat::RED."Usage: ".$command->getUsage());
             }
         }
         return true;
