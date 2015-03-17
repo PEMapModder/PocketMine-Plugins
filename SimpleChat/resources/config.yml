@@ -1,3 +1,5 @@
 #Config file for SimpleChat by Gamecrafter;
 format: "{player}: {message}"
 #Change the chat format
+#Available tags:
+#{player}
