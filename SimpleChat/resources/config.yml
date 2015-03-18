@@ -1,8 +1,8 @@
 #Config file for SimpleChat by Gamecrafter;
 format: "{player}: {message}"
 #Chat layout, default is name: message
-#{ip} shows player IP address
-#{message} shows the player's message
-#{player} shows the player's name
-#{port} shows the player's port number
-#{world} shows the player's world
+#"{ip}" shows player IP address
+#"{message}" shows the player's message
+#"{player}" shows the player's name
+#"{port}" shows the player's port number
+#"{world}" shows the player's world
