@@ -9,7 +9,7 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iManager
 commands:
  check:
   description:
-  usage: /check
+  usage: /check <address/gamemode/health/money/op/money>
   permission: imanager.command.check
 permissions:
  imanager:
