@@ -28,7 +28,12 @@ class Loader extends PluginBase{
     	if(strtolower($command->getName()) === "check"){
     	    if(isset($args[0])){
     	    	if(strtolower($args[0]) === "address"){
-    	    		
+    	    	    if(count($sender->getServer()->getOnlinePlayers()) > 0){
+    	    	    	
+    	    	    }
+    	    	    else{
+    	    	    	$sender->sendMessage(TextFormat::RED."There are currently no players online.");
+    	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "gamemode"){
     	    		
@@ -57,7 +62,6 @@ class Loader extends PluginBase{
     	    $sender->sendMessage(TextFormat::YELLOW."IP address and port of all players that are currently online:");
     	    foreach($sender->getServer()->getOnlinePlayers() as $players){  
     	    	$sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName().TextFormat::YELLOW.": ".TextFormat::RED.$players->getAddress().TextFormat::BLUE.":".TextFormat::GREEN.$players->getPort());
-                return true;
     	    }	
     	}
     	if(strtolower($command->getName()) === "gamemodelist"){
@@ -65,19 +69,15 @@ class Loader extends PluginBase{
             foreach($sender->getServer()->getOnlinePlayers() as $players){
                 if($players->isAdventure()){
                     $sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName().TextFormat::YELLOW.": ".TextFormat::LIGHT_PURPLE."2");
-                    return true;
                 }
                 elseif($players->isCreative()){
                     $sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName().TextFormat::YELLOW.": ".TextFormat::GREEN."1");
-                    return true;
                 }
                 elseif($players->isSurvival()){
                     $sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName().TextFormat::YELLOW.": ".TextFormat::BLUE."0");
-                    return true;
                 }
                 else{
                     $sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName().TextFormat::YELLOW.": ".TextFormat::RED."?");
-                    return true;
                 }
             }
     	}
@@ -85,7 +85,6 @@ class Loader extends PluginBase{
     	    $sender->sendMessage(TextFormat::YELLOW."Health of all players that are currently online:");
     	    foreach($sender->getServer()->getOnlinePlayers() as $players){
     	    	$sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName().TextFormat::YELLOW.": ".TextFormat::RED.$players->getHealth().TextFormat::BLUE."/".TextFormat::GREEN.$players->getMaxHealth());
-                return true;
     	    }
     	}
     	if(strtolower($command->getName()) === "kickall"){
@@ -93,7 +92,6 @@ class Loader extends PluginBase{
     	    foreach($sender->getServer()->getOnlinePlayers() as $players){
     	    	if($players->hasPermission("imanager.exempt")){
                     $players->sendMessage("You are safe!");
-                    return true;
                 }
                 else{
                     $players->kick();
@@ -105,7 +103,6 @@ class Loader extends PluginBase{
     	    foreach($sender->getServer()->getOnlinePlayers() as $players){               
     	    	if($players->hasPermission("imanager.exempt")){
                     $players->sendMessage("You are safe!");
-                    return true;
                 }
                 else{
                     $players->kill();
@@ -123,7 +120,6 @@ class Loader extends PluginBase{
     	    foreach($sender->getServer()->getOnlinePlayers() as $players){
     	    	if($players->isOp()){
     	    	    $sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName());
-                    return true;
     	    	}
     	    }	
     	}
@@ -131,8 +127,8 @@ class Loader extends PluginBase{
     	    $sender->sendMessage(TextFormat::YELLOW."Location of all players that are currently online:");
     	    foreach($sender->getServer()->getOnlinePlayers() as $players){
     	    	$sender->sendMessage(TextFormat::YELLOW."> ".TextFormat::WHITE.$players->getName().TextFormat::YELLOW.":".TextFormat::WHITE." X: ".TextFormat::RED.$players->getX().TextFormat::WHITE." Y: ".TextFormat::BLUE.$players->getY().TextFormat::WHITE." Z: ".TextFormat::GREEN.$players->getZ().TextFormat::WHITE." Level: ".TextFormat::LIGHT_PURPLE.$players->getLevel()->getName());
-                return true;	
     	    }
     	}
+        return true;
     }
 }
