@@ -36,10 +36,16 @@ class Loader extends PluginBase{
     	    	if(strtolower($args[0]) === "health"){
     	    		
     	    	}
+    	    	if(strtolower($args[0]) === "money"){
+    	    		
+    	    	}
     	    	if(strtolower($args[0]) === "op"){
     	    		
     	    	}
     	    	if(strtolower($args[0]) === "pos"){
+    	    		
+    	    	}
+    	    	else{
     	    		
     	    	}
     	    }
