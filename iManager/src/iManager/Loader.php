@@ -25,6 +25,28 @@ class Loader extends PluginBase{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+    	if(strtolower($command->getName()) === "check"){
+    	    if(isset($args[0])){
+    	    	if(strtolower($args[0]) === "address"){
+    	    		
+    	    	}
+    	    	if(strtolower($args[0]) === "gamemode"){
+    	    		
+    	    	}
+    	    	if(strtolower($args[0]) === "health"){
+    	    		
+    	    	}
+    	    	if(strtolower($args[0]) === "op"){
+    	    		
+    	    	}
+    	    	if(strtolower($args[0]) === "pos"){
+    	    		
+    	    	}
+    	    }
+    	    else{
+    	    	$sender->sendMessage();
+    	    }
+    	}
     	if(strtolower($command->getName()) === "addresslist"){
     	    $sender->sendMessage(TextFormat::YELLOW."IP address and port of all players that are currently online:");
     	    foreach($sender->getServer()->getOnlinePlayers() as $players){  
