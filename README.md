@@ -11,6 +11,7 @@ not all the plugins here may work like it was intended to.
 * FlowControl
 * GearUp
 * GlobalShield
+* GoTroll
 * HeartMe
 * LifeCare
 * MyTag
