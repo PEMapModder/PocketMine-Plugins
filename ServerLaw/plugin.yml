@@ -1,0 +1,13 @@
+name: ServerLaw
+main: ServerLaw\Loader
+version: 1.0.0
+api: 1.0.0
+load: STARTUP
+author: Gamecrafter
+description: Let there be law and order in your server!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerLaw
+commands:
+ staff:
+  description: Get a list of laws for the server
+  usage: /staff
+  permission: serverlaw.command.laws
