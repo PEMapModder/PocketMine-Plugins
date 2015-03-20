@@ -1,0 +1,8 @@
+name: GoTroll
+main: GoTroll\Loader
+version: 1.0.0
+api: 1.0.0
+load: STARTUP
+author: Gamecrafter
+description: Troll players in the server and make them mad!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GoTroll
