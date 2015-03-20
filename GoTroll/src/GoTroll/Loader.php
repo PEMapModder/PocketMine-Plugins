@@ -19,7 +19,14 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "troll"){
-          
+            if(isset($args[0])){
+                if(strtolower($args[0]) === "spam"){
+                    
+                }
+            }
+            else{
+                
+            }
         }
     }
 }
