@@ -18,7 +18,7 @@ class Loader extends PluginBase{
     }
 
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-        if(strtolower($command->getName()) === "staff"{
+        if(strtolower($command->getName()) === "staff"){
             foreach($this->getConfig()->get("staff") as $staff){
                 $sender->sendMessage($staff);
             }
