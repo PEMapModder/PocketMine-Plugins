@@ -6,3 +6,8 @@ load: STARTUP
 author: Gamecrafter
 description: Troll players in the server and make them mad!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GoTroll
+commands:
+ troll:
+  description: Trolls the specified player
+  usage: /troll
+  permission: gotroll.command.troll
