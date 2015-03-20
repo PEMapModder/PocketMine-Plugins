@@ -12,9 +12,11 @@ class Loader extends PluginBase{
     public function onEnable(){
         $this->getLogger()->info(TextFormat::GREEN."ServerLaw enabled.");
     }
+    
     public function onDisable(){
         $this->getLogger()->info(TextFormat::RED."ServerLaw disabled.");
     }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "laws"){
             foreach($this->getConfig()->get("laws") as $laws){
@@ -23,3 +25,4 @@ class Loader extends PluginBase{
         }
         return true;
     }
+}
