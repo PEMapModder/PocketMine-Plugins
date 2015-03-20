@@ -14,6 +14,7 @@ not all the plugins here may work like it was intended to.
 * HeartMe
 * LifeCare
 * MyTag
+* ServerRules
 * ServerStaff
 * SignsPro
 * SimpleChat
