@@ -10,6 +10,7 @@ use pocketmine\utils\TextFormat;
 class Loader extends PluginBase{
     
     public function onEnable(){
+        $this->saveDefaultConfig();
         $this->getLogger()->info(TextFormat::GREEN."ServerStaff enabled.");
     }
 
