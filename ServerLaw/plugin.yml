@@ -7,7 +7,7 @@ author: Gamecrafter
 description: Let there be law and order in your server!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerLaw
 commands:
- staff:
+ laws:
   description: Get a list of laws for the server
-  usage: /staff
+  usage: /laws
   permission: serverlaw.command.laws
