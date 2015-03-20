@@ -1,7 +1,7 @@
 #Config file for ServerStaff by Gamecrafter;
 staff:
- - Owner:
- - Admins:
- - Moderators:
- - Builders:
- - Testers:
+ - "Owner: "
+ - "Admins: "
+ - "Moderators: "
+ - "Builders:"
+ - "Testers: "
