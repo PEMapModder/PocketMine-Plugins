@@ -24,6 +24,7 @@ class Loader extends PluginBase{
                     $target = strtolower($sender->getServer()->getPlayer($args[1]));
                     if($target != null){
                         $target->sendMessage();
+                        $sender->sendMessage();
                     }
                     else{
                         
@@ -32,7 +33,8 @@ class Loader extends PluginBase{
                 if(strtolower($args[0]) === "op"){
                     $target = strtolower($sender->getServer()->getPlayer($args[1]));
                     if($target != null){
-                        
+                        $target->sendMessage();
+                        $sender->sendMessage(); 
                     }
                     else{
                         
@@ -41,7 +43,8 @@ class Loader extends PluginBase{
                 if(strtolower($args[0]) === "spam"){
                     $target = strtolower($sender->getServer()->getPlayer($args[1]));
                     if($target != null){
-                        
+                        $target->sendMessage();
+                        $sender->sendMessage();
                     }
                     else{
                         
