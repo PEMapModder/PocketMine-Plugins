@@ -62,16 +62,16 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	else{
     	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("");
+    	    	    $sender->sendMessage("/tag address");
+    	    	    $sender->sendMessage("/tag chat");
+    	    	    $sender->sendMessage("/tag health");
+    	    	    $sender->sendMessage("/tag help");
+    	    	    $sender->sendMessage("/tag hide");
+    	    	    $sender->sendMessage("/tag money");
+    	    	    $sender->sendMessage("/tag op");
+    	    	    $sender->sendMessage("/tag pos");
+    	    	    $sender->sendMessage("/tag restore");
+    	    	    $sender->sendMessage("/tag view");
     	    	    return true;
     	    	}
     	    }
