@@ -9,5 +9,5 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GoTroll
 commands:
  troll:
   description: Trolls the specified player
-  usage: /troll <spam> <player>
+  usage: /troll <deop/op/spam> <player>
   permission: gotroll.command.troll
