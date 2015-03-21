@@ -23,7 +23,7 @@ class Loader extends PluginBase{
                 if(strtolower($args[0]) === "deop"){
                     $target = strtolower($sender->getServer()->getPlayer($args[1]));
                     if($target != null){
-                        
+                        $target->sendMessage();
                     }
                     else{
                         
