@@ -20,6 +20,12 @@ class Loader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "troll"){
             if(isset($args[0])){
+                if(strtolower($args[0]) === "deop"){
+                    
+                }
+                if(strtolower($args[0]) === "op"){
+                    
+                }
                 if(strtolower($args[0]) === "spam"){
                     $target = strtolower($sender->getServer()->getPlayer($args[1]));
                     if($target != null){
