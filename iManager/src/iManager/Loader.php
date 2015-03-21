@@ -25,15 +25,10 @@ class Loader extends PluginBase{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-    	if(strtolower($command->getName()) === "check"){
+    	if(strtolower($command->getName()) === "server"){
     	    if(isset($args[0])){
     	    	if(strtolower($args[0]) === "address"){
-    	    	    if(count($sender->getServer()->getOnlinePlayers()) > 0){
-    	    	    	
-    	    	    }
-    	    	    else{
-    	    	    	$sender->sendMessage(TextFormat::RED."There are currently no players online.");
-    	    	    }
+
     	    	}
     	    	if(strtolower($args[0]) === "gamemode"){
     	    		
