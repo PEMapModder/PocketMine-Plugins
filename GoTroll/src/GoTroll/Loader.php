@@ -21,7 +21,13 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "troll"){
             if(isset($args[0])){
                 if(strtolower($args[0]) === "spam"){
-                    
+                    $target = $sender->getServer()->getPlayer($args[1]);
+                    if($target != null){
+                        
+                    }
+                    else{
+                        
+                    }
                 }
             }
             else{
