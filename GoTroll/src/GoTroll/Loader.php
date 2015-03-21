@@ -25,8 +25,9 @@ class Loader extends PluginBase{
                 }
             }
             else{
-                
+                $sender->sendMessage("/troll spam");
             }
         }
+        return true;
     }
 }
