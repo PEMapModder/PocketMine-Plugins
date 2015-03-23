@@ -1,6 +1,6 @@
 name: MyTag
 main: MyTag\Loader
-version: 1.0.1
+version: 1.1.0
 api: 1.0.0
 load: STARTUP
 author: Gamecrafter
