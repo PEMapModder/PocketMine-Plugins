@@ -56,6 +56,9 @@ class Loader extends PluginBase implements Listener{
     	    	    if(strtolower($args[0]) === "restore"){
     	    	    	
     	    	    }
+    	    	    if(strtolower($args[0]) === "set"){
+    	    	    	
+    	    	    }
     	    	    if(strtolower($args[0]) === "view"){
     	    	    	
     	    	    }
@@ -71,6 +74,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("/tag op");
     	    	    $sender->sendMessage("/tag pos");
     	    	    $sender->sendMessage("/tag restore");
+    	    	    $sender->sendMessage("/tag set");
     	    	    $sender->sendMessage("/tag view");
     	    	    return true;
     	    	}
