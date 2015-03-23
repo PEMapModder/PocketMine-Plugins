@@ -65,25 +65,24 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	else{
     	    	    $sender->sendMessage("");
-    	    	    $sender->sendMessage("/tag address");
-    	    	    $sender->sendMessage("/tag chat");
-    	    	    $sender->sendMessage("/tag health");
-    	    	    $sender->sendMessage("/tag help");
-    	    	    $sender->sendMessage("/tag hide");
-    	    	    $sender->sendMessage("/tag money");
-    	    	    $sender->sendMessage("/tag op");
-    	    	    $sender->sendMessage("/tag pos");
-    	    	    $sender->sendMessage("/tag restore");
-    	    	    $sender->sendMessage("/tag set");
-    	    	    $sender->sendMessage("/tag view");
-    	    	    return true;
+    	    	    $sender->sendMessage("/tag address: Shows IP address and port number on the name tag");
+    	    	    $sender->sendMessage("/tag chat: Shows the last message spoken on the name tag");
+    	    	    $sender->sendMessage("/tag health: Shows health on the name tag");
+    	    	    $sender->sendMessage("/tag help: Shows all the sub-commands for /tag");
+    	    	    $sender->sendMessage("/tag hide: Hides the name tag");
+    	    	    $sender->sendMessage("/tag money: Shows the amount of money ");
+    	    	    $sender->sendMessage("/tag op: Shows op status on the name tag, if they have it");
+    	    	    $sender->sendMessage("/tag pos: Shows current coordinates on the name tag");
+    	    	    $sender->sendMessage("/tag restore: Restores current name tag to the default name tag");
+    	    	    $sender->sendMessage("/tag set: Changes the name tag to whatever is set");
+    	    	    $sender->sendMessage("/tag view: Shows the name tag via message");
     	    	}
     	    }
     	}
     	else{
     	    $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
-    	    return true;
     	}
+    	return true;
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
