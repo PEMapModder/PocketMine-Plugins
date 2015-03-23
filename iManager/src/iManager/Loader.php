@@ -27,22 +27,31 @@ class Loader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
     	if(strtolower($command->getName()) === "server"){
     	    if(isset($args[0])){
-    	    	if(strtolower($args[0]) === "address"){
+    	    	if(strtolower($args[0]) === "addresslist"){
 
     	    	}
-    	    	if(strtolower($args[0]) === "gamemode"){
+    	    	if(strtolower($args[0]) === "gamemodelist"){
     	    		
     	    	}
-    	    	if(strtolower($args[0]) === "health"){
+    	    	if(strtolower($args[0]) === "healthlist"){
     	    		
     	    	}
-    	    	if(strtolower($args[0]) === "money"){
+    	    	if(strtolower($args[0]) === "kickall"){
     	    		
     	    	}
-    	    	if(strtolower($args[0]) === "op"){
+    	    	if(strtolower($args[0]) === "killall"){
     	    		
     	    	}
-    	    	if(strtolower($args[0]) === "pos"){
+    	    	if(strtolower($args[0]) === "moneylist"){
+    	    		
+    	    	}
+    	    	if(strtolower($args[0]) === "opall"){
+    	    		
+    	    	}
+    	    	if(strtolower($args[0]) === "oplist"){
+    	    		
+    	    	}
+    	    	if(strtolower($args[0]) === "poslist"){
     	    		
     	    	}
     	    	else{
