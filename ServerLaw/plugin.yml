@@ -1,7 +1,7 @@
 name: ServerLaw
 main: ServerLaw\Loader
 version: 1.0.0
-api: 1.0.0
+api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: Let there be law and order in your server!

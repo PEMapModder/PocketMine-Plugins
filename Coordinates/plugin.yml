@@ -1,7 +1,7 @@
 name: Coordinates
 main: Coordinates\Loader
 version: 1.0.0
-api: 1.0.0
+api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: Shows player their coordinates.

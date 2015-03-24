@@ -1,7 +1,7 @@
 name: LifeCare
 main: LifeCare\Loader
 version: 1.0.0
-api: 1.0.0
+api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: Manage the player's health and what they can get damaged by!

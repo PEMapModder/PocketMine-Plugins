@@ -1,7 +1,7 @@
 name: GearUp
 main: GearUp\Loader
 version: 1.0.0
-api: 1.0.0
+api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: Gear up yourself with ease!

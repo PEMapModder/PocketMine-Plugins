@@ -1,7 +1,7 @@
 name: DoMath
 main: DoMath\Loader
 version: 1.0.0
-api: 1.0.0
+api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: Play Minecraft and do math at the same time!

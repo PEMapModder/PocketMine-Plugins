@@ -1,7 +1,7 @@
 name: SimpleChat
 main: SimpleChat\Loader
 version: 1.0.0
-api: 1.0.0
+api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: Change the way the chat looks on your server!
