@@ -9,19 +9,19 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/DoMath
 commands:
  add:
   description: Adds the specified numbers 
-  usage: /add <digit> <digit>
+  usage: /add <number> <number>
   permission: domath.command.add
  divide:
   description: Divides the specified numbers
-  usage: /divide <digit> <digit>
+  usage: /divide <number> <number>
   permission: domath.command.divide
  multiply:
   description: Multiplies the specified numbers
-  usage: /multiply <digit> <digit>
+  usage: /multiply <number> <number>
   permission: domath.command.multiply
  subtract:
   description: Subtracts the specified numbers
-  usage: /subtract <digit> <digit>
+  usage: /subtract <number> <number>
   permission: domath.command.subtract
 permissions:
  domath:
