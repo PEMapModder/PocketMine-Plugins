@@ -23,4 +23,4 @@ not all the plugins here may work like it was intended to.
 * iManager
 
 ### To-do
-* Tutorial Wiki
+* Fix any bugs if found
