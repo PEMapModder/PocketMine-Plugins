@@ -1,4 +1,4 @@
-#Config file for FlowControl by Gamecrafter;
+#Configuration file for FlowControl by Gamecrafter
 spread-lava: 
 #Set to false to disable lava spreading on-place
 spread-water: 

@@ -1,4 +1,4 @@
-#Config file for SimpleChat by Gamecrafter;
+#Configuration file for SimpleChat by Gamecrafter
 format: "{player}: {message}"
 #Set chat format layout, default is name: message
 #"{ip}" shows player IP address

@@ -1,4 +1,4 @@
-#Config file for LifeCare by Gamecrafter;
+#Configuration file for LifeCare by Gamecrafter
 auto-heal:
 #Set to true to enable auto-healing
 default-health:

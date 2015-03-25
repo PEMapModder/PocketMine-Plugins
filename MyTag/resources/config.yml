@@ -1,4 +1,4 @@
-#Config file for MyTag by Gamecrafter;
+#Configuration file for MyTag by Gamecrafter
 auto-set:
 #Set to true to set the tag on-join without having to use /optag
 op-tag: 
