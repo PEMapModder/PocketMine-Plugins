@@ -1,8 +1,8 @@
 #Configuration file for SimpleChat by Gamecrafter
 format: "{player}: {message}"
 #Set chat format layout, default is name: message
-#"{ip}" shows player IP address
-#"{level}" shows player level
-#"{message}" shows message
-#"{player}" shows player name
-#"{port}" shows port number
+#{ip} shows player IP address
+#{level} shows player level
+#{message} shows message
+#{player} shows player name
+#{port} shows port number
