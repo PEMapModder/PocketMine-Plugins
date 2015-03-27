@@ -25,14 +25,21 @@ class Loader extends PluginBase{
                     $target = $sender->getServer()->getPlayer($args[0]);
                     if($target != null){
                         $sender->sendMessage($target->getName()."'s location:");
-                        $sender->sendMessage("X: ".round($target->getX())." Y: ".round($target->getY())." Z: ".round($target->getZ())." Level: ".$target->getLevel()->getName());
+                        $sender->sendMessage("X: ".round($target->getX()));
+                        $sender->sendMessage("Y: ".round($target->getY()));
+                        $sender->sendMessage("Z: ".round($target->getZ()));
+                        $sender->sendMessage("Level: ".$target->getLevel()->getName());
                     }
                     else{
                         $sender->sendMessage("Please specify a valid player.");
                     }
                 }
                 else{
-                    $sender->sendMessage("X: ".round($sender->getX())." Y: ".round($sender->getY())." Z: ".round($sender->getZ())." Level: ".$sender->getLevel()->getName());
+                    $sender->sendMessage("Your location:");
+                    $sender->sendMessage("X: ".round($sender->getX()));
+                    $sender->sendMessage("Y: ".round($sender->getY()));
+                    $sender->sendMessage("Z: ".round($sender->getZ()));
+                    $sender->sendMessage("Level: ".$sender->getLevel()->getName());
                 }
             }
         }
