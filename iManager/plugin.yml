@@ -9,7 +9,7 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iManager
 commands:
  server:
   description:
-  usage: /server <addresslist/gamemodelist/healthlist/kickall/killall/moneylist/opall/oplist/moneylist>
+  usage: /server <addresslist/gamemodelist/healthlist/kickall/killall/moneylist/opall/oplist>
   permission: imanager.command.check
 permissions:
  imanager:
