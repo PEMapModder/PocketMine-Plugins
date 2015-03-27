@@ -24,5 +24,6 @@ work, for the fact that I don't always test them thoroughly.
 * iManager
 
 ### To-do:
+* Check plugin version for configuration files
 * Fix any bugs if found
 * Make more plugins
