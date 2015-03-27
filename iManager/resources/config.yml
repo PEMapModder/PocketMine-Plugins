@@ -1,5 +1,7 @@
-#Configuration file for iManager by Gamecrafter
+#Configuration file for iManager v1.0.0
 log-chat: true
 #Set to true to save all player chat in chat.txt
 preferred-economy:
 #Will be used for /moneylist
+version: 1.0.0
+#Do not change the version, it is used for internal purposes

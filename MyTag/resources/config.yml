@@ -1,7 +1,9 @@
-#Configuration file for MyTag by Gamecrafter
+#Configuration file for MyTag v1.0.0
 auto-set: false
 #Set to true to set the tag on-join without having to use /optag
 op-tag: "Staff"
 #Custom tag for /optag, example: [Admin] Steve
 preferred-economy: 
 #Will be used for /moneytag
+version: 1.0.0
+#Do not change the version, it is used for internal purposes

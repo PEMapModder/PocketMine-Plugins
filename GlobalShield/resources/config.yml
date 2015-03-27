@@ -1,3 +1,5 @@
-#Configuration file for GlobalShield by Gamecrafter
+#Configuration file for GlobalShield v1.0.0
 levels:
  - world
+version: 1.0.0
+#Do not change the version, it is used for internal purposes

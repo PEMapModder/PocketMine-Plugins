@@ -1,7 +1,9 @@
-#Configuration file for ServerStaff by Gamecrafter
+#Configuration file for ServerStaff v1.0.0
 staff:
  - "Owner: "
  - "Admins: "
  - "Moderators: "
  - "Builders:"
  - "Testers: "
+version: 1.0.0
+#Do not change the version, it is used for internal purposes

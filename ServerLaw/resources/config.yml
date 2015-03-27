@@ -1,5 +1,7 @@
-#Configuration file for ServerLaw by Gamecrafter
+#Configuration file for ServerLaw v1.0.0
 laws:
  - "1. Be cool."
  - "2. Play nice."
  - "3. Have fun."
+version: 1.0.0
+#Do not change the version, it is used for internal purposes

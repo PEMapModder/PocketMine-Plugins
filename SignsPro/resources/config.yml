@@ -1,1 +1,3 @@
-#Configuration file for SignsPro by Gamecrafter
+#Configuration file for SignsPro v1.0.0
+version: 1.0.0
+#Do not change the version, it is used for internal purposes
