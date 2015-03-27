@@ -36,7 +36,7 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("You are now AFK. Run /afk off to turn it off.");
                     }
                     else{
-                        $sender->sendMessage($command->getUsage());
+                        $sender->sendMessage(TextFormat::RED."Please specify a valid sub-command.");
                     }
                 }
                 else{
