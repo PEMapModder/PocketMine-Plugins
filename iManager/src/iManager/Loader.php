@@ -17,11 +17,18 @@ class Loader extends PluginBase implements Listener{
     public $exempt;
     
     public function onEnable(){
-        @mkdir($this->getDataFolder());
-        $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
-        $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);
-	$this->getLogger()->info(TextFormat::GREEN."iManager enabled.");
+	$this->saveDefaultConfig();
+    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
+    	    @mkdir($this->getDataFolder());
+            $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
+            $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
+    	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    	    $this->getLogger()->info(TextFormat::GREEN."iManager enabled.");
+    	}
+    	else{
+    	    $this->getLogger()->info(TextFormat::YELLOW."Your configuration file is outdated.");
+    	    $this->getPluginLoader()->disablePlugin($this);
+    	}
     }
     
     public function onDisable(){
