@@ -16,14 +16,13 @@ use pocketmine\Player;
 class Loader extends PluginBase implements Listener{
     
     public function onEnable(){
+    	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    $this->saveDefaultConfig();
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
     	    $this->getLogger()->info(TextFormat::GREEN."MyTag enabled.");
     	}
     	else{
     	    $this->getLogger()->info(TextFormat::YELLOW."Your configuration does not appear to be compatible with this plugin version.");
-    	    $this->getServer()->getPluginManager()->disablePlugin();
     	}
     }
     
