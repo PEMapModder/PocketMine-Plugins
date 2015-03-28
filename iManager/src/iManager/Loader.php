@@ -23,7 +23,7 @@ class Loader extends PluginBase implements Listener{
             $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
             $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    	    $this->getLogger()->info(TextFormat::GREEN."iManager enabled.");
+			$this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
     	    $this->getLogger()->info(TextFormat::YELLOW."Your configuration file is outdated.");
@@ -33,7 +33,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onDisable(){
         $this->exempt->save();
-        $this->getLogger()->info(TextFormat::RED."iManager disabled.");
+        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){

@@ -12,10 +12,10 @@ class Loader extends PluginBase implements Listener{
 
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getLogger()->info(TextFormat::GREEN."WarpArrow enabled.");
+        $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."WarpArrow disabled.");
+        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
 }

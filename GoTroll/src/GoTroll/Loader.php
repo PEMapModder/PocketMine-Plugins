@@ -10,11 +10,11 @@ use pocketmine\utils\TextFormat;
 class Loader extends PluginBase{
     
     public function onEnable(){
-        $this->getLogger()->info(TextFormat::GREEN."GoTroll enabled.");
+        $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."GoTroll disabled.");
+        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){

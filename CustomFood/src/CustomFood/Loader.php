@@ -13,11 +13,11 @@ class Loader extends PluginBase implements Listener{
     public function onEnable(){
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getLogger()->info(TextFormat::GREEN."CustomFood enabled.");
+        $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."CustomFood disabled.");
+        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onEntityRegainHealth(EntityRegainHealthEvent $event){

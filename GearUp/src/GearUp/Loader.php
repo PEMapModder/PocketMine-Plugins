@@ -13,11 +13,11 @@ use pocketmine\Player;
 class Loader extends PluginBase{
 
     public function onEnable(){
-        $this->getLogger()->info(TextFormat::GREEN."GearUp enabled.");
+        $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."GearUp disabled.");
+        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
