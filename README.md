@@ -18,6 +18,7 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 * ServerStaff
 * SignsPro
 * SimpleChat
+* SwitchIt
 * WarpArrow
 * iManager
 
