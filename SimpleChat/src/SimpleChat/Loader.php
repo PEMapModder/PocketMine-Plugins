@@ -3,7 +3,7 @@
 namespace SimpleChat;
 
 use pocketmine\event\player\PlayerChatEvent;
-use pocketmine\event\player\PlayerJoinEvent
+use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
