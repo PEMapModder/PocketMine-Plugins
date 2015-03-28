@@ -1,6 +1,6 @@
 <?php
 
-namespace Coordinates;
+namespace Locator;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -11,11 +11,11 @@ use pocketmine\Player;
 class Loader extends PluginBase{
     
     public function onEnable(){
-        $this->getLogger()->info(TextFormat::GREEN."Coordinates enabled.");
+        $this->getLogger()->info(TextFormat::GREEN."Locator enabled.");
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."Coordinates disabled.");
+        $this->getLogger()->info(TextFormat::RED."Locator disabled.");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){

@@ -1,0 +1,32 @@
+name: Locator
+main: Locator\Loader
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: Shows player their location information.
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/Locator
+commands:
+ getpos:
+  description: Gets a player's current coordinates, level name, and the direction they are facing
+  usage: /getpos <player>
+  permission: locator.command.getpos
+permissions:
+ locator:
+  default: op
+  description: Allows access to all Locator features
+  children:
+   locator.command:
+    default: op
+    description: Allows use of all Locator commands
+    children:
+     locator.command.getpos:
+      default: true
+      description: Allows use of /getpos
+      children:
+       locator.command.getpos.others:
+        default: true
+        description: Allows use of /getpos for others
+       locator.command.getpos.self:
+        default: true
+        description: Allows use of /getpos for self
