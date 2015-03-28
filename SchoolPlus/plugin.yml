@@ -1,0 +1,8 @@
+name: SchoolPlus
+main: SchoolPlus\Loader
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: Made for users that have kids that want an educational experience!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/SchoolPlus
