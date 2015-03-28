@@ -21,7 +21,7 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "disable"){
             if(isset($args[0])){
                 if($target != null){
-                    $this->getPluginLoader()->disablePlugin($args[0]);
+                    $sender->getServer()->getPluginManager()->disablePlugin($args[0]);
                     $sender->sendMessage("Disabled "."...");
                 }
                 else{
@@ -35,7 +35,7 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "enable"){
             if(isset($args[0])){
                 if($target != null){
-                    $this->getPluginLoader()->enablePlugin($args[0]);
+                    $sender->getServer()->getPluginManager()->enablePlugin($args[0]);
                     $sender->sendMessage("Enabled "."...");
                 }
                 else{
