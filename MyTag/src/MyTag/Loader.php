@@ -104,8 +104,6 @@ class Loader extends PluginBase implements Listener{
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
-    	if($this->getConfig()->get("reset") === true){
-    	    $event->getPlayer()->setNameTag($event->getPlayer()->getName());	
-    	}
+
     }
 }
