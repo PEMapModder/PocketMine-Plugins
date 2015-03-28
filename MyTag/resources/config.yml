@@ -1,4 +1,4 @@
-#Configuration file for MyTag v1.0.0
+#Configuration file for MyTag v1.1.0
 auto-set: false
 #Set to true to set the tag on-join without having to use /optag
 op-tag: "Staff"
