@@ -20,7 +20,7 @@ class Loader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "disable"){
             if(isset($args[0])){
-                
+                $target = $this->getPluginLoader(); 
             }
             else{
                 $sender->sendMessage();
@@ -28,7 +28,7 @@ class Loader extends PluginBase{
         }
         if(strtolower($command->getName()) === "enable"){
             if(isset($args[0])){
-                
+                $target = $this->getPluginLoader();
             }
             else{
                 $sender->sendMessage();
