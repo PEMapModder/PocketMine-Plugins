@@ -1,4 +1,4 @@
-#Configuration file for iManager v1.0.0
+#Configuration file for iManager v1.1.0
 log-chat: true
 #Set to true to save all player chat in chat.txt
 preferred-economy:
