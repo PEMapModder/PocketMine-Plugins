@@ -5,5 +5,5 @@ op-tag: "Staff"
 #Custom tag for /optag, example: [Admin] Steve
 preferred-economy: 
 #Will be used for /moneytag
-version: 1.0.0
+version: 1.1.0
 #Do not change the version, it is used for internal purposes
