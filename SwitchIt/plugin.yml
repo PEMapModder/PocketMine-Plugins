@@ -1,0 +1,17 @@
+name: SwitchIt
+main: SwitchIt\Loader
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: Manually disable/enable your plugins!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/SwitchIt
+commands:
+ disable:
+  description: Disables the specified plugin
+  usage: /disable <plugin>
+  permission: switchit.command.disable
+ enable:
+  description: Enables the specified plugin
+  usage: /enable <plugin>
+  permission: switchit.command.enable
