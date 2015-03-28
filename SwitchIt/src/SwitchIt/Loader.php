@@ -19,10 +19,20 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "disable"){
-        
+            if(isset($args[0])){
+                
+            }
+            else{
+                $sender->sendMessage();
+            }
         }
         if(strtolower($command->getName()) === "enable"){
-        
+            if(isset($args[0])){
+                
+            }
+            else{
+                $sender->sendMessage();
+            }
         }
     }
 }
