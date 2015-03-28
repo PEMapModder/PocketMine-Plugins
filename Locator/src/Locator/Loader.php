@@ -22,26 +22,36 @@ class Loader extends PluginBase{
         if($sender instanceof Player){
             if(strtolower($command->getName()) === "getpos"){
                 if(isset($args[0])){
-                    $target = $sender->getServer()->getPlayer($args[0]);
-                    if($target != null){
-                        $sender->sendMessage($target->getName()."'s location:");
-                        $sender->sendMessage("X: ".$target->getX());
-                        $sender->sendMessage("Y: ".$target->getY());
-                        $sender->sendMessage("Z: ".$target->getZ());
-                        $sender->sendMessage("Level: ".$target->getLevel()->getName());
-                        $sender->sendMessage("Face: ");
+                    if($sender->hasPermission("locator.command.getpos.other")){
+                        $target = $sender->getServer()->getPlayer($args[0]);
+                        if($target != null){
+                            $sender->sendMessage($target->getName()."'s location:");
+                            $sender->sendMessage("X: ".$target->getX());
+                            $sender->sendMessage("Y: ".$target->getY());
+                            $sender->sendMessage("Z: ".$target->getZ());
+                            $sender->sendMessage("Level: ".$target->getLevel()->getName());
+                            $sender->sendMessage("Face: ");
+                        }
+                        else{
+                            $sender->sendMessage(TextFormat::RED."Please specify a valid player.");
+                        }
                     }
                     else{
-                        $sender->sendMessage("Please specify a valid player.");
+                        $sender->sendMessage(TextFormat::RED."You don't have permissions to use this command.");
                     }
                 }
                 else{
-                    $sender->sendMessage("Your location:");
-                    $sender->sendMessage("X: ".$sender->getX());
-                    $sender->sendMessage("Y: ".$sender->getY());
-                    $sender->sendMessage("Z: ".$sender->getZ());
-                    $sender->sendMessage("Level: ".$sender->getLevel()->getName());
-                    $sender->sendMessage("Face: ");
+                    if($sender->hasPermission("locator.command.getpos.self")){
+                        $sender->sendMessage("Your location:");
+                        $sender->sendMessage("X: ".$sender->getX());
+                        $sender->sendMessage("Y: ".$sender->getY());
+                        $sender->sendMessage("Z: ".$sender->getZ());
+                        $sender->sendMessage("Level: ".$sender->getLevel()->getName());
+                        $sender->sendMessage("Face: ");
+                    }
+                    else{
+                        $sender->sendMessage(TextFormat::RED."You don't have permissions to use this command.");
+                    }
                 }
             }
         }
