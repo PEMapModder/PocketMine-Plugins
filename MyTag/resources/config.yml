@@ -1,9 +1,11 @@
 #Configuration file for MyTag v1.1.0
 auto-set: false
-#Set to true to set the tag on-join without having to use /optag
+#Set to true to set the tag to the player's preferences
+default-tag: "{player}"
+#Default tag the player will have on their first join
 op-tag: "Staff"
-#Custom tag for /optag, example: [Admin] Steve
+#Custom tag for /tag op, example: [Admin] Steve
 preferred-economy: 
-#Will be used for /moneytag
+#Will be used for /tag money
 version: 1.1.0
 #Do not change the version, it is used for internal purposes
