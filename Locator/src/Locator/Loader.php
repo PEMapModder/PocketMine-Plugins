@@ -29,6 +29,7 @@ class Loader extends PluginBase{
                         $sender->sendMessage("Y: ".$target->getY());
                         $sender->sendMessage("Z: ".$target->getZ());
                         $sender->sendMessage("Level: ".$target->getLevel()->getName());
+                        $sender->sendMessage("Face: ");
                     }
                     else{
                         $sender->sendMessage("Please specify a valid player.");
@@ -40,6 +41,7 @@ class Loader extends PluginBase{
                     $sender->sendMessage("Y: ".$sender->getY());
                     $sender->sendMessage("Z: ".$sender->getZ());
                     $sender->sendMessage("Level: ".$sender->getLevel()->getName());
+                    $sender->sendMessage("Face: ");
                 }
             }
         }
