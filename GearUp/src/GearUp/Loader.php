@@ -72,7 +72,7 @@ class Loader extends PluginBase{
                         $sender->sendMessage("Equipped with full diamond armor and a diamond sword.");
                     }
                     else{
-                        $sender->sendMessage("This set of equipment does not exist.");
+                        $sender->sendMessage("Please specify an existing set of equipment.");
                     }
                 }
                 else{
