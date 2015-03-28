@@ -64,7 +64,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	}
     	    	else{
-    	    	    $sender->sendMessage("");
+    	    	    $sender->sendMessage("MyTag commands:");
     	    	    $sender->sendMessage("/tag address: Shows IP address and port number on the name tag");
     	    	    $sender->sendMessage("/tag chat: Shows the last message spoken on the name tag");
     	    	    $sender->sendMessage("/tag health: Shows health on the name tag");
