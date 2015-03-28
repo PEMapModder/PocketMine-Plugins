@@ -14,11 +14,11 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 * LifeCare
 * Locator
 * MyTag
+* SchoolPlus
 * ServerLaw
 * ServerStaff
 * SignsPro
 * SimpleChat
-* SwitchIt
 * WarpArrow
 * iManager
 
