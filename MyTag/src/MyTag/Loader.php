@@ -22,7 +22,8 @@ class Loader extends PluginBase implements Listener{
     	    $this->getLogger()->info(TextFormat::GREEN."MyTag enabled.");
     	}
     	else{
-    	    $this->getLogger()->info(TextFormat::YELLOW."Your configuration file does not appear to be compatible with this plugin version.");
+    	    $this->getLogger()->info(TextFormat::YELLOW."Please use a configuration file that is compatible with this plugin version.");
+    	    $this->getPluginLoader()->disablePlugin($this);
     	}
     }
     
