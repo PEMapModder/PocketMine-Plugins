@@ -48,7 +48,8 @@ class Loader extends PluginBase implements Listener{
     	    	    	
     	    	    }
     	    	    if(strtolower($args[0]) === "hide"){
-    	    	    	
+    	    	    	$sender->setNameTag(null);
+    	    	    	$sender->sendMessage("Your name tag has been hidden.");
     	    	    }
     	    	    if(strtolower($args[0]) === "money"){
     	    	    	
