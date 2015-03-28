@@ -21,8 +21,6 @@ use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
-use pocketmine\Player;
-use pocketmine\Server;
 
 class Loader extends PluginBase implements Listener{
     
