@@ -20,26 +20,30 @@ class Loader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "disable"){
             if(isset($args[0])){
-                $target = $this->getPluginLoader($args[0]); 
                 if($target != null){
-                    $target->disablePlugin($target);
-                    $sender->sendMessage("disabled!");
+                    $this->getPluginLoader()->disablePlugin($args[0]);
+                    $sender->sendMessage("Disabled "."...");
+                }
+                else{
+                    $sender->sendMessage(TextFormat::RED."Please specify an existing plugin, or check the case.");
                 }
             }
             else{
-                $sender->sendMessage(TextFormat::RED."Invalid plugin name, check the name case.");
+                $sender->sendMessage(TextFormat::RED."Please specify a valid plugin.");
             }
         }
         if(strtolower($command->getName()) === "enable"){
             if(isset($args[0])){
-                $target = $this->getPluginLoader($args[0]);
                 if($target != null){
-                    $target->enablePlugin($target);
-                    $sender->sendMessage("enabled!");
+                    $this->getPluginLoader()->enablePlugin($args[0]);
+                    $sender->sendMessage("Enabled "."...");
+                }
+                else{
+                    $sender->sendMessage(TextFormat::RED."Please specify an existing plugin, or check the case.");
                 }
             }
             else{
-                $sender->sendMessage(TextFormat::RED."Invalid plugin name, check the name case.");
+                $sender->sendMessage(TextFormat::RED."Please specify a valid plugin.");
             }
         }
     }
