@@ -4,5 +4,5 @@ version: 1.0.0
 api: 1.10.0
 load: STARTUP
 author: Gamecrafter
-description: Change the way the chat looks on your server!
+description: Manage the chat/messages on your server!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/SimpleChat
