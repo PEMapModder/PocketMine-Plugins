@@ -2,6 +2,6 @@
 log-chat: true
 #Set to true to save all player chat in chat.txt
 preferred-economy:
-#Will be used for /moneylist
+#Will be used for /server moneylist
 version: 1.1.0
 #Do not change the version, it is used for internal purposes
