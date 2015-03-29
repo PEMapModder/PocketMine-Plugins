@@ -2,6 +2,7 @@
 
 namespace WarpArrow;
 
+use pocketmine\entity\Arrow;
 use pocketmine\event\entity\ProjectileHitEvent;
 use pocketmine\event\Listener;
 use pocketmine\math\Vector3;
@@ -17,5 +18,11 @@ class Loader extends PluginBase implements Listener{
     
     public function onDisable(){
         $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
+    }
+    
+    public function onProjectileHit(ProjectileHitEvent $event){
+        if($event->getEntity() instanceof Arrow){
+            
+        }
     }
 }
