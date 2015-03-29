@@ -12,7 +12,6 @@ class Loader extends PluginBase{
     public function onEnable(){
     	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
             $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
