@@ -1,0 +1,8 @@
+name: GoFlurry
+main: GoFlurry\Loader
+version: 1.0.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Everyone has snow above their heads!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GoFlurry
