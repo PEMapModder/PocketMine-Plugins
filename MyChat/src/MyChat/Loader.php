@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleChat;
+namespace MyChat;
 
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerJoinEvent;

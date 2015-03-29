@@ -1,4 +1,4 @@
-#Configuration file for SimpleChat v1.0.0
+#Configuration file for MyChat v1.0.0
 format: "{player}: {message}"
 #Set chat format layout, default is name: message
 #"{ip}" shows player IP address
