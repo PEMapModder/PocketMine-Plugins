@@ -26,6 +26,8 @@ class Loader extends PluginBase implements Listener{
     }
 
     public function onPlayerCommandPreProcess(PlayerPreProcessEvent $event){
-
+        if(strtolower($event->getMessage()) === "/help"){
+            
+        }
     }
 }
