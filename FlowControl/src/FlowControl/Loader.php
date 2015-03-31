@@ -32,7 +32,7 @@ class Loader extends PluginBase implements Listener{
             $event->setCancelled();
         }
         if($event->getBlock() instanceof Lava && $this->getConfig()->get("spread-lava") === false){
-            $event->serCancelled();
+            $event->setCancelled();
         }
     }
 }
