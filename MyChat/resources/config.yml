@@ -6,9 +6,8 @@ format: "{player}: {message}"
 #{message} shows message
 #{player} shows player name
 #{port} shows port number
-mute-join-message: false
-#Set to true to mute the on-join message
-mute-quit-message: false
-#Set to true to mute the on-quit message
+mute:
+ on-join-message:
+ on-quit-message:
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
