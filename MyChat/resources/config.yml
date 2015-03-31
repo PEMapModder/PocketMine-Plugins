@@ -1,11 +1,11 @@
 #Configuration file for MyChat v1.0.0
 format: "{player}: {message}"
 #Set chat format layout, default is name: message
-#"{ip}" shows player IP address
-#"{level}" shows player level
-#"{message}" shows message
-#"{player}" shows player name
-#"{port}" shows port number
+#{ip} shows player IP address
+#{level} shows player level
+#{message} shows message
+#{player} shows player name
+#{port} shows port number
 mute-join-message: false
 #Set to true to mute the on-join message
 mute-quit-message: false
