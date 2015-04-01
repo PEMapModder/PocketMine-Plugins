@@ -39,13 +39,13 @@ class Loader extends PluginBase implements Listener{
     
     public function onSignChange(SignChangeEvent $event){
         if($event->getPlayer()->hasPermission("signspro.action.create")){
-            if($event->getLine(0) === "[BOMB]"){
+            if($event->getLine(0) === "[Bomb]"){
                 
             }
-            if($event->getLine(0) === "[COMMAND]"){
+            if($event->getLine(0) === "[Command]"){
                 
             }
-            if($event->getLine(0) === "[INFO]"){
+            if($event->getLine(0) === "[Info]"){
                 
             }
         }
