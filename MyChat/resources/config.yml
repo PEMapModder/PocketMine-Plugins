@@ -1,4 +1,11 @@
 #Configuration file for MyChat v1.0.0
+enable:
+ mute:
+  on-join-message: false
+  on-quit-message: false
+ scramble: false
+format: "{player}: {message}"
+#Sets chat format, refer to key.txt
 characters:
  A:
  B:
@@ -61,15 +68,5 @@ characters:
  7:
  8:
  9:
-format: "{player}: {message}"
-#Set chat format layout, default is name: message
-#{ip} shows player IP address
-#{level} shows player level
-#{message} shows message
-#{player} shows player name
-#{port} shows port number
-mute:
- on-join-message:
- on-quit-message:
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
