@@ -4,7 +4,7 @@ namespace FlowControl;
 
 use pocketmine\block\Lava;
 use pocketmine\block\Water;
-use pocketmine\event\block\BlockSpreadEvent;
+use pocketmine\event\block\BlockUpdateEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
@@ -27,7 +27,7 @@ class Loader extends PluginBase implements Listener{
         $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function onBlockSpread(BlockSpreadEvent $event){
+    public function onBlockUpdate(BlockUpdateEvent $event){
         if($event->getBlock() instanceof Lava && $this->getConfig()->get("enable")["spread"]["lava"] === false){
             $event->setCancelled();
         }
