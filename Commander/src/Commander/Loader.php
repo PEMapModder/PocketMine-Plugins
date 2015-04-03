@@ -44,11 +44,55 @@ class Loader extends PluginBase implements Listener{
         
     }
     
-        public function onPlayerBedEnter(PlayerBedEnterEvent $event){
+    public function onPlayerBedLeaveEvent(PlayerBedLeaveEvent $event){
         
     }
     
-        public function onPlayerBedEnter(PlayerBedEnterEvent $event){
+    public function onPlayerBucketEmpty(PlayerBucketEmptyEvent $event){
+        
+    }
+    
+    public function onPlayerBucketFill(PlayerBucketFillEvent $event){
+        
+    }
+    
+    public function onPlayerDeath(PlayerDeathEvent $event){
+        
+    }
+    
+    public function onPlayerDropItem(PlayerDropItemEvent $event){
+        
+    }
+    
+    public function onPlayerGameModeChange(PlayerGameModeChangeEvent $event){
+        
+    }
+    
+    public function onPlayerInteract(PlayerInteractEvent $event){
+        
+    }
+    
+    public function onPlayerItemConsume(PlayerItemConsumeEvent $event){
+        
+    }
+    
+    public function onPlayerItemHeld(PlayerItemHeldEvent $event){
+        
+    }
+    
+    public function onPlayerJoin(PlayerJoinEvent $event){
+        
+    }
+    
+    public function onPlayerKick(PlayerKickEvent $event){
+        
+    }
+    
+    public function onPlayerQuit(PlayerQuitEvent $event){
+        
+    }
+    
+    public function onPlayerRespawn(PlayerRespawnEvent $event){
         
     }
 }
