@@ -39,4 +39,16 @@ class Loader extends PluginBase implements Listener{
     public function onDisable(){
         $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
+    
+    public function onPlayerBedEnter(PlayerBedEnterEvent $event){
+        
+    }
+    
+        public function onPlayerBedEnter(PlayerBedEnterEvent $event){
+        
+    }
+    
+        public function onPlayerBedEnter(PlayerBedEnterEvent $event){
+        
+    }
 }
