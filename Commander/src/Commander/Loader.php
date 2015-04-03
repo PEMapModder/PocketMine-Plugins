@@ -4,6 +4,8 @@ namespace Commander;
 
 use pocketmine\command\Command;
 use pocketmine\command\ConsoleCommandSender;
+use pocketmine\event\block\BlockBreakEvent;
+use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerBedEnterEvent;
 use pocketmine\event\player\PlayerBedLeaveEvent;
 use pocketmine\event\player\PlayerBucketEmptyEvent;
@@ -38,6 +40,14 @@ class Loader extends PluginBase implements Listener{
     
     public function onDisable(){
         $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
+    }
+    
+    public function onBlockBreak(BlockBreakEvent $event){
+        
+    }
+    
+    public function onBlockPlace(BlockPlaceEvent $event){
+        
     }
     
     public function onPlayerBedEnter(PlayerBedEnterEvent $event){
