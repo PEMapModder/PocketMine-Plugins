@@ -132,7 +132,7 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerItemHeld(PlayerItemHeldEvent $event){
         if($this->getConfig()->get("enable")["command"]["on-player-item-held"] === true){
             foreach($this->getConfig()->get("run")["on-player-item-held"] as $command){
-                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command);
+                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command));
             }
         }
     }
@@ -140,7 +140,7 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerJoin(PlayerJoinEvent $event){
         if($this->getConfig()->get("enable")["command"]["on-player-join"] === true){
             foreach($this->getConfig()->get("run")["on-player-join"] as $command){
-                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command);
+                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command));
             }
         }
     }
@@ -148,7 +148,7 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerKick(PlayerKickEvent $event){
         if($this->getConfig()->get("enable")["command"]["on-player-kick"] === true){
             foreach($this->getConfig()->get("run")["on-player-kick"] as $command){
-                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command);  
+                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command));  
             }
         }
     }
@@ -156,7 +156,7 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerQuit(PlayerQuitEvent $event){
         if($this->getConfig()->get("enable")["command"]["on-player-quit"] === true){
             foreach($this->getConfig()->get("run")["on-player-quit"] as $command){
-                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command); 
+                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command)); 
             }  
         }  
     }
@@ -164,7 +164,7 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerRespawn(PlayerRespawnEvent $event){
         if($this->getConfig()->get("enable")["command"]["on-player-respawn"] === true){
             foreach($this->getConfig()->get("run")["on-player-respawn"] as $command){
-                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command);
+                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command));
             }
         }   
     }
