@@ -3,6 +3,7 @@
 namespace MyChat;
 
 use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\Listener;
@@ -42,14 +43,19 @@ class Loader extends PluginBase implements Listener{
             $this->getConfig()->get("format")));
     }
     
+    public function onPlayerDeath(PlayerDeathEvent $event){
+        if($this->getConfig()->get("enable")["mute"]["player-death-message"] === true){
+            $event->setDeathMessage(null);
+        }
+    }
     public function onPlayerJoin(PlayerJoinEvent $event){
-        if($this->getConfig()->get("mute-join-message") === true){
+        if($this->getConfig()->get("enable")["mute"]["player-join-message"] === true){
             $event->setJoinMessage(null);
         }
     }
     
     public function onPlayerQuit(PlayerQuitEvent $event){
-        if($this->getConfig()->get("mute-quit-message") === true){
+        if($this->getConfig()->get("enable")["mute"]["player-quit-message"] === true){
             $event->setQuitMessage(null);
         }
     }
