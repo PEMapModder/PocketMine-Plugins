@@ -1,8 +1,22 @@
 #Configuration file for Commander v1.0.0
 enable:
  command:
-  on-block-break:
-  on-block-place:
-  on-player:
+ #Set to true for each event you want commands to be run on
+  on-block-break: false
+  on-block-place: false
+  on-player-bed-enter: false
+  on-player-bed-leave: false
+  on-player-bucket-empty: false
+  on-player-bucket-fill: false
+  on-player-death: false
+  on-player-drop-item: false
+  on-player-gamemode-change: false
+  on-player-interact: false
+  on-player-item-consume: false
+  on-player-item-held: false
+  on-player-join: false
+  on-player-kick: false
+  on-player-quit: false
+  on-player-respawn: false
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
