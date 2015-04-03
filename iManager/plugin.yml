@@ -14,12 +14,9 @@ commands:
 permissions:
  imanager:
   default: op
-  description: Allows access to all iManager features
   children:
    imanager.command:
     default: op
-    description: Allows use of all iManager commands
     children:
      imanager.command.server:
       default: op
-      description: Allows use of /server

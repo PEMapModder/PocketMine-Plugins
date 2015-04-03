@@ -14,19 +14,14 @@ commands:
 permissions:
  locator:
   default: op
-  description: Allows access to all Locator features
   children:
    locator.command:
     default: op
-    description: Allows use of all Locator commands
     children:
      locator.command.getpos:
       default: true
-      description: Allows use of /getpos
       children:
        locator.command.getpos.others:
         default: true
-        description: Allows use of /getpos for others
        locator.command.getpos.self:
         default: true
-        description: Allows use of /getpos for self

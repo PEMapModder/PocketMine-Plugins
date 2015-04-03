@@ -14,12 +14,9 @@ commands:
 permissions:
  mytag:
   default: op
-  description: Allows access to all MyTag features
   children:
    mytag.command:
     default: op
-    description: Allows use of all MyTag commands
     children:
      mytag.command.tag:
       default: true
-      description: Allows use of /tag

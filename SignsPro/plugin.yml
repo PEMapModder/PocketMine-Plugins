@@ -9,15 +9,11 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/SignsPro
 permission:
  signspro:
   default: op
-  description: Allows access to all SignsPro features
   children:
    signspro.action:
     default: op
-    description: Allows access to all SignsPro actions
     children:
      signspro.action.create:
       default: true
-      description: Allows creation of SignsPro signs
      signspro.action.use:
       default: true
-      description: Allows usage of SignsPro signs

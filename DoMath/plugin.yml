@@ -26,21 +26,15 @@ commands:
 permissions:
  domath:
   default: op
-  description: Allows access to all DoMath features
   children:
    domath.command:
     default: op 
-    description: Allows use of all DoMath commands
     children:
      domath.command.add:
       default: true
-      description: Allows use of /add
      domath.command.divide:
       default: true
-      description: Allows use of /divide
      domath.command.multiply:
       default: true
-      description: Allows use of /multiply
      domath.command.subtract:
       default: true
-      description: Allows use of /subtract
