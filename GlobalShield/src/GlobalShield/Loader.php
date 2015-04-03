@@ -6,6 +6,7 @@ use pocketmine\block\BurningFurnace;
 use pocketmine\block\Chest;
 use pocketmine\block\Furnace;
 use pocketmine\block\IronDoor;
+use pocketmine\block\Stonecutter;
 use pocketmine\block\Trapdoor;
 use pocketmine\block\WoodDoor;
 use pocketmine\block\Workbench;
