@@ -1,13 +1,14 @@
 #Configuration file for GlobalShield v1.0.0
 enable:
- burning-furnace:
- chest:
- furnace:
- iron-door:
- stonecutter:
- trapdoor:
- wood-door:
- workbench:
+#Set to false if you don't want players to interact with that block in a protected level
+ burning-furnace: false
+ chest: false
+ furnace: false
+ iron-door: false
+ stonecutter: false
+ trapdoor: false
+ wood-door: false
+ workbench: false
 levels:
  - world
 version: 1.0.0
