@@ -4,5 +4,5 @@ version: 1.0.0
 api: 1.10.0
 load: STARTUP
 author: Gamecrafter
-description: Execute commands on almost all player-related events!
+description: Execute commands on events!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/Commander
