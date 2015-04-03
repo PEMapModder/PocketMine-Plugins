@@ -94,28 +94,28 @@ class Loader extends PluginBase implements Listener{
                 }
                 else{
                     if($event->getBlock() instanceof BurningFurnace && $this->getConfig()->get("enable")["interact"]["burning-furnace"] === false){
-                        
+                        $event->setCancelled();
                     }
                     if($event->getBlock() instanceof Chest && $this->getConfig()->get("enable")["interact"]["chest"] === false){
-                        
+                        $event->setCancelled();
                     }
                     if($event->getBlock() instanceof Furnace && $this->getConfig()->get("enable")["interact"]["furnace"] === false){
-                        
+                        $event->setCancelled();
                     }
                     if($event->getBlock() instanceof IronDoor && $this->getConfig()->get("enable")["interact"]["iron-door"] === false){
-                        
+                        $event->setCancelled();
                     }
                     if($event->getBlock() instanceof Stonecutter && $this->getConfig()->get("enable")["interact"]["stonecutter"] === false){
-                        
+                        $event->setCancelled();
                     }
                     if($event->getBlock() instanceof Trapdoor && $this->getConfig()->get("enable")["interact"]["trapdoor"] === false){
-                        
+                        $event->setCancelled();
                     }
                     if($event->getBlock() instanceof WoodDoor && $this->getConfig()->get("enable")["interact"]["wood-door"] === false){
-                        
+                        $event->setCancelled();
                     }
                     if($event->getBlock() instanceof Workbench && $this->getConfig()->get("enable")["interact"]["workbench"] === false){
-                        
+                        $event->setCancelled();
                     }
                 }
             }
