@@ -31,15 +31,19 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerChat(PlayerChatEvent $event){
         $event->setFormat(str_replace(
             [
+            "{health}",
             "{ip}",
             "{level}", 
+            "{max-health}",
             "{message}", 
             "{player}",
             "{port}"
             ], 
             [
+            $event->getPlayer()->getHealth();
             $event->getPlayer()->getAddress(), 
             $event->getPlayer()->getLevel()->getName(), 
+            $event->getPlayer()->getMaxHealth(),
             $event->getMessage(), 
             $event->getPlayer()->getName(), 
             $event->getPlayer()->getPort()
