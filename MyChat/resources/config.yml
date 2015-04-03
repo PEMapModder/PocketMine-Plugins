@@ -4,9 +4,9 @@ enable:
   on-death-message: true
   #Set to false to mute on-death-message
   on-join-message: true
-  #Set to false to mute on-death-message
+  #Set to false to mute on-join-message
   on-quit-message: true
-  #Set to false to mute on-death-message
+  #Set to false to mute on-quit-message
 format: "{player}: {message}"
 #Sets chat format, refer to key.txt
 version: 1.0.0
