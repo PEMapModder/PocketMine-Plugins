@@ -42,66 +42,97 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onBlockBreak(BlockBreakEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-block-break"] === true){
+            
+        }
     }
     
     public function onBlockPlace(BlockPlaceEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-block-break"] === true){
+            
+        }
     }
     
     public function onPlayerBedEnter(PlayerBedEnterEvent $event){
-        
-    }
+        if($this->getConfig()->get("enable")["command"]["on-player-bed-enter"] === true){
+            
+        }    }
     
     public function onPlayerBedLeaveEvent(PlayerBedLeaveEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-bed-leave"] === true){
+            
+        }  
     }
     
     public function onPlayerBucketEmpty(PlayerBucketEmptyEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-bucket-empty"] === true){
+            
+        }
     }
     
     public function onPlayerBucketFill(PlayerBucketFillEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-bucket-fill"] === true){
+            
+        } 
     }
     
     public function onPlayerDeath(PlayerDeathEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-death"] === true){
+            
+        }
     }
     
     public function onPlayerDropItem(PlayerDropItemEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-drop-item"] === true){
+            
+        }
     }
     
     public function onPlayerGameModeChange(PlayerGameModeChangeEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-gamemode-change"] === true){
+            
+        }
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-interact"] === true){
+            
+        }
     }
     
     public function onPlayerItemConsume(PlayerItemConsumeEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-item-consume"] === true){
+            
+        }
     }
     
     public function onPlayerItemHeld(PlayerItemHeldEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-item-held"] === true){
+            
+        }
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-join"] === true){
+            
+        }
     }
     
     public function onPlayerKick(PlayerKickEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-kick"] === true){
+            
+        }
     }
     
     public function onPlayerQuit(PlayerQuitEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-quit"] === true){
+            
+        }  
     }
     
     public function onPlayerRespawn(PlayerRespawnEvent $event){
-        
+        if($this->getConfig()->get("enable")["command"]["on-player-respawn"] === true){
+            
+        }   
     }
 }
