@@ -1,9 +1,10 @@
 #Configuration file for ServerStaff v1.0.0
 staff:
- - "Owner: "
- - "Admins: "
- - "Moderators: "
- - "Builders:"
- - "Testers: "
+ - "Here is the staff for this server:"
+ - "Owner: Gamecrafter"
+ - "Admins: Steve, Notch, iNeon"
+ - "Moderators: fierydrop, poppyguy03"
+ - "Builders: bubbleblub183, bananatime"
+ - "Testers: Tester_1, Tester_2, Tester_3"
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
