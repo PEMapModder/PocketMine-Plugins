@@ -40,7 +40,8 @@ class Loader extends PluginBase implements Listener{
             $event->getMessage(), 
             $event->getPlayer()->getName(), 
             $event->getPlayer()->getPort()], 
-            $this->getConfig()->get("format")));
+            $this->getConfig()->get("format")
+        ));
     }
     
     public function onPlayerDeath(PlayerDeathEvent $event){
