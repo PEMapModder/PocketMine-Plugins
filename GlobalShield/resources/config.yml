@@ -11,6 +11,7 @@ enable:
   wood-door: false
   workbench: false
 levels:
+#For each level you want to protect, just add the name of that world here
  - world
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
