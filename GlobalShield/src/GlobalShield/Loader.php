@@ -2,6 +2,13 @@
 
 namespace GlobalShield;
 
+use pocketmine\block\BurningFurnace;
+use pocketmine\block\Chest;
+use pocketmine\block\Furnace;
+use pocketmine\block\IronDoor;
+use pocketmine\block\Trapdoor;
+use pocketmine\block\WoodDoor;
+use pocketmine\block\Workbench;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\player\PlayerBucketEmptyEvent;
