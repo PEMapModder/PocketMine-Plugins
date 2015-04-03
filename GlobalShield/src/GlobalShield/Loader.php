@@ -93,7 +93,30 @@ class Loader extends PluginBase implements Listener{
                 if($event->getPlayer()->hasPermission("globalshield.action.interact")){
                 }
                 else{
-                    $event->setCancelled();
+                    if($event->getBlock() instanceof BurningFurnace && $this->getConfig()->get("enable")["interact"]["burning-furnace"] === false){
+                        
+                    }
+                    if($event->getBlock() instanceof Chest && $this->getConfig()->get("enable")["interact"]["chest"] === false){
+                        
+                    }
+                    if($event->getBlock() instanceof Furnace && $this->getConfig()->get("enable")["interact"]["furnace"] === false){
+                        
+                    }
+                    if($event->getBlock() instanceof IronDoor && $this->getConfig()->get("enable")["interact"]["iron-door"] === false){
+                        
+                    }
+                    if($event->getBlock() instanceof Stonecutter && $this->getConfig()->get("enable")["interact"]["stonecutter"] === false){
+                        
+                    }
+                    if($event->getBlock() instanceof Trapdoor && $this->getConfig()->get("enable")["interact"]["trapdoor"] === false){
+                        
+                    }
+                    if($event->getBlock() instanceof WoodDoor && $this->getConfig()->get("enable")["interact"]["wood-door"] === false){
+                        
+                    }
+                    if($event->getBlock() instanceof Workbench && $this->getConfig()->get("enable")["interact"]["workbench"] === false){
+                        
+                    }
                 }
             }
         }
