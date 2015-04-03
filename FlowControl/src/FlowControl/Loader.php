@@ -28,10 +28,10 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onBlockSpread(BlockSpreadEvent $event){
-        if($event->getBlock() instanceof Water && $this->getConfig()->get("spread-water") === false){
+        if($event->getBlock() instanceof Lava && $this->getConfig()->get("enable")["spread"]["lava"] === false){
             $event->setCancelled();
         }
-        if($event->getBlock() instanceof Lava && $this->getConfig()->get("spread-lava") === false){
+        if($event->getBlock() instanceof Water && $this->getConfig()->get("enable")["spread"]["water"] === false){
             $event->setCancelled();
         }
     }
