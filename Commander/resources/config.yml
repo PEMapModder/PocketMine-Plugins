@@ -18,5 +18,22 @@ enable:
   on-player-kick: false
   on-player-quit: false
   on-player-respawn: false
+run:
+ on-block-break: 
+ on-block-place: 
+ on-player-bed-enter: 
+ on-player-bed-leave: 
+ on-player-bucket-empty: 
+ on-player-bucket-fill: 
+ on-player-death: 
+ on-player-drop-item: 
+ on-player-gamemode-change: 
+ on-player-interact: 
+ on-player-item-consume: 
+ on-player-item-held: 
+ on-player-join: 
+ on-player-kick: 
+ on-player-quit: 
+ on-player-respawn: 
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
