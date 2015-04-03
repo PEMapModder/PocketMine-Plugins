@@ -1,72 +1,13 @@
 #Configuration file for MyChat v1.0.0
 enable:
  mute:
-  on-join-message: false
-  on-quit-message: false
- scramble: false
+  on-death-message: true
+  #Set to false to mute on-death-message
+  on-join-message: true
+  #Set to false to mute on-death-message
+  on-quit-message: true
+  #Set to false to mute on-death-message
 format: "{player}: {message}"
 #Sets chat format, refer to key.txt
-characters:
- A:
- B:
- C:
- D:
- E:
- F:
- G:
- H:
- I:
- J:
- K:
- L:
- M:
- N:
- O:
- P:
- Q:
- R:
- S:
- T:
- U:
- V:
- W:
- X:
- Y:
- Z:
- a:
- b:
- c:
- d:
- e:
- f:
- g:
- h:
- i:
- j:
- k:
- l:
- m:
- n:
- o:
- p:
- q:
- r:
- s:
- t:
- u:
- v:
- w:
- x:
- y:
- z:
- 1:
- 2:
- 3:
- 4:
- 5:
- 6:
- 7:
- 8:
- 9:
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
