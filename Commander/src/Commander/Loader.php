@@ -44,7 +44,8 @@ class Loader extends PluginBase implements Listener{
     public function onBlockBreak(BlockBreakEvent $event){
         if($this->getConfig()->get("enable")["command"]["on-block-break"] === true){
             foreach($this->getConfig()->get("run")["on-block-break"] as $command){
-                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command));           }
+                $this->getServer()->dispatchCommand(new ConsoleCommandSender, str_replace("{player}", $event->getPlayer()->getName(), $command));      
+            }
         }
     }
     
