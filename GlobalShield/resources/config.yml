@@ -1,4 +1,13 @@
 #Configuration file for GlobalShield v1.0.0
+enable:
+ burning-furnace:
+ chest:
+ furnace:
+ iron-door:
+ stonecutter:
+ trapdoor:
+ wood-door:
+ workbench:
 levels:
  - world
 version: 1.0.0
