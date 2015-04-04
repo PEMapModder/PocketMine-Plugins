@@ -5,6 +5,7 @@ namespace iManager;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\event\player\PlayerPreLoginEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
@@ -149,6 +150,10 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
+    	
+    }
+    
+    public function onPlayerPreLogin(PlayerPreLoginEvent $event){
     	
     }
 }
