@@ -36,7 +36,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setArmorItem(1, Item::LeatherTunic);
                         $sender->getInventory()->setArmorItem(2, Item::LeatherPants);
                         $sender->getInventory()->setArmorItem(3, Item::LeatherBoots);
-                        $sender->getInventory()->setItemInHand(268);
+                        $sender->getInventory()->setItemInHand(Item::WoodenSword);
                         $sender->sendMessage("Equipped with full leather armor and a wooden sword.");
                     }
                     if($args[0] === "2"){
@@ -44,7 +44,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setArmorItem(1, Item::ChainChestplate);
                         $sender->getInventory()->setArmorItem(2, Item::ChainLeggings);
                         $sender->getInventory()->setArmorItem(3, Item::ChainBoots);
-                        $sender->getInventory()->setItemInHand(272);
+                        $sender->getInventory()->setItemInHand(Item::StoneSword);
                         $sender->sendMessage("Equipped with full chain armor and a stone sword.");
                     }
                     if($args[0] === "3"){
@@ -52,7 +52,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setArmorItem(1, Item::IronChestplate);
                         $sender->getInventory()->setArmorItem(2, Item::IronLeggings);
                         $sender->getInventory()->setArmorItem(3, Item::IronBoots);
-                        $sender->getInventory()->setItemInHand(267);
+                        $sender->getInventory()->setItemInHand(Item::IronSword);
                         $sender->sendMessage("Equipped with full iron armor and an iron sword.");
                     }
                     if($args[0] === "4"){
@@ -60,7 +60,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setArmorItem(1, Item::GoldChestplate);
                         $sender->getInventory()->setArmorItem(2, Item::GoldLeggings);
                         $sender->getInventory()->setArmorItem(3, Item::GoldBoots);
-                        $sender->getInventory()->setItemInHand(283);
+                        $sender->getInventory()->setItemInHand(Item::GoldSword);
                         $sender->sendMessage("Equipped with full golden armor and a golden sword.");
                     }
                     if($args[0] === "5"){
@@ -68,7 +68,7 @@ class Loader extends PluginBase{
                         $sender->getInventory()->setArmorItem(1, Item::DiamondChestplate);
                         $sender->getInventory()->setArmorItem(2, Item::DiamondLeggings);
                         $sender->getInventory()->setArmorItem(3, Item::DiamondBoots);
-                        $sender->getInventory()->setItemInHand(276);
+                        $sender->getInventory()->setItemInHand(Item::DiamondSword);
                         $sender->sendMessage("Equipped with full diamond armor and a diamond sword.");
                     }
                     else{
@@ -78,18 +78,6 @@ class Loader extends PluginBase{
                 else{
                     $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
                 }
-            }
-            if(isset($args[1])){
-                $target = $sender->getServer()->getPlayer($args[1]);
-                if($target != null){
-                    
-                }
-                else{
-                    $sender->sendMessage(TextFormat::RED."Please specify a valid player.");
-                }
-            }
-            else{
-                
             }
         }
         return true;
