@@ -6,7 +6,6 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 * Commander
 * CustomFood
 * DoMath
-* FlowControl
 * GearUp
 * GlobalShield
 * GoTroll
@@ -18,6 +17,7 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 * ServerLaw
 * ServerStaff
 * SignsPro
+* SpreadFreeze
 * WarpArrow
 * iManager
 
