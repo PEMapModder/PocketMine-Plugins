@@ -5,11 +5,11 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 ### Plugins:
 * Commander
 * CustomFood
+* CustomHealth
 * DoMath
 * GearUp
 * GlobalShield
 * GoTroll
-* LifeCare
 * Locator
 * MyChat
 * MyTag
