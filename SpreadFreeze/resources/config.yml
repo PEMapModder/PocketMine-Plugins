@@ -2,13 +2,13 @@
 enable:
  spread:
   grass: true
-  #Set to false to disable grass spreading
+  #Set to false to disable grass growing
   mycelium: true
-  #Set to false to disable mycelium spreading
+  #Set to false to disable mycelium growing
   lava: true
   #Set to false to disable lava spreading on-place
   podzol: true
-  #Set to false to disable podzol spreading
+  #Set to false to disable podzol growing
   water: true
   #Set to false to disable water spreading on-place
 version: 1.0.0
