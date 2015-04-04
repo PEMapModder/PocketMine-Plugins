@@ -14,6 +14,7 @@ class Loader extends PluginBase implements Listener{
 
     public function onEnable(){
     	$this->saveDefaultConfig();
+    	$this->saveResource("key.txt");
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
             $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
