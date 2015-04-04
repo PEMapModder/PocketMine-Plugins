@@ -2,9 +2,15 @@
 
 namespace SpreadFreeze;
 
+use pocketmine\block\Grass;
 use pocketmine\block\Lava;
+use pocketmine\block\Mycelium;
+use pocketmine\block\Podzol;
 use pocketmine\block\Water;
+use pocketmine\event\block\BlockGrowEvent;
+use pocketmine\event\block\BlockSpreadEvent;
 use pocketmine\event\block\BlockUpdateEvent;
+use pocketmine\event\block\LeavesDecayEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
