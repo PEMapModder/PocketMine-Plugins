@@ -2,6 +2,7 @@
 
 namespace GearUp;
 
+use pocketmine\block\Block;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\inventory\PlayerInventory;
@@ -25,10 +26,10 @@ class Loader extends PluginBase{
             if(isset($args[0])){
                 if($sender instanceof Player){
                     if($args[0] === "0"){
-                        $sender->getInventory()->setArmorItem(0, 0);
-                        $sender->getInventory()->setArmorItem(1, 0);
-                        $sender->getInventory()->setArmorItem(2, 0);
-                        $sender->getInventory()->setArmorItem(3, 0);
+                        $sender->getInventory()->setArmorItem(0, Block::Air);
+                        $sender->getInventory()->setArmorItem(1, Block::Air);
+                        $sender->getInventory()->setArmorItem(2, Block::Air);
+                        $sender->getInventory()->setArmorItem(3, Block::Air);
                         $sender->sendMessage("You have cleared your armor.");
                     }
                     if($args[0] === "1"){
