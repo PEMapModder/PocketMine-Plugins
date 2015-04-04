@@ -1,4 +1,4 @@
-#Configuration file for FlowControl v1.0.0
+#Configuration file for SpreadFreeze v1.0.0
 enable:
  spread:
   lava: true

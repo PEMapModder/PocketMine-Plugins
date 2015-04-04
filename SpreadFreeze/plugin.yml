@@ -1,0 +1,8 @@
+name: SpreadFreeze
+main: SpreadFreeze\Loader
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: Now you can control blocks that spread in your worlds!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/SpreadFreeze

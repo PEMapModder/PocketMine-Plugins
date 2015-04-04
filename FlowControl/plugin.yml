@@ -1,8 +1,0 @@
-name: FlowControl
-main: FlowControl\Loader
-version: 1.0.0
-api: 1.10.0
-load: STARTUP
-author: Gamecrafter
-description: Liquids won't spread in your worlds!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/FlowControl

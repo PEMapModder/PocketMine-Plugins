@@ -1,6 +1,6 @@
 <?php
 
-namespace FlowControl;
+namespace SpreadFreeze;
 
 use pocketmine\block\Lava;
 use pocketmine\block\Water;
