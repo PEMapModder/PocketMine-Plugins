@@ -32,42 +32,42 @@ class Loader extends PluginBase{
                         $sender->sendMessage("You have cleared your armor.");
                     }
                     if($args[0] === "1"){
-                        $sender->getInventory()->setArmorItem(0, 298);
-                        $sender->getInventory()->setArmorItem(1, 299);
-                        $sender->getInventory()->setArmorItem(2, 300);
-                        $sender->getInventory()->setArmorItem(3, 301);
+                        $sender->getInventory()->setArmorItem(0, Item::LeatherCap);
+                        $sender->getInventory()->setArmorItem(1, Item::LeatherTunic);
+                        $sender->getInventory()->setArmorItem(2, Item::LeatherPants);
+                        $sender->getInventory()->setArmorItem(3, Item::LeatherBoots);
                         $sender->getInventory()->setItemInHand(268);
                         $sender->sendMessage("Equipped with full leather armor and a wooden sword.");
                     }
                     if($args[0] === "2"){
-                        $sender->getInventory()->setArmorItem(0, 302);
-                        $sender->getInventory()->setArmorItem(1, 303);
-                        $sender->getInventory()->setArmorItem(2, 304);
-                        $sender->getInventory()->setArmorItem(3, 305);
+                        $sender->getInventory()->setArmorItem(0, Item::ChainHelmet);
+                        $sender->getInventory()->setArmorItem(1, Item::ChainChestplate);
+                        $sender->getInventory()->setArmorItem(2, Item::ChainLeggings);
+                        $sender->getInventory()->setArmorItem(3, Item::ChainBoots);
                         $sender->getInventory()->setItemInHand(272);
                         $sender->sendMessage("Equipped with full chain armor and a stone sword.");
                     }
                     if($args[0] === "3"){
-                        $sender->getInventory()->setArmorItem(0, 306);
-                        $sender->getInventory()->setArmorItem(1, 307);
-                        $sender->getInventory()->setArmorItem(2, 308);
-                        $sender->getInventory()->setArmorItem(3, 309);
+                        $sender->getInventory()->setArmorItem(0, Item::IronHelmet);
+                        $sender->getInventory()->setArmorItem(1, Item::IronChestplate);
+                        $sender->getInventory()->setArmorItem(2, Item::IronLeggings);
+                        $sender->getInventory()->setArmorItem(3, Item::IronBoots);
                         $sender->getInventory()->setItemInHand(267);
                         $sender->sendMessage("Equipped with full iron armor and an iron sword.");
                     }
                     if($args[0] === "4"){
-                        $sender->getInventory()->setArmorItem(0, 314);
-                        $sender->getInventory()->setArmorItem(1, 315);
-                        $sender->getInventory()->setArmorItem(2, 316);
-                        $sender->getInventory()->setArmorItem(3, 317);
+                        $sender->getInventory()->setArmorItem(0, Item::GoldHelmet);
+                        $sender->getInventory()->setArmorItem(1, Item::GoldChestplate);
+                        $sender->getInventory()->setArmorItem(2, Item::GoldLeggings);
+                        $sender->getInventory()->setArmorItem(3, Item::GoldBoots);
                         $sender->getInventory()->setItemInHand(283);
                         $sender->sendMessage("Equipped with full golden armor and a golden sword.");
                     }
                     if($args[0] === "5"){
-                        $sender->getInventory()->setArmorItem(0, 310);
-                        $sender->getInventory()->setArmorItem(1, 311);
-                        $sender->getInventory()->setArmorItem(2, 312);
-                        $sender->getInventory()->setArmorItem(3, 313);
+                        $sender->getInventory()->setArmorItem(0, Item::DiamondHelmet);
+                        $sender->getInventory()->setArmorItem(1, Item::DiamondChestplate);
+                        $sender->getInventory()->setArmorItem(2, Item::DiamondLeggings);
+                        $sender->getInventory()->setArmorItem(3, Item::DiamondBoots);
                         $sender->getInventory()->setItemInHand(276);
                         $sender->sendMessage("Equipped with full diamond armor and a diamond sword.");
                     }
