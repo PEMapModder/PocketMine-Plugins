@@ -2,7 +2,7 @@
 
 namespace ServerHelp;
 
-use pocketmine\event\player\PlayerCommandPreProcessEvent;
+use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
@@ -25,7 +25,7 @@ class Loader extends PluginBase implements Listener{
         $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
 
-    public function onPlayerCommandPreProcess(PlayerPreProcessEvent $event){
+    public function onPlayerCommandPreProcess(PlayerCommandPreprocessEvent $event){
         if(strtolower($event->getMessage()) === "/help"){
             
         }

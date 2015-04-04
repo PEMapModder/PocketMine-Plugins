@@ -40,7 +40,7 @@ class Loader extends PluginBase implements Listener{
             "{port}"
             ], 
             [
-            $event->getPlayer()->getHealth();
+            $event->getPlayer()->getHealth(),
             $event->getPlayer()->getAddress(), 
             $event->getPlayer()->getLevel()->getName(), 
             $event->getPlayer()->getMaxHealth(),
