@@ -9,7 +9,6 @@ use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\tile\Sign;
-use pocketmine\utils\TextFormat;
 
 class Loader extends PluginBase implements Listener{
 
@@ -17,16 +16,16 @@ class Loader extends PluginBase implements Listener{
     	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-            $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
+            $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
-    	    $this->getLogger()->info(TextFormat::YELLOW."Your configuration file is outdated.");
+    	    $this->getLogger()->info("§eYour configuration file is outdated.");
     	    $this->getPluginLoader()->disablePlugin($this);
     	}
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
+        $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onBlockBreak(BlockBreakEvent $event){
@@ -50,7 +49,7 @@ class Loader extends PluginBase implements Listener{
             }
         }
         else{
-            $sender->sendMessage("You don't have permissions to create signs.");
+            $sender->sendMessage("§cYou don't have permissions to create signs.");
         }
         return true;
     }
@@ -61,7 +60,7 @@ class Loader extends PluginBase implements Listener{
             
             }
             else{
-                $event->getPlayer()->sendMessage("You don't have permission to use signs.");
+                $event->getPlayer()->sendMessage("§cYou don't have permission to use signs.");
             }
         }
         return true;

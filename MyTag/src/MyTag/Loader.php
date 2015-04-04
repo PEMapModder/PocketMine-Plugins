@@ -10,7 +10,6 @@ use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
 class Loader extends PluginBase implements Listener{
@@ -19,16 +18,16 @@ class Loader extends PluginBase implements Listener{
     	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
+        $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
-    	    $this->getLogger()->info(TextFormat::YELLOW."Your configuration file is outdated.");
+    	    $this->getLogger()->info("§eYour configuration file is outdated.");
     	    $this->getPluginLoader()->disablePlugin($this);
     	}
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
+        $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
@@ -88,7 +87,7 @@ class Loader extends PluginBase implements Listener{
     	    }
     	}
     	else{
-    	    $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
+    	    $sender->sendMessage("§cPlease run this command in-game.");
     	}
     	return true;
     }

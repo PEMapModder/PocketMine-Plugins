@@ -5,17 +5,16 @@ namespace Locator;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
 class Loader extends PluginBase{
     
     public function onEnable(){
-        $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
+        $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
+        $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
@@ -50,13 +49,13 @@ class Loader extends PluginBase{
                         $sender->sendMessage("Face: ");
                     }
                     else{
-                        $sender->sendMessage(TextFormat::RED."You don't have permissions to use this command.");
+                        $sender->sendMessage("§cYou don't have permissions to use this command.");
                     }
                 }
             }
         }
         else{
-            $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
+            $sender->sendMessage("§cPlease run this command in-game.");
         }
         return true;
     }

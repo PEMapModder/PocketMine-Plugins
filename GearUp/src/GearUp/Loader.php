@@ -8,17 +8,16 @@ use pocketmine\command\CommandSender;
 use pocketmine\inventory\PlayerInventory;
 use pocketmine\item\Item;
 use pocketmine\plugin\PluginBase;
-use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
 class Loader extends PluginBase{
 
     public function onEnable(){
-        $this->getLogger()->info(TextFormat::GREEN."Enabling ".$this->getDescription()->getFullName()."...");
+        $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
+        $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
@@ -73,11 +72,11 @@ class Loader extends PluginBase{
                         $sender->sendMessage("Equipped with full diamond armor and a diamond sword.");
                     }
                     else{
-                        $sender->sendMessage("Please specify an existing set of equipment.");
+                        $sender->sendMessage("§cPlease specify an existing set of equipment.");
                     }
                 }
                 else{
-                    $sender->sendMessage(TextFormat::RED."Please run this command in-game.");
+                    $sender->sendMessage("§cPlease run this command in-game.");
                 }
             }
         }
