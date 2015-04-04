@@ -38,7 +38,15 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onBlockSpread(BlockSpreadEvent $event){
-        
+        if($event->getBlock() instanceof Grass && $this->getConfig()->get("enable")["spread"]["grass"] === false){
+            $event->setCancelled();
+        }
+        if($event->getBlock() instanceof Mycelium && $this->getConfig()->get("enable")["spread"]["mycelium"] === false){
+            $event->setCancelled();
+        }
+        if($event->getBlock() instanceof Podzol && $this->getConfig()->get("enable")["spread"]["podzol"] === false){
+            $event->setCancelled();
+        }
     }
     
     public function onBlockUpdate(BlockUpdateEvent $event){
