@@ -1,6 +1,6 @@
 <?php
 
-namespace LifeCare;
+namespace CustomHealth;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
