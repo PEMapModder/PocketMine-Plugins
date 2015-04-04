@@ -32,11 +32,11 @@ class Loader extends PluginBase{
                             $sender->sendMessage("Face: ");
                         }
                         else{
-                            $sender->sendMessage(TextFormat::RED."Please specify a valid player.");
+                            $sender->sendMessage("§cPlease specify a valid player.");
                         }
                     }
                     else{
-                        $sender->sendMessage(TextFormat::RED."You don't have permissions to use this command.");
+                        $sender->sendMessage("§cYou don't have permissions to use this command.");
                     }
                 }
                 else{
