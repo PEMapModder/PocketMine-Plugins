@@ -1,6 +1,6 @@
 #Configuration file for MyTag v1.1.0
 auto-set: false
-#Set to true to set the tag to the player's preferences
+#Set to true to set the tag to the player's preferences on-join
 default-tag: "{player}"
 #Default tag the player will have on their first join
 op-tag: "Staff"
