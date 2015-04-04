@@ -33,6 +33,14 @@ class Loader extends PluginBase implements Listener{
         $this->getLogger()->info(TextFormat::RED."Disabling ".$this->getDescription()->getFullName()."...");
     }
     
+    public function onBlockGrow(BlockGrowEvent $event){
+        
+    }
+    
+    public function onBlockSpread(BlockSpreadEvent $event){
+        
+    }
+    
     public function onBlockUpdate(BlockUpdateEvent $event){
         if($event->getBlock() instanceof Lava && $this->getConfig()->get("enable")["spread"]["lava"] === false){
             $event->setCancelled();
@@ -40,5 +48,9 @@ class Loader extends PluginBase implements Listener{
         if($event->getBlock() instanceof Water && $this->getConfig()->get("enable")["spread"]["water"] === false){
             $event->setCancelled();
         }
+    }
+    
+    public function onLeavesDecay(LeavesDecayEvent $event){
+        
     }
 }
