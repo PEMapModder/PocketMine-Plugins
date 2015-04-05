@@ -1,6 +1,6 @@
 name: SpreadFreeze
 main: SpreadFreeze\Loader
-version: 1.0.0
+version: 1.0.0-beta
 api: 1.10.0
 load: STARTUP
 author: Gamecrafter
