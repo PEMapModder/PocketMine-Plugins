@@ -35,11 +35,12 @@ class Loader extends PluginBase{
             if(isset($args[0]) && isset($args[1])){
                 if(is_numeric($args[0]) && is_numeric($args[1])){
                     if($args[1] === 0){
-                        $sender->sendMessage(TextFormat::RED."Error: division by 0 is not possible.");
-                        return true;
+                        $sender->sendMessage(TextFormat::RED."Undefined value error: 0");
                     }
-                    $answer = $args[0] / $args[1];
-                    $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." / ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                    else{
+                        $answer = $args[0] / $args[1];
+                        $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." / ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
+                    }
                 } 
                 else{
                     $sender->sendMessage(TextFormat::RED."Please use numbers.");
