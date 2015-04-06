@@ -104,12 +104,17 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
-        
+        if($event->getBlock()->getId() === $this->getConfig()->get("tap-block")){
+            @mkdir($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml");
+        }
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-        if(file_exists($this->getDataFolder().$event->getPlayer()->getName().".yml")){
+        if(file_exists($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml")){
             
+        }
+        else{
+            $this->getServer()->getLogger()->info("");
         }
     }
     
