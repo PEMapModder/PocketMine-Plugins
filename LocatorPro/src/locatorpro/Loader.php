@@ -108,7 +108,9 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-        
+        if(file_exists($this->getDataFolder().$event->getPlayer()->getName().".yml")){
+            
+        }
     }
     
     public function onPlayerMove(PlayerMoveEvent $event){
