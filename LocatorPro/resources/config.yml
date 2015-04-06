@@ -1,7 +1,7 @@
 #Configuration file for LocatorPro v1.0.0
 enable:
  teleport: true
- #Set to true to enable teleporting back to set position after player has a y-coordinate above maximum-y or below minimum-y
+ #Set to true to teleport players back to set position after player has a y-coordinate above maximum-y or below minimum-y
 position:
  maximum-y:
  minimum-y:
