@@ -14,7 +14,15 @@ use pocketmine\Player;
 class Loader extends PluginBase{
     
     public function onEnable(){
-        $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+    	$this->saveDefaultConfig();
+    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
+    	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+            $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+    	}
+    	else{
+    	    $this->getLogger()->info("§eYour configuration file is outdated.");
+    	    $this->getPluginLoader()->disablePlugin($this);
+    	}
     }
     
     public function onDisable(){
