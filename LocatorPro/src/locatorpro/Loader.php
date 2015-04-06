@@ -114,7 +114,7 @@ class Loader extends PluginBase implements Listener{
             
         }
         else{
-            $this->getServer()->getLogger()->info("§eCreated data file for ".$event->getPlayer()->getName()." at LocatorPro\\data\\".$event->getPlayer()->getName().".yml");
+            $this->getServer()->getLogger()->info("§eCreated new data file for ".$event->getPlayer()->getName()." at LocatorPro\\data\\".$event->getPlayer()->getName().".yml");
         }
     }
     
