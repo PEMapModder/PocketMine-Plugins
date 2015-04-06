@@ -9,6 +9,7 @@ use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\Listener;
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\Config;
 use pocketmine\Player;
 
 class Loader extends PluginBase implements Listener{
