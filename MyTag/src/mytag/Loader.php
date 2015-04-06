@@ -32,7 +32,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
     	if($sender instanceof Player){
-    	    if(strtolower($command->getName()) === "tag"){
+    	    if(strtolower($command->getName()) === "mytag"){
     	    	if(isset($args[0])){
     	    	    if(strtolower($args[0]) === "address"){
     	    	    	
@@ -72,17 +72,17 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	else{
     	    	    $sender->sendMessage("MyTag commands:");
-    	    	    $sender->sendMessage("/tag address: Shows IP address and port number on the name tag");
-    	    	    $sender->sendMessage("/tag chat: Shows the last message spoken on the name tag");
-    	    	    $sender->sendMessage("/tag health: Shows health on the name tag");
-    	    	    $sender->sendMessage("/tag help: Shows all the sub-commands for /tag");
-    	    	    $sender->sendMessage("/tag hide: Hides the name tag");
-    	    	    $sender->sendMessage("/tag money: Shows the amount of money ");
-    	    	    $sender->sendMessage("/tag op: Shows op status on the name tag, if they have it");
-    	    	    $sender->sendMessage("/tag pos: Shows current coordinates on the name tag");
-    	    	    $sender->sendMessage("/tag restore: Restores current name tag to the default name tag");
-    	    	    $sender->sendMessage("/tag set: Changes the name tag to whatever is set");
-    	    	    $sender->sendMessage("/tag view: Shows the name tag via message");
+    	    	    $sender->sendMessage("/mytag address: Shows IP address and port number on the name tag");
+    	    	    $sender->sendMessage("/mytag chat: Shows the last message spoken on the name tag");
+    	    	    $sender->sendMessage("/mytag health: Shows health on the name tag");
+    	    	    $sender->sendMessage("/mytag help: Shows all the sub-commands for /tag");
+    	    	    $sender->sendMessage("/mytag hide: Hides the name tag");
+    	    	    $sender->sendMessage("/mytag money: Shows the amount of money ");
+    	    	    $sender->sendMessage("/mytag op: Shows op status on the name tag, if they have it");
+    	    	    $sender->sendMessage("/mytag pos: Shows current coordinates on the name tag");
+    	    	    $sender->sendMessage("/mytag restore: Restores current name tag to the default name tag");
+    	    	    $sender->sendMessage("/mytag set: Changes the name tag to whatever is set");
+    	    	    $sender->sendMessage("/mytag view: Shows the name tag via message");
     	    	}
     	    }
     	}
