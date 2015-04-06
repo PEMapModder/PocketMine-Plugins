@@ -56,15 +56,9 @@ class Loader extends PluginBase implements Listener{
     	    	    if(strtolower($args[0]) === "op"){
     	    	    	
     	    	    }
-    	    	    if(strtolower($args[0]) === "pos"){
-    	    	    	
-    	    	    }
     	    	    if(strtolower($args[0]) === "restore"){
     	    	    	$sender->setNameTag($sender->getName());
     	    	    	$sender->sendMessage("Your default name tag has been restored.");
-    	    	    }
-    	    	    if(strtolower($args[0]) === "set"){
-    	    	    	
     	    	    }
     	    	    if(strtolower($args[0]) === "view"){
     	    	    	$sender->sendMessage("Your tag: ".$sender->getNameTag());
@@ -79,9 +73,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("/mytag hide: Hides the name tag");
     	    	    $sender->sendMessage("/mytag money: Shows the amount of money ");
     	    	    $sender->sendMessage("/mytag op: Shows op status on the name tag, if they have it");
-    	    	    $sender->sendMessage("/mytag pos: Shows current coordinates on the name tag");
     	    	    $sender->sendMessage("/mytag restore: Restores current name tag to the default name tag");
-    	    	    $sender->sendMessage("/mytag set: Changes the name tag to whatever is set");
     	    	    $sender->sendMessage("/mytag view: Shows the name tag via message");
     	    	}
     	    }
@@ -108,7 +100,9 @@ class Loader extends PluginBase implements Listener{
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
-    	@mkdir($this->getDataFolder()."data/");
-	file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("tag" => $event->getPlayer()->getNameTag())));
+    	if($this->getConfig()->get("enable")["auto-set"] === true){
+    	    @mkdir($this->getDataFolder()."data/");
+	    file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("tag" => $event->getPlayer()->getNameTag())));
+    	}
     }
 }
