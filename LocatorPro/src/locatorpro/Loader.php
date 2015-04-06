@@ -39,9 +39,9 @@ class Loader extends PluginBase implements Listener{
                     $target = $sender->getServer()->getPlayer($args[0]);
                     if($target !== null){
                         $sender->sendMessage($target->getName()."'s location:");
-                        $sender->sendMessage("X: ".$target->getX());
-                        $sender->sendMessage("Y: ".$target->getY());
-                        $sender->sendMessage("Z: ".$target->getZ());
+                        $sender->sendMessage("X: ".$target->getFloorX());
+                        $sender->sendMessage("Y: ".$target->getFloorY());
+                        $sender->sendMessage("Z: ".$target->getFloorZ());
                         $sender->sendMessage("Level: ".$target->getLevel()->getName());
                         if($target->getYaw() === 0){
                             $sender->sendMessage("Facing: south");
@@ -71,9 +71,9 @@ class Loader extends PluginBase implements Listener{
                 if($sender instanceof Player){
                     if($sender->hasPermission("locator.command.getpos.self")){
                         $sender->sendMessage("Your location:");
-                        $sender->sendMessage("X: ".$sender->getX());
-                        $sender->sendMessage("Y: ".$sender->getY());
-                        $sender->sendMessage("Z: ".$sender->getZ());
+                        $sender->sendMessage("X: ".$sender->getFloorX());
+                        $sender->sendMessage("Y: ".$sender->getFloorY());
+                        $sender->sendMessage("Z: ".$sender->getFloorZ());
                         $sender->sendMessage("Level: ".$sender->getLevel()->getName());
                         if($sender->getYaw() === 0){
                             $sender->sendMessage("Facing: south");
@@ -100,6 +100,17 @@ class Loader extends PluginBase implements Listener{
                 }
             }
         }
+        if(strtolower($command->getName()) === "lastpos"){
+            
+        }
+        if(strtolower($command->getName()) === "savepos"){
+            if(isset($args[0])){
+                
+            }
+            else{
+                
+            }
+        }
         return true;
     }
     
@@ -107,6 +118,7 @@ class Loader extends PluginBase implements Listener{
         if($event->getBlock()->getId() === $this->getConfig()->get("tap-block")){
             @mkdir($this->getDataFolder()."data/");
             file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("x" => $event->getBlock()->getX(), "y" => $event->getBlock()->getY(), "z" => $event->getBlock()->getZ())));
+            $event->getPlayer()->sendMessage("Coordinates saved.");
         }
     }
     
