@@ -18,7 +18,7 @@ class Loader extends PluginBase implements Listener{
     	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+            $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
     	    $this->getLogger()->info("§eYour configuration file is outdated.");

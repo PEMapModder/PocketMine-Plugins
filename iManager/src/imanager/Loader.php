@@ -23,7 +23,7 @@ class Loader extends PluginBase implements Listener{
             $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
             $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-			$this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+	    $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
     	    $this->getLogger()->info("§eYour configuration file is outdated.");
