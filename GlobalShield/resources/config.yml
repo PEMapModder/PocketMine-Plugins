@@ -1,15 +1,4 @@
 #Configuration file for GlobalShield v1.1.0
-enable:
- interact:
- #Set to false for each block that you don't want players interacting with in protected levels
-  burning-furnace: false
-  chest: false
-  furnace: false
-  iron-door: false
-  stonecutter: false
-  trapdoor: false
-  wood-door: false
-  workbench: false
 levels:
 #For each level you want to protect, just add the name of that world here
  - world
