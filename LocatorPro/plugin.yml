@@ -2,7 +2,7 @@ name: LocatorPro
 main: locatorpro\Loader
 version: 1.0.0
 api: 1.10.0
-load: STARTUP
+load: POSTWORLD
 author: Gamecrafter
 description: Everything is about the coordinates!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/LocatorPro
