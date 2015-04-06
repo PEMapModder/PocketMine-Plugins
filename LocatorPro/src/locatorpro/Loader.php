@@ -5,6 +5,7 @@ namespace locatorpro;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\Listener;
@@ -75,6 +76,10 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
+        
+    }
+    
+    public function onPlayerJoin(PlayerJoinEvent $event){
         
     }
     
