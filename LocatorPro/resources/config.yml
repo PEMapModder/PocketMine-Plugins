@@ -2,10 +2,12 @@
 enable:
  teleport: true
  #Set to true to teleport players back to set position after player has a y-coordinate above maximum-y or below minimum-y
-position:
+limit:
  maximum-y:
+ #Highest y-coordinate before player is teleported back to set position
  minimum-y:
-teleport:
+ #Lowest y-coordinate before player is teleported back to set position
+position:
  x:
  #Sets x-coordinate for new position
  y:
