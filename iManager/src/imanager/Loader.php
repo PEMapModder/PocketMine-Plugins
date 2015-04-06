@@ -16,12 +16,15 @@ class Loader extends PluginBase implements Listener{
     
     public $exempt;
     
+    public $iplist;
+    
     public function onEnable(){
 	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    @mkdir($this->getDataFolder());
             $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
             $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
+            $this->iplist = new Config($this->getDataFolder()."iplist.txt", Config::ENUM);
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
 	    $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
@@ -153,6 +156,11 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerPreLogin(PlayerPreLoginEvent $event){
-    	
+    	if($this->iplist->exists($event->getPlayer()->getAddress())){
+    		
+    	}
+    	else{
+    		
+    	}
     }
 }
