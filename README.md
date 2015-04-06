@@ -22,6 +22,6 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 * iManager
 
 ### To-do:
-* Check plugin version for configuration files
 * Fix any bugs if found
+* Lighten up `.phar` plugins
 * Make more plugins
