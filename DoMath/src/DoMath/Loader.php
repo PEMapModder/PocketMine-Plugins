@@ -34,6 +34,10 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "divide"){
             if(isset($args[0]) && isset($args[1])){
                 if(is_numeric($args[0]) && is_numeric($args[1])){
+                    if($args[1] === 0){
+                        $sender->sendMessage(TextFormat::RED."Error: division by 0 is not possible.");
+                        return true;
+                    }
                     $answer = $args[0] / $args[1];
                     $sender->sendMessage(TextFormat::RED.$args[0].TextFormat::WHITE." / ".TextFormat::BLUE.$args[1].TextFormat::WHITE." = ".TextFormat::GREEN.$answer);
                 } 
