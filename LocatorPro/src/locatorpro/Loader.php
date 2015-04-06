@@ -31,28 +31,28 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-        if($sender instanceof Player){
-            if(strtolower($command->getName()) === "getpos"){
-                if(isset($args[0])){
-                    if($sender->hasPermission("locator.command.getpos.other")){
-                        $target = $sender->getServer()->getPlayer($args[0]);
-                        if($target != null){
-                            $sender->sendMessage($target->getName()."'s location:");
-                            $sender->sendMessage("X: ".$target->getX());
-                            $sender->sendMessage("Y: ".$target->getY());
-                            $sender->sendMessage("Z: ".$target->getZ());
-                            $sender->sendMessage("Level: ".$target->getLevel()->getName());
-                            $sender->sendMessage("Face: ".$target->getYaw());
-                        }
-                        else{
-                            $sender->sendMessage("§cPlease specify a valid player.");
-                        }
+        if(strtolower($command->getName()) === "getpos"){
+            if(isset($args[0])){
+                if($sender->hasPermission("locator.command.getpos.other")){
+                    $target = $sender->getServer()->getPlayer($args[0]);
+                    if($target != null){
+                        $sender->sendMessage($target->getName()."'s location:");
+                        $sender->sendMessage("X: ".$target->getX());
+                        $sender->sendMessage("Y: ".$target->getY());
+                        $sender->sendMessage("Z: ".$target->getZ());
+                        $sender->sendMessage("Level: ".$target->getLevel()->getName());
+                        $sender->sendMessage("Face: ".$target->getYaw());
                     }
                     else{
-                        $sender->sendMessage("§cYou don't have permissions to use this command.");
+                        $sender->sendMessage("§cPlease specify a valid player.");
                     }
                 }
                 else{
+                    $sender->sendMessage("§cYou don't have permissions to use this command.");
+                }
+            }
+            else{
+                if($sender instanceof Player){
                     if($sender->hasPermission("locator.command.getpos.self")){
                         $sender->sendMessage("Your location:");
                         $sender->sendMessage("X: ".$sender->getX());
@@ -65,10 +65,10 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("§cYou don't have permissions to use this command.");
                     }
                 }
+                else{
+                    $sender->sendMessage("§cPlease run this command in-game.");
+                }
             }
-        }
-        else{
-            $sender->sendMessage("§cPlease run this command in-game.");
         }
         return true;
     }
