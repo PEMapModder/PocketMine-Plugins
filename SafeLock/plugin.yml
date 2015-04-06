@@ -1,0 +1,17 @@
+name: SafeLock
+main: safelock\Loader
+version: 1.0.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Lock up your home, keep it safe from griefers!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/SafeLock
+commands:
+ lock:
+  description:
+  usage: /lock
+  permission: safelock.command.lock
+ unlock:
+  description:
+  usage: /unlock
+  permission: safelock.command.unlock
