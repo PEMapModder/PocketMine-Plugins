@@ -23,5 +23,5 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 
 ### To-do:
 * Fix any bugs if found
-* Lighten up `.phar` plugins
+* Make `.phar` files lighter
 * Make more plugins
