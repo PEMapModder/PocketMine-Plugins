@@ -8,6 +8,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
 
 class Loader extends PluginBase implements Listener{
+    
     public function onEnable(){
     	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
