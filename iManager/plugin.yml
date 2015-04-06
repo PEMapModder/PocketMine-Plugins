@@ -7,9 +7,9 @@ author: Gamecrafter
 description: Manage your server like never before!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iManager
 commands:
- server:
+ imanager:
   description:
-  usage: /server <addresslist/gamemodelist/healthlist/kickall/killall/moneylist/opall/oplist>
+  usage: /imanager <addresslist/gamemodelist/healthlist/kickall/killall/moneylist/opall/oplist>
   permission: imanager.command.check
 permissions:
  imanager:
@@ -18,5 +18,5 @@ permissions:
    imanager.command:
     default: op
     children:
-     imanager.command.server:
+     imanager.command.imanager:
       default: op
