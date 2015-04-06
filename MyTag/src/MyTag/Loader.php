@@ -1,6 +1,6 @@
 <?php
 
-namespace MyTag;
+namespace mytag;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;

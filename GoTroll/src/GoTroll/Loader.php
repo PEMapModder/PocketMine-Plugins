@@ -1,6 +1,6 @@
 <?php
 
-namespace GoTroll;
+namespace gotroll;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;

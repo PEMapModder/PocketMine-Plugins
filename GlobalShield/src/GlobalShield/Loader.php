@@ -1,6 +1,6 @@
 <?php
 
-namespace GlobalShield;
+namespace globalshield;
 
 use pocketmine\block\BurningFurnace;
 use pocketmine\block\Chest;

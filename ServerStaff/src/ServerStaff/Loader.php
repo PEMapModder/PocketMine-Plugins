@@ -1,6 +1,6 @@
 <?php
 
-namespace ServerStaff;
+namespace serverstaff;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;

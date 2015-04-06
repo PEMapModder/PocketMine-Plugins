@@ -1,5 +1,5 @@
 name: GamemodePvP
-main: GamemodePvP\Loader
+main: gamemodepvp\Loader
 version: 1.0.0
 api: 1.10.0
 load: POSTWORLD

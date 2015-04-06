@@ -1,6 +1,6 @@
 <?php
 
-namespace ServerHelp;
+namespace serverhelp;
 
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\event\Listener;

@@ -11,7 +11,7 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 * GearUp
 * GlobalShield
 * GoTroll
-* Locator
+* LocatorPro
 * MyChat
 * MyTag
 * ServerHelp

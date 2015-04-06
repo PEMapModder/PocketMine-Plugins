@@ -1,6 +1,6 @@
 <?php
 
-namespace MyChat;
+namespace mychat;
 
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerDeathEvent;

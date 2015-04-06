@@ -1,6 +1,6 @@
 <?php
 
-namespace Commander;
+namespace commander;
 
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\event\block\BlockBreakEvent;

@@ -1,5 +1,5 @@
 name: CustomHealth
-main: CustomHealth\Loader
+main: customhealth\Loader
 version: 1.0.0
 api: 1.10.0
 load: STARTUP

@@ -1,10 +1,10 @@
-name: Locator
-main: Locator\Loader
+name: LocatorPro
+main: locatorpro\Loader
 version: 1.0.0
 api: 1.10.0
 load: STARTUP
 author: Gamecrafter
-description: Now you can locate anything!
+description: 
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/Locator
 commands:
  getpos:

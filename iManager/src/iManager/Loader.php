@@ -1,6 +1,6 @@
 <?php
 
-namespace iManager;
+namespace imanager;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;

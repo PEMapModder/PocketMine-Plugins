@@ -1,6 +1,6 @@
 <?php
 
-namespace GearUp;
+namespace gearup;
 
 use pocketmine\block\Block;
 use pocketmine\command\Command;

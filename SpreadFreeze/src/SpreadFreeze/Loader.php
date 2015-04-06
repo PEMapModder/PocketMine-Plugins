@@ -1,6 +1,6 @@
 <?php
 
-namespace SpreadFreeze;
+namespace spreadfreeze;
 
 use pocketmine\block\Grass;
 use pocketmine\block\Lava;

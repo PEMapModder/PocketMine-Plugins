@@ -1,6 +1,6 @@
 <?php
 
-namespace SignsPro;
+namespace signspro;
 
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;

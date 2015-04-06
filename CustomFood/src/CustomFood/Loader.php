@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomFood;
+namespace customfood;
 
 use pocketmine\event\entity\EntityRegainHealthEvent;
 use pocketmine\event\player\PlayerItemConsumeEvent;

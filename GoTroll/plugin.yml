@@ -1,5 +1,5 @@
 name: GoTroll
-main: GoTroll\Loader
+main: gotroll\Loader
 version: 1.0.0
 api: 1.10.0
 load: STARTUP

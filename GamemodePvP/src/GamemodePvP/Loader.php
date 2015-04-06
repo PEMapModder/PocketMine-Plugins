@@ -1,6 +1,6 @@
 <?php
 
-namespace GamemodePvP;
+namespace gamemodepvp;
 
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\Listener;
