@@ -40,7 +40,7 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-    	if(strtolower($command->getName()) === "server"){
+    	if(strtolower($command->getName()) === "imanager"){
     	    if(isset($args[0])){
     	    	if(strtolower($args[0]) === "addresslist"){
 
