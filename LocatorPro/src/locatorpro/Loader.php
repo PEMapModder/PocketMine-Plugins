@@ -114,7 +114,7 @@ class Loader extends PluginBase implements Listener{
             
         }
         else{
-            $this->getServer()->getLogger()->info("");
+            $this->getServer()->getLogger()->info("§eCreated data file for ".$event->getPlayer()->getName().".");
         }
     }
     
