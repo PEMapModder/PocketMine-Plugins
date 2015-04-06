@@ -3,6 +3,8 @@
 namespace safelock;
 
 use pocketmine\block\WoodDoor;
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\Listener;
@@ -26,6 +28,15 @@ class Loader extends PluginBase implements Listener{
         $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
 
+    public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+        if(strtolower($command->getName()) === "lock"){
+            
+        }
+        if(strtolower($command->getName()) === "unlock"){
+            
+        }
+    }
+    
     public function onPlayerInteract(PlayerInteractEvent $event){
     
     }
