@@ -12,16 +12,16 @@ commands:
   usage: /getpos <player>
   permission: locator.command.getpos
 permissions:
- locator:
+ locatorpro:
   default: op
   children:
-   locator.command:
+   locatorpro.command:
     default: op
     children:
-     locator.command.getpos:
+     locatorpro.command.getpos:
       default: true
       children:
-       locator.command.getpos.others:
+       locatorpro.command.getpos.others:
         default: true
-       locator.command.getpos.self:
+       locatorpro.command.getpos.self:
         default: true
