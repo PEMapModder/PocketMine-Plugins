@@ -7,9 +7,9 @@ author: Gamecrafter
 description: Players get to control what is on their name tag!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/MyTag
 commands:
- tag:
+ mytag:
   description: 
-  usage: /tag <address/chat/health/help/hide/money/op/pos/restore/view>
+  usage: /mytag <address/chat/health/help/hide/money/op/pos/restore/view>
   permission: mytag.command.tag
 permissions:
  mytag:
@@ -18,5 +18,5 @@ permissions:
    mytag.command:
     default: op
     children:
-     mytag.command.tag:
+     mytag.command.mytag:
       default: true
