@@ -35,7 +35,9 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onDisable(){
+    	$this->chat->save();
         $this->exempt->save();
+        $this->ip->save();
         $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -152,7 +154,9 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
-    	
+    	if($this->getConfig()->get("enable")["chat-log"] === true){
+    		
+    	}
     }
     
     public function onPlayerPreLogin(PlayerPreLoginEvent $event){
