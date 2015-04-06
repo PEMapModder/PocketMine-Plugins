@@ -2,7 +2,7 @@ name: CustomHealth
 main: customhealth\Loader
 version: 1.0.0
 api: 1.10.0
-load: STARTUP
+load: POSTWORLD
 author: Gamecrafter
 description: Control how players gain and lose health!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/CustomHealth
