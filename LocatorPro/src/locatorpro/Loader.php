@@ -41,7 +41,7 @@ class Loader extends PluginBase implements Listener{
                             $sender->sendMessage("Y: ".$target->getY());
                             $sender->sendMessage("Z: ".$target->getZ());
                             $sender->sendMessage("Level: ".$target->getLevel()->getName());
-                            $sender->sendMessage("Face: ");
+                            $sender->sendMessage("Face: ".$target->getYaw());
                         }
                         else{
                             $sender->sendMessage("§cPlease specify a valid player.");
@@ -58,7 +58,7 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("Y: ".$sender->getY());
                         $sender->sendMessage("Z: ".$sender->getZ());
                         $sender->sendMessage("Level: ".$sender->getLevel()->getName());
-                        $sender->sendMessage("Face: ");
+                        $sender->sendMessage("Face: ".$sender->getYaw());
                     }
                     else{
                         $sender->sendMessage("§cYou don't have permissions to use this command.");
