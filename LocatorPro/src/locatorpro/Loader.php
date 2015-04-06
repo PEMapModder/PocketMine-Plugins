@@ -4,6 +4,8 @@ namespace locatorpro;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
 
@@ -58,5 +60,9 @@ class Loader extends PluginBase{
             $sender->sendMessage("§cPlease run this command in-game.");
         }
         return true;
+    }
+    
+    public function onPlayerInteract(PlayerInteractEvent $event){
+        
     }
 }
