@@ -101,7 +101,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerJoin(PlayerJoinEvent $event){
 	if(file_exists($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml") && $this->getConfig()->get("enable")["auto-set"] === true){
-	    $event->getPlayer()->setNameTag(yaml_parse(file_get_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml")["tag"]));
+	    $event->getPlayer()->setNameTag(yaml_parse(file_get_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml")));
 	}
 	else{
 	    @mkdir($this->getDataFolder()."data/");
