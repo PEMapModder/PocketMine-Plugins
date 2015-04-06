@@ -106,6 +106,6 @@ class Loader extends PluginBase implements Listener{
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
-	
+	file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("tag" => $event->getPlayer()->getNameTag())));
     }
 }
