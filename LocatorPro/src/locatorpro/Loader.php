@@ -37,7 +37,7 @@ class Loader extends PluginBase implements Listener{
             if(isset($args[0])){
                 if($sender->hasPermission("locator.command.getpos.other")){
                     $target = $sender->getServer()->getPlayer($args[0]);
-                    if($target != null){
+                    if($target !== null){
                         $sender->sendMessage($target->getName()."'s location:");
                         $sender->sendMessage("X: ".$target->getX());
                         $sender->sendMessage("Y: ".$target->getY());
