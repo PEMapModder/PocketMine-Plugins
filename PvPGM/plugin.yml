@@ -1,8 +1,8 @@
-name: GamemodePvP
-main: gamemodepvp\Loader
+name: PvPGM
+main: pvpgm\Loader
 version: 1.0.0
 api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
 description: Players can't hurt players that don't have the same gamemode as them!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GamemodePvP
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/PvPGM
