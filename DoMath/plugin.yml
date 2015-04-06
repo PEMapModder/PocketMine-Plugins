@@ -4,7 +4,7 @@ version: 1.0.0
 api: 1.10.0
 load: STARTUP
 author: Gamecrafter
-description: Play Minecraft and do math at the same time!
+description: It's easy to do math now!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/DoMath
 commands:
  add:
