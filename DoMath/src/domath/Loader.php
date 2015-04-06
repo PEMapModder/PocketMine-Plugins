@@ -23,29 +23,29 @@ class Loader extends PluginBase{
                     $sender->sendMessage($args[0]." + ".$args[1]." = ".($args[0] + $args[1]));
                 }
                 else{
-                    $sender->sendMessage("Please use numbers.");
+                    $sender->sendMessage("§cPlease use numbers.");
                 }
             }
             else{
-                $sender->sendMessage("Usage: ".$command->getUsage());
+                $sender->sendMessage("§cUsage: ".$command->getUsage());
             }
         }
         if(strtolower($command->getName()) === "divide"){
             if(isset($args[0]) && isset($args[1])){
                 if(is_numeric($args[0]) && is_numeric($args[1])){
                     if($args[1] === 0){
-                        $sender->sendMessage("Undefined value error: 0");
+                        $sender->sendMessage("§cUndefined value error: 0");
                     }
                     else{
                         $sender->sendMessage($args[0]." / ".$args[1]." = ".($args[0] / $args[1]));
                     }
                 } 
                 else{
-                    $sender->sendMessage("Please use numbers.");
+                    $sender->sendMessage("§cPlease use numbers.");
                 }
             }
             else{
-                $sender->sendMessage("Usage: ".$command->getUsage()); 
+                $sender->sendMessage("§cUsage: ".$command->getUsage()); 
             }
         }
         if(strtolower($command->getName()) === "multiply"){
@@ -54,11 +54,11 @@ class Loader extends PluginBase{
                     $sender->sendMessage($args[0]." * ".$args[1]." = ".($args[0] * $args[1]));
                 }
                 else{
-                    $sender->sendMessage("Please use numbers.");
+                    $sender->sendMessage("§cPlease use numbers.");
                 }
             }
             else{
-                $sender->sendMessage("Usage: ".$command->getUsage());
+                $sender->sendMessage("§cUsage: ".$command->getUsage());
             }
         }
         if(strtolower($command->getName()) === "subtract"){
@@ -67,11 +67,11 @@ class Loader extends PluginBase{
                     $sender->sendMessage($args[0]." - ".$args[1]." = ".($args[0] - $args[1]));
                 }
                 else{
-                    $sender->sendMessage("Please use numbers.");
+                    $sender->sendMessage("§cPlease use numbers.");
                 }
             }
             else{
-                $sender->sendMessage("Usage: ".$command->getUsage());
+                $sender->sendMessage("§cUsage: ".$command->getUsage());
             }
         }
         return true;
