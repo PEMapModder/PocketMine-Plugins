@@ -5,7 +5,7 @@ api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: 
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/Locator
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/LocatorPro
 commands:
  getpos:
   description: Gets a player's current coordinates, level name, and the direction they are facing
