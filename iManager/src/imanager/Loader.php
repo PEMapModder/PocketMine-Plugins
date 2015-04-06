@@ -161,10 +161,9 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerPreLogin(PlayerPreLoginEvent $event){
     	if($this->ip->exists($event->getPlayer()->getAddress())){
-    		
     	}
     	else{
-    		
+    	    $event->getPlayer()->kick();
     	}
     }
 }
