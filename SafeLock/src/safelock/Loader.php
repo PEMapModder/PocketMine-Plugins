@@ -3,6 +3,7 @@
 namespace safelock;
 
 use pocketmine\block\WoodDoor;
+use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
