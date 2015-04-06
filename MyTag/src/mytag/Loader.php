@@ -98,14 +98,17 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerJoin(PlayerJoinEvent $event){
 	if(file_exists($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml")){
-		
+	    $event->getPlayer()-setNameTag(yaml_parse(file_get_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml")["tag"]));
 	}
 	else{
+	    @mkdir($this->getDataFolder()."data/");
+	    file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("tag" => $event->getPlayer()->getNameTag())));
 	    $this->getServer()->getLogger()->info("§eCreated new data file for ".$event->getPlayer()->getName()." at MyTag\\data\\".$event->getPlayer()->getName().".yml");
 	}
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
+    	@mkdir($this->getDataFolder()."data/");
 	file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("tag" => $event->getPlayer()->getNameTag())));
     }
 }
