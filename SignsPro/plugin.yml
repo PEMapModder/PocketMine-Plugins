@@ -2,7 +2,7 @@ name: SignsPro
 main: signspro\Loader
 version: 1.0.0
 api: 1.10.0
-load: STARTUP
+load: POSTWORLD
 author: Gamecrafter
 description: Control and customize the signs in your server!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/SignsPro
