@@ -3,8 +3,8 @@ enable:
  chat-log: true
  #Set to true to save all player chat in chat.txt
  ip-whitelist: false
- #Set to true to enable whitelist by IP address
+ #Set to true to enable whitelist by IP address, addresses saved in ip.txt
 preferred-economy:
-#Will be used for /server moneylist
+#Will be used for /imanager moneylist
 version: 1.1.0
 #Do not change the version, it is used for internal purposes
