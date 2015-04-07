@@ -114,7 +114,7 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "addresslist"){
 		    $sender->sendMessage("§eIP address and port of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getAddress()."§f:§9".$players->getPort());
+		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getAddress()."§f:§a".$players->getPort());
 		    }
     	    	}
     	    	if(strtolower($args[0]) === "delexempt"){
@@ -193,7 +193,7 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "healthlist"){
 		    $sender->sendMessage("§eHealth of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getHealth()."§e:§9".$players->getMaxHealth());
+		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getHealth()."§e/§a".$players->getMaxHealth());
 
 		    }	
     	    	}
