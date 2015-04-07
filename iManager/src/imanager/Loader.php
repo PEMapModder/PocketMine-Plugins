@@ -247,7 +247,23 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "info"){
     	    	    if(isset($args[1])){
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
-    	    	    	$sender->sendMessage();
+    	    	    	if($target !== null){
+    	    	    	    $sender->sendMessage("> Information about: ".$target->getName());
+    	    	    	    $sender->sendMessage("Name: ".$target->getName());
+    	    	    	    $sender->sendMessage("Display name: ".$target->getDisplayName());
+    	    	    	    $sender->sendMessage("Name tag: ".$target->getNameTag());
+    	    	    	    $sender->sendMessage("Address: ".$target->getAddress().":".$target->getPort());
+    	    	    	    $sender->sendMessage("X: ".$target->getFloorX());
+    	    	    	    $sender->sendMessage("Y: ".$target->getFloorY());
+    	    	    	    $sender->sendMessage("Z: ".$target->getFloorZ());
+    	    	    	    $sender->sendMessage("Level: ".$target->getLevel()->getName());
+    	    	    	    $sender->sendMessage("Yaw: ".$target->getYaw());
+    	    	    	    $sender->sendMessage("Pitch: ".$target->getPitch());
+    	    	    	    $sender->sendMessage("Gamemode: ".$target->getGamemode());
+    	    	    	}
+    	    	    	else{
+    	    	    	    $sender->sendMessage("");
+    	    	    	}
     	    	    }
     	    	    else{
     	    	    	$sender->sendMessage("§cPlease specify a valid player");
