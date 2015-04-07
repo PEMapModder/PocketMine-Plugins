@@ -70,7 +70,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    else{
     	    	    	    	$this->ip->set($sender->getAddress());
     	    	    	    	$this->ip->save();
-    	    	    	    	$sender->sendMessage("§aAdded ".$sender->getAddress()." to ip.txt.")
+    	    	    	    	$sender->sendMessage("§aAdded ".$sender->getAddress()." to ip.txt.");
     	    	    	    }
     	    	    	}
     	    	    	else{
