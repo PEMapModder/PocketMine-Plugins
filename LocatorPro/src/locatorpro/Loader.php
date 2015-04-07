@@ -44,13 +44,13 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("Z: ".$target->getFloorZ());
                         $sender->sendMessage("Level: ".$target->getLevel()->getName());
                         if($target->getYaw() === 0){
-                            $sender->sendMessage("Facing: south");                            $sender->sendMessage("Facing: west");                            $sender->sendMessage("Facing: west");
+                            $sender->sendMessage("Facing: south");      
                         }
                         elseif($target->getYaw() === 1){
                             $sender->sendMessage("Facing: west");
                         }
                         elseif($target->getYaw() === 2){
-                            $sender->sendMessage("Facing: north");                            $sender->sendMessage("Facing: west");
+                            $sender->sendMessage("Facing: north");                          
                         }
                         elseif($target->getYaw() === 3){
                             $sender->sendMessage("Facing: east");
@@ -73,13 +73,13 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("Z: ".$sender->getFloorZ());
                         $sender->sendMessage("Level: ".$sender->getLevel()->getName());
                         if($sender->getYaw() === 0){
-                            $sender->sendMessage("Facing: south");                            $sender->sendMessage("Facing: west");                            $sender->sendMessage("Facing: west");
+                            $sender->sendMessage("Facing: south");
                         }
                         elseif($sender->getYaw() === 1){
                             $sender->sendMessage("Facing: west");
                         }
                         elseif($sender->getYaw() === 2){
-                            $sender->sendMessage("Facing: north");                            $sender->sendMessage("Facing: west");
+                            $sender->sendMessage("Facing: north");
                         }
                         elseif($sender->getYaw() === 3){
                             $sender->sendMessage("Facing: east");
