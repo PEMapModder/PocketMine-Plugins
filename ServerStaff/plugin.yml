@@ -9,5 +9,5 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerStaff
 commands:
  staff:
   description: List of the players in the staff
-  usage: /staff
   permission: serverstaff.command.staff
+  aliases: [ss]
