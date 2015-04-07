@@ -84,7 +84,7 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "addresslist"){
 		    $sender->sendMessage("");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	
+		    	$sender->sendMessage("> ".$players->getName().": ".$players->getAddress().":".$players->getPort());
 		    }
     	    	}
     	    	if(strtolower($args[0]) === "delexempt"){
