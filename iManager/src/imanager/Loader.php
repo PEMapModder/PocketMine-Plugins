@@ -241,12 +241,15 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "moneylist"){
 		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §f- §c".$players->getAddress()."§f:§9".$players->getPort());
+		    	$sender->sendMessage("§e> §b".$players->getName()." §f- ");
 
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "opall"){
-    	    		
+    	    	    $sender->sendMessage("§eGranting OP status to everyone in the server...");
+    	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
+    	    	    	$players->setOp(true);
+    	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "oplist"){
 		    $sender->sendMessage("§eOPs that are currently online:");
@@ -259,7 +262,7 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "poslist"){
 		    $sender->sendMessage("§eLocation of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §e- X: §c".$players->getFloorX()." §eY: §9".$players->getFloorY()." §eZ: §a".$players->getFloorZ()." §eLevel: §d".$players->getLevel()->getName()." §eYaw: §6");
+		    	$sender->sendMessage("§e> §b".$players->getName()." §e- X: §c".$players->getFloorX()." §eY: §9".$players->getFloorY()." §eZ: §a".$players->getFloorZ()." §eLevel: §d".$players->getLevel()->getName()." §eYaw: §6".$players->getYaw());
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "usage"){
