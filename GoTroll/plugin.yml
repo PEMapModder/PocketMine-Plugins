@@ -7,7 +7,7 @@ author: Gamecrafter
 description: Troll players in the server and make them mad!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GoTroll
 commands:
- troll:
+ gotroll:
   description: Trolls the specified player
-  usage: /troll <deop/op/spam> <player>
   permission: gotroll.command.troll
+  aliases: [gt]
