@@ -183,6 +183,12 @@ class Loader extends PluginBase implements Listener{
     	    	    	}
     	    	    }
     	    	}
+    	    	if(strtolower($args[0]) === "deopall"){
+    	    	    $sender->sendMessage("§eRevoking OP status of everyone in the server...");
+    	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
+    	    	    	$players->setOp(false);
+    	    	    }
+    	    	}
     	    	if(strtolower($args[0]) === "gamemodelist"){
 		    $sender->sendMessage("§eGamemode of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
@@ -216,7 +222,13 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("/imanager poslist: Lists every player's coordinates, level, and face direction");	
     	    	}
     	    	if(strtolower($args[0]) === "info"){
-    	    		
+    	    	    if(isset($args[1])){
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	$sender->sendMessage();
+    	    	    }
+    	    	    else{
+    	    	    	$sender->sendMessage("§cPlease specify a valid player");
+    	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "kickall"){
 		    $sender->sendMessage("§eKicking everyone without EXEMPT status from the server...");
@@ -242,7 +254,7 @@ class Loader extends PluginBase implements Listener{
 		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	$sender->sendMessage("§e> §b".$players->getName()." §f- ");
-
+			//To-do
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "opall"){
@@ -276,10 +288,11 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("/imanager addresslist: Lists every player's IP address and port");
     	    	$sender->sendMessage("/imanager delexempt: Removes a player's name from exempt.txt");
     	    	$sender->sendMessage("/imanager delip: Removes a player's IP address from ip.txt");
+    	    	$sender->sendMessage("/imanager deop: Revokes all the player's OP status");
     	    	$sender->sendMessage("/imanager gamemodelist: Lists every player's gamemode");
     	    	$sender->sendMessage("/imanager healthlist: Lists every player's health");
     	    	$sender->sendMessage("/imanager help: Shows all the sub-commands for /imanager");
-    	    	$sender->sendMessage("/imanager info: Gets all the info about a player");
+    	    	$sender->sendMessage("/imanager info: Gets all the information about a player");
     	    	$sender->sendMessage("/imanager kickall: Kicks all the players without EXEMPT status from the server");
     	    	$sender->sendMessage("/imanager killall: Kills all the players without EXEMPT status in the server");
     	    	$sender->sendMessage("/imanager moneylist: Lists every player's amount of money");
