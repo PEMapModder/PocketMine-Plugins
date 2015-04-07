@@ -47,15 +47,15 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    if(strtolower($args[0]) === "help"){
     	    	    	$sender->sendMessage("MyTag commands:");
-    	    	    	$sender->sendMessage("§a/mytag address §c- §eShows IP address and port number on the name tag");
-    	    	    	$sender->sendMessage("§a/mytag chat §c- §eShows the last message spoken on the name tag");
-    	    	    	$sender->sendMessage("§a/mytag health §c- §eShows health on the name tag");
-    	    	    	$sender->sendMessage("§a/mytag help §c- §eShows all the sub-commands for /tag");
-    	    	    	$sender->sendMessage("§a/mytag hide §c- §eHides the name tag");
-    	    	    	$sender->sendMessage("§a/mytag money §c- §eShows the amount of money ");
-    	    	    	$sender->sendMessage("§a/mytag op §c- §eShows op status on the name tag, if they have it");
-    	    	    	$sender->sendMessage("§a/mytag restore §c- §eRestores current name tag to the default name tag");
-    	    	    	$sender->sendMessage("§a/mytag view §c- §eShows the name tag via message");
+    	    	    	$sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
+    	    	    	$sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
+    	    	    	$sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
+    	    	    	$sender->sendMessage("§a/mytag help §c- §fShows all the sub-commands for /tag");
+    	    	    	$sender->sendMessage("§a/mytag hide §c- §fHides the name tag");
+    	    	    	$sender->sendMessage("§a/mytag money §c- §fShows the amount of money ");
+    	    	    	$sender->sendMessage("§a/mytag op §c- §fShows op status on the name tag, if they have it");
+    	    	    	$sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
+    	    	    	$sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
     	    	    }
     	    	    if(strtolower($args[0]) === "hide"){
     	    	    	$sender->setNameTag(null);
@@ -80,15 +80,15 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	else{
     	    	    $sender->sendMessage("MyTag commands:");
-    	    	    $sender->sendMessage("§a/mytag address §c- §eShows IP address and port number on the name tag");
-    	    	    $sender->sendMessage("§a/mytag chat §c- §eShows the last message spoken on the name tag");
-    	    	    $sender->sendMessage("§a/mytag health §c- §eShows health on the name tag");
-    	    	    $sender->sendMessage("§a/mytag help §c- §eShows all the sub-commands for /tag");
-    	    	    $sender->sendMessage("§a/mytag hide §c- §eHides the name tag");
-    	    	    $sender->sendMessage("§a/mytag money §c- §eShows the amount of money ");
-    	    	    $sender->sendMessage("§a/mytag op §c- §eShows op status on the name tag, if they have it");
-    	    	    $sender->sendMessage("§a/mytag restore §c- §eRestores current name tag to the default name tag");
-    	    	    $sender->sendMessage("§a/mytag view §c- §eShows the name tag via message");
+    	    	    $sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
+    	    	    $sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
+    	    	    $sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
+    	    	    $sender->sendMessage("§a/mytag help §c- §fShows all the sub-commands for /tag");
+    	    	    $sender->sendMessage("§a/mytag hide §c- §fHides the name tag");
+    	    	    $sender->sendMessage("§a/mytag money §c- §fShows the amount of money ");
+    	    	    $sender->sendMessage("§a/mytag op §c- §fShows op status on the name tag, if they have it");
+    	    	    $sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
+    	    	    $sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
     	    	}
     	    }
     	}
