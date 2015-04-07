@@ -8,7 +8,7 @@ description: Manage your server like never before!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iManager
 commands:
  imanager:
-  description:
+  description: Shows all the sub-commands for /imanager
   permission: imanager.command.check
   aliases: [im]
 permissions:
