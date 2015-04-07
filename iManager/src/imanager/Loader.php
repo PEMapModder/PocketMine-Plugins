@@ -47,9 +47,9 @@ class Loader extends PluginBase implements Listener{
     	    if(isset($args[0])){
     	    	if(strtolower($args[0]) === "addexempt"){
  		    if(isset($args[1])){
-    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	$target = strtolower($this->getServer()->getPlayer($args[1]));
     	    	    	if($target !== null){
-    	    	    	    if($this->exempt->exists($target->getName())){
+    	    	    	    if($this->exempt->exists(strtolower($target->getName()))){
     	    	    	    	$sender->sendMessage("§cThat name already exists in exempt.txt.");
     	    	    	    }
     	    	    	    else{
@@ -64,11 +64,11 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    else{
     	    	    	if($sender instanceof Player){
-    	    	    	    if($this->exempt->exists($sender->getName())){
+    	    	    	    if($this->exempt->exists(strtolower($sender->getName()))){
     	    	    	    	$sender->sendMessage("§cYour name already exists in exempt.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$this->exempt->set($sender->getAddress());
+    	    	    	    	$this->exempt->set($sender->getName());
     	    	    	    	$this->exempt->save();
     	    	    	    	$sender->sendMessage("§aAdded ".$sender->getName()." to exempt.txt.");
     	    	    	    }
@@ -80,9 +80,9 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "addip"){
     	    	    if(isset($args[1])){
-    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	$target = strtolower($this->getServer()->getPlayer($args[1]));
     	    	    	if($target !== null){
-    	    	    	    if($this->ip->exists($target->getAddress())){
+    	    	    	    if($this->ip->exists(strtolower($target->getAddress()))){
     	    	    	    	$sender->sendMessage("§cThat IP address already exists in ip.txt.");
     	    	    	    }
     	    	    	    else{
@@ -97,7 +97,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    else{
     	    	    	if($sender instanceof Player){
-    	    	    	    if($this->ip->exists($sender->getAddress())){
+    	    	    	    if($this->ip->exists(strtolower($sender->getAddress()))){
     	    	    	    	$sender->sendMessage("§cYour IP address already exists in ip.txt.");
     	    	    	    }
     	    	    	    else{
@@ -119,9 +119,9 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "delexempt"){
     	    	    if(isset($args[1])){
-    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	$target = strtolower($this->getServer()->getPlayer($args[1]));
     	    	    	if($target !== null){
-    	    	    	    if($this->exempt->exists($target->getName())){
+    	    	    	    if($this->exempt->exists(strtolower($target->getName()))){
     	    	    	    	$this->exempt->remove($target->getName());
     	    	    	    	$this->exempt->save();
     	    	    	    	$sender->sendMessage("§aRemoved ".$target->getName()." from exempt.txt.");
@@ -136,7 +136,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    else{
     	    	    	if($sender instanceof Player){
-    	    	    	    if($this->exempt->exists($sender->getName())){
+    	    	    	    if($this->exempt->exists(strtolower($sender->getName()))){
     	    	    	    	$this->exempt->remove($sender->getName());
     	    	    	    	$this->exempt->save();
     	    	    	    	$sender->sendMessage("§aRemoved your name from exempt.txt.");
@@ -152,9 +152,9 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "delip"){
     	    	    if(isset($args[1])){
-    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	$target = strtolower($this->getServer()->getPlayer($args[1]));
     	    	    	if($target !== null){
-    	    	    	    if($this->ip->exists($target->getAddress())){
+    	    	    	    if($this->ip->exists(strtolower($target->getAddress()))){
     	    	    	    	$this->ip->remove($target->getAddress());
     	    	    	    	$this->ip->save();
     	    	    	    	$sender->sendMessage("§aRemoved ".$target->getAddress()." from ip.txt.");
@@ -169,7 +169,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    else{
     	    	    	if($sender instanceof Player){
-    	    	    	    if($this->ip->exists($sender->getAddress())){
+    	    	    	    if($this->ip->exists(strtolower($sender->getAddress()))){
     	    	    	    	$this->ip->remove($sender->getAddress());
     	    	    	    	$this->ip->save();
     	    	    	    	$sender->sendMessage("§aRemoved your IP address from ip.txt.");
