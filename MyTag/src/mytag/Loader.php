@@ -39,14 +39,14 @@ class Loader extends PluginBase implements Listener{
     	    	    	$sender->sendMessage("Your IP address and port number has been set on your tag.");
     	    	    }
     	    	    if(strtolower($args[0]) === "chat"){
-    	    	    	
+    	    	    	//To-do
     	    	    }
     	    	    if(strtolower($args[0]) === "health"){
     	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getHealth()."/".$sender->getMaxHealth());
     	    	    	$sender->sendMessage("Your health has been set on your tag.");
     	    	    }
     	    	    if(strtolower($args[0]) === "help"){
-    	    	    	$sender->sendMessage("MyTag commands:");
+    	    	    	$sender->sendMessage("> MyTag commands");
     	    	    	$sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    	    	$sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    	    	$sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
@@ -62,7 +62,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	$sender->sendMessage("Your name tag has been hidden.");
     	    	    }
     	    	    if(strtolower($args[0]) === "money"){
-    	    	    	
+    	    	    	//To-do
     	    	    }
     	    	    if(strtolower($args[0]) === "op"){
     	    	    	
@@ -71,15 +71,15 @@ class Loader extends PluginBase implements Listener{
     	    	    	$sender->setNameTag($sender->getName());
     	    	    	$sender->sendMessage("Your default name tag has been restored.");
     	    	    }
-    	    	    if(strtolower($args[0]) === "usage"){
-    	    	    	$sender->sendMessage("MyTag usage:");
-    	    	    }
     	    	    if(strtolower($args[0]) === "view"){
     	    	    	$sender->sendMessage("Your tag: ".$sender->getNameTag());
     	    	    }
+    	    	    else{
+    	    	    	$sender->sendMessage("§cPlease specify a valid sub-command.");
+    	    	    }
     	    	}
     	    	else{
-    	    	    $sender->sendMessage("MyTag commands:");
+    	    	    $sender->sendMessage("> MyTag commands");
     	    	    $sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    	    $sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    	    $sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
@@ -96,7 +96,7 @@ class Loader extends PluginBase implements Listener{
     	    if(strtolower($command->getName()) === "mytag"){
     	    	if(isset($args[0])){
     	    	    if(strtolower($args[0]) === "help"){
-    	    		$sender->sendMessage("MyTag commands:");
+    	    		$sender->sendMessage("> MyTag commands");
     	    		$sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    		$sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    		$sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
