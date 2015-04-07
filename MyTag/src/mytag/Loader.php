@@ -71,6 +71,9 @@ class Loader extends PluginBase implements Listener{
     	    	    	$sender->setNameTag($sender->getName());
     	    	    	$sender->sendMessage("Your default name tag has been restored.");
     	    	    }
+    	    	    if(strtolower($args[0]) === "usage"){
+    	    	    	$sender->sendMessage("MyTag usage:");
+    	    	    }
     	    	    if(strtolower($args[0]) === "view"){
     	    	    	$sender->sendMessage("Your tag: ".$sender->getNameTag());
     	    	    }
