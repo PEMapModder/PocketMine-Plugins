@@ -11,6 +11,7 @@ commands:
   description: 
   usage: /mytag <address/chat/health/help/hide/money/op/restore/view>
   permission: mytag.command.tag
+  aliases: [mt]
 permissions:
  mytag:
   default: op
