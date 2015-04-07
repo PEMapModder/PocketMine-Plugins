@@ -232,7 +232,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("§a/imanager burnall §c- §fBurns all the players without EXEMPT status in the server");
     	    	    $sender->sendMessage("§a/imanager delexempt §c- §fRemoves a player's name from exempt.txt");
     	    	    $sender->sendMessage("§a/imanager delip §c- §fRemoves a player's IP address from ip.txt");
-    	    	    $sender->sendMessage("§a/imanager deop §c- §fRevokes all the player's OP status");
+    	    	    $sender->sendMessage("§a/imanager deopall §c- §fRevokes all the player's OP status");
     	    	    $sender->sendMessage("§a/imanager gamemodelist §c- §fLists every player's gamemode");
     	    	    $sender->sendMessage("§a/imanager healthlist §c- §fLists every player's health");
     	    	    $sender->sendMessage("§a/imanager help §c- §fShows all the sub-commands for /imanager");
@@ -312,7 +312,7 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("§a/imanager burnall §c- §fBurns all the players without EXEMPT status in the server");
     	    	$sender->sendMessage("§a/imanager delexempt §c- §fRemoves a player's name from exempt.txt");
     	    	$sender->sendMessage("§a/imanager delip §c- §fRemoves a player's IP address from ip.txt");
-    	    	$sender->sendMessage("§a/imanager deop §c- §fRevokes all the player's OP status");
+    	    	$sender->sendMessage("§a/imanager deopall §c- §fRevokes all the player's OP status");
     	    	$sender->sendMessage("§a/imanager gamemodelist §c- §fLists every player's gamemode");
     	    	$sender->sendMessage("§a/imanager healthlist §c- §fLists every player's health");
     	    	$sender->sendMessage("§a/imanager help §c- §fShows all the sub-commands for /imanager");
