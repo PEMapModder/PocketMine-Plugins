@@ -225,7 +225,7 @@ class Loader extends PluginBase implements Listener{
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "help"){
-    	    	    $sender->sendMessage("iManager commands:");
+    	    	    $sender->sendMessage("> iManager commands");
     	    	    $sender->sendMessage("§a/imanager addexempt §c- §fAdds a player's name to exempt.txt");
     	    	    $sender->sendMessage("§a/imanager addip §c- §fAdds a player's IP address to ip.txt");
     	    	    $sender->sendMessage("§a/imanager addresslist §c- §fLists every player's IP address and port");
@@ -300,12 +300,12 @@ class Loader extends PluginBase implements Listener{
 		    	$sender->sendMessage("§e> §b".$players->getName()." §e- X: §c".$players->getFloorX()." §eY: §9".$players->getFloorY()." §eZ: §a".$players->getFloorZ()." §eLevel: §d".$players->getLevel()->getName()." §eYaw: §6".$players->getYaw());
 		    }	
     	    	}
-    	    	if(strtolower($args[0]) === "usage"){
-    	    	    $sender->sendMessage("iManager usage:");
+    	    	else{
+    	    	    $sender->sendMessage("§cPlease specify a valid sub-command.");
     	    	}
     	    }
     	    else{
-    	    	$sender->sendMessage("iManager commands:");
+    	    	$sender->sendMessage("> iManager commands");
     	    	$sender->sendMessage("§a/imanager addexempt §c- §fAdds a player's name to exempt.txt");
     	    	$sender->sendMessage("§a/imanager addip §c- §fAdds a player's IP address to ip.txt");
     	    	$sender->sendMessage("§a/imanager addresslist §c- §fLists every player's IP address and port");
