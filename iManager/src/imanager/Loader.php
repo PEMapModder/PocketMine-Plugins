@@ -121,7 +121,7 @@ class Loader extends PluginBase implements Listener{
     	    	    if(isset($args[1])){
     	    	    	if(is_numeric($args[1])){
     	    	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
-    	    	    	    	$sender->sendMessage("§Burning everyone without EXEMPT status in the server...")
+    	    	    	    	$sender->sendMessage("§Burning everyone without EXEMPT status in the server...");
     	    	    	    	if($this->exempt->exists(strtolower($players->getName()))){
     	    	    	    	}
     	    	    	    	else{
