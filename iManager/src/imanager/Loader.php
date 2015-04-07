@@ -240,7 +240,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("§a/imanager kickall §c- §eKicks all the players without EXEMPT status from the server");
     	    	    $sender->sendMessage("§a/imanager killall §c- §eKills all the players without EXEMPT status in the server");
     	    	    $sender->sendMessage("§a/imanager moneylist §c- §eLists every player's amount of money");
-    	    	    $sender->sendMessage("§a/imanager opall §e- §eGrants OP status to everyone in the server");
+    	    	    $sender->sendMessage("§a/imanager opall §c- §eGrants OP status to everyone in the server");
     	    	    $sender->sendMessage("§a/imanager oplist §c- §eLists all the online OPs");
     	    	    $sender->sendMessage("§a/imanager poslist §c- §eLists every player's coordinates, level, and face direction");
     	    	}
@@ -320,7 +320,7 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("§a/imanager kickall §c- §eKicks all the players without EXEMPT status from the server");
     	    	$sender->sendMessage("§a/imanager killall §c- §eKills all the players without EXEMPT status in the server");
     	    	$sender->sendMessage("§a/imanager moneylist §c- §eLists every player's amount of money");
-    	    	$sender->sendMessage("§a/imanager opall §e- §eGrants OP status to everyone in the server");
+    	    	$sender->sendMessage("§a/imanager opall §c- §eGrants OP status to everyone in the server");
     	    	$sender->sendMessage("§a/imanager oplist §c- §eLists all the online OPs");
     	    	$sender->sendMessage("§a/imanager poslist §c- §eLists every player's coordinates, level, and face direction");
     	    }
