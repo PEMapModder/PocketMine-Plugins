@@ -45,13 +45,23 @@ class Loader extends PluginBase implements Listener{
     	if(strtolower($command->getName()) === "imanager"){
     	    if(isset($args[0])){
     	    	if(strtolower($args[0]) === "addip"){
-    	    		
+    	    	    if(isset($args[1])){
+    	    	    	
+    	    	    }
+    	    	    else{
+    	    	    	$sender->sendMessage("§cPlease specify a valid player.");
+    	    	    }
     	    	} 
     	    	if(strtolower($args[0]) === "addresslist"){
 
     	    	}
     	    	if(strtolower($args[0]) === "delip"){
-    	    		
+    	    	    if(isset($args[1])){
+    	    	    	
+    	    	    }
+    	    	    else{
+    	    	    	$sender->sendMessage("§cPlease specify a valid player.");
+    	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "gamemodelist"){
     	    		
