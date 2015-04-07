@@ -242,6 +242,9 @@ class Loader extends PluginBase implements Listener{
 		    	
 		    }	
     	    	}
+    	    	if(strtolower($args[0]) === "usage"){
+    	    	    $sender->sendMessage("iManager usage:");
+    	    	}
     	    }
     	    else{
     	    	$sender->sendMessage("iManager commands:");
