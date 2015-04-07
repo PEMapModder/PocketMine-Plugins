@@ -120,6 +120,9 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "healthlist"){
     	    		
     	    	}
+    	    	if(strtolower($args[0]) === "help"){
+    	    		
+    	    	}
     	    	if(strtolower($args[0]) === "info"){
     	    		
     	    	}
