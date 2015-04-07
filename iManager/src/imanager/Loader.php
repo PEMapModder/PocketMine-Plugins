@@ -202,15 +202,23 @@ class Loader extends PluginBase implements Listener{
     	    		
     	    	}
     	    	if(strtolower($args[0]) === "kickall"){
-		    $sender->sendMessage("");
+		    $sender->sendMessage("§eKicking everyone without EXEMPT status from the server...");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	
+		    	if($this->exempt->exists(strtolower($players->getName()))){
+		    	}
+		    	else{
+		    	    $players->kick();
+		    	}
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "killall"){
-		    $sender->sendMessage("");
+		    $sender->sendMessage("§eKilling everyone without EXEMPT status in the server...");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	
+		    	if($this->exempt->exists(strtolower($players->getName()))){
+		    	}
+		    	else{
+		    	    $players->kill();
+		    	}
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "moneylist"){
@@ -233,9 +241,6 @@ class Loader extends PluginBase implements Listener{
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	
 		    }	
-    	    	}
-    	    	else{
-    	    	    $sender->sendMessage();
     	    	}
     	    }
     	    else{
