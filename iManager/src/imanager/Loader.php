@@ -50,7 +50,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
     	    	    	    if($this->exempt->exists($target->getName())){
-    	    	    	    	$sender->sendMessage("§cThat player already exists in exempt.txt.");
+    	    	    	    	$sender->sendMessage("§cThat name already exists in exempt.txt.");
     	    	    	    }
     	    	    	    else{
     	    	    	    	$this->exempt->set($target->getAddress());
@@ -127,7 +127,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    	$sender->sendMessage("§aRemoved ".$target->getName()." from exempt.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("§cThat player does not exist in exempt.txt.");
+    	    	    	    	$sender->sendMessage("§cThat name does not exist in exempt.txt.");
     	    	    	    }
     	    	    	}
     	    	    	else{
@@ -139,10 +139,10 @@ class Loader extends PluginBase implements Listener{
     	    	    	    if($this->exempt->exists($sender->getName())){
     	    	    	    	$this->exempt->remove($sender->getName());
     	    	    	    	$this->exempt->save();
-    	    	    	    	$sender->sendMessage("§aRemoved ".$sender->getName()." from exempt.txt.");
+    	    	    	    	$sender->sendMessage("§aRemoved your name from exempt.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("§cThat player does not exist in exempt.txt.");
+    	    	    	    	$sender->sendMessage("§cYour name does not exist in exempt.txt.");
     	    	    	    }
     	    	    	}
     	    	    	else{
@@ -172,10 +172,10 @@ class Loader extends PluginBase implements Listener{
     	    	    	    if($this->ip->exists($sender->getAddress())){
     	    	    	    	$this->ip->remove($sender->getAddress());
     	    	    	    	$this->ip->save();
-    	    	    	    	$sender->sendMessage("§aRemoved ".$sender->getAddress()." from ip.txt.");
+    	    	    	    	$sender->sendMessage("§aRemoved your IP address from ip.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("§cThat IP address does not exist in ip.txt.");
+    	    	    	    	$sender->sendMessage("§cYour IP address does not exist in ip.txt.");
     	    	    	    }
     	    	    	}
     	    	    	else{
