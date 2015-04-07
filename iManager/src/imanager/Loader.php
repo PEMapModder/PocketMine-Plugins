@@ -54,7 +54,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    }
     	    	    	    else{
     	    	    	    	$this->exempt->set($target->getAddress());
-    	    	    	    	$this->ip->save();	
+    	    	    	    	$this->exempt->save();	
     	    	    	    	$sender->sendMessage("§aAdded ".$target->getName()." to exempt.txt.");
     	    	    	    }
     	    	    	}
@@ -64,13 +64,13 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    else{
     	    	    	if($sender instanceof Player){
-    	    	    	    if($this->ip->exists($sender->getAddress())){
-    	    	    	    	$sender->sendMessage("§cYour IP address already exists in ip.txt.");
+    	    	    	    if($this->exempt->exists($sender->getName())){
+    	    	    	    	$sender->sendMessage("§cYour name already exists in exempt.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$this->ip->set($sender->getAddress());
-    	    	    	    	$this->ip->save();
-    	    	    	    	$sender->sendMessage("§aAdded ".$sender->getAddress()." to ip.txt.");
+    	    	    	    	$this->exempt->set($sender->getAddress());
+    	    	    	    	$this->exempt->save();
+    	    	    	    	$sender->sendMessage("§aAdded ".$sender->getName()." to exempt.txt.");
     	    	    	    }
     	    	    	}
     	    	    	else{
@@ -118,7 +118,37 @@ class Loader extends PluginBase implements Listener{
 		    }
     	    	}
     	    	if(strtolower($args[0]) === "delexempt"){
-    	    		
+    	    	    if(isset($args[1])){
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	if($target !== null){
+    	    	    	    if($this->exempt->exists($target->getName())){
+    	    	    	    	$this->exempt->remove($target->getName());
+    	    	    	    	$this->exempt->save();
+    	    	    	    	$sender->sendMessage("§aRemoved ".$target->getName()." from exempt.txt.");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§cThat player does not exist in exempt.txt.");
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+			    $sender->sendMessage("§cPlease specify a valid player.");
+    	    	    	}
+    	    	    }
+    	    	    else{
+    	    	    	if($sender instanceof Player){
+    	    	    	    if($this->exempt->exists($sender->getName())){
+    	    	    	    	$this->exempt->remove($sender->getName());
+    	    	    	    	$this->exempt->save();
+    	    	    	    	$sender->sendMessage("§aRemoved ".$sender->getName()." from exempt.txt.");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§cThat player does not exist in exempt.txt.");
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+    	    	    	    $sender->sendMessage("§cPlease run this command in-game.");
+    	    	    	}
+    	    	    }	
     	    	}
     	    	if(strtolower($args[0]) === "delip"){
     	    	    if(isset($args[1])){
