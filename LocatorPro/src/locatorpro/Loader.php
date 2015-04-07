@@ -43,7 +43,18 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("Y: ".$target->getFloorY());
                         $sender->sendMessage("Z: ".$target->getFloorZ());
                         $sender->sendMessage("Level: ".$target->getLevel()->getName());
-                        $sender->sendMessage("Facing: ".$target->getYaw());
+                        if($target->getYaw() === 0){
+                            $sender->sendMessage("Facing: south");                            $sender->sendMessage("Facing: west");                            $sender->sendMessage("Facing: west");
+                        }
+                        elseif($target->getYaw() === 1){
+                            $sender->sendMessage("Facing: west");
+                        }
+                        elseif($target->getYaw() === 2){
+                            $sender->sendMessage("Facing: north");                            $sender->sendMessage("Facing: west");
+                        }
+                        elseif($target->getYaw() === 3){
+                            $sender->sendMessage("Facing: east");
+                        }
                     }
                     else{
                         $sender->sendMessage("§cPlease specify a valid player.");
@@ -61,7 +72,18 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("Y: ".$sender->getFloorY());
                         $sender->sendMessage("Z: ".$sender->getFloorZ());
                         $sender->sendMessage("Level: ".$sender->getLevel()->getName());
-                        $sender->sendMessage("Facing: ".$sender->getYaw());
+                        if($sender->getYaw() === 0){
+                            $sender->sendMessage("Facing: south");                            $sender->sendMessage("Facing: west");                            $sender->sendMessage("Facing: west");
+                        }
+                        elseif($sender->getYaw() === 1){
+                            $sender->sendMessage("Facing: west");
+                        }
+                        elseif($sender->getYaw() === 2){
+                            $sender->sendMessage("Facing: north");                            $sender->sendMessage("Facing: west");
+                        }
+                        elseif($sender->getYaw() === 3){
+                            $sender->sendMessage("Facing: east");
+                        }
                     }
                     else{
                         $sender->sendMessage("§cYou don't have permissions to use this command.");
