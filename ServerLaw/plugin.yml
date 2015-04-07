@@ -9,5 +9,5 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerLaw
 commands:
  laws:
   description: Get a list of laws for the server
-  usage: /laws
   permission: serverlaw.command.laws
+  aliases: [sl]
