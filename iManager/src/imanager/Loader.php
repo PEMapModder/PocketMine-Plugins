@@ -112,7 +112,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	} 
     	    	if(strtolower($args[0]) === "addresslist"){
-		    $sender->sendMessage("");
+		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	$sender->sendMessage("§f> §e".$players->getName()." §f- §c".$players->getAddress()."§f:§9".$players->getPort());
 		    }
@@ -184,19 +184,34 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "gamemodelist"){
-		    $sender->sendMessage("");
+		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "healthlist"){
-		    $sender->sendMessage("");
+		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "help"){
-    	    		
+    	    	    $sender->sendMessage("iManager commands:");
+    	    	    $sender->sendMessage("/imanager addexempt: Adds a player's name to exempt.txt");
+    	    	    $sender->sendMessage("/imanager addip: Adds a player's IP address to ip.txt");
+    	    	    $sender->sendMessage("/imanager addresslist: Lists every player's IP address and port");
+    	    	    $sender->sendMessage("/imanager delexempt: Removes a player's name from exempt.txt");
+    	    	    $sender->sendMessage("/imanager delip: Removes a player's IP address from ip.txt");
+    	    	    $sender->sendMessage("/imanager gamemodelist: Lists every player's gamemode");
+    	            $sender->sendMessage("/imanager healthlist: Lists every player's health");
+    	    	    $sender->sendMessage("/imanager help: Shows all the sub-commands for /imanager");
+    	    	    $sender->sendMessage("/imanager info: Gets all the info about a player");
+    	    	    $sender->sendMessage("/imanager kickall: Kicks all the players in the server");
+    	    	    $sender->sendMessage("/imanager killall: Kills all the players in the server");
+    	    	    $sender->sendMessage("/imanager moneylist: Lists every player's amount of money");
+    	    	    $sender->sendMessage("/imanager opall: Grants OP status to everyone in the server");
+    	    	    $sender->sendMessage("/imanager oplist: Lists all the online OPs");
+    	    	    $sender->sendMessage("/imanager poslist: Lists every player's coordinates, level, and face direction");	
     	    	}
     	    	if(strtolower($args[0]) === "info"){
     	    		
@@ -222,7 +237,7 @@ class Loader extends PluginBase implements Listener{
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "moneylist"){
-		    $sender->sendMessage("");
+		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	
 		    }	
@@ -231,13 +246,13 @@ class Loader extends PluginBase implements Listener{
     	    		
     	    	}
     	    	if(strtolower($args[0]) === "oplist"){
-		    $sender->sendMessage("");
+		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "poslist"){
-		    $sender->sendMessage("");
+		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	
 		    }	
