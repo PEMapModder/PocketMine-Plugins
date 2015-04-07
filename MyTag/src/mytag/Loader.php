@@ -107,6 +107,9 @@ class Loader extends PluginBase implements Listener{
     	    		$sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
     	    		$sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
     	    	    }
+    	    	    else{
+    	    	    	$sender->sendMessage("§cPlease run this command in-game.");
+    	    	    }
     	    	}
     	    	else{
     	    	    $sender->sendMessage("MyTag commands:");
