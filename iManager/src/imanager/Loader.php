@@ -46,7 +46,37 @@ class Loader extends PluginBase implements Listener{
     	if(strtolower($command->getName()) === "imanager"){
     	    if(isset($args[0])){
     	    	if(strtolower($args[0]) === "addexempt"){
-    	    		
+ 		    if(isset($args[1])){
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	if($target !== null){
+    	    	    	    if($this->exempt->exists($target->getName())){
+    	    	    	    	$sender->sendMessage("§cThat player already exists in exempt.txt.");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$this->exempt->set($target->getAddress());
+    	    	    	    	$this->ip->save();	
+    	    	    	    	$sender->sendMessage("§aAdded ".$target->getName()." to exempt.txt.");
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+			    $sender->sendMessage("§cPlease specify a valid player.");
+    	    	    	}
+    	    	    }
+    	    	    else{
+    	    	    	if($sender instanceof Player){
+    	    	    	    if($this->ip->exists($sender->getAddress())){
+    	    	    	    	$sender->sendMessage("§cYour IP address already exists in ip.txt.");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$this->ip->set($sender->getAddress());
+    	    	    	    	$this->ip->save();
+    	    	    	    	$sender->sendMessage("§aAdded ".$sender->getAddress()." to ip.txt.");
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+    	    	    	    $sender->sendMessage("§cPlease run this command in-game.");
+    	    	    	}
+    	    	    }	
     	    	}
     	    	if(strtolower($args[0]) === "addip"){
     	    	    if(isset($args[1])){
