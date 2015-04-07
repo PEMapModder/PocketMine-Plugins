@@ -240,21 +240,21 @@ class Loader extends PluginBase implements Listener{
     	    }
     	    else{
     	    	$sender->sendMessage("iManager commands:");
-    	    	$sender->sendMessage("/imanager addexempt: ");
+    	    	$sender->sendMessage("/imanager addexempt: Adds ");
     	    	$sender->sendMessage("/imanager addip: ");
-    	    	$sender->sendMessage("/imanager addresslist: ");
+    	    	$sender->sendMessage("/imanager addresslist: Lists every player's IP address and port");
     	    	$sender->sendMessage("/imanager delexempt: ");
     	    	$sender->sendMessage("/imanager delip: ");
-    	    	$sender->sendMessage("/imanager gamemodelist: ");
-    	    	$sender->sendMessage("/imanager healthlist: ");
+    	    	$sender->sendMessage("/imanager gamemodelist: Lists every player's gamemode");
+    	    	$sender->sendMessage("/imanager healthlist: Lists every player's health");
     	    	$sender->sendMessage("/imanager help: Shows all the sub-commands for /imanager");
     	    	$sender->sendMessage("/imanager info: ");
-    	    	$sender->sendMessage("/imanager kickall: ");
-    	    	$sender->sendMessage("/imanager killall: ");
+    	    	$sender->sendMessage("/imanager kickall: Kicks all the players in the server");
+    	    	$sender->sendMessage("/imanager killall: Kills all the players in the server");
     	    	$sender->sendMessage("/imanager moneylist: ");
-    	    	$sender->sendMessage("/imanager opall: ");
-    	    	$sender->sendMessage("/imanager oplist: ");
-    	    	$sender->sendMessage("/imanager poslist: ");
+    	    	$sender->sendMessage("/imanager opall: Grants OP status to everyone in the server");
+    	    	$sender->sendMessage("/imanager oplist: Lists all the online OPs");
+    	    	$sender->sendMessage("/imanager poslist: Lists every player's coordinates, level, and face direction");
     	    }
     	}
     	return true;
