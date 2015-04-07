@@ -106,7 +106,7 @@ class Loader extends PluginBase implements Listener{
 	else{
 	    @mkdir($this->getDataFolder()."data/");
 	    file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("tag" => $event->getPlayer()->getNameTag())));
-	    $this->getServer()->getLogger()->info("§eCreated new data file for ".$event->getPlayer()->getName()." at MyTag\\data\\".$event->getPlayer()->getName().".yml");
+	    $this->getServer()->getLogger()->notice("Created new data file for ".$event->getPlayer()->getName()." at MyTag\\data\\".$event->getPlayer()->getName().".yml");
 	}
     }
 	
