@@ -80,7 +80,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("/mytag address: Shows IP address and port number on the name tag");
     	    	    $sender->sendMessage("/mytag chat: Shows the last message spoken on the name tag");
     	    	    $sender->sendMessage("/mytag health: Shows health on the name tag");
-    	    	    $sender->sendMessage("/mytag help: Shows all the sub-commands for /tag");
+    	    	    $sender->sendMessage("/mytag help: Shows all the sub-commands for /mytag");
     	    	    $sender->sendMessage("/mytag hide: Hides the name tag");
     	    	    $sender->sendMessage("/mytag money: Shows the amount of money ");
     	    	    $sender->sendMessage("/mytag op: Shows op status on the name tag, if they have it");
