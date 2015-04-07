@@ -226,23 +226,23 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "help"){
     	    	    $sender->sendMessage("iManager commands:");
-    	    	    $sender->sendMessage("§a/imanager addexempt §c- §eAdds a player's name to exempt.txt");
-    	    	    $sender->sendMessage("§a/imanager addip §c- §eAdds a player's IP address to ip.txt");
-    	    	    $sender->sendMessage("§a/imanager addresslist §c- §eLists every player's IP address and port");
-    	    	    $sender->sendMessage("§a/imanager burnall §c- §eBurns all the players without EXEMPT status in the server");
-    	    	    $sender->sendMessage("§a/imanager delexempt §c- §eRemoves a player's name from exempt.txt");
-    	    	    $sender->sendMessage("§a/imanager delip §c- §eRemoves a player's IP address from ip.txt");
-    	    	    $sender->sendMessage("§a/imanager deop §c- §eRevokes all the player's OP status");
-    	    	    $sender->sendMessage("§a/imanager gamemodelist §c- §eLists every player's gamemode");
-    	    	    $sender->sendMessage("§a/imanager healthlist §c- §eLists every player's health");
-    	    	    $sender->sendMessage("§a/imanager help §c- §eShows all the sub-commands for /imanager");
-    	    	    $sender->sendMessage("§a/imanager info §c- §eGets all the information about a player");
-    	    	    $sender->sendMessage("§a/imanager kickall §c- §eKicks all the players without EXEMPT status from the server");
-    	    	    $sender->sendMessage("§a/imanager killall §c- §eKills all the players without EXEMPT status in the server");
-    	    	    $sender->sendMessage("§a/imanager moneylist §c- §eLists every player's amount of money");
-    	    	    $sender->sendMessage("§a/imanager opall §c- §eGrants OP status to everyone in the server");
-    	    	    $sender->sendMessage("§a/imanager oplist §c- §eLists all the online OPs");
-    	    	    $sender->sendMessage("§a/imanager poslist §c- §eLists every player's coordinates, level, and face direction");
+    	    	    $sender->sendMessage("§a/imanager addexempt §c- §fAdds a player's name to exempt.txt");
+    	    	    $sender->sendMessage("§a/imanager addip §c- §fAdds a player's IP address to ip.txt");
+    	    	    $sender->sendMessage("§a/imanager addresslist §c- §fLists every player's IP address and port");
+    	    	    $sender->sendMessage("§a/imanager burnall §c- §fBurns all the players without EXEMPT status in the server");
+    	    	    $sender->sendMessage("§a/imanager delexempt §c- §fRemoves a player's name from exempt.txt");
+    	    	    $sender->sendMessage("§a/imanager delip §c- §fRemoves a player's IP address from ip.txt");
+    	    	    $sender->sendMessage("§a/imanager deop §c- §fRevokes all the player's OP status");
+    	    	    $sender->sendMessage("§a/imanager gamemodelist §c- §fLists every player's gamemode");
+    	    	    $sender->sendMessage("§a/imanager healthlist §c- §fLists every player's health");
+    	    	    $sender->sendMessage("§a/imanager help §c- §fShows all the sub-commands for /imanager");
+    	    	    $sender->sendMessage("§a/imanager info §c- §fGets all the information about a player");
+    	     	    $sender->sendMessage("§a/imanager kickall §c- §fKicks all the players without EXEMPT status from the server");
+    	    	    $sender->sendMessage("§a/imanager killall §c- §fKills all the players without EXEMPT status in the server");
+    	    	    $sender->sendMessage("§a/imanager moneylist §c- §fLists every player's amount of money");
+    	    	    $sender->sendMessage("§a/imanager opall §c- §fGrants OP status to everyone in the server");
+    	    	    $sender->sendMessage("§a/imanager oplist §c- §fLists all the online OPs");
+    	    	    $sender->sendMessage("§a/imanager poslist §c- §fLists every player's coordinates, level, and face direction");
     	    	}
     	    	if(strtolower($args[0]) === "info"){
     	    	    if(isset($args[1])){
@@ -306,23 +306,23 @@ class Loader extends PluginBase implements Listener{
     	    }
     	    else{
     	    	$sender->sendMessage("iManager commands:");
-    	    	$sender->sendMessage("§a/imanager addexempt §c- §eAdds a player's name to exempt.txt");
-    	    	$sender->sendMessage("§a/imanager addip §c- §eAdds a player's IP address to ip.txt");
-    	    	$sender->sendMessage("§a/imanager addresslist §c- §eLists every player's IP address and port");
-    	    	$sender->sendMessage("§a/imanager burnall §c- §eBurns all the players without EXEMPT status in the server");
-    	    	$sender->sendMessage("§a/imanager delexempt §c- §eRemoves a player's name from exempt.txt");
-    	    	$sender->sendMessage("§a/imanager delip §c- §eRemoves a player's IP address from ip.txt");
-    	    	$sender->sendMessage("§a/imanager deop §c- §eRevokes all the player's OP status");
-    	    	$sender->sendMessage("§a/imanager gamemodelist §c- §eLists every player's gamemode");
-    	    	$sender->sendMessage("§a/imanager healthlist §c- §eLists every player's health");
-    	    	$sender->sendMessage("§a/imanager help §c- §eShows all the sub-commands for /imanager");
-    	    	$sender->sendMessage("§a/imanager info §c- §eGets all the information about a player");
-    	    	$sender->sendMessage("§a/imanager kickall §c- §eKicks all the players without EXEMPT status from the server");
-    	    	$sender->sendMessage("§a/imanager killall §c- §eKills all the players without EXEMPT status in the server");
-    	    	$sender->sendMessage("§a/imanager moneylist §c- §eLists every player's amount of money");
-    	    	$sender->sendMessage("§a/imanager opall §c- §eGrants OP status to everyone in the server");
-    	    	$sender->sendMessage("§a/imanager oplist §c- §eLists all the online OPs");
-    	    	$sender->sendMessage("§a/imanager poslist §c- §eLists every player's coordinates, level, and face direction");
+    	    	$sender->sendMessage("§a/imanager addexempt §c- §fAdds a player's name to exempt.txt");
+    	    	$sender->sendMessage("§a/imanager addip §c- §fAdds a player's IP address to ip.txt");
+    	    	$sender->sendMessage("§a/imanager addresslist §c- §fLists every player's IP address and port");
+    	    	$sender->sendMessage("§a/imanager burnall §c- §fBurns all the players without EXEMPT status in the server");
+    	    	$sender->sendMessage("§a/imanager delexempt §c- §fRemoves a player's name from exempt.txt");
+    	    	$sender->sendMessage("§a/imanager delip §c- §fRemoves a player's IP address from ip.txt");
+    	    	$sender->sendMessage("§a/imanager deop §c- §fRevokes all the player's OP status");
+    	    	$sender->sendMessage("§a/imanager gamemodelist §c- §fLists every player's gamemode");
+    	    	$sender->sendMessage("§a/imanager healthlist §c- §fLists every player's health");
+    	    	$sender->sendMessage("§a/imanager help §c- §fShows all the sub-commands for /imanager");
+    	    	$sender->sendMessage("§a/imanager info §c- §fGets all the information about a player");
+    	    	$sender->sendMessage("§a/imanager kickall §c- §fKicks all the players without EXEMPT status from the server");
+    	    	$sender->sendMessage("§a/imanager killall §c- §fKills all the players without EXEMPT status in the server");
+    	    	$sender->sendMessage("§a/imanager moneylist §c- §fLists every player's amount of money");
+    	    	$sender->sendMessage("§a/imanager opall §c- §fGrants OP status to everyone in the server");
+    	    	$sender->sendMessage("§a/imanager oplist §c- §fLists all the online OPs");
+    	    	$sender->sendMessage("§a/imanager poslist §c- §fLists every player's coordinates, level, and face direction");
     	    }
     	}
     	return true;
