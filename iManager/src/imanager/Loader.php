@@ -234,9 +234,27 @@ class Loader extends PluginBase implements Listener{
 		    	
 		    }	
     	    	}
+    	    	else{
+    	    	    $sender->sendMessage();
+    	    	}
     	    }
     	    else{
-    	    	$sender->sendMessage();
+    	    	$sender->sendMessage("iManager commands:");
+    	    	$sender->sendMessage("/imanager addexempt: ");
+    	    	$sender->sendMessage("/imanager addip: ");
+    	    	$sender->sendMessage("/imanager addresslist: ");
+    	    	$sender->sendMessage("/imanager delexempt: ");
+    	    	$sender->sendMessage("/imanager delip: ");
+    	    	$sender->sendMessage("/imanager gamemodelist: ");
+    	    	$sender->sendMessage("/imanager healthlist: ");
+    	    	$sender->sendMessage("/imanager help: ");
+    	    	$sender->sendMessage("/imanager info: ");
+    	    	$sender->sendMessage("/imanager kickall: ");
+    	    	$sender->sendMessage("/imanager killall: ");
+    	    	$sender->sendMessage("/imanager moneylist: ");
+    	    	$sender->sendMessage("/imanager opall: ");
+    	    	$sender->sendMessage("/imanager oplist: ");
+    	    	$sender->sendMessage("/imanager poslist: ");
     	    }
     	}
     	return true;
