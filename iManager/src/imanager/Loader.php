@@ -253,6 +253,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    $sender->sendMessage("Display name: ".$target->getDisplayName());
     	    	    	    $sender->sendMessage("Name tag: ".$target->getNameTag());
     	    	    	    $sender->sendMessage("Address: ".$target->getAddress().":".$target->getPort());
+    	    	    	    $sender->sendMessage("Health: ".$target->getHealth()."/".$target->getMaxHealth());
     	    	    	    $sender->sendMessage("X: ".$target->getFloorX());
     	    	    	    $sender->sendMessage("Y: ".$target->getFloorY());
     	    	    	    $sender->sendMessage("Z: ".$target->getFloorZ());
@@ -260,6 +261,25 @@ class Loader extends PluginBase implements Listener{
     	    	    	    $sender->sendMessage("Yaw: ".$target->getYaw());
     	    	    	    $sender->sendMessage("Pitch: ".$target->getPitch());
     	    	    	    $sender->sendMessage("Gamemode: ".$target->getGamemode());
+    	    	    	    if($target->isSleeping()){
+    	    	    	    	$sender->sendMessage("Sleeping: yes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("Sleeping: no");
+    	    	    	    }
+    	    	    	    if($target->isOp()){
+    	    	    	    	$sender->sendMessage("OP: yes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("OP: no");
+    	    	    	    }
+    	    	    	    if($this->exempt->exists(strtolower($target->getName()))){
+    	    	    	    	$sender->sendMessage("EXEMPT: yes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("EXEMPT: no");
+    	    	    	    }
+    	    	    	    if()
     	    	    	}
     	    	    	else{
     	    	    	    $sender->sendMessage("");
