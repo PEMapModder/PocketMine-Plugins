@@ -53,7 +53,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    	$sender->sendMessage("§cThat name already exists in exempt.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$this->exempt->set($target->getAddress());
+    	    	    	    	$this->exempt->set(strtolower($target->getName()));
     	    	    	    	$this->exempt->save();	
     	    	    	    	$sender->sendMessage("§aAdded ".$target->getName()." to exempt.txt.");
     	    	    	    }
@@ -68,7 +68,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    	$sender->sendMessage("§cYour name already exists in exempt.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$this->exempt->set($sender->getName());
+    	    	    	    	$this->exempt->set(strtolower($sender->getName()));
     	    	    	    	$this->exempt->save();
     	    	    	    	$sender->sendMessage("§aAdded ".$sender->getName()." to exempt.txt.");
     	    	    	    }
@@ -86,7 +86,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    	$sender->sendMessage("§cThat IP address already exists in ip.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$this->ip->set($target->getAddress());
+    	    	    	    	$this->ip->set(strtolower($target->getAddress()));
     	    	    	    	$this->ip->save();	
     	    	    	    	$sender->sendMessage("§aAdded ".$target->getAddress()." to ip.txt.");
     	    	    	    }
@@ -101,7 +101,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    	$sender->sendMessage("§cYour IP address already exists in ip.txt.");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$this->ip->set($sender->getAddress());
+    	    	    	    	$this->ip->set(strtolower($sender->getAddress()));
     	    	    	    	$this->ip->save();
     	    	    	    	$sender->sendMessage("§aAdded ".$sender->getAddress()." to ip.txt.");
     	    	    	    }
@@ -122,7 +122,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
     	    	    	    if($this->exempt->exists(strtolower($target->getName()))){
-    	    	    	    	$this->exempt->remove($target->getName());
+    	    	    	    	$this->exempt->remove(strtolower($target->getName()));
     	    	    	    	$this->exempt->save();
     	    	    	    	$sender->sendMessage("§aRemoved ".$target->getName()." from exempt.txt.");
     	    	    	    }
@@ -137,7 +137,7 @@ class Loader extends PluginBase implements Listener{
     	    	    else{
     	    	    	if($sender instanceof Player){
     	    	    	    if($this->exempt->exists(strtolower($sender->getName()))){
-    	    	    	    	$this->exempt->remove($sender->getName());
+    	    	    	    	$this->exempt->remove(strtolower($sender->getName()));
     	    	    	    	$this->exempt->save();
     	    	    	    	$sender->sendMessage("§aRemoved your name from exempt.txt.");
     	    	    	    }
@@ -155,7 +155,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
     	    	    	    if($this->ip->exists(strtolower($target->getAddress()))){
-    	    	    	    	$this->ip->remove($target->getAddress());
+    	    	    	    	$this->ip->remove(strtolower($target->getAddress()));
     	    	    	    	$this->ip->save();
     	    	    	    	$sender->sendMessage("§aRemoved ".$target->getAddress()." from ip.txt.");
     	    	    	    }
@@ -170,7 +170,7 @@ class Loader extends PluginBase implements Listener{
     	    	    else{
     	    	    	if($sender instanceof Player){
     	    	    	    if($this->ip->exists(strtolower($sender->getAddress()))){
-    	    	    	    	$this->ip->remove($sender->getAddress());
+    	    	    	    	$this->ip->remove(strtolower($sender->getAddress()));
     	    	    	    	$this->ip->save();
     	    	    	    	$sender->sendMessage("§aRemoved your IP address from ip.txt.");
     	    	    	    }
