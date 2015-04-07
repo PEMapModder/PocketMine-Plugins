@@ -9,6 +9,7 @@ use pocketmine\event\player\PlayerPreLoginEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\Player;
 
 class Loader extends PluginBase implements Listener{
 
@@ -46,10 +47,35 @@ class Loader extends PluginBase implements Listener{
     	    if(isset($args[0])){
     	    	if(strtolower($args[0]) === "addip"){
     	    	    if(isset($args[1])){
-    	    	    	
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	if($target !== null){
+    	    	    	    if($this->ip->exists($target->getAddress())){
+    	    	    	    	$sender->sendMessage("§cThat IP address already exists in ip.txt.");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$this->ip->set($target->getAddress());
+    	    	    	    	$this->ip->save();	
+    	    	    	    	$sender->sendMessage("§aAdded ".$target->getAddress()." to ip.txt.");
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+			    $sender->sendMessage("§cPlease specify a valid player.");
+    	    	    	}
     	    	    }
     	    	    else{
-    	    	    	$sender->sendMessage("§cPlease specify a valid player.");
+    	    	    	if($sender instanceof Player){
+    	    	    	    if($this->ip->exists($sender->getAddress())){
+    	    	    	    	$sender->sendMessage("§cYour IP address already exists in ip.txt.");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$this->ip->set($sender->getAddress());
+    	    	    	    	$this->ip->save();
+    	    	    	    	$sender->sendMessage("§aAdded ".$sender->getAddress()." to ip.txt.")
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+    	    	    	    $sender->sendMessage("§cPlease run this command in-game.");
+    	    	    	}
     	    	    }
     	    	} 
     	    	if(strtolower($args[0]) === "addresslist"){
@@ -57,10 +83,35 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "delip"){
     	    	    if(isset($args[1])){
-    	    	    	
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
+    	    	    	if($target !== null){
+    	    	    	    if($this->ip->exists($target->getAddress())){
+    	    	    	    	$this->ip->remove($target->getAddress());
+    	    	    	    	$this->ip->save();
+    	    	    	    	$sender->sendMessage("§aRemoved ".$target->getAddress()." from ip.txt.");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§cThat IP address does not exist in ip.txt.");
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+			    $sender->sendMessage("§cPlease specify a valid player.");
+    	    	    	}
     	    	    }
     	    	    else{
-    	    	    	$sender->sendMessage("§cPlease specify a valid player.");
+    	    	    	if($sender instanceof Player){
+    	    	    	    if($this->ip->exists($sender->getAddress())){
+    	    	    	    	$this->ip->remove($sender->getAddress());
+    	    	    	    	$this->ip->save();
+    	    	    	    	$sender->sendMessage("§aRemoved ".$sender->getAddress()." from ip.txt.");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§cThat IP address does not exist in ip.txt.");
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+    	    	    	    $sender->sendMessage("§cPlease run this command in-game.");
+    	    	    	}
     	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "gamemodelist"){
