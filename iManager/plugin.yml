@@ -9,7 +9,6 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iManager
 commands:
  imanager:
   description:
-  usage: /imanager <addresslist/gamemodelist/healthlist/kickall/killall/moneylist/opall/oplist>
   permission: imanager.command.check
   aliases: [im]
 permissions:
