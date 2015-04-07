@@ -206,8 +206,8 @@ class Loader extends PluginBase implements Listener{
     	            $sender->sendMessage("/imanager healthlist: Lists every player's health");
     	    	    $sender->sendMessage("/imanager help: Shows all the sub-commands for /imanager");
     	    	    $sender->sendMessage("/imanager info: Gets all the info about a player");
-    	    	    $sender->sendMessage("/imanager kickall: Kicks all the players in the server");
-    	    	    $sender->sendMessage("/imanager killall: Kills all the players in the server");
+    	    	    $sender->sendMessage("/imanager kickall: Kicks all the players without EXEMPT status from the server");
+    	    	    $sender->sendMessage("/imanager killall: Kills all the players without EXEMPT status in the server");
     	    	    $sender->sendMessage("/imanager moneylist: Lists every player's amount of money");
     	    	    $sender->sendMessage("/imanager opall: Grants OP status to everyone in the server");
     	    	    $sender->sendMessage("/imanager oplist: Lists all the online OPs");
@@ -272,8 +272,8 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("/imanager healthlist: Lists every player's health");
     	    	$sender->sendMessage("/imanager help: Shows all the sub-commands for /imanager");
     	    	$sender->sendMessage("/imanager info: Gets all the info about a player");
-    	    	$sender->sendMessage("/imanager kickall: Kicks all the players in the server");
-    	    	$sender->sendMessage("/imanager killall: Kills all the players in the server");
+    	    	$sender->sendMessage("/imanager kickall: Kicks all the players without EXEMPT status from the server");
+    	    	$sender->sendMessage("/imanager killall: Kills all the players without EXEMPT status in the server");
     	    	$sender->sendMessage("/imanager moneylist: Lists every player's amount of money");
     	    	$sender->sendMessage("/imanager opall: Grants OP status to everyone in the server");
     	    	$sender->sendMessage("/imanager oplist: Lists all the online OPs");
