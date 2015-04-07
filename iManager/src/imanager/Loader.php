@@ -99,7 +99,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerPreLogin(PlayerPreLoginEvent $event){
     	if($this->getConfig()->get("enable")["ip-whitelist"] === true){
-    	    if($this->ip->exists($event->getPlayer()->getAddress())){
+    	    if($this->ip->exists(strtolower($event->getPlayer()->getAddress()))){
     	    }
     	    else{
     	    	$event->setCancelled();
