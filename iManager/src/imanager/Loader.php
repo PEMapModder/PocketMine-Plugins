@@ -47,7 +47,7 @@ class Loader extends PluginBase implements Listener{
     	    if(isset($args[0])){
     	    	if(strtolower($args[0]) === "addexempt"){
  		    if(isset($args[1])){
-    	    	    	$target = strtolower($this->getServer()->getPlayer($args[1]));
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
     	    	    	    if($this->exempt->exists(strtolower($target->getName()))){
     	    	    	    	$sender->sendMessage("§cThat name already exists in exempt.txt.");
@@ -80,7 +80,7 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "addip"){
     	    	    if(isset($args[1])){
-    	    	    	$target = strtolower($this->getServer()->getPlayer($args[1]));
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
     	    	    	    if($this->ip->exists(strtolower($target->getAddress()))){
     	    	    	    	$sender->sendMessage("§cThat IP address already exists in ip.txt.");
@@ -119,7 +119,7 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "delexempt"){
     	    	    if(isset($args[1])){
-    	    	    	$target = strtolower($this->getServer()->getPlayer($args[1]));
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
     	    	    	    if($this->exempt->exists(strtolower($target->getName()))){
     	    	    	    	$this->exempt->remove($target->getName());
@@ -152,7 +152,7 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "delip"){
     	    	    if(isset($args[1])){
-    	    	    	$target = strtolower($this->getServer()->getPlayer($args[1]));
+    	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
     	    	    	    if($this->ip->exists(strtolower($target->getAddress()))){
     	    	    	    	$this->ip->remove($target->getAddress());
