@@ -229,7 +229,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("/imanager addexempt: Adds a player's name to exempt.txt");
     	    	    $sender->sendMessage("/imanager addip: Adds a player's IP address to ip.txt");
     	    	    $sender->sendMessage("/imanager addresslist: Lists every player's IP address and port");
-    	    	    $sender->sendMessage("/imanager burnall: Burns all the players without EXEMPT status in the server")
+    	    	    $sender->sendMessage("/imanager burnall: Burns all the players without EXEMPT status in the server");
     	    	    $sender->sendMessage("/imanager delexempt: Removes a player's name from exempt.txt");
     	    	    $sender->sendMessage("/imanager delip: Removes a player's IP address from ip.txt");
     	    	    $sender->sendMessage("/imanager gamemodelist: Lists every player's gamemode");
@@ -308,7 +308,7 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("/imanager addexempt: Adds a player's name to exempt.txt");
     	    	$sender->sendMessage("/imanager addip: Adds a player's IP address to ip.txt");
     	    	$sender->sendMessage("/imanager addresslist: Lists every player's IP address and port");
-    	    	$sender->sendMessage("/imanager burnall: Burns all the players without EXEMPT status in the server")
+    	    	$sender->sendMessage("/imanager burnall: Burns all the players without EXEMPT status in the server");
     	    	$sender->sendMessage("/imanager delexempt: Removes a player's name from exempt.txt");
     	    	$sender->sendMessage("/imanager delip: Removes a player's IP address from ip.txt");
     	    	$sender->sendMessage("/imanager deop: Revokes all the player's OP status");
