@@ -112,9 +112,9 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	} 
     	    	if(strtolower($args[0]) === "addresslist"){
-		    $sender->sendMessage("§e");
+		    $sender->sendMessage("§eIP address and port of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§f> §e".$players->getName()." §f- §c".$players->getAddress()."§f:§9".$players->getPort());
+		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getAddress()."§f:§9".$players->getPort());
 		    }
     	    	}
     	    	if(strtolower($args[0]) === "delexempt"){
@@ -184,15 +184,17 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "gamemodelist"){
-		    $sender->sendMessage("§e");
+		    $sender->sendMessage("§eGamemode of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	
+		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getGamemode());
+
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "healthlist"){
-		    $sender->sendMessage("§e");
+		    $sender->sendMessage("§eHealth of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	
+		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getHealth()."§e:§9".$players->getMaxHealth());
+
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "help"){
@@ -239,22 +241,25 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "moneylist"){
 		    $sender->sendMessage("§e");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	
+		    	$sender->sendMessage("§e> §b".$players->getName()." §f- §c".$players->getAddress()."§f:§9".$players->getPort());
+
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "opall"){
     	    		
     	    	}
     	    	if(strtolower($args[0]) === "oplist"){
-		    $sender->sendMessage("§e");
+		    $sender->sendMessage("§eOPs that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	
+		    	if($players->isOp()){
+		    	    $sender->sendMessage("§e> §b".$players->getName());
+		    	}
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "poslist"){
-		    $sender->sendMessage("§e");
+		    $sender->sendMessage("§eLocation of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	
+		    	$sender->sendMessage("§e> §b".$players->getName()." §e- X: §c".$players->getFloorX()." §eY: §9".$players->getFloorY()." §eZ: §a".$players->getFloorZ()." §eLevel: §d".$players->getLevel()->getName()." §eYaw: §6");
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "usage"){
