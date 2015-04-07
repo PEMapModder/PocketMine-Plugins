@@ -117,6 +117,27 @@ class Loader extends PluginBase implements Listener{
 		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getAddress()."§f:§a".$players->getPort());
 		    }
     	    	}
+    	    	if(strtolower($args[0]) === "burnall"){
+    	    	    if(isset($args[1])){
+    	    	    	if(is_numeric($args[1])){
+    	    	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
+    	    	    	    	$sender->sendMessage("§Burning everyone without EXEMPT status in the server...")
+    	    	    	    	if($this->exempt->exists(strtolower($players->getName()))){
+    	    	    	    	}
+    	    	    	    	else{
+    	    	    	    	    $players->setOnFire($args[1]);
+    	    	    	    	    $players->sendMessage("You have been set on fire for ".$args[1]." seconds!");
+    	    	    	    	}
+    	    	    	    }
+    	    	    	}
+    	    	    	else{
+    	    	    	    $sender->sendMessage("§cTime value must be in numerical form.");
+    	    	    	}
+    	    	    }
+    	    	    else{
+    	    	    	$sender->sendMessage("§cPlease specify a valid time value.");
+    	    	    }
+    	    	}
     	    	if(strtolower($args[0]) === "delexempt"){
     	    	    if(isset($args[1])){
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
@@ -208,6 +229,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("/imanager addexempt: Adds a player's name to exempt.txt");
     	    	    $sender->sendMessage("/imanager addip: Adds a player's IP address to ip.txt");
     	    	    $sender->sendMessage("/imanager addresslist: Lists every player's IP address and port");
+    	    	    $sender->sendMessage("/imanager burnall: Burns all the players without EXEMPT status in the server")
     	    	    $sender->sendMessage("/imanager delexempt: Removes a player's name from exempt.txt");
     	    	    $sender->sendMessage("/imanager delip: Removes a player's IP address from ip.txt");
     	    	    $sender->sendMessage("/imanager gamemodelist: Lists every player's gamemode");
@@ -251,7 +273,7 @@ class Loader extends PluginBase implements Listener{
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "moneylist"){
-		    $sender->sendMessage("§e");
+		    $sender->sendMessage("§eAmount of money of all players that are currently online");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	$sender->sendMessage("§e> §b".$players->getName()." §f- ");
 			//To-do
@@ -286,6 +308,7 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("/imanager addexempt: Adds a player's name to exempt.txt");
     	    	$sender->sendMessage("/imanager addip: Adds a player's IP address to ip.txt");
     	    	$sender->sendMessage("/imanager addresslist: Lists every player's IP address and port");
+    	    	$sender->sendMessage("/imanager burnall: Burns all the players without EXEMPT status in the server")
     	    	$sender->sendMessage("/imanager delexempt: Removes a player's name from exempt.txt");
     	    	$sender->sendMessage("/imanager delip: Removes a player's IP address from ip.txt");
     	    	$sender->sendMessage("/imanager deop: Revokes all the player's OP status");
