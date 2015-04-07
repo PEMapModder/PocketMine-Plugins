@@ -247,7 +247,7 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("/imanager delip: ");
     	    	$sender->sendMessage("/imanager gamemodelist: ");
     	    	$sender->sendMessage("/imanager healthlist: ");
-    	    	$sender->sendMessage("/imanager help: ");
+    	    	$sender->sendMessage("/imanager help: Shows all the sub-commands for /imanager");
     	    	$sender->sendMessage("/imanager info: ");
     	    	$sender->sendMessage("/imanager kickall: ");
     	    	$sender->sendMessage("/imanager killall: ");
