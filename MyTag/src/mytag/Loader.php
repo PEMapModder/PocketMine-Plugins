@@ -93,7 +93,34 @@ class Loader extends PluginBase implements Listener{
     	    }
     	}
     	else{
-    	    $sender->sendMessage("§cPlease run this command in-game.");
+    	    if(strtolower($command->getName()) === "mytag"){
+    	    	if(isset($args[0])){
+    	    	    if(strtolower($args[0]) === "help"){
+    	    		$sender->sendMessage("MyTag commands:");
+    	    		$sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
+    	    		$sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
+    	    		$sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
+    	    		$sender->sendMessage("§a/mytag help §c- §fShows all the sub-commands for /tag");
+    	    		$sender->sendMessage("§a/mytag hide §c- §fHides the name tag");
+    	    		$sender->sendMessage("§a/mytag money §c- §fShows the amount of money ");
+    	    		$sender->sendMessage("§a/mytag op §c- §fShows op status on the name tag, if they have it");
+    	    		$sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
+    	    		$sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
+    	    	    }
+    	    	}
+    	    	else{
+    	    	    $sender->sendMessage("MyTag commands:");
+    	    	    $sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
+    	    	    $sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
+    	    	    $sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
+    	    	    $sender->sendMessage("§a/mytag help §c- §fShows all the sub-commands for /tag");
+    	    	    $sender->sendMessage("§a/mytag hide §c- §fHides the name tag");
+    	    	    $sender->sendMessage("§a/mytag money §c- §fShows the amount of money ");
+    	    	    $sender->sendMessage("§a/mytag op §c- §fShows op status on the name tag, if they have it");
+    	    	    $sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
+    	    	    $sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
+    	    	}
+    	    }
     	}
     	return true;
     }
