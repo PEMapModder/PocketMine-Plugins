@@ -45,6 +45,9 @@ class Loader extends PluginBase implements Listener{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
     	if(strtolower($command->getName()) === "imanager"){
     	    if(isset($args[0])){
+    	    	if(strtolower($args[0]) === "addexempt"){
+    	    		
+    	    	}
     	    	if(strtolower($args[0]) === "addip"){
     	    	    if(isset($args[1])){
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
@@ -79,7 +82,13 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	} 
     	    	if(strtolower($args[0]) === "addresslist"){
-
+		    $sender->sendMessage("");
+		    foreach($this->getServer()->getOnlinePlayers() as $players){
+		    	
+		    }
+    	    	}
+    	    	if(strtolower($args[0]) === "delexempt"){
+    	    		
     	    	}
     	    	if(strtolower($args[0]) === "delip"){
     	    	    if(isset($args[1])){
@@ -115,10 +124,16 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "gamemodelist"){
-    	    		
+		    $sender->sendMessage("");
+		    foreach($this->getServer()->getOnlinePlayers() as $players){
+		    	
+		    }	
     	    	}
     	    	if(strtolower($args[0]) === "healthlist"){
-    	    		
+		    $sender->sendMessage("");
+		    foreach($this->getServer()->getOnlinePlayers() as $players){
+		    	
+		    }	
     	    	}
     	    	if(strtolower($args[0]) === "help"){
     	    		
@@ -127,25 +142,37 @@ class Loader extends PluginBase implements Listener{
     	    		
     	    	}
     	    	if(strtolower($args[0]) === "kickall"){
-    	    		
+		    $sender->sendMessage("");
+		    foreach($this->getServer()->getOnlinePlayers() as $players){
+		    	
+		    }	
     	    	}
     	    	if(strtolower($args[0]) === "killall"){
-    	    		
+		    $sender->sendMessage("");
+		    foreach($this->getServer()->getOnlinePlayers() as $players){
+		    	
+		    }	
     	    	}
     	    	if(strtolower($args[0]) === "moneylist"){
-    	    		
+		    $sender->sendMessage("");
+		    foreach($this->getServer()->getOnlinePlayers() as $players){
+		    	
+		    }	
     	    	}
     	    	if(strtolower($args[0]) === "opall"){
     	    		
     	    	}
     	    	if(strtolower($args[0]) === "oplist"){
-    	    		
+		    $sender->sendMessage("");
+		    foreach($this->getServer()->getOnlinePlayers() as $players){
+		    	
+		    }	
     	    	}
     	    	if(strtolower($args[0]) === "poslist"){
-    	    		
-    	    	}
-    	    	else{
-    	    		
+		    $sender->sendMessage("");
+		    foreach($this->getServer()->getOnlinePlayers() as $players){
+		    	
+		    }	
     	    	}
     	    }
     	    else{
