@@ -7,6 +7,6 @@ first-tag: "{player}"
 op-tag: "Staff"
 #Custom tag for /mytag op, example: [Admin] Steve
 preferred-economy: 
-#Will be used for /mytag money, will be implemented in v1.3.0
+#Will be used for /mytag money, will be implemented in v1.2.0
 version: 1.1.0
 #Do not change the version, it is used for internal purposes
