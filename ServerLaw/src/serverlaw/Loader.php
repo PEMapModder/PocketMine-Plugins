@@ -11,16 +11,16 @@ class Loader extends PluginBase{
     public function onEnable(){
     	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-            $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+            $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
-    	    $this->getLogger()->info("§eYour configuration file is outdated.");
+    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
     	    $this->getPluginLoader()->disablePlugin($this);
     	}
     }
     
     public function onDisable(){
-        $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
+        $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
