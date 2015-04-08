@@ -248,60 +248,65 @@ class Loader extends PluginBase implements Listener{
     	    	    if(isset($args[1])){
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
-    	    	    	    $sender->sendMessage("Information about: ".$target->getName());
-    	    	    	    $sender->sendMessage("Name: ".$target->getName());
-    	    	    	    $sender->sendMessage("Display name: ".$target->getDisplayName());
-    	    	    	    $sender->sendMessage("Name tag: ".$target->getNameTag());
-    	    	    	    $sender->sendMessage("Address: ".$target->getAddress().":".$target->getPort());
-    	    	    	    $sender->sendMessage("Health: ".$target->getHealth()."/".$target->getMaxHealth());
-    	    	    	    $sender->sendMessage("X: ".$target->getFloorX());
-    	    	    	    $sender->sendMessage("Y: ".$target->getFloorY());
-    	    	    	    $sender->sendMessage("Z: ".$target->getFloorZ());
-    	    	    	    $sender->sendMessage("Level: ".$target->getLevel()->getName());
-    	    	    	    $sender->sendMessage("Yaw: ".$target->getYaw());
-    	    	    	    $sender->sendMessage("Pitch: ".$target->getPitch());
-    	    	    	    $sender->sendMessage("Gamemode: ".$target->getGamemode());
+    	    	    	    $sender->sendMessage("§e".$target->getName()."'s information:");
+    	    	    	    $sender->sendMessage("§eName: ".$target->getName());
+    	    	    	    $sender->sendMessage("§eDisplay name: ".$target->getDisplayName());
+    	    	    	    $sender->sendMessage("§eName tag: ".$target->getNameTag());
+    	    	    	    $sender->sendMessage("§eAddress: ".$target->getAddress().":".$target->getPort());
+    	    	    	    $sender->sendMessage("§eHealth: ".$target->getHealth()."/".$target->getMaxHealth());
+    	    	    	    $sender->sendMessage("§eX: ".$target->getFloorX());
+    	    	    	    $sender->sendMessage("§eY: ".$target->getFloorY());
+    	    	    	    $sender->sendMessage("§eZ: ".$target->getFloorZ());
+    	    	    	    $sender->sendMessage("§eLevel: ".$target->getLevel()->getName());
+    	    	    	    $sender->sendMessage("§eYaw: ".$target->getYaw());
+    	    	    	    $sender->sendMessage("§ePitch: ".$target->getPitch());
+    	    	    	    $sender->sendMessage("§eGamemode: ".$target->getGamemode());
+    	    	    	    $sender->sendMessage("§eHeld item: ".$target->getInventory()->getItemInHand()->getName());
+    	    	    	    $sender->sendMessage("§eHead item: ".$target->getInventory()->getArmorItem(0)->getName());
+    	    	    	    $sender->sendMessage("§eChest item: ".$target->getInventory()->getArmorItem(1)->getName());
+    	    	    	    $sender->sendMessage("§eLeg item: ".$target->getInventory()->getArmorItem(2)->getName());
+    	    	    	    $sender->sendMessage("§eFeet item: ".$target->getInventory()->getArmorItem(3)->getName());
     	    	    	    if($target->isSleeping()){
-    	    	    	    	$sender->sendMessage("Sleeping: yes");
+    	    	    	    	$sender->sendMessage("§eSleeping: yes");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("Sleeping: no");
+    	    	    	    	$sender->sendMessage("§eSleeping: no");
     	    	    	    }
     	    	    	    if($target->isInsideOfWater()){
-    	    	    	    	$sender->sendMessage("Inside water: yes");
+    	    	    	    	$sender->sendMessage("§eInside water: yes");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("Inside water: no");
+    	    	    	    	$sender->sendMessage("§eInside water: no");
     	    	    	    }
     	    	    	    if($target->isInsideOfSolid()){
-    	    	    	    	$sender->sendMessage("Inside solid: yes");
+    	    	    	    	$sender->sendMessage("§eInside solid: yes");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("Inside solid: no");
+    	    	    	    	$sender->sendMessage("§eInside solid: no");
     	    	    	    }
     	    	    	    if($target->isOnGround()){
-    	    	    	    	$sender->sendMessage("On ground: yes");
+    	    	    	    	$sender->sendMessage("§eOn ground: yes");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("On ground: no");
+    	    	    	    	$sender->sendMessage("§eOn ground: no");
     	    	    	    }
     	    	    	    if($target->isOp()){
-    	    	    	    	$sender->sendMessage("OP: yes");
+    	    	    	    	$sender->sendMessage("§eOP: yes");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("OP: no");
+    	    	    	    	$sender->sendMessage("§eOP: no");
     	    	    	    }
     	    	    	    if($this->exempt->exists(strtolower($target->getName()))){
-    	    	    	    	$sender->sendMessage("EXEMPT: yes");
+    	    	    	    	$sender->sendMessage("§eEXEMPT: yes");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("EXEMPT: no");
+    	    	    	    	$sender->sendMessage("§eEXEMPT: no");
     	    	    	    }
     	    	    	    if($target->isWhitelisted()){
-    	    	    	    	$sender->sendMessage("Name whitelisted: yes");
+    	    	    	    	$sender->sendMessage("§eName whitelisted: yes");
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("Name whitelisted: no");
+    	    	    	    	$sender->sendMessage("§eName whitelisted: no");
     	    	    	    }
     	    	    	    if($this->ip->exists(strtolower($target->getAddress()))){
     	    	    	    	
@@ -311,11 +316,11 @@ class Loader extends PluginBase implements Listener{
     	    	    	    }
     	    	    	}
     	    	    	else{
-    	    	    	    $sender->sendMessage("");
+    	    	    	    $sender->sendMessage("§cPlease specify a valid player.");
     	    	    	}
     	    	    }
     	    	    else{
-    	    	    	$sender->sendMessage("§cPlease specify a valid player");
+    	    	    	$sender->sendMessage("Your information:");
     	    	    }
     	    	}
     	    	if(strtolower($args[0]) === "kickall"){
