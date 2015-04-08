@@ -23,7 +23,7 @@ class Loader extends PluginBase implements Listener{
             $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
-    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDesrcription()->getVersion()."is outdated.");
+    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDesrcription()->getFullName()."is outdated.");
     	    $this->getPluginLoader()->disablePlugin($this);
     	}
     }
