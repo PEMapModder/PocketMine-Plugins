@@ -18,65 +18,32 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "domath"){
-            
-        }
-        if(strtolower($command->getName()) === "add"){
-            if(isset($args[0]) && isset($args[1])){
-                if(is_numeric($args[0]) && is_numeric($args[1])){
-                    $sender->sendMessage($args[0]." + ".$args[1]." = ".($args[0] + $args[1]));
+            if(isset($args[0])){
+                if(strtolower($args[0]) === "add"){
+                    return true;
                 }
-                else{
-                    $sender->sendMessage("§cPlease use numbers.");
+                if(strtolower($args[0]) === "divide"){
+                    return true;
                 }
+                if(strtolower($args[0]) === "help"){
+                    return true;
+                }
+                if(strtolower($args[0]) === "multiply"){
+                    return true;
+                }
+                if(strtolower($args[0]) === "subtract"){
+                    return true;
+                }
+                return false;
             }
             else{
-                $sender->sendMessage("§cUsage: ".$command->getUsage());
+                $sender->sendMessage("DoMath commands");
+                $sender->sendMessage("/domath add -");
+                $sender->sendMessage("/domath divide -");
+                $sender->sendMessage("/domath help -");
+                $sender->sendMessage("/domath multiply -");
+                $sender->sendMessage("/domath subtract -");
             }
         }
-        if(strtolower($command->getName()) === "divide"){
-            if(isset($args[0]) && isset($args[1])){
-                if(is_numeric($args[0]) && is_numeric($args[1])){
-                    if($args[1] === 0){
-                        $sender->sendMessage("§cUndefined value error: 0");
-                    }
-                    else{
-                        $sender->sendMessage($args[0]." / ".$args[1]." = ".($args[0] / $args[1]));
-                    }
-                } 
-                else{
-                    $sender->sendMessage("§cPlease use numbers.");
-                }
-            }
-            else{
-                $sender->sendMessage("§cUsage: ".$command->getUsage()); 
-            }
-        }
-        if(strtolower($command->getName()) === "multiply"){
-            if(isset($args[0]) && isset($args[1])){
-                if(is_numeric($args[0]) && is_numeric($args[1])){
-                    $sender->sendMessage($args[0]." * ".$args[1]." = ".($args[0] * $args[1]));
-                }
-                else{
-                    $sender->sendMessage("§cPlease use numbers.");
-                }
-            }
-            else{
-                $sender->sendMessage("§cUsage: ".$command->getUsage());
-            }
-        }
-        if(strtolower($command->getName()) === "subtract"){
-            if(isset($args[0]) && isset($args[1])){
-                if(is_numeric($args[0]) && is_numeric($args[1])){
-                    $sender->sendMessage($args[0]." - ".$args[1]." = ".($args[0] - $args[1]));
-                }
-                else{
-                    $sender->sendMessage("§cPlease use numbers.");
-                }
-            }
-            else{
-                $sender->sendMessage("§cUsage: ".$command->getUsage());
-            }
-        }
-        return true;
     }
 }
