@@ -5,6 +5,6 @@ enable:
  ip-whitelist: false
  #Set to true to enable whitelist by IP address, addresses saved in ip.txt
 preferred-economy:
-#Will be used for /imanager moneylist, will be implemented in v1.3.0
+#Will be used for /imanager moneylist, will be implemented in v1.2.0
 version: 1.1.0
 #Do not change the version, it is used for internal purposes
