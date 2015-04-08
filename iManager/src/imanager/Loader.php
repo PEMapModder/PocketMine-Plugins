@@ -256,7 +256,7 @@ class Loader extends PluginBase implements Listener{
     	    	    if(isset($args[1])){
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
-    	    	    	    $sender->sendMessage("§b".$target->getName()."§e's information:");
+    	    	    	    $sender->sendMessage("§b".$target->getName()."'s §einformation:");
     	    	    	    $sender->sendMessage("§eName: §b".$target->getName());
     	    	    	    $sender->sendMessage("§eDisplay-name: §b".$target->getDisplayName());
     	    	    	    $sender->sendMessage("§eName-tag: §b".$target->getNameTag());
@@ -331,7 +331,74 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    else{
     	    	    	if($sender instanceof Player){
-    	    	    	    $sender->sendMessage("Your information:");
+    	    	    	    $sender->sendMessage("§einformation:");
+    	    	    	    $sender->sendMessage("§eName: §b".$sender->getName());
+    	    	    	    $sender->sendMessage("§eDisplay-name: §b".$sender->getDisplayName());
+    	    	    	    $sender->sendMessage("§eName-tag: §b".$sender->getNameTag());
+    	    	    	    $sender->sendMessage("§eAddress: §c".$sender->getAddress()."§e:§a".$sender->getPort());
+    	    	    	    $sender->sendMessage("§eHealth: §c".$sender->getHealth()."§e/§a".$sender->getMaxHealth());
+    	    	    	    $sender->sendMessage("§eX: §c".$sender->getFloorX());
+    	    	    	    $sender->sendMessage("§eY: §9".$sender->getFloorY());
+    	    	    	    $sender->sendMessage("§eZ: §a".$sender->getFloorZ());
+    	    	    	    $sender->sendMessage("§eLevel: §d".$sender->getLevel()->getName());
+    	    	    	    $sender->sendMessage("§eYaw: §6".$sender->getYaw());
+    	    	    	    $sender->sendMessage("§ePitch: §6".$sender->getPitch());
+    	    	    	    $sender->sendMessage("§eGamemode: §c".$sender->getGamemode());
+    	    	    	    $sender->sendMessage("§eHeld-item: §9".$sender->getInventory()->getItemInHand()->getName());
+    	    	    	    $sender->sendMessage("§eHead-item: §9".$sender->getInventory()->getArmorItem(0)->getName());
+    	    	    	    $sender->sendMessage("§eChest-item: §9".$sender->getInventory()->getArmorItem(1)->getName());
+    	    	    	    $sender->sendMessage("§eLeg-item: §9".$sender->getInventory()->getArmorItem(2)->getName());
+    	    	    	    $sender->sendMessage("§eFeet-item: §9".$sender->getInventory()->getArmorItem(3)->getName());
+    	    	    	    if($sender->isSleeping()){
+    	    	    	    	$sender->sendMessage("§eSleeping: §ayes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§eSleeping: §cno");
+    	    	    	    }
+    	    	    	    if($sender->isInsideOfWater()){
+    	    	    	    	$sender->sendMessage("§eInside-water: §ayes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§eInside-water: §cno");
+    	    	    	    }
+    	    	    	    if($sender->isInsideOfSolid()){
+    	    	    	    	$sender->sendMessage("§eInside-solid: §ayes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§eInside-solid: §cno");
+    	    	    	    }
+    	    	    	    if($sender->isOnGround()){
+    	    	    	    	$sender->sendMessage("§eOn-ground: §ayes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§eOn-ground: §cno");
+    	    	    	    }
+    	    	    	    if($sender->isOp()){
+    	    	    	    	$sender->sendMessage("§eOP: §ayes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§eOP: §cno");
+    	    	    	    }
+    	    	    	    if($this->exempt->exists(strtolower($sender->getName()))){
+    	    	    	    	$sender->sendMessage("§eEXEMPT: §ayes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§eEXEMPT: §cno");
+    	    	    	    }
+    	    	    	    /*
+    	    	    	    if($sender->isWhitelisted()){
+    	    	    	    	$sender->sendMessage("§eName-whitelisted: §ayes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§eName-whitelisted: §cno");
+    	    	    	    }
+    	    	    	    */
+    	    	    	    if($this->ip->exists(strtolower($sender->getAddress()))){
+    	    	    	    	$sender->sendMessage("§eIP-whitelisted: §ayes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§eIP-whitelisted: §cno");
+    	    	    	    }
     	    	    	}
     	    	    	else{
     	    	            $sender->sendMessage("§cPlease specify a valid player.");
