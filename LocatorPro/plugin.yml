@@ -8,7 +8,7 @@ description: Everything is about the coordinates!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/LocatorPro
 commands:
  locatorpro:
-  description:
+  description: Shows all the sub-commands for /locatorpro
   usage: /locatorpro <sub-command>
   permission: locatorpro.command.locatorpro
   aliases: [lp]
