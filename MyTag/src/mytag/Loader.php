@@ -175,6 +175,7 @@ class Loader extends PluginBase implements Listener{
 	    	$this->getConfig()->get("first-tag")
 	    ));
 	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+	    $this->data->save();
 	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
 	}
     }
@@ -183,11 +184,13 @@ class Loader extends PluginBase implements Listener{
     	if($this->data->exists(strtolower($event->getPlayer()->getName()))){
     	    if($this->getConfig()->get("enable")["auto-set"] === true){
 	        $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+	        $this->data->save();
     	    }
     	}
     	else{
 	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
 	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
+	    $this->data->save();
 	}
     }
 }
