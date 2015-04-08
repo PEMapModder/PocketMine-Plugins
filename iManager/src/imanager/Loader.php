@@ -225,7 +225,7 @@ class Loader extends PluginBase implements Listener{
 		    }	
     	    	}
     	    	if(strtolower($args[0]) === "help"){
-    	    	    $sender->sendMessage("> iManager commands");
+    	    	    $sender->sendMessage("iManager commands");
     	    	    $sender->sendMessage("§a/imanager addexempt §c- §fAdds a player's name to exempt.txt");
     	    	    $sender->sendMessage("§a/imanager addip §c- §fAdds a player's IP address to ip.txt");
     	    	    $sender->sendMessage("§a/imanager addresslist §c- §fLists every player's IP address and port");
@@ -248,7 +248,7 @@ class Loader extends PluginBase implements Listener{
     	    	    if(isset($args[1])){
     	    	    	$target = $this->getServer()->getPlayer($args[1]);
     	    	    	if($target !== null){
-    	    	    	    $sender->sendMessage("> Information about: ".$target->getName());
+    	    	    	    $sender->sendMessage("Information about: ".$target->getName());
     	    	    	    $sender->sendMessage("Name: ".$target->getName());
     	    	    	    $sender->sendMessage("Display name: ".$target->getDisplayName());
     	    	    	    $sender->sendMessage("Name tag: ".$target->getNameTag());
@@ -267,6 +267,24 @@ class Loader extends PluginBase implements Listener{
     	    	    	    else{
     	    	    	    	$sender->sendMessage("Sleeping: no");
     	    	    	    }
+    	    	    	    if($target->isInsideOfWater()){
+    	    	    	    	$sender->sendMessage("Inside water: yes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("Inside water: no");
+    	    	    	    }
+    	    	    	    if($target->isInsideOfSolid()){
+    	    	    	    	$sender->sendMessage("Inside solid: yes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("Inside solid: no");
+    	    	    	    }
+    	    	    	    if($target->isOnGround()){
+    	    	    	    	$sender->sendMessage("On ground: yes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("On ground: no");
+    	    	    	    }
     	    	    	    if($target->isOp()){
     	    	    	    	$sender->sendMessage("OP: yes");
     	    	    	    }
@@ -279,7 +297,18 @@ class Loader extends PluginBase implements Listener{
     	    	    	    else{
     	    	    	    	$sender->sendMessage("EXEMPT: no");
     	    	    	    }
-    	    	    	    if()
+    	    	    	    if($target->isWhitelisted()){
+    	    	    	    	$sender->sendMessage("Name whitelisted: yes");
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("Name whitelisted: no");
+    	    	    	    }
+    	    	    	    if($this->ip->exist(strtolower($target->getAddress()))){
+    	    	    	    	
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	
+    	    	    	    }
     	    	    	}
     	    	    	else{
     	    	    	    $sender->sendMessage("");
@@ -341,7 +370,7 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    }
     	    else{
-    	    	$sender->sendMessage("> iManager commands");
+    	    	$sender->sendMessage("iManager commands");
     	    	$sender->sendMessage("§a/imanager addexempt §c- §fAdds a player's name to exempt.txt");
     	    	$sender->sendMessage("§a/imanager addip §c- §fAdds a player's IP address to ip.txt");
     	    	$sender->sendMessage("§a/imanager addresslist §c- §fLists every player's IP address and port");
