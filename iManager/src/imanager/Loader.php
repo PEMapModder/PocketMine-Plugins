@@ -401,7 +401,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    }
     	    	    	}
     	    	    	else{
-    	    	            $sender->sendMessage("§cPlease specify a valid player.");
+    	    	            $sender->sendMessage("§cPlease specify a valid player that is in-game.");
     	    	    	}
     	    	    }
     	    	    return true;
