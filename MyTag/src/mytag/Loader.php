@@ -161,6 +161,19 @@ class Loader extends PluginBase implements Listener{
 	    }
 	}
 	else{
+	    $event->getPlayer()->setNameTag(str_replace(
+	    [
+	    "{ip}",
+	    "{player}",
+	    "{port}"
+	    ],
+	    [
+	    $event->getPlayer()->getAddress(),
+	    $event->getPlayer()->getName(),
+	    $event->getPlayer()->getPort()
+	    ],
+	    $this->getConfig()->get("first-tag")
+	    ));
 	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
 	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
 	}
