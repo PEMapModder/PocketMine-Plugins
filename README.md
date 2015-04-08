@@ -6,14 +6,12 @@ note that not all the plugins here may be released on the PocketMine plugin repo
 * CustomFood
 * CustomHealth
 * DoMath
-* EasyBeacon
 * GearUp
 * GlobalShield
 * GoTroll
 * LocatorPro
 * MyChat
 * MyTag
-* PvPGM
 * SafeLock
 * ServerHelp
 * ServerLaw
