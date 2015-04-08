@@ -2,6 +2,7 @@
 enable:
  auto-heal: false
  #Set to true to enable auto-healing
+ damage-cause:
 health:
  default-amount: 20
  #Default amount of health for a player
