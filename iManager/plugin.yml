@@ -10,7 +10,7 @@ commands:
  imanager:
   description: Shows all the sub-commands for /imanager
   usage: /imanager <sub-command> [parameters]
-  permission: imanager.command.check
+  permission: imanager.command.imanager
   aliases: [im]
 permissions:
  imanager:
