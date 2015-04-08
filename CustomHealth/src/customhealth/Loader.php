@@ -72,7 +72,7 @@ class Loader extends PluginBase implements Listener{
             if($event->getCause() === EntityDamageEvent::CAUSE_SUICIDE){
                 
             }
-            if($event->getCause() === EntityDamageEvent::CAUSE_SUICIDE){
+            if($event->getCause() === EntityDamageEvent::CAUSE_MAGIC){
                 
             }
             if($event->getCause() === EntityDamageEvent::CAUSE_CUSTOM){
