@@ -17,6 +17,9 @@ class Loader extends PluginBase{
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+        if(strtolower($command->getName()) === "domath"){
+            
+        }
         if(strtolower($command->getName()) === "add"){
             if(isset($args[0]) && isset($args[1])){
                 if(is_numeric($args[0]) && is_numeric($args[1])){
