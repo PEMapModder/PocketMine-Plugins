@@ -4,11 +4,11 @@ namespace locatorpro;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\Listener;
+use pocketmine\level\Position;
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
@@ -83,9 +83,12 @@ class Loader extends PluginBase implements Listener{
                 $sender->sendMessage("/locatorpro help -");
                 $sender->sendMessage("/locatorpro pos -");
                 $sender->sendMessage("/locatorpro save -");
-                $sender->sendMessage("/locatorpro setspawn -");
+                $sender->sendMessage("/locatorpro set -");
             }
             if(strtolower($args[0]) === "save"){
+                
+            }
+            if(strtolower($args[0]) === "set"){
                 
             }
         }
