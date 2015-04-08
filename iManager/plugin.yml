@@ -9,6 +9,7 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iManager
 commands:
  imanager:
   description: Shows all the sub-commands for /imanager
+  usage: /imanager <sub-command> <player/time>
   permission: imanager.command.check
   aliases: [im]
 permissions:
