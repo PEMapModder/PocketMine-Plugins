@@ -5,6 +5,7 @@ namespace imanager;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\event\player\PlayerCommandPreprocessEvent;
 use pocketmine\event\player\PlayerPreLoginEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
@@ -488,6 +489,12 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerChat(PlayerChatEvent $event){
     	if($this->getConfig()->get("enable")["chat-log"] === true){
     	    $this->chat->set($event->getPlayer()->getName().": ".$event->getMessage());
+    	}
+    }
+    
+    public function onPlayerCommandPreprocess(PlayerCommandPrepreprocessEvent $event){
+    	if($this->getConfig()->get("enable")["log-commands"] === true){
+    		
     	}
     }
     
