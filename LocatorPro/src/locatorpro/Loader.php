@@ -43,7 +43,7 @@ class Loader extends PluginBase implements Listener{
             }
             if(strtolower($args[0]) === "pos"){
                 if(isset($args[1])){
-                    if($sender->hasPermission("locator.command.locator.other")){
+                    if($sender->hasPermission("locatorpro.command.locatorpro.other")){
                         $target = $sender->getServer()->getPlayer($args[1]);
                         if($target !== null){
                             $sender->sendMessage($target->getName()."'s location:");
@@ -64,7 +64,7 @@ class Loader extends PluginBase implements Listener{
                 }
                 else{
                     if($sender instanceof Player){
-                        if($sender->hasPermission("locator.command.locator.self")){
+                        if($sender->hasPermission("locatorpro.command.locatorpro.self")){
                             $sender->sendMessage("Your location:");
                             $sender->sendMessage("X: ".$sender->getFloorX());
                             $sender->sendMessage("Y: ".$sender->getFloorY());
