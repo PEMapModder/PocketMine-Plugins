@@ -37,16 +37,19 @@ class Loader extends PluginBase implements Listener{
     	    	    if(strtolower($args[0]) === "address"){
     	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getAddress().":".$sender->getPort());
     	    	    	$sender->sendMessage("Your IP address and port number has been set on your tag.");
+    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "chat"){
     	    	    	//To-do
+    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "health"){
     	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getHealth()."/".$sender->getMaxHealth());
     	    	    	$sender->sendMessage("Your health has been set on your tag.");
+    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "help"){
-    	    	    	$sender->sendMessage("> MyTag commands");
+    	    	    	$sender->sendMessage("MyTag commands");
     	    	    	$sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    	    	$sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    	    	$sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
@@ -56,30 +59,33 @@ class Loader extends PluginBase implements Listener{
     	    	    	$sender->sendMessage("§a/mytag op §c- §fShows op status on the name tag, if they have it");
     	    	    	$sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
     	    	    	$sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
+    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "hide"){
     	    	    	$sender->setNameTag(null);
     	    	    	$sender->sendMessage("Your name tag has been hidden.");
+    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "money"){
     	    	    	//To-do
+    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "op"){
-    	    	    	
+    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "restore"){
     	    	    	$sender->setNameTag($sender->getName());
     	    	    	$sender->sendMessage("Your default name tag has been restored.");
+    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "view"){
     	    	    	$sender->sendMessage("Your tag: ".$sender->getNameTag());
+    	    	    	return true;
     	    	    }
-    	    	    else{
-    	    	    	$sender->sendMessage("§cPlease specify a valid sub-command.");
-    	    	    }
+    	    	    return false;
     	    	}
     	    	else{
-    	    	    $sender->sendMessage("> MyTag commands");
+    	    	    $sender->sendMessage("MyTag commands");
     	    	    $sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    	    $sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    	    $sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
@@ -96,7 +102,7 @@ class Loader extends PluginBase implements Listener{
     	    if(strtolower($command->getName()) === "mytag"){
     	    	if(isset($args[0])){
     	    	    if(strtolower($args[0]) === "help"){
-    	    		$sender->sendMessage("> MyTag commands");
+    	    		$sender->sendMessage("MyTag commands");
     	    		$sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    		$sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    		$sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
@@ -106,9 +112,11 @@ class Loader extends PluginBase implements Listener{
     	    		$sender->sendMessage("§a/mytag op §c- §fShows op status on the name tag, if they have it");
     	    		$sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
     	    		$sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
+    	    		return true;
     	    	    }
     	    	    else{
     	    	    	$sender->sendMessage("§cPlease run this command in-game.");
+    	    	    	return true;
     	    	    }
     	    	}
     	    	else{
@@ -122,10 +130,10 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("§a/mytag op §c- §fShows op status on the name tag, if they have it");
     	    	    $sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
     	    	    $sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
+    	    	    return true;
     	    	}
     	    }
     	}
-    	return true;
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
