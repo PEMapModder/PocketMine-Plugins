@@ -322,7 +322,6 @@ class Loader extends PluginBase implements Listener{
     	    	    	    else{
     	    	    	    	
     	    	    	    }
-    	    	    	    return true;
     	    	    	}
     	    	    	else{
     	    	    	    $sender->sendMessage("§cPlease specify a valid player.");
@@ -331,6 +330,7 @@ class Loader extends PluginBase implements Listener{
     	    	    else{
     	    	    	$sender->sendMessage("Your information:");
     	    	    }
+    	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "kickall"){
 		    $sender->sendMessage("§eKicking everyone without EXEMPT status from the server...");
