@@ -21,25 +21,22 @@ class Loader extends PluginBase implements Listener{
     
     public function onEnable(){
 	$this->saveDefaultConfig();
-    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    @mkdir($this->getDataFolder());
-            $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
-            $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
-            $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
-    	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-	    $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+    	if($this->getConfig()->get("version") !== $this->getDescription()->getVersion()){
+    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated. It will be regenerated.");
+    	    $this->saveResource("config.yml", true);
     	}
-    	else{
-    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
-    	    $this->getPluginLoader()->disablePlugin($this);
-    	}
+    	$this->chat = fopen($this->getDataFolder()."chat.txt", "a");
+    	$this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
+    	$this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    	$this->getServer()->getLogger()->info("§aEnabled ".$this->getDescription()->getFullName().".");
     }
     
     public function onDisable(){
-    	$this->chat->save();
+    	fclose($this->chat);
         $this->exempt->save();
         $this->ip->save();
-        $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
+        $this->getServer()->getLogger()->info("§cDisabled ".$this->getDescription()->getFullName().".");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
@@ -487,7 +484,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerChat(PlayerChatEvent $event){
     	if($this->getConfig()->get("enable")["chat-log"] === true){
-    	    $this->chat->set($event->getPlayer()->getName().": ".$event->getMessage());
+    	    fwrite($this->chat, $event->getPlayer()->getName().": ".$event->getMessage());
     	}
     }
     
