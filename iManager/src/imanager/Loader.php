@@ -303,7 +303,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    else{
     	    	    	    	$sender->sendMessage("Name whitelisted: no");
     	    	    	    }
-    	    	    	    if($this->ip->exist(strtolower($target->getAddress()))){
+    	    	    	    if($this->ip->exists(strtolower($target->getAddress()))){
     	    	    	    	
     	    	    	    }
     	    	    	    else{
