@@ -74,16 +74,8 @@ class Loader extends PluginBase implements Listener{
                 }
             }
         }
-        if(strtolower($command->getName()) === "lastpos"){
+        if(strtolower($command->getName()) === "locatorpro"){
             
-        }
-        if(strtolower($command->getName()) === "savepos"){
-            if(isset($args[0])){
-                
-            }
-            else{
-                
-            }
         }
         return true;
     }
