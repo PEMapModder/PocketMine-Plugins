@@ -27,7 +27,7 @@ class Loader extends PluginBase implements Listener{
             $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
             $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-	    $this->->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+	    $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
     	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
