@@ -10,7 +10,7 @@ commands:
  mytag:
   description: Shows all the sub-commands for /tag
   usage: /mytag <sub-command>
-  permission: mytag.command.tag
+  permission: mytag.command.mytag
   aliases: [mt]
 permissions:
  mytag:
