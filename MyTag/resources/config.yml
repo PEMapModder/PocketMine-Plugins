@@ -4,7 +4,7 @@ enable:
  #Set to true to set the tag to the player's preferences on-join
 default-tag: "{player}"
 #Default tag the player will have on their first join
-op-tag: "Staff"
+op-tag: "[Staff]"
 #Custom tag for /mytag op, example: [Admin] Steve
 preferred-economy: 
 #Will be used for /mytag money, will be implemented in v1.2.0
