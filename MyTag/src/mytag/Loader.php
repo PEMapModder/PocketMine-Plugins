@@ -31,6 +31,7 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onDisable(){
+    	$this->data->save();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -82,6 +83,14 @@ class Loader extends PluginBase implements Listener{
     	    	    	$sender->sendMessage("Your default name tag has been restored.");
     	    	    	return true;
     	    	    }
+    	    	    if(strtolower($args[0]) === "set"){
+    	    	    	if(isset($args[1])){
+    	    	    		
+    	    	    	}
+    	    	    	else{
+    	    	    		
+    	    	    	}
+    	    	    }
     	    	    if(strtolower($args[0]) === "view"){
     	    	    	$sender->sendMessage("Your tag: ".$sender->getNameTag());
     	    	    	return true;
@@ -98,6 +107,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("§a/mytag money §c- §fShows the amount of money ");
     	    	    $sender->sendMessage("§a/mytag op §c- §fShows op status on the name tag, if they have it");
     	    	    $sender->sendMessage("§a/mytag restore §c- §fRestores current name tag to the default name tag");
+    	    	    $sender->sendMessage("§a/mytag set §c- §f");
     	    	    $sender->sendMessage("§a/mytag view §c- §fShows the name tag with a message");
     	    	}
     	    }
@@ -141,7 +151,7 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
-    	
+    	//To-do
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
@@ -152,13 +162,19 @@ class Loader extends PluginBase implements Listener{
 	}
 	else{
 	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	    $this->getServer()->getLogger()->notice("Created new player save data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
+	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
 	}
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
-    	if($this->getConfig()->get("enable")["auto-set"] === true){
-
+    	if($this->data->exists(strtolower($event->getPlayer()->getName()))){
+    	    if($this->getConfig()->get("enable")["auto-set"] === true){
+	        $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+    	    }
     	}
+    	else{
+	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
+	}
     }
 }
