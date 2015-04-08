@@ -85,10 +85,21 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    if(strtolower($args[0]) === "set"){
     	    	    	if(isset($args[1])){
-    	    	    		
+    	    	    	    $target = $this->getServer()->getPlayer($args[1]);
+    	    	    	    if($target !== null){
+    	    	    	    	if(isset($args[2])){
+    	    	    	    	    $target->setNameTag(implode(" ", $args));
+    	    	    	    	}
+    	    	    	    	else{
+    	    	    	    	    return false;
+    	    	    	    	}
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§cPlease specify a valid player.");
+    	    	    	    }
     	    	    	}
     	    	    	else{
-    	    	    		
+    	    	    	    $sender->sendMessage("§cPlease specify a valid player.");
     	    	    	}
     	    	    }
     	    	    if(strtolower($args[0]) === "view"){
