@@ -12,22 +12,6 @@ commands:
   usage: /domath <sub-command> [parameters] [parameters]
   permission: domath.command.domath
   aliases: [dm]
- add:
-  description: Adds the specified numbers 
-  usage: /add <number> <number>
-  permission: domath.command.add
- divide:
-  description: Divides the specified numbers
-  usage: /divide <number> <number>
-  permission: domath.command.divide
- multiply:
-  description: Multiplies the specified numbers
-  usage: /multiply <number> <number>
-  permission: domath.command.multiply
- subtract:
-  description: Subtracts the specified numbers
-  usage: /subtract <number> <number>
-  permission: domath.command.subtract
 permissions:
  domath:
   default: op
@@ -35,11 +19,5 @@ permissions:
    domath.command:
     default: op 
     children:
-     domath.command.add:
-      default: true
-     domath.command.divide:
-      default: true
-     domath.command.multiply:
-      default: true
-     domath.command.subtract:
+     domath.command.domath:
       default: true
