@@ -183,7 +183,7 @@ class Loader extends PluginBase implements Listener{
 	    	$event->getPlayer()->getName(),
 	    	$event->getPlayer()->getPort()
 	    	],
-	    	$this->getConfig()->get("first-tag")
+	    	$this->getConfig()->get("default-tag")
 	    ));
 	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
 	    $this->data->save();
