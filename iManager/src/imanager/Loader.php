@@ -370,6 +370,9 @@ class Loader extends PluginBase implements Listener{
 		    	$sender->sendMessage("§e> §b".$players->getName()." §e- X: §c".$players->getFloorX()." §eY: §9".$players->getFloorY()." §eZ: §a".$players->getFloorZ()." §eLevel: §d".$players->getLevel()->getName()." §eYaw: §6".$players->getYaw());
 		    }	
     	    	}
+    	    	else{
+    	    	    $sender->sendMessage("§cUsage: ".$command->getUsage());
+    	    	}
     	    }
     	    else{
     	    	$sender->sendMessage("iManager commands");
