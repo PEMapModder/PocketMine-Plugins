@@ -75,9 +75,16 @@ class Loader extends PluginBase implements Listener{
             }
         }
         if(strtolower($command->getName()) === "locatorpro"){
-            
+            if(strtolower($args[0]) === "back"){
+                
+            }
+            if(strtolower($args[0]) === "help"){
+                
+            }
+            if(strtolower($args[0]) === "save"){
+                
+            }
         }
-        return true;
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
