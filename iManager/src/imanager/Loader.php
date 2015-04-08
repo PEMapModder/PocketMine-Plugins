@@ -322,6 +322,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    else{
     	    	    	    	
     	    	    	    }
+    	    	    	    return true;
     	    	    	}
     	    	    	else{
     	    	    	    $sender->sendMessage("§cPlease specify a valid player.");
