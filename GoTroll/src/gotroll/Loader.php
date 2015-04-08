@@ -54,7 +54,7 @@ class Loader extends PluginBase{
                 }
             }
             else{
-                $sender->sendMessage("GoTroll commands:");
+                $sender->sendMessage("GoTroll commands");
             }
         }
         return false;
