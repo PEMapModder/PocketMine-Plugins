@@ -16,9 +16,13 @@ use pocketmine\Player;
 
 class Loader extends PluginBase implements Listener{
     
+    public $data;
+    
     public function onEnable(){
     	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
+    	    @mkdir($this->getDataFolder());
+            $this->data = new Config($this->getDataFolder()."data.yml", Config::YAML);
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
             $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
