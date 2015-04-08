@@ -27,10 +27,10 @@ class Loader extends PluginBase implements Listener{
             $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
             $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-	    $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+	    $this->->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
-    	    $this->getLogger()->info("§eYour configuration file is outdated.");
+    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getVersion()." is outdated.");
     	    $this->getPluginLoader()->disablePlugin($this);
     	}
     }
@@ -39,7 +39,7 @@ class Loader extends PluginBase implements Listener{
     	$this->chat->save();
         $this->exempt->save();
         $this->ip->save();
-        $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
+        $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
