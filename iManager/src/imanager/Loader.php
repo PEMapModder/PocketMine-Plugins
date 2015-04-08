@@ -494,7 +494,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerCommandPreprocess(PlayerCommandPrepreprocessEvent $event){
     	if($this->getConfig()->get("enable")["log-commands"] === true){
-    		
+    	    $this->getServer()->getLogger()->notice($event->getPlayer()->getName()." issued command: ".$event->getMessage());
     	}
     }
     
