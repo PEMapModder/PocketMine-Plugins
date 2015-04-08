@@ -331,7 +331,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    else{
     	    	    	if($sender instanceof Player){
-    	    	    	    $sender->sendMessage("§einformation:");
+    	    	    	    $sender->sendMessage("§eYour information:");
     	    	    	    $sender->sendMessage("§eName: §b".$sender->getName());
     	    	    	    $sender->sendMessage("§eDisplay-name: §b".$sender->getDisplayName());
     	    	    	    $sender->sendMessage("§eName-tag: §b".$sender->getNameTag());
@@ -462,7 +462,7 @@ class Loader extends PluginBase implements Listener{
 		return false;
     	    }
     	    else{
-    	    	$sender->sendMessage("iManager commands");
+    	    	$sender->sendMessage("§biManager commands");
     	    	$sender->sendMessage("§a/imanager addexempt §c- §fAdds a player's name to exempt.txt");
     	    	$sender->sendMessage("§a/imanager addip §c- §fAdds a player's IP address to ip.txt");
     	    	$sender->sendMessage("§a/imanager addresslist §c- §fLists every player's IP address and port");
