@@ -7,6 +7,6 @@ enable:
  log-commands: true
  #Set to true to log all commands issued by players
 preferred-economy:
-#Will be used for /imanager moneylist, will be implemented in v1.2.0
-version: 1.1.0
+#Will be used for /imanager moneylist
+version: 1.2.0
 #Do not change the version, it is used for internal purposes
