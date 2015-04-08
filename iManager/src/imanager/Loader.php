@@ -77,6 +77,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    $sender->sendMessage("§cPlease run this command in-game.");
     	    	    	}
     	    	    }	
+    	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "addip"){
     	    	    if(isset($args[1])){
@@ -110,12 +111,14 @@ class Loader extends PluginBase implements Listener{
     	    	    	    $sender->sendMessage("§cPlease run this command in-game.");
     	    	    	}
     	    	    }
+    	    	    return true;
     	    	} 
     	    	if(strtolower($args[0]) === "addresslist"){
 		    $sender->sendMessage("§eIP address and port of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getAddress()."§e:§a".$players->getPort());
 		    }
+		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "burnall"){
     	    	    if(isset($args[1])){
@@ -137,6 +140,7 @@ class Loader extends PluginBase implements Listener{
     	    	    else{
     	    	    	$sender->sendMessage("§cPlease specify a valid time value.");
     	    	    }
+    	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "delexempt"){
     	    	    if(isset($args[1])){
@@ -170,6 +174,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	    $sender->sendMessage("§cPlease run this command in-game.");
     	    	    	}
     	    	    }	
+    	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "delip"){
     	    	    if(isset($args[1])){
@@ -203,26 +208,28 @@ class Loader extends PluginBase implements Listener{
     	    	    	    $sender->sendMessage("§cPlease run this command in-game.");
     	    	    	}
     	    	    }
+    	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "deopall"){
     	    	    $sender->sendMessage("§eRevoking OP status of everyone in the server...");
     	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
     	    	    	$players->setOp(false);
     	    	    }
+    	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "gamemodelist"){
 		    $sender->sendMessage("§eGamemode of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getGamemode());
-
 		    }	
+		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "healthlist"){
 		    $sender->sendMessage("§eHealth of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getHealth()."§e/§a".$players->getMaxHealth());
-
 		    }	
+		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "help"){
     	    	    $sender->sendMessage("iManager commands");
@@ -243,6 +250,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("§a/imanager opall §c- §fGrants OP status to everyone in the server");
     	    	    $sender->sendMessage("§a/imanager oplist §c- §fLists all the online OPs");
     	    	    $sender->sendMessage("§a/imanager poslist §c- §fLists every player's coordinates, level, and face direction");
+    	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "info"){
     	    	    if(isset($args[1])){
@@ -331,7 +339,8 @@ class Loader extends PluginBase implements Listener{
 		    	else{
 		    	    $players->kick();
 		    	}
-		    }	
+		    }
+		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "killall"){
 		    $sender->sendMessage("§eKilling everyone without EXEMPT status in the server...");
@@ -342,6 +351,7 @@ class Loader extends PluginBase implements Listener{
 		    	    $players->kill();
 		    	}
 		    }	
+		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "moneylist"){
 		    $sender->sendMessage("§eAmount of money of all players that are currently online");
@@ -349,12 +359,14 @@ class Loader extends PluginBase implements Listener{
 		    	$sender->sendMessage("§e> §b".$players->getName()." §f- ");
 			//To-do
 		    }	
+		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "opall"){
     	    	    $sender->sendMessage("§eGranting OP status to everyone in the server...");
     	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
     	    	    	$players->setOp(true);
     	    	    }
+    	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "oplist"){
 		    $sender->sendMessage("§eOPs that are currently online:");
@@ -363,16 +375,16 @@ class Loader extends PluginBase implements Listener{
 		    	    $sender->sendMessage("§e> §b".$players->getName());
 		    	}
 		    }	
+		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "poslist"){
 		    $sender->sendMessage("§eLocation of all players that are currently online:");
 		    foreach($this->getServer()->getOnlinePlayers() as $players){
 		    	$sender->sendMessage("§e> §b".$players->getName()." §e- X: §c".$players->getFloorX()." §eY: §9".$players->getFloorY()." §eZ: §a".$players->getFloorZ()." §eLevel: §d".$players->getLevel()->getName()." §eYaw: §6".$players->getYaw());
 		    }	
+		    return true;
     	    	}
-    	    	else{
-    	    	    $sender->sendMessage("§cUsage: ".$command->getUsage());
-    	    	}
+		return false;
     	    }
     	    else{
     	    	$sender->sendMessage("iManager commands");
@@ -393,9 +405,9 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("§a/imanager opall §c- §fGrants OP status to everyone in the server");
     	    	$sender->sendMessage("§a/imanager oplist §c- §fLists all the online OPs");
     	    	$sender->sendMessage("§a/imanager poslist §c- §fLists every player's coordinates, level, and face direction");
+    	    	return true;
     	    }
     	}
-    	return true;
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
