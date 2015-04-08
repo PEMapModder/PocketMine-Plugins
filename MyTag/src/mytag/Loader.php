@@ -152,7 +152,7 @@ class Loader extends PluginBase implements Listener{
 	}
 	else{
 	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	    $this->getServer()->getLogger()->notice("");
+	    $this->getServer()->getLogger()->notice("Created new player save data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
 	}
     }
 	
