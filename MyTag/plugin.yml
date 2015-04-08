@@ -9,7 +9,7 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/MyTag
 commands:
  mytag:
   description: Shows all the sub-commands for /tag
-  usage: /mytag <sub-command>
+  usage: /mytag <sub-command> [parameters]
   permission: mytag.command.mytag
   aliases: [mt]
 permissions:
