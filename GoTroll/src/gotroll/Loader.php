@@ -20,7 +20,7 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "troll"){
             if(isset($args[0])){
                 if(strtolower($args[0]) === "deop"){
-                    $target = strtolower($sender->getServer()->getPlayer($args[1]));
+                    $target = $sender->getServer()->getPlayer($args[1]);
                     if($target !== null){
                         $target->sendMessage();
                         $sender->sendMessage();
@@ -28,9 +28,10 @@ class Loader extends PluginBase{
                     else{
                         
                     }
+                    return true;
                 }
                 if(strtolower($args[0]) === "op"){
-                    $target = strtolower($sender->getServer()->getPlayer($args[1]));
+                    $target = $sender->getServer()->getPlayer($args[1]);
                     if($target !== null){
                         $target->sendMessage();
                         $sender->sendMessage(); 
@@ -38,9 +39,10 @@ class Loader extends PluginBase{
                     else{
                         
                     }
+                    return true;
                 }
                 if(strtolower($args[0]) === "spam"){
-                    $target = strtolower($sender->getServer()->getPlayer($args[1]));
+                    $target = $sender->getServer()->getPlayer($args[1]);
                     if($target !== null){
                         $target->sendMessage();
                         $sender->sendMessage();
@@ -48,12 +50,13 @@ class Loader extends PluginBase{
                     else{
                         
                     }
+                    return true;
                 }
             }
             else{
-                $sender->sendMessage("/troll spam");
+                $sender->sendMessage("GoTroll commands:");
             }
         }
-        return true;
+        return false;
     }
 }
