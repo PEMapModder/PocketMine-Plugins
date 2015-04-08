@@ -7,6 +7,11 @@ author: Gamecrafter
 description: It's easy to do math now!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/DoMath
 commands:
+ domath:
+  description:
+  usage: /domath <sub-command> [parameters] [parameters]
+  permission: domath.command.domath
+  aliases: [dm]
  add:
   description: Adds the specified numbers 
   usage: /add <number> <number>
