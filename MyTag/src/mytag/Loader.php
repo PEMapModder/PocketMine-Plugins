@@ -145,20 +145,17 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-	if(file_exists($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml") && $this->getConfig()->get("enable")["auto-set"] === true){
-	    $event->getPlayer()->setNameTag(yaml_parse(file_get_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml")));
+	if($this->getConfig()->get("enable")["auto-set"] === true){
+	    
 	}
 	else{
-	    @mkdir($this->getDataFolder()."data/");
-	    file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("tag" => $event->getPlayer()->getNameTag())));
-	    $this->getServer()->getLogger()->notice("Created new data file for ".$event->getPlayer()->getName()." at MyTag\\data\\".$event->getPlayer()->getName().".yml");
+		
 	}
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
     	if($this->getConfig()->get("enable")["auto-set"] === true){
-    	    @mkdir($this->getDataFolder()."data/");
-	    file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("tag" => $event->getPlayer()->getNameTag())));
+
     	}
     }
 }
