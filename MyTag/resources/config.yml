@@ -2,7 +2,7 @@
 enable:
  auto-set: true
  #Set to true to set the tag to the player's preferences on-join
-first-tag: "{player}"
+default-tag: "{player}"
 #Default tag the player will have on their first join
 op-tag: "Staff"
 #Custom tag for /mytag op, example: [Admin] Steve
