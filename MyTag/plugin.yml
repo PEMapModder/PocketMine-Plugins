@@ -8,7 +8,7 @@ description: Players get to control what is on their name tag!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/MyTag
 commands:
  mytag:
-  description: Shows all the sub-commands for /tag
+  description: Shows all the sub-commands for /mytag
   usage: /mytag <sub-command> [parameters]
   permission: mytag.command.mytag
   aliases: [mt]
