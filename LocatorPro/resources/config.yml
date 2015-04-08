@@ -14,7 +14,5 @@ position:
  #Sets y-coordinate for new position
  z:
  #Sets z-coordinate for new position
-tap-block: 247:1
-#Block player has to touch to save coordinates
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
