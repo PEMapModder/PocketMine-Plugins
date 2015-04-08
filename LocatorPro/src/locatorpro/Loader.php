@@ -43,7 +43,8 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("Y: ".$target->getFloorY());
                         $sender->sendMessage("Z: ".$target->getFloorZ());
                         $sender->sendMessage("Level: ".$target->getLevel()->getName());
-                        $sender->sendMessage("Facing: ".$target->getYaw());
+                        $sender->sendMessage("Yaw: ".$target->getYaw());
+                        $sender->sendMessage("Pitch: ".$target->getPitch());
                     }
                     else{
                         $sender->sendMessage("§cPlease specify a valid player.");
@@ -61,7 +62,8 @@ class Loader extends PluginBase implements Listener{
                         $sender->sendMessage("Y: ".$sender->getFloorY());
                         $sender->sendMessage("Z: ".$sender->getFloorZ());
                         $sender->sendMessage("Level: ".$sender->getLevel()->getName());
-                        $sender->sendMessage("Facing: ".$sender->getYaw());
+                        $sender->sendMessage("Yaw: ".$sender->getYaw());
+                        $sender->sendMessage("Pitch: ".$sender->getPitch());
                     }
                     else{
                         $sender->sendMessage("§cYou don't have permissions to use this command.");
@@ -84,14 +86,6 @@ class Loader extends PluginBase implements Listener{
             }
         }
         return true;
-    }
-    
-    public function onPlayerInteract(PlayerInteractEvent $event){
-        if($event->getBlock()->getId() === $this->getConfig()->get("tap-block")){
-            @mkdir($this->getDataFolder()."data/");
-            file_put_contents($this->getDataFolder()."data/".$event->getPlayer()->getName().".yml", yaml_emit(array("x" => $event->getBlock()->getX(), "y" => $event->getBlock()->getY(), "z" => $event->getBlock()->getZ())));
-            $event->getPlayer()->sendMessage("Coordinates saved.");
-        }
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
