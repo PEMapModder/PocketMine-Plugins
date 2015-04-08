@@ -145,11 +145,14 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-	if($this->getConfig()->get("enable")["auto-set"] === true){
-	    
+	if($this->data->exists(strtolower($event->getPlayer()->getName()))){
+	    if($this->getConfig()->get("enable")["auto-set"] === true){
+	    	$event->getPlayer()->setNameTag($this->data->get($event->getPlayer()->getName()));
+	    }
 	}
 	else{
-		
+	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+	    $this->getServer()->getLogger()->notice("");
 	}
     }
 	
