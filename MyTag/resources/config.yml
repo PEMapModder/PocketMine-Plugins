@@ -2,8 +2,6 @@
 enable:
  auto-set: true
  #Set to true to set the tag to the player's preferences on-join
-default-tag: "{player}"
-#Default tag the player will have on their first join
 op-prefix: "[Staff]"
 #Name tag prefix for /mytag op, example: [Admin] Steve
 preferred-economy: 
