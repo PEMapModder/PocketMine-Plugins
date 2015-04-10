@@ -14,13 +14,13 @@ use pocketmine\Player;
 
 class Loader extends PluginBase implements Listener{
     
-    public $data;
+    public $tag;
     
     public function onEnable(){
     	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    @mkdir($this->getDataFolder());
-            $this->data = new Config($this->getDataFolder()."data.yml", Config::YAML);
+            $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
             $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
@@ -31,7 +31,7 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onDisable(){
-    	$this->data->save();
+    	$this->tag->save();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -185,9 +185,9 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-	if($this->data->exists(strtolower($event->getPlayer()->getName()))){
+	if($this->tag->exists(strtolower($event->getPlayer()->getName()))){
 	    if($this->getConfig()->get("enable")["auto-set"] === true){
-	    	$event->getPlayer()->setNameTag($this->data->get($event->getPlayer()->getName()));
+	    	$event->getPlayer()->setNameTag($this->tag->get($event->getPlayer()->getName()));
 	    }
 	}
 	else{
@@ -204,17 +204,17 @@ class Loader extends PluginBase implements Listener{
 	    	],
 	    	$this->getConfig()->get("default-tag")
 	    ));
-	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	    $this->data->save();
-	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
+	    $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+	    $this->tag->save();
+	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\tag.yml");
 	}
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
-    	if($this->data->exists(strtolower($event->getPlayer()->getName()))){
+    	if($this->tag->exists(strtolower($event->getPlayer()->getName()))){
     	    if($this->getConfig()->get("enable")["auto-set"] === true){
-	        $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	        $this->data->save();
+	        $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+	        $this->tag->save();
     	    }
     	}
     	else{
