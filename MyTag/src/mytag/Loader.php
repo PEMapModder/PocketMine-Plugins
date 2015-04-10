@@ -218,9 +218,9 @@ class Loader extends PluginBase implements Listener{
     	    }
     	}
     	else{
-	    $this->data->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+	    $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
 	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
-	    $this->data->save();
+	    $this->tag->save();
 	}
     }
 }
