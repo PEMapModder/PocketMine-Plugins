@@ -152,7 +152,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	}
     	    	else{
-    	    	    $sender->sendMessage("MyTag commands:");
+    	    	    $sender->sendMessage("MyTag commands");
     	    	    $sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    	    $sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    	    $sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
@@ -179,7 +179,7 @@ class Loader extends PluginBase implements Listener{
 	    }
 	}
 	else{
-	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\tag.yml");
+	    $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
 	}
     }
 	
@@ -192,7 +192,7 @@ class Loader extends PluginBase implements Listener{
     	}
     	else{
 	    $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\data.yml");
+	    $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
 	    $this->tag->save();
 	}
     }
