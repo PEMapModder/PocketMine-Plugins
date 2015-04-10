@@ -8,7 +8,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\Listener;
-use pocketmine\level\Position;
+use pocketmine\level\Location;
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
@@ -114,6 +114,6 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerRespawn(PlayerRespawnEvent $event){
-        $event->getPlayer()->teleport(new Position($this->getConfig()->get("spawn")["x"], $this->getConfig()->get("spawn")["y"], $this->getConfig()->get("spawn")["z"], $this->getConfig()->get("spawn")["level"]);)
+        $event->getPlayer()->teleport(new Location($this->getConfig()->get("spawn")["x"], $this->getConfig()->get("spawn")["y"], $this->getConfig()->get("spawn")["z"], $this->getConfig()->get("spawn")["yaw"], $this->getConfig()->get("spawn")["pitch"], $this->getConfig()->get("spawn")["level"]);)
     }
 }
