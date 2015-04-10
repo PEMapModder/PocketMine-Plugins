@@ -100,7 +100,13 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-
+        if($this->pos->exists($event->getPlayer()->getName())){
+            
+        }
+        else{
+            $this->pos->set($event->getPlayer()->getName());
+            $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to LocatorPro at LocatorPro\\tag.yml");
+        }
     }
     
     public function onPlayerMove(PlayerMoveEvent $event){
