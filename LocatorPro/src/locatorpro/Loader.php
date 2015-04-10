@@ -105,7 +105,7 @@ class Loader extends PluginBase implements Listener{
         }
         else{
             $this->pos->set($event->getPlayer()->getName());
-            $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to LocatorPro at LocatorPro\\tag.yml");
+            $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to LocatorPro at LocatorPro\\pos.yml");
         }
     }
     
