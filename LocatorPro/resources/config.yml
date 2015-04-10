@@ -3,10 +3,11 @@ enable:
  teleport: true
  #Set to true to teleport players back to set position after player has a y-coordinate above maximum-y or below minimum-y
 limit:
- maximum-y:
- #Highest y-coordinate before player is teleported back to set position
- minimum-y:
- #Lowest y-coordinate before player is teleported back to set position
+ y:
+  maximum-y:
+  #Highest y-coordinate before player is teleported back to set position
+  minimum-y:
+  #Lowest y-coordinate before player is teleported back to set position
 spawn-point:
  x:
  #Sets x-coordinate for spawn
@@ -16,9 +17,5 @@ spawn-point:
  #Sets z-coordinate for spawn
  level:
  #Sets the spawn level
- yaw:
- #Sets the yaw for spawn
- pitch:
- #Sets the pitch for spawn
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
