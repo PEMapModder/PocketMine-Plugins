@@ -1,7 +1,7 @@
 name: MyChat
 main: mychat\Loader
 version: 1.0.0
-api: 1.10.0dfsa
+api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: Manage the chat/messages on your server!
