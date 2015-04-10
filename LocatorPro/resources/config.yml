@@ -7,7 +7,7 @@ limit:
  #Highest y-coordinate before player is teleported back to set position
  minimum-y:
  #Lowest y-coordinate before player is teleported back to set position
-spawn-point:
+spawn:
  x:
  #Sets the spawn x
  y:
