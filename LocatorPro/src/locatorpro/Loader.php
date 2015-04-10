@@ -110,7 +110,12 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerMove(PlayerMoveEvent $event){
-        
+        if($event->getPlayer()->getFloorY() < $this->getConfig()->get("limit")["minimum-y"]){
+            
+        }
+        if($event->getPlayer()->getFloor() > $this->getConfig()->get("limit")["maximum-y"]){
+            
+        }
     }
     
     public function onPlayerRespawn(PlayerRespawnEvent $event){
