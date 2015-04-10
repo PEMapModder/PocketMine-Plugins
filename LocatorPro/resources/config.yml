@@ -10,11 +10,15 @@ limit:
   #Lowest y-coordinate before player is teleported back to set position
 spawn-point:
  x:
- #Sets x-coordinate for spawn
+ #Sets the spawn x
  y:
- #Sets y-coordinate for spawn
+ #Sets the spawn y
  z:
- #Sets z-coordinate for spawn
+ #Sets the spawn z
+ yaw:
+ #Sets the spawn yaw
+ pitch:
+ #Sets the spawn pitch
  level:
  #Sets the spawn level
 version: 1.0.0
