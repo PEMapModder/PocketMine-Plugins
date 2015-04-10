@@ -131,6 +131,7 @@ class Loader extends PluginBase implements Listener{
 	}
 	else{
 	    $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+	    $this->tag->save();
 	    $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
 	}
     }
