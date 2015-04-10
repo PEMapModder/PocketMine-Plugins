@@ -86,19 +86,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "restore"){
-    	    	    	$sender->setNameTag(str_replace(
-    	    	    	    [
-    	    	    	    "{ip}",
-    	    	    	    "{player}",
-    	    	    	    "{port}",
-    	    	    	    ],
-    	    	    	    [
-    	    	    	    $event->getPlayer()->getAddress();
-    	    	    	    $event->getPlayer()->getName();
-    	    	    	    $event->getPlayer()->getPort();
-    	    	    	    ],
-    	    	    	    $this->getConfig()->get("default-tag")
-    	    	    	));
+			$sender->setNameTag($sender->getName());
     	    	    	$sender->sendMessage("Your default name tag has been restored.");
     	    	    	return true;
     	    	    }
@@ -191,21 +179,6 @@ class Loader extends PluginBase implements Listener{
 	    }
 	}
 	else{
-	    $event->getPlayer()->setNameTag(str_replace(
-	    	[
-	    	"{ip}",
-	    	"{player}",
-	    	"{port}"
-	    	],
-	    	[
-	    	$event->getPlayer()->getAddress(),
-	    	$event->getPlayer()->getName(),
-	    	$event->getPlayer()->getPort()
-	    	],
-	    	$this->getConfig()->get("default-tag")
-	    ));
-	    $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	    $this->tag->save();
 	    $this->getServer()->getLogger()->notice("Created player data for ".$event->getPlayer()->getName()." at MyTag\\tag.yml");
 	}
     }
