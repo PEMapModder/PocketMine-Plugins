@@ -114,6 +114,6 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerRespawn(PlayerRespawnEvent $event){
-        
+        $event->getPlayer()->teleport(new Position($this->getConfig()->get("spawn")["x"], $this->getConfig()->get("spawn")["y"], $this->getConfig()->get("spawn")["z"], $this->getConfig()->get("spawn")["level"]);)
     }
 }
