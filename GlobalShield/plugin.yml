@@ -4,7 +4,7 @@ version: 1.1.0
 api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
-description: Shield all of your worlds from griefers!
+description: Disable/enable certain things in certain levels!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GlobalShield
 permissions:
  globalshield:
