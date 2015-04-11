@@ -13,13 +13,5 @@ permissions:
    globalshield.action:
     default: op
     children:
-     globalshield.action.break:
-      default: op
-     globalshield.action.empty:
-      default: op
-     globalshield.action.fill:
-      default: op
-     globalshield.action.interact:
-      default: op
-     globalshield.action.place:
+     globalshield.action.bypass:
       default: op
