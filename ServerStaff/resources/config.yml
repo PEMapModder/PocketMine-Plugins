@@ -1,4 +1,6 @@
 #Configuration file for ServerStaff v1.0.0
+version: 1.0.0
+#Do not change the version, it is used for internal purposes
 staff:
  - "Here is the staff for this server:"
  - "Owner: Gamecrafter"
@@ -6,5 +8,3 @@ staff:
  - "Moderators: fierydrop, poppyguy03"
  - "Builders: bubbleblub183, bananatime"
  - "Testers: Tester_1, Tester_2, Tester_3"
-version: 1.0.0
-#Do not change the version, it is used for internal purposes
