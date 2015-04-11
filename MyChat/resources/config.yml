@@ -1,4 +1,6 @@
 #Configuration file for MyChat v1.0.0
+version: 1.0.0
+#Do not change the version, it is used for internal purposes
 enable:
  mute:
   on-death-message: true
@@ -9,5 +11,3 @@ enable:
   #Set to false to mute on-quit-message
 format: "{player}: {message}"
 #Sets chat format, refer to key.txt
-version: 1.0.0
-#Do not change the version, it is used for internal purposes
