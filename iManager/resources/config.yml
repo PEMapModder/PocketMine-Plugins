@@ -1,4 +1,6 @@
 #Configuration file for iManager v1.2.0
+version: 1.2.0
+#Do not change the version, it is used for internal purposes
 enable:
  chat-log: true
  #Set to true to save all player chat in chat.txt
@@ -8,5 +10,3 @@ enable:
  #Set to true to log all commands issued by players
 preferred-economy:
 #Will be used for /imanager moneylist
-version: 1.2.0
-#Do not change the version, it is used for internal purposes
