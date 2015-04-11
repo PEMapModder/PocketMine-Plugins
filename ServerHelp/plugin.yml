@@ -1,8 +1,0 @@
-name: ServerHelp
-main: serverhelp\Loader
-version: 1.0.0
-api: 1.10.0
-load: STARTUP
-author: Gamecrafter
-description: Override /help with your own help messages!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerHelp
