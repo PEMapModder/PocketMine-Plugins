@@ -1,4 +1,6 @@
 #Configuration file for SpreadFreeze v1.0.0-beta
+version: 1.0.0-beta
+#Do not change the version, it is used for internal purposes
 enable:
  spread:
   grass: true
@@ -11,5 +13,3 @@ enable:
   #Set to false to disable podzol growing
   water: true
   #Set to false to disable water spreading on-place
-version: 1.0.0-beta
-#Do not change the version, it is used for internal purposes
