@@ -3,9 +3,9 @@ version: 1.1.0
 #Do not change the version, it is used for internal purposes
 level:
  world:
-  block-breaking:
-  block-placing:
-  bucket-emptying:
-  bucket-filling:
-  explosions:
-  pvp:
+  block-breaking: false
+  block-placing: false
+  bucket-emptying: false
+  bucket-filling: false
+  explosions: false
+  pvp: false
