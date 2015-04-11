@@ -41,15 +41,18 @@ class Loader extends PluginBase implements Listener{
     	    	if(isset($args[0])){
     	    	    if(strtolower($args[0]) === "address"){
     	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getAddress().":".$sender->getPort());
+    	    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    		$this->tag->save();
     	    	    	$sender->sendMessage("Your IP address and port number has been set on your tag.");
     	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "chat"){
     	    	    	//To-do
-    	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "health"){
     	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getHealth()."/".$sender->getMaxHealth());
+    	    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    		$this->tag->save();
     	    	    	$sender->sendMessage("Your health has been set on your tag.");
     	    	    	return true;
     	    	    }
@@ -69,6 +72,8 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    if(strtolower($args[0]) === "hide"){
     	    	    	$sender->setNameTag(null);
+    	    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    		$this->tag->save();
     	    	    	$sender->sendMessage("Your name tag has been hidden.");
     	    	    	return true;
     	    	    }
@@ -78,6 +83,8 @@ class Loader extends PluginBase implements Listener{
     	    	    if(strtolower($args[0]) === "op"){
     	    	    	if($sender->isOp()){
     	    	    	    $sender->setNameTag($this->getConfig()->get("op-prefix")." ".$sender->getNameTag());
+    	    	    	    $this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    		    $this->tag->save();
     	    	    	    $sender->sendMessage("Your OP status has been set on your tag.");
     	    	    	}
     	    	    	else{
@@ -87,27 +94,13 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    if(strtolower($args[0]) === "restore"){
 			$sender->setNameTag($sender->getName());
+			$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    		$this->tag->save();
     	    	    	$sender->sendMessage("Your default name tag has been restored.");
     	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "set"){
-			if(isset($args[1])){
-			    if(isset($args[2])){
-			    	$target = $this->getServer()->getPlayer($args[2]);
-			    	if($target !== null){
-			    	    $target->setNameTag(implode(" ", $args));
-			    	}
-			    	else{
-			    	    $sender->sendMessage("Please specify a valid player.");
-			    	}
-			    }
-			    else{
-			    	$sender->setNameTag(implode(" ", $args));
-			    }
-			}
-			else{
-			    $sender->sendMessage("Please specify content to put on your name tag.");	
-			}
+			//To-do
     	    	    }
     	    	    if(strtolower($args[0]) === "view"){
     	    	    	$sender->sendMessage("Your tag: ".$sender->getNameTag());
