@@ -129,7 +129,7 @@ class Loader extends PluginBase implements Listener{
     	    	$event->getPlayer()->setNameTag($this->tag->get($event->getPlayer()->getName()));
     	    }
     	    else{
-    	    	$this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
     	    	$this->tag->save();
     	    	$this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
     	    }
@@ -139,10 +139,10 @@ class Loader extends PluginBase implements Listener{
     public function onPlayerQuit(PlayerQuitEvent $event){
     	if($this->getConfig()->get("enable")["auto-set"] === true){
     	    if($this->tag->exists(strtolower($event->getPlayer()->getName()))){
-    	    	$this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
     	    }
     	    else{
-    	    	$this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
     	    	$this->tag->save();
     	    	$this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
     	    }
