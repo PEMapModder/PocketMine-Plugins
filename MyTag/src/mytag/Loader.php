@@ -124,29 +124,28 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-	if($this->tag->exists(strtolower($event->getPlayer()->getName()))){
-	    if($this->getConfig()->get("enable")["auto-set"] === true){
-	    	$event->getPlayer()->setNameTag($this->tag->get($event->getPlayer()->getName()));
-	    }
-	}
-	else{
-	    $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	    $this->tag->save();
-	    $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
-	}
+    	if($this->getConfig()->get("enable")["auto-set"] === true){
+    	    if($this->tag->exists(strtolower($event->getPlayer()->getName()))){
+    	    	$event->getPlayer()->setNameTag($this->tag->get($event->getPlayer()->getName()));
+    	    }
+    	    else{
+    	    	$this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+    	    	$this->tag->save();
+    	    	$this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
+    	    }
+    	}
     }
 	
     public function onPlayerQuit(PlayerQuitEvent $event){
-    	if($this->tag->exists(strtolower($event->getPlayer()->getName()))){
-    	    if($this->getConfig()->get("enable")["auto-set"] === true){
-	        $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	        $this->tag->save();
+    	if($this->getConfig()->get("enable")["auto-set"] === true){
+    	    if($this->tag->exists(strtolower($event->getPlayer()->getName()))){
+    	    	$this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+    	    }
+    	    else{
+    	    	$this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
+    	    	$this->tag->save();
+    	    	$this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
     	    }
     	}
-    	else{
-	    $this->tag->set($event->getPlayer()->getName(), $event->getPlayer()->getNameTag());
-	    $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to MyTag at MyTag\\tag.yml");
-	    $this->tag->save();
-	}
     }
 }
