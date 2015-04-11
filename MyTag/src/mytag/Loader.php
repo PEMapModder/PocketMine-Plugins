@@ -41,7 +41,7 @@ class Loader extends PluginBase implements Listener{
     	    	if(isset($args[0])){
     	    	    if(strtolower($args[0]) === "address"){
     	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getAddress().":".$sender->getPort());
-    	    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    	    	$this->tag->set(strtolower($sender->getName()), $sender->getNameTag());
     	    		$this->tag->save();
     	    	    	$sender->sendMessage("Your IP address and port number has been set on your tag.");
     	    	    	return true;
@@ -51,7 +51,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    if(strtolower($args[0]) === "health"){
     	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getHealth()."/".$sender->getMaxHealth());
-    	    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    	    	$this->tag->set(strtolower($sender->getName()), $sender->getNameTag());
     	    		$this->tag->save();
     	    	    	$sender->sendMessage("Your health has been set on your tag.");
     	    	    	return true;
@@ -72,7 +72,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    if(strtolower($args[0]) === "hide"){
     	    	    	$sender->setNameTag(null);
-    	    	    	$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    	    	$this->tag->set(strtolower($sender->getName()), $sender->getNameTag());
     	    		$this->tag->save();
     	    	    	$sender->sendMessage("Your name tag has been hidden.");
     	    	    	return true;
@@ -83,7 +83,7 @@ class Loader extends PluginBase implements Listener{
     	    	    if(strtolower($args[0]) === "op"){
     	    	    	if($sender->isOp()){
     	    	    	    $sender->setNameTag($this->getConfig()->get("op-prefix")." ".$sender->getNameTag());
-    	    	    	    $this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+    	    	    	    $this->tag->set(strtolower($sender->getName()), $sender->getNameTag());
     	    		    $this->tag->save();
     	    	    	    $sender->sendMessage("Your OP status has been set on your tag.");
     	    	    	}
@@ -94,7 +94,7 @@ class Loader extends PluginBase implements Listener{
     	    	    }
     	    	    if(strtolower($args[0]) === "restore"){
 			$sender->setNameTag($sender->getName());
-			$this->tag->set(strtolower($event->getPlayer()->getName()), $event->getPlayer()->getNameTag());
+			$this->tag->set(strtolower($sender->getName()), $sender->getNameTag());
     	    		$this->tag->save();
     	    	    	$sender->sendMessage("Your default name tag has been restored.");
     	    	    	return true;
