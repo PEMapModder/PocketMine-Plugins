@@ -251,6 +251,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("§a/imanager opall §c- §fGrants OP status to everyone in the server");
     	    	    $sender->sendMessage("§a/imanager oplist §c- §fLists all the online OPs");
     	    	    $sender->sendMessage("§a/imanager poslist §c- §fLists every player's coordinates, level, and face direction");
+    	    	    $sender->sendMessage("§a/imanager server §c- §fShows all the information about the server");
     	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "info"){
@@ -460,6 +461,9 @@ class Loader extends PluginBase implements Listener{
 		    }	
 		    return true;
     	    	}
+    	    	if(strtolower($args[0]) === "server"){
+    	    	    return true;
+    	    	}
 		return false;
     	    }
     	    else{
@@ -481,6 +485,7 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("§a/imanager opall §c- §fGrants OP status to everyone in the server");
     	    	$sender->sendMessage("§a/imanager oplist §c- §fLists all the online OPs");
     	    	$sender->sendMessage("§a/imanager poslist §c- §fLists every player's coordinates, level, and face direction");
+    	    	$sender->sendMessage("§a/imanager server §c- §fShows all the information about the server");
     	    	return true;
     	    }
     	}
