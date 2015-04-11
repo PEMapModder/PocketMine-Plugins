@@ -91,7 +91,23 @@ class Loader extends PluginBase implements Listener{
     	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "set"){
-			//To-do
+			if(isset($args[1])){
+			    if(isset($args[2])){
+			    	$target = $this->getServer()->getPlayer($args[2]);
+			    	if($target !== null){
+			    	    $target->setNameTag(implode(" ", $args));
+			    	}
+			    	else{
+			    	    $sender->sendMessage("Please specify a valid player.");
+			    	}
+			    }
+			    else{
+			    	$sender->setNameTag(implode(" ", $args));
+			    }
+			}
+			else{
+			    $sender->sendMessage("Please specify content to put on your name tag.");	
+			}
     	    	    }
     	    	    if(strtolower($args[0]) === "view"){
     	    	    	$sender->sendMessage("Your tag: ".$sender->getNameTag());
