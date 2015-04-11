@@ -40,7 +40,7 @@ class Loader extends PluginBase implements Listener{
     	    if(strtolower($command->getName()) === "mytag"){
     	    	if(isset($args[0])){
     	    	    if(strtolower($args[0]) === "address"){
-    	    	    	$sender->setNameTag($sender->getNameTag()."\n".$sender->getAddress().":".$sender->getPort());
+    	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getAddress().":".$sender->getPort());
     	    	    	$sender->sendMessage("Your IP address and port number has been set on your tag.");
     	    	    	return true;
     	    	    }
@@ -49,7 +49,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "health"){
-    	    	    	$sender->setNameTag($sender->getNameTag()."\n".$sender->getHealth()."/".$sender->getMaxHealth());
+    	    	    	$sender->setNameTag($sender->getNameTag()." ".$sender->getHealth()."/".$sender->getMaxHealth());
     	    	    	$sender->sendMessage("Your health has been set on your tag.");
     	    	    	return true;
     	    	    }
