@@ -1,4 +1,6 @@
 #Configuration file for LocatorPro v1.0.0
+version: 1.0.0
+#Do not change the version, it is used for internal purposes
 enable:
  teleport: true
  #Set to true to teleport players back to set position after player has a y-coordinate above maximum-y or below minimum-y
@@ -20,5 +22,3 @@ spawn:
  #Sets the spawn pitch
  level:
  #Sets the spawn level
-version: 1.0.0
-#Do not change the version, it is used for internal purposes
