@@ -462,6 +462,7 @@ class Loader extends PluginBase implements Listener{
 		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "server"){
+    	    	    $sender->sendMessage("Information of the server:");
     	    	    return true;
     	    	}
 		return false;
