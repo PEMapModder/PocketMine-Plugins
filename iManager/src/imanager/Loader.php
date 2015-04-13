@@ -124,14 +124,19 @@ class Loader extends PluginBase implements Listener{
     	    	if(strtolower($args[0]) === "burnall"){
     	    	    if(isset($args[1])){
     	    	    	if(is_numeric($args[1])){
-    	    	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
+    	    	    	    if($args[1] > 0){
     	    	    	    	$sender->sendMessage("§eBurning everyone without EXEMPT status in the server...");
-    	    	    	    	if($this->exempt->exists(strtolower($players->getName()))){
-    	    	    	    	}
-    	    	    	    	else{
-    	    	    	    	    $players->setOnFire($args[1]);
-    	    	    	    	    $players->sendMessage("You have been set on fire for ".$args[1]." seconds!");
-    	    	    	    	}
+    	    	    	    	foreach($this->getServer()->getOnlinePlayers() as $players){
+    	    	    	    	    if($this->exempt->exists(strtolower($players->getName()))){
+    	    	    	    	    }
+    	    	    	    	    else{
+    	    	    	    	        $players->setOnFire($args[1]);
+    	    	    	    	        $players->sendMessage("You have been set on fire for ".$args[1]." seconds!");
+    	    	    	    	    }
+    	    	    	        }
+    	    	    	    }
+    	    	    	    else{
+    	    	    	    	$sender->sendMessage("§cTime value must be greater than zero.");
     	    	    	    }
     	    	    	}
     	    	    	else{
@@ -242,6 +247,7 @@ class Loader extends PluginBase implements Listener{
     	    	    $sender->sendMessage("§a/imanager delip §c- §fRemoves a player's IP address from ip.txt");
     	    	    $sender->sendMessage("§a/imanager deopall §c- §fRevokes all the player's OP status");
     	    	    $sender->sendMessage("§a/imanager gamemodelist §c- §fLists every player's gamemode");
+    	    	    $sender->sendMessage("§a/imanager giveall §c- §f");
     	    	    $sender->sendMessage("§a/imanager healthlist §c- §fLists every player's health");
     	    	    $sender->sendMessage("§a/imanager help §c- §fShows all the sub-commands for /imanager");
     	    	    $sender->sendMessage("§a/imanager info §c- §fGets all the information about a player");
@@ -477,6 +483,7 @@ class Loader extends PluginBase implements Listener{
     	    	$sender->sendMessage("§a/imanager delip §c- §fRemoves a player's IP address from ip.txt");
     	    	$sender->sendMessage("§a/imanager deopall §c- §fRevokes all the player's OP status");
     	    	$sender->sendMessage("§a/imanager gamemodelist §c- §fLists every player's gamemode");
+    	    	$sender->sendMessage("§a/imanager giveall §c- §f");
     	    	$sender->sendMessage("§a/imanager healthlist §c- §fLists every player's health");
     	    	$sender->sendMessage("§a/imanager help §c- §fShows all the sub-commands for /imanager");
     	    	$sender->sendMessage("§a/imanager info §c- §fGets all the information about a player");
