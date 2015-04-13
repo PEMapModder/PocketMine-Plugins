@@ -28,8 +28,8 @@ class Loader extends PluginBase{
             if(isset($args[0]){
                 if(strtolower($args[0]) === "help"){
                     $sender->sendMessage("PlanB commands");
-                    $sender->sendMessage("/planb help §c-");
-                    $sender->sendMessage("/planb reset §c-");
+                    $sender->sendMessage("§a/planb help §c- §f");
+                    $sender->sendMessage("§a/planb reset §c- §f");
                     return true;
                 }
                 if(strtolower($args[0]) === "reset"){
