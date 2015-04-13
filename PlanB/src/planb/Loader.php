@@ -28,7 +28,7 @@ class Loader extends PluginBase{
             if(isset($args[0]){
                 if(strtolower($args[0]) === "help"){
                     $sender->sendMessage("PlanB commands");
-                    $sender->sendMessage("§a/planb help §c- §f");
+                    $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
                     $sender->sendMessage("§a/planb reset §c- §f");
                     return true;
                 }
