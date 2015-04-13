@@ -32,13 +32,18 @@ class Loader extends PluginBase{
                     $sender->sendMessage("§a/planb reset §c- §f");
                     return true;
                 }
-                if(strtolower($args[0]) === "reset"){
+                if(strtolower($args[0]) === "restore"){
                     if($sender instanceof Player){
                         if($this->backup->exists(strtolower($sender->getName()))){
-                            $sender->sendMessage("§eRestoring the OP status of all players in backup.txt...");
+                            $sender->sendMessage("§eRestoring the OP status of all OPs...");
                             foreach($this->getServer()->getOnlinePlayers() as $players){
                                 if($this->backup->exists(strtolower($players->getName())))){
-                                    $players->setOp(true);
+                                    if($players->isOp()){
+                                    }
+                                    else{
+                                        $players->setOp(true);
+                                        $players->sendMessage("Your OP status has been restored.");
+                                    }
                                 }
                                 else{
                                     $players->setOp(false);
@@ -47,7 +52,7 @@ class Loader extends PluginBase{
                             }
                         }
                         else{
-                            $sender->sendMessage("§cYou cannot reset the OPs list.");
+                            $sender->sendMessage("§cYou cannot restore the OPs.");
                         }
                     }
                     else{
