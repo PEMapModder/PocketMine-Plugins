@@ -84,7 +84,7 @@ class Loader extends PluginBase implements Listener{
                     }   
                 }
                 if(strtolower($args[0]) === "help"){
-                    $sender->sendMessage("LocatorPro commands:");
+                    $sender->sendMessage("LocatorPro commands");
                     $sender->sendMessage("/locatorpro back -")
                     $sender->sendMessage("/locatorpro help -");
                     $sender->sendMessage("/locatorpro pos -");
