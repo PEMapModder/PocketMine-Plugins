@@ -1,0 +1,14 @@
+name: PlanB
+main: planb\Loader
+version: 1.1.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Hackers can't mess around with OPs anymore!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/PlanB
+commands:
+ planb:
+  description: Shows all the sub-commands for /planb
+  usage: /planb <sub-command>
+  permission: planb.command.planb
+  aliases: [pb]
