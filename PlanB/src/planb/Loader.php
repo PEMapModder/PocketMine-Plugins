@@ -57,7 +57,9 @@ class Loader extends PluginBase{
                 }
             }
             else{
-                
+                $sender->sendMessage("PlanB commands");
+                $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
+                $sender->sendMessage("§a/planb reset §c- §f");
             }
         }
     }
