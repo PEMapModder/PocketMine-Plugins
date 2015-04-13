@@ -13,20 +13,13 @@ class Loader extends PluginBase{
     public $backup;
     
     public function onEnable(){
-    	$this->saveDefaultConfig();
-    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    @mkdir($this->getDataFolder());
-            $this->pos = new Config($this->getDataFolder()."backup.yml", Config::YAML);
-            $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
-    	}
-    	else{
-    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDesrcription()->getFullName()."is outdated.");
-    	    $this->getPluginLoader()->disablePlugin($this);
-    	}
+    	@mkdir($this->getDataFolder());
+        $this->backup = new Config($this->getDataFolder()."backup.yml", Config::YAML);
+        $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->pos->save();
+        $this->backup->save();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -42,10 +35,19 @@ class Loader extends PluginBase{
                 if(strtolower($args[0]) === "reset"){
                     if($sender instanceof Player){
                         if($this->backup->exists(strtolower($sender->getName()))){
-                            
+                            $sender->sendMessage();
+                            foreach($this->getServer()->getOnlinePlayers() as $players){
+                                if($this->backup->exists(strtolower($players->getName()))){
+                                    $players->setOp(true);
+                                }
+                                else{
+                                    $players->setOp(false);
+                                    $players->kick();
+                                }
+                            }
                         }
                         else{
-                            
+                            $sender->sendMessage("§cYou cannot reset the OPs list.");
                         }
                     }
                     else{
