@@ -35,12 +35,27 @@ class Loader extends PluginBase{
             if(isset($args[0]){
                 if(strtolower($args[0]) === "help"){
                     $sender->sendMessage("PlanB commands");
-                    $sender->sendMessage("/planb help -");
-                    $sender->sendMessage("/planb reset -");
+                    $sender->sendMessage("/planb help §c-");
+                    $sender->sendMessage("/planb reset §c-");
+                    return true;
                 }
                 if(strtolower($args[0]) === "reset"){
-                
+                    if($sender instanceof Player){
+                        if($this->backup->exists(strtolower($sender->getName()))){
+                            
+                        }
+                        else{
+                            
+                        }
+                    }
+                    else{
+                        $sender->sendMessage("§cPlease run this command in-game.");
+                    }
+                    return true;
                 }
+            }
+            else{
+                
             }
         }
     }
