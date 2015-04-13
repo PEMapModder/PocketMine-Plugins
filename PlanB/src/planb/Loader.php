@@ -13,15 +13,15 @@ class Loader extends PluginBase{
     public $backup;
     
     public function onEnable(){
-    	  $this->saveDefaultConfig();
-    	  if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	      @mkdir($this->getDataFolder());
+    	$this->saveDefaultConfig();
+    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
+    	    @mkdir($this->getDataFolder());
             $this->pos = new Config($this->getDataFolder()."backup.yml", Config::YAML);
             $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
-    	  }
-    	  else{
-    	      $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDesrcription()->getFullName()."is outdated.");
-    	      $this->getPluginLoader()->disablePlugin($this);
+    	}
+    	else{
+    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDesrcription()->getFullName()."is outdated.");
+    	    $this->getPluginLoader()->disablePlugin($this);
     	}
     }
     
