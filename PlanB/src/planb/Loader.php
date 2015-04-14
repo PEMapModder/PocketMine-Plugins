@@ -39,13 +39,9 @@ class Loader extends PluginBase{
                             foreach($this->getServer()->getOnlinePlayers() as $players){
                                 if($players->isOp()){
                                     if($this->backup->exists(strtolower($players->getName()))){
-                                        if($players->isOp()){
-                                        }
-                                        else{
-                                            $players->setOp(true);
-                                            $players->sendMessage("§aYour OP status has been restored.");
-                                            $sender->sendMessage("§aRestored ".$players->getName()."'s OP status.");
-                                        }
+                                        $players->setOp(true);
+                                        $players->sendMessage("§aYour OP status has been restored.");
+                                        $sender->sendMessage("§aRestored ".$players->getName()."'s OP status.");
                                     }
                                     else{
                                         $players->setOp(false);
