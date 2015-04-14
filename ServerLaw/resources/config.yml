@@ -1,7 +1,0 @@
-#Configuration file for ServerLaw v1.0.0
-version: 1.0.0
-#Do not change the version, it is used for internal purposes
-laws:
- - "1. Be cool."
- - "2. Play nice."
- - "3. Have fun."
