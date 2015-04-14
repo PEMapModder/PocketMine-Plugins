@@ -55,6 +55,8 @@ class Loader extends PluginBase implements Listener{
         if($event->getBlock() instanceof Water && $this->getConfig()->get("enable")["spread"]["water"] === false){
             $event->setCancelled();
         }
+        else{
+        }
     }
     
     public function onLeavesDecay(LeavesDecayEvent $event){
