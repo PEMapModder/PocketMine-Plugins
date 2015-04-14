@@ -27,7 +27,7 @@ class Loader extends PluginBase{
         if(strtolower($command->getName()) === "planb"){
             if(isset($args[0])){
                 if(strtolower($args[0]) === "help"){
-                    $sender->sendMessage("PlanB commands");
+                    $sender->sendMessage("§bPlanB commands");
                     $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
                     $sender->sendMessage("§a/planb restore §c- §f");
                     return true;
@@ -62,7 +62,7 @@ class Loader extends PluginBase{
                 }
             }
             else{
-                $sender->sendMessage("PlanB commands");
+                $sender->sendMessage("§bPlanB commands");
                 $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
                 $sender->sendMessage("§a/planb restore §c- §f");
             }
