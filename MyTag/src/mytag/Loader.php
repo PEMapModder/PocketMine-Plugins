@@ -57,7 +57,7 @@ class Loader extends PluginBase implements Listener{
     	    	    	return true;
     	    	    }
     	    	    if(strtolower($args[0]) === "help"){
-    	    	    	$sender->sendMessage("MyTag commands");
+    	    	    	$sender->sendMessage("§bMyTag commands");
     	    	    	$sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    	    	$sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    	    	$sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
@@ -109,7 +109,7 @@ class Loader extends PluginBase implements Listener{
     	    	    return false;
     	    	}
     	    	else{
-    	    	    $sender->sendMessage("MyTag commands");
+    	    	    $sender->sendMessage("§bMyTag commands");
     	    	    $sender->sendMessage("§a/mytag address §c- §fShows IP address and port number on the name tag");
     	    	    $sender->sendMessage("§a/mytag chat §c- §fShows the last message spoken on the name tag");
     	    	    $sender->sendMessage("§a/mytag health §c- §fShows health on the name tag");
