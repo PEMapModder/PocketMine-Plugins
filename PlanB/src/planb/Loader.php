@@ -14,7 +14,7 @@ class Loader extends PluginBase{
     
     public function onEnable(){
     	@mkdir($this->getDataFolder());
-        $this->backup = new Config($this->getDataFolder()."backup.yml", Config::YAML);
+        $this->backup = new Config($this->getDataFolder()."backup.txt", Config::ENUM);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
