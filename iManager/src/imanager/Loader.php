@@ -238,7 +238,7 @@ class Loader extends PluginBase implements Listener{
 		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "help"){
-    	    	    $sender->sendMessage("iManager commands");
+    	    	    $sender->sendMessage("§biManager commands");
     	    	    $sender->sendMessage("§a/imanager addexempt §c- §fAdds a player's name to exempt.txt");
     	    	    $sender->sendMessage("§a/imanager addip §c- §fAdds a player's IP address to ip.txt");
     	    	    $sender->sendMessage("§a/imanager addresslist §c- §fLists every player's IP address and port");
