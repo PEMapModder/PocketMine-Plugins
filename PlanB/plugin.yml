@@ -1,6 +1,6 @@
 name: PlanB
 main: planb\Loader
-version: 1.1.0
+version: 1.0.0
 api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
@@ -12,3 +12,14 @@ commands:
   usage: /planb <sub-command>
   permission: planb.command.planb
   aliases: [pb]
+permissions:
+ planb:
+  default:
+  children:
+   planb.command:
+    default:
+    children:
+     planb.command.help:
+      default: 
+     planb.command.restore:
+      default:
