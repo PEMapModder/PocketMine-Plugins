@@ -29,7 +29,7 @@ class Loader extends PluginBase{
                 if(strtolower($args[0]) === "help"){
                     $sender->sendMessage("PlanB commands");
                     $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
-                    $sender->sendMessage("§a/planb reset §c- §f");
+                    $sender->sendMessage("§a/planb restore §c- §f");
                     return true;
                 }
                 if(strtolower($args[0]) === "restore"){
@@ -37,22 +37,26 @@ class Loader extends PluginBase{
                         if($this->backup->exists(strtolower($sender->getName()))){
                             $sender->sendMessage("§eRestoring the OP status of all OPs...");
                             foreach($this->getServer()->getOnlinePlayers() as $players){
-                                if($this->backup->exists(strtolower($players->getName())))){
-                                    if($players->isOp()){
+                                if($players->isOp()){
+                                    if($this->backup->exists(strtolower($players->getName()))){
+                                        if($players->isOp()){
+                                        }
+                                        else{
+                                            $players->setOp(true);
+                                            $players->sendMessage("§aYour OP status has been restored.");
+                                            $sender->sendMessage("§aRestored ".$players->getName()."'s OP status.");
+                                        }
                                     }
                                     else{
-                                        $players->setOp(true);
-                                        $players->sendMessage("Your OP status has been restored.");
+                                        $players->setOp(false);
+                                        $players->kick();
+                                        $this->getServer()->broadcastMessage("§eDeopped and kicked imposter: ".$players->getName());
                                     }
-                                }
-                                else{
-                                    $players->setOp(false);
-                                    $players->kick();
                                 }
                             }
                         }
                         else{
-                            $sender->sendMessage("§cYou cannot restore the OPs.");
+                            $sender->sendMessage("§cYou don't have permissions to restore OP statuses.");
                         }
                     }
                     else{
@@ -64,7 +68,7 @@ class Loader extends PluginBase{
             else{
                 $sender->sendMessage("PlanB commands");
                 $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
-                $sender->sendMessage("§a/planb reset §c- §f");
+                $sender->sendMessage("§a/planb restore §c- §f");
             }
         }
     }
