@@ -54,6 +54,7 @@ class Loader extends PluginBase{
                                     }
                                 }
                             }
+                        }
                         else{
                             $sender->sendMessage("§cYou don't have permissions to restore OP statuses.");
                         }
