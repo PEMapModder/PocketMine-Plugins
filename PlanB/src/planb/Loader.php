@@ -69,6 +69,7 @@ class Loader extends PluginBase{
                 $sender->sendMessage("§bPlanB commands");
                 $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
                 $sender->sendMessage("§a/planb restore §c- §fRestores OP status of all online players listed in backup.txt");
+                return true;
             }
         }
     }
