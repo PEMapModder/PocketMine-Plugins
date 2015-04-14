@@ -4,7 +4,7 @@ version: 1.0.0
 api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
-description: Hackers can't mess around with OPs anymore!
+description: Hackers can't cripple your server anymore!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/PlanB
 commands:
  planb:
@@ -12,14 +12,3 @@ commands:
   usage: /planb <sub-command>
   permission: planb.command.planb
   aliases: [pb]
-permissions:
- planb:
-  default:
-  children:
-   planb.command:
-    default:
-    children:
-     planb.command.help:
-      default: 
-     planb.command.restore:
-      default:
