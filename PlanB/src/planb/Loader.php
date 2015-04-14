@@ -29,7 +29,7 @@ class Loader extends PluginBase{
                 if(strtolower($args[0]) === "help"){
                     $sender->sendMessage("§bPlanB commands");
                     $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
-                    $sender->sendMessage("§a/planb restore §c- §f");
+                    $sender->sendMessage("§a/planb restore §c- §fRestores OP status of all online players listed in backup.txt");
                     return true;
                 }
                 if(strtolower($args[0]) === "restore"){
@@ -68,7 +68,7 @@ class Loader extends PluginBase{
             else{
                 $sender->sendMessage("§bPlanB commands");
                 $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
-                $sender->sendMessage("§a/planb restore §c- §f");
+                $sender->sendMessage("§a/planb restore §c- §fRestores OP status of all online players listed in backup.txt");
             }
         }
     }
