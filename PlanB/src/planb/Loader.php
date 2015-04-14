@@ -25,7 +25,7 @@ class Loader extends PluginBase{
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "planb"){
-            if(isset($args[0]){
+            if(isset($args[0])){
                 if(strtolower($args[0]) === "help"){
                     $sender->sendMessage("PlanB commands");
                     $sender->sendMessage("§a/planb help §c- §fShows all sub-commands for /planb");
