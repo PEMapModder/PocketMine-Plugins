@@ -507,13 +507,7 @@ class Loader extends PluginBase implements Listener{
     
     public function onPlayerCommandPreprocess(PlayerCommandPreprocessEvent $event){
     	if($this->getConfig()->get("enable")["log-commands"] === true){
-    	    if($event->getMessage() !== "/login"){
-    	    	$this->getServer()->getLogger()->notice($event->getPlayer()->getName()." issued command: /login <password>");
-    	    }
-    	    elseif($event->getMessage() !== "/register"){
-    	    	$this->getServer()->getLogger()->notice($event->getPlayer()->getName()." issued command: /register <password>");
-    	    }
-    	    elseif($event->getMessage()[0] === "/"){
+    	    if($event->getMessage()[0] === "/" && !($event->getMessage() !== "/login") || !($event->getMessage()) !== "/register"){
     	    	$this->getServer()->getLogger()->notice($event->getPlayer()->getName()." issued command: ".$event->getMessage());
     	    }
     	}
