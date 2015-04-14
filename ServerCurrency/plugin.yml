@@ -1,0 +1,14 @@
+name: ServerCurrency
+main: ServerCurrency
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: 
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerCurrency
+commands:
+ servercurrency:
+  description: Shows all the sub-commands for /servercurrency
+  usage: /servercurrency <sub-command>
+  permission: servercurrency.command.servercurrency
+  aliases: [sc]
