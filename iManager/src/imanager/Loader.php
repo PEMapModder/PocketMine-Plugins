@@ -469,6 +469,7 @@ class Loader extends PluginBase implements Listener{
     	    	}
     	    	if(strtolower($args[0]) === "server"){
     	    	    $sender->sendMessage("Information of the server:");
+    	    	    $sender->sendMessage("Players: ".count($this->getServer()->getOnlinePlayers())."/".$this->getServer()->getMaxPlayers());
     	    	    return true;
     	    	}
 		return false;
