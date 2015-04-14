@@ -37,20 +37,23 @@ class Loader extends PluginBase{
                         if($this->backup->exists(strtolower($sender->getName()))){
                             $sender->sendMessage("§eRestoring the OP status of all OPs...");
                             foreach($this->getServer()->getOnlinePlayers() as $players){
-                                if($players->isOp()){
-                                    if($this->backup->exists(strtolower($players->getName()))){
+                                if($this->backup->exists(strtolower($players->getName()))){
+                                    if($players->isOp()){
+                                    }
+                                    else{
                                         $players->setOp(true);
                                         $players->sendMessage("§aYour OP status has been restored.");
                                         $sender->sendMessage("§aRestored ".$players->getName()."'s OP status.");
                                     }
-                                    else{
+                                }
+                                else{
+                                    if($players->isOp()){
                                         $players->setOp(false);
-                                        $players->kick();
-                                        $this->getServer()->broadcastMessage("§eDeopped and kicked imposter: ".$players->getName());
+                                        $players->kick("Detected potential hacker");
+                                        $this->getServer()->broadcastMessage("§eDeopped and kicked potential hacker: ".$players->getName());
                                     }
                                 }
                             }
-                        }
                         else{
                             $sender->sendMessage("§cYou don't have permissions to restore OP statuses.");
                         }
