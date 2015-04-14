@@ -1,5 +1,5 @@
-#Configuration file for MyTag v1.1.0
-version: 1.1.0
+#Configuration file for MyTag v1.2.0
+version: 1.2.0
 #Do not change the version, it is used for internal purposes
 enable:
  auto-set: true
@@ -7,4 +7,4 @@ enable:
 op-prefix: "[Staff]"
 #Name tag prefix for /mytag op, example: [Admin] Steve
 preferred-economy: 
-#Will be used for /mytag money, will be implemented in v1.2.0
+#Will be used for /mytag money
