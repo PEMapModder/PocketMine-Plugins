@@ -19,19 +19,19 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function getCurrencyName(){
-        return;
+        return $this->getResource("currency.yml")->get("currency")["name"];
     }
     
     public function getCurrencySymbol(){
-        return;
+        return $this->getResource("currency.yml")->get("currency")["symbol"];
     }
     
     public function getMinimumBalance(){
-        return;
+        return $this->getResource("currency.yml")->get("balance")["minimum"];
     }
     
     public function getMaximumBalance(){
-        return;
+        return $this->getResource("currency.yml")->get("balance")["maximum"];
     }
     
     public function getPlayerBalance(Player $player){
