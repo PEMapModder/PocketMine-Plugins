@@ -8,4 +8,7 @@ use pocketmine\event\Listener;
 
 class NewCurrencyListener implements Listener{
 
+    public function onPlayerJoin(PlayerJoinEvent $event){
+      
+    }
 }
