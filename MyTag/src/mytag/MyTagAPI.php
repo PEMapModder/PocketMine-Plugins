@@ -37,4 +37,12 @@ class MyTagAPI extends PluginBase implements Listener{
     	$this->tag->save();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
+    
+    public function createFiles(){
+        
+    }
+    
+    public function saveNameTag(Player $player){
+        
+    }
 }
