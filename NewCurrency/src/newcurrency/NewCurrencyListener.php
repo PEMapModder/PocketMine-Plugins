@@ -17,8 +17,9 @@ class NewCurrencyListener implements Listener{
             
         }
         else{
-            $this->account->set(strtolower($event->getPlayer()->getName()));
-            $this->account->save();
+            if($this->getResource("currency.yml")->get("auto-register") === true){
+            	$this->plugin->register(strtolower($event->getPlayer()->getName()));
+            }
         }
     }
 }
