@@ -34,11 +34,11 @@ class NewCurrencyAPI extends PluginBase{
         return $this->getResource("currency.yml")->get("balance")["maximum"];
     }
     
-    public function getPlayerBalance(Player $player){
+    public function getPlayerBalance($player){
         return;
     }
     
-    public function isRegistered(Player $player){
+    public function isRegistered($player){
         return;
     }
 }
