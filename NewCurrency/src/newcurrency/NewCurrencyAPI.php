@@ -22,23 +22,27 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function getCurrencyName(){
-        return $this->getResource("currency.yml")->get("currency")["name"];
+        return $this->getResource("currency.yml")->get("name");
     }
     
     public function getCurrencySymbol(){
-        return $this->getResource("currency.yml")->get("currency")["symbol"];
+        return $this->getResource("currency.yml")->get("symbol");
     }
     
     public function getMinimumBalance(){
-        return $this->getResource("currency.yml")->get("balance")["minimum"];
+        return $this->getResource("currency.yml")->get("balance");
     }
     
     public function getMaximumBalance(){
-        return $this->getResource("currency.yml")->get("balance")["maximum"];
+        return $this->getResource("currency.yml")->get("balance");
     }
     
     public function getBalance($player){
         return $this->account->get($player);
+    }
+    
+    public function getDefault(){
+        return $this->getResource("currency.yml")->get("default");
     }
     
     public function decreaseBalance($amount, $player){
