@@ -17,7 +17,8 @@ class NewCurrencyListener implements Listener{
             
         }
         else{
-            
+            $this->account->set(strtolower($event->getPlayer()->getName()));
+            $this->account->save();
         }
     }
 }
