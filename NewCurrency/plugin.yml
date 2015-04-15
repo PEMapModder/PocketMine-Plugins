@@ -1,0 +1,14 @@
+name: NewCurrency
+main: NewCurrency
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: 
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/NewCurrency
+commands:
+ newcurrency:
+  description: Shows all the sub-commands for /newcurrency
+  usage: /newcurrency <sub-command>
+  permission: newcurrency.command.newcurrency
+  aliases: [nc]
