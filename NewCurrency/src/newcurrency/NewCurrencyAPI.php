@@ -16,11 +16,11 @@ class NewCurrencyAPI extends PluginBase{
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function getCurrencyPrefix(){
+    public function getCurrencyName(){
         return;
     }
     
-    public function getCurrencySuffix(){
+    public function getCurrencySymbol(){
         return;
     }
     
