@@ -55,15 +55,15 @@ class NewCurrencyAPI extends PluginBase{
         return $this->getConfig()->get("default");
     }
     
-    public function decreaseBalance($amount, $player){
+    public function decreaseBalance($player, $amount){
         
     }
     
-    public function increaseBalance($amount, $player){
+    public function increaseBalance($player, $amount){
         
     }
     
-    public function setBalance($amount, $player){
+    public function setBalance($player, $amount){
         
     }
     
