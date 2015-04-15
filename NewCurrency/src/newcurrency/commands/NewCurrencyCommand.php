@@ -22,10 +22,16 @@ class NewCurrencyCommand implements CommandExecutor{
                 if(strtolower($args[0]) === "info"){
                     return true;
                 }
+                if(strtolower($args[0]) === "register"){
+                    return true;
+                }
                 if(strtolower($args[0]) === "send"){
                     return true;
                 }
                 if(strtolower($args[0]) === "take"){
+                    return true;
+                }
+                if(strtolower($args[0]) === "unregister"){
                     return true;
                 }
                 if(strtolower($args[0]) === "view"){
