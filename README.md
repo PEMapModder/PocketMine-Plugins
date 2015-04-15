@@ -20,3 +20,4 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * Fix any bugs if found
 * Make `.phar` files lighter
 * Make more plugins
+* Split `Loader.php` into multiple files
