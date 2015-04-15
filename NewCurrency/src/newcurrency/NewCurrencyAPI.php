@@ -53,6 +53,10 @@ class NewCurrencyAPI extends PluginBase{
         
     }
     
+    public function setBalance($amount, $player){
+        
+    }
+    
     public function isRegistered($player){
         return $this->account->exists($player);
     }
