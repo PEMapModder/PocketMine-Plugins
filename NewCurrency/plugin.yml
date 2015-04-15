@@ -12,3 +12,9 @@ commands:
   usage: /newcurrency <sub-command> [parameters]
   permission: newcurrency.command.newcurrency
   aliases: [nc]
+permissions:
+ newcurrency:
+  default: op
+  children:
+   newcurrency.command:
+    default: op
