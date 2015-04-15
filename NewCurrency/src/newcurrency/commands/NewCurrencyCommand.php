@@ -33,7 +33,7 @@ class NewCurrencyCommand implements CommandExecutor{
                 return false;
             }
             else{
-                
+                return true;
             }
         }
     }
