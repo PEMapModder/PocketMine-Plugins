@@ -1,1 +1,9 @@
 #Currency configuration file for NewCurrency v1.0.0
+currency-name:
+#Name of the currency, example: 10 coins
+currency-symbol:
+#Symbol of the currency, example: $10
+maximum-balance:
+#Maximum amount in balance a player can have
+minimum-balance:
+#Minimum amount in balance a player can have
