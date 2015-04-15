@@ -2,6 +2,7 @@
 
 namespace mytag;
 
+use mytag\MyTagListener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\player\PlayerChatEvent;
@@ -22,6 +23,8 @@ class MyTagAPI extends PluginBase implements Listener{
     	    @mkdir($this->getDataFolder());
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
     	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    	    $this->listener = new MyTagListener($this);
+            $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
             $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
