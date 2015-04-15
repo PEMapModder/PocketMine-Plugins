@@ -2,6 +2,7 @@
 
 namespace imanager;
 
+use imanager\iManagerListener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\player\PlayerChatEvent;
@@ -27,7 +28,8 @@ class iManagerAPI extends PluginBase implements Listener{
             $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
             $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
             $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
-    	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    	    $this->listener = new iManagerListener($this);
+            $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
 	    $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	}
     	else{
@@ -41,5 +43,13 @@ class iManagerAPI extends PluginBase implements Listener{
         $this->exempt->save();
         $this->ip->save();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
+    }
+    
+    public function isAddressWhitelisted(Player $player){
+    	return $this->ip->exists($player->getAddress());
+    }
+    
+    public function isExempted($player){
+    	return $this->exempt->exists($player);
     }
 }
