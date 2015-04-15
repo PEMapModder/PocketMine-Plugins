@@ -2,6 +2,10 @@
 
 namespace imanager;
 
+use imanager\iManagerAPI;
+use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\event\player\PlayerCommandPreprocessEvent;
+use pocketmine\event\player\PlayerPreLoginEvent;
 use pocketmine\event\Listener;
 
 class iManagerListener implements Listener{
