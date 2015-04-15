@@ -25,6 +25,14 @@ class NewCurrencyAPI extends PluginBase{
         return;
     }
     
+    public function getMinimumBalance(){
+        return;
+    }
+    
+    public function getMaximumBalance(){
+        return;
+    }
+    
     public function getPlayerBalance(Player $player){
         return;
     }
