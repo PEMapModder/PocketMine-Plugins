@@ -10,17 +10,21 @@ class NewCurrencyListener implements Listener{
     
     public function __construct(NewCurrencyAPI $plugin){
 	$this->plugin = $plugin;
-	$this->plugin->getServer()->getPluginManager()->registerEvents($this, $this->plugin;
+	$this->getPlugin()->getServer()->getPluginManager()->registerEvents($this, $this->plugin;
+    }
+    
+    public function getPlugin(){
+    	return $this->plugin;
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
-        if($this->plugin->isRegistered(strtolower($event->getPlayer()->getName()))){
+        if($this->getPlugin()->isRegistered(strtolower($event->getPlayer()->getName()))){
             
         }
         else{
             if($this->getResource("currency.yml")->get("enable")["auto-register"] === true){
-            	$this->plugin->register(strtolower($event->getPlayer()->getName()));
-            	$this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to NewCurrency at NewCurrency\\account.yml");
+            	$this->getPlugin()->register(strtolower($event->getPlayer()->getName()));
+            	$this->getPlugin()->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to NewCurrency at NewCurrency\\account.yml");
             }
         }
     }
