@@ -38,7 +38,7 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function getBalance($player){
-        return;
+        return $this->account->get($player);
     }
     
     public function decreaseBalance($amount, $player){
