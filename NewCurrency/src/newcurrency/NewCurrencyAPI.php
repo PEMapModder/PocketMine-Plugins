@@ -9,6 +9,7 @@ use pocketmine\Player;
 class NewCurrencyAPI extends PluginBase{
 
     public function onEnable(){
+        $this->saveResource("currency.yml");
       	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
