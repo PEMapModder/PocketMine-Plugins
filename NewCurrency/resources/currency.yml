@@ -6,6 +6,8 @@ enable:
  #Set to true to enable the currency name
  symbol: false
  #Set to true to enable the currency symbol
+default:
+#Amount of money players have when they are first registered
 name: "coins"
 #Name of the currency, example: 10 coins
 symbol: "$"
