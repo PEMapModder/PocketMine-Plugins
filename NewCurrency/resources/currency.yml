@@ -2,6 +2,8 @@
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
 enable:
+ auto-register: true
+ #Set to true to enable players being automatically registered on-join
  name: true
  #Set to true to enable the currency name
  symbol: false
