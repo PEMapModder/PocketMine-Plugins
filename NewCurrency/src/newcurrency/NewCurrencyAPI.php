@@ -27,7 +27,7 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function onDisable(){
-		$this->account->save();
+	$this->account->save();
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -73,11 +73,11 @@ class NewCurrencyAPI extends PluginBase{
     
     public function register($player){
         $this->account->set($player, $this->getDefault());
-		$this->account->save();
+	$this->account->save();
     }
     
     public function unregister($player){
         $this->account->remove($player);
-		$this->account->save();
+	$this->account->save();
     }
 }
