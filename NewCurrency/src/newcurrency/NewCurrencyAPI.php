@@ -11,7 +11,6 @@ class NewCurrencyAPI extends PluginBase{
     public $account;
     
     public function onEnable(){
-        $this->saveResource("currency.yml");
         $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
         $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
       	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -22,19 +21,19 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function getCurrencyName(){
-        return $this->getResource("currency.yml")->get("name");
+        return $this->getConfig()->get("name");
     }
     
     public function getCurrencySymbol(){
-        return $this->getResource("currency.yml")->get("symbol");
+        return $this->getConfig()->get("symbol");
     }
     
     public function getMinimumBalance(){
-        return $this->getResource("currency.yml")->get("balance");
+        return $this->getConfig()->get("balance");
     }
     
     public function getMaximumBalance(){
-        return $this->getResource("currency.yml")->get("balance");
+        return $this->getConfig()->get("balance");
     }
     
     public function getBalance($player){
