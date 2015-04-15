@@ -22,7 +22,7 @@ class NewCurrencyListener implements Listener{
             
         }
         else{
-            if($this->getConfig()->get("enable")["auto-register"] === true){
+            if($this->getPlugin()->getConfig()->get("enable")["auto-register"] === true){
             	$this->getPlugin()->register(strtolower($event->getPlayer()->getName()));
             	$this->getPlugin()->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to NewCurrency at NewCurrency\\account.yml");
             }
