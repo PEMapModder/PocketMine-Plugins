@@ -58,10 +58,10 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function register($player){
-        
+        $this->account->set($player);
     }
     
     public function unregister($player){
-        
+        $this->account->remove($player);
     }
 }
