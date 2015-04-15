@@ -9,6 +9,6 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/NewCurrency
 commands:
  newcurrency:
   description: Shows all the sub-commands for /newcurrency
-  usage: /newcurrency <sub-command>
+  usage: /newcurrency <sub-command> [parameters]
   permission: newcurrency.command.newcurrency
   aliases: [nc]
