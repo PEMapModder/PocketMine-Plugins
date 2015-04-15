@@ -22,7 +22,6 @@ class MyTagAPI extends PluginBase implements Listener{
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    @mkdir($this->getDataFolder());
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
-    	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
     	    $this->listener = new MyTagListener($this);
             $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
             $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
