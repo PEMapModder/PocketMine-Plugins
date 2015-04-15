@@ -1,0 +1,20 @@
+name: NewCurrency
+main: NewCurrency\NewCurrencyAPI
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: A virtual currency system for your server!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/NewCurrency
+commands:
+ newcurrency:
+  description: Shows all the sub-commands for /newcurrency
+  usage: /newcurrency <sub-command> [parameters]
+  permission: newcurrency.command.newcurrency
+  aliases: [nc]
+permissions:
+ newcurrency:
+  default: op
+  children:
+   newcurrency.command:
+    default: op
