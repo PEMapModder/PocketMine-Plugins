@@ -2,6 +2,7 @@
 
 namespace newcurrency;
 
+use newcurrency\NewCurrencyListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Player;
@@ -11,9 +12,18 @@ class NewCurrencyAPI extends PluginBase{
     public $account;
     
     public function onEnable(){
-        $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
-        $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
-      	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+        $this->saveDefaultConfig();
+    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
+    	    @mkdir($this->getDataFolder());
+            $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
+            $this->listener = new NewCurrencyListener($this);
+            $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
+            $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+    	}
+    	else{
+    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
+    	    $this->getPluginLoader()->disablePlugin($this);
+    	}
     }
     
     public function onDisable(){
