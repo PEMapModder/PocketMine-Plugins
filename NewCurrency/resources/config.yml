@@ -1,4 +1,4 @@
-#Currency configuration file for NewCurrency v1.0.0
+#Configuration file for NewCurrency v1.0.0
 version: 1.0.0
 #Do not change the version, it is used for internal purposes
 enable:
