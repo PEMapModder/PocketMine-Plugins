@@ -28,4 +28,8 @@ class NewCurrencyAPI extends PluginBase{
     public function getPlayerBalance(Player $player){
         return;
     }
+    
+    public function isRegistered(Player $player){
+        return;
+    }
 }
