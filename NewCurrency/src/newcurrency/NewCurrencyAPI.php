@@ -10,6 +10,7 @@ class NewCurrencyAPI extends PluginBase{
 
     public function onEnable(){
         $this->saveResource("currency.yml");
+        $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
       	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
