@@ -56,4 +56,12 @@ class NewCurrencyAPI extends PluginBase{
     public function isRegistered($player){
         return $this->account->get($player);
     }
+    
+    public function register($player){
+        
+    }
+    
+    public function unregister($player){
+        
+    }
 }
