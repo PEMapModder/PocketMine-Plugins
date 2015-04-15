@@ -1,5 +1,5 @@
 name: iManager
-main: imanager\Loader
+main: imanager\iManagerAPI
 version: 1.2.0
 api: 1.10.0
 load: STARTUP
