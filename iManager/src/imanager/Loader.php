@@ -12,7 +12,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Player;
 
-class Loader extends PluginBase implements Listener{
+class iManagerAPI extends PluginBase implements Listener{
 
     public $chat;
     
