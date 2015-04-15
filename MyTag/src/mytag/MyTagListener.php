@@ -2,6 +2,10 @@
 
 namespace mytag;
 
+use mytag\MyTagAPI;
+use pocketmine\event\player\PlayerChatEvent;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\Listener;
 
 class MyTagListener implements Listener{
