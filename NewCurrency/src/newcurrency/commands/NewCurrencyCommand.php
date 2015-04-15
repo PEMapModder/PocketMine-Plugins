@@ -33,6 +33,7 @@ class NewCurrencyCommand implements CommandExecutor{
                 return false;
             }
             else{
+                $sender->sendMessage("NewCurrency commands");
                 return true;
             }
         }
