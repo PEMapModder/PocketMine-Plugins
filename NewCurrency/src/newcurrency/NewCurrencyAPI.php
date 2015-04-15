@@ -31,6 +31,10 @@ class NewCurrencyAPI extends PluginBase{
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
+    public function createFiles(){
+    	
+    }
+    
     public function getCurrencyName(){
         return $this->getConfig()->get("name");
     }
