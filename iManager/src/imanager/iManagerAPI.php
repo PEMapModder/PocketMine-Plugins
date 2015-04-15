@@ -45,6 +45,10 @@ class iManagerAPI extends PluginBase implements Listener{
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
+    public function createFiles(){
+    	
+    }
+    
     public function isAddressWhitelisted(Player $player){
     	return $this->ip->exists($player->getAddress());
     }
