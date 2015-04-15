@@ -10,7 +10,7 @@ class NewCurrencyListener implements Listener{
     
     public function __construct(NewCurrencyAPI $plugin){
 	$this->plugin = $plugin;
-	$this->plugin->getServer()->getPluginManager()->registerEvents($this, $this->getPlugin());
+	$this->plugin->getServer()->getPluginManager()->registerEvents($this, $this->plugin;
     }
     
     public function onPlayerJoin(PlayerJoinEvent $event){
