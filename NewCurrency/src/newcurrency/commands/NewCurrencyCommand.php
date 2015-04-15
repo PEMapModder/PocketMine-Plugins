@@ -2,6 +2,7 @@
 
 namespace newcurrency\commands;
 
+use newcurrency\NewCurrencyAPI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
