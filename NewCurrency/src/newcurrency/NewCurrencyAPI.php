@@ -44,7 +44,10 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function updateFiles(){
-    	
+    	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
+    	    unlink($this->getDataFolder()."settings.yml");
+    	    $this->createFiles();
+    	}
     }
     
     public function getCurrencyName(){
