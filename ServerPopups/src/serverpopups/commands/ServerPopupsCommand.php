@@ -9,6 +9,10 @@ use serverpopups\ServerPopupsAPI;
 
 class ServerPopupsCommand implements CommandExecutor{
 
+    public function __construct(ServerPopupsAPI $plugin){
+        $this->plugin = $plugin;
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "serverpopups"){
             if(isset($args[0])){
