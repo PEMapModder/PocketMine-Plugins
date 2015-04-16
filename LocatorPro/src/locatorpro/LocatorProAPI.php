@@ -105,7 +105,7 @@ class LocatorProAPI extends PluginBase{
         
     }
     
-    public function savePosition($x, $y, $z, $yaw, $pitch, $level){
+    public function saveLocation($x, $y, $z, $yaw, $pitch, $level){
         
     }
 }
