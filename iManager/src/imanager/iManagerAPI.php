@@ -15,7 +15,6 @@ class iManagerAPI extends PluginBase implements Listener{
     public $ip;
     
     public function onEnable(){
-	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    @mkdir($this->getDataFolder());
             $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
