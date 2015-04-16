@@ -10,11 +10,11 @@ class ServerPopupsAPI extends PluginBase{
     public $settings;
     
     public function onEnable(){
-      
+        $this->createFiles();
     }
     
     public function onDisable(){
-        $this->saveFiles();
+
     }
     
     public function createFiles(){
