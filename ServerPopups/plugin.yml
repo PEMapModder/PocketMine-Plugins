@@ -1,5 +1,5 @@
 name: ServerPopups
-main: serverpopups\Loader
+main: serverpopups\
 version: 1.0.0
 api: 1.12.0
 load: POSTWORLD
