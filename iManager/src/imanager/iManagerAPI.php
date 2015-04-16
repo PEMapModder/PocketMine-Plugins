@@ -33,20 +33,20 @@ class iManagerAPI extends PluginBase{
     	}
     	if(!file_exists($this->getDataFolder()."chat.txt")){
     	    $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
-    	    $this->chat->save();
     	}
     	if(!file_exists($this->getDataFolder()."exempt.txt")){
     	    $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
-    	    $this->exempt->save();
     	}
     	if(!file_exists($this->getDataFolder()."ip.txt")){
     	    $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
-    	    $this->ip->save();
     	}
     	if(!file_exists($this->getDataFolder()."settings.yml")){
     	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
     	    $this->settings->set("version", $this->getDescription()->getVersion());
-    	    $this->settings->save();
+    	    $this->settings->setNested("enable.chat-log", true);
+    	    $this->settings->setNested("enable.ip-whitelist", false);
+    	    $this->settings->setNested("enable.log-commands", true);
+    	    $this->settings->set("preferred-economy", "NewCurrency");
     	}
     }
     
