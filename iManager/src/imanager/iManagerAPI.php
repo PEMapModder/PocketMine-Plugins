@@ -17,9 +17,6 @@ class iManagerAPI extends PluginBase implements Listener{
     public function onEnable(){
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    @mkdir($this->getDataFolder());
-            $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
-            $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
-            $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
     	    $this->listener = new iManagerListener($this);
             $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
 	    $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
