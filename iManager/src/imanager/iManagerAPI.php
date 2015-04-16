@@ -53,8 +53,8 @@ class iManagerAPI extends PluginBase implements Listener{
     	
     }
     
-    public function isAddressWhitelisted(Player $player){
-    	return $this->ip->exists($player->getAddress());
+    public function isAddressWhitelisted($address){
+    	return $this->ip->exists($address);
     }
     
     public function isExempted($player){
