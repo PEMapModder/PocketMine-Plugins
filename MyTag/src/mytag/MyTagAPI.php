@@ -11,9 +11,10 @@ class MyTagAPI extends PluginBase{
     public $tag;
     
     public function onEnable(){
+        if(!is_dir($this->getDataFolder())){
+            mkdir($this->getDataFolder());
+        }
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    @mkdir($this->getDataFolder());
-            $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
     	    $this->listener = new MyTagListener($this);
             $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
             $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -30,6 +31,10 @@ class MyTagAPI extends PluginBase{
     }
     
     public function createFiles(){
+        if(!file_exists($this->getDataFolder()."tag.yml")){
+            $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
+            $this->tag->save();
+        }
         if(!file_exists($this->getDataFolder()."settings.yml")){
             $this->saveResource("settings.yml");
         }
