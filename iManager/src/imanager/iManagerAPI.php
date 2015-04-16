@@ -16,7 +16,6 @@ class iManagerAPI extends PluginBase implements Listener{
     
     public function onEnable(){
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    @mkdir($this->getDataFolder());
     	    $this->listener = new iManagerListener($this);
             $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
 	    $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -28,9 +27,7 @@ class iManagerAPI extends PluginBase implements Listener{
     }
     
     public function onDisable(){
-    	$this->chat->save();
-        $this->exempt->save();
-        $this->ip->save();
+    	$this->saveFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -53,7 +50,9 @@ class iManagerAPI extends PluginBase implements Listener{
     }
     
     public function saveFiles(){
-    	
+    	$this->chat->save();
+    	$this->exempt->save();
+    	$this->ip->save();
     }
     
     public function updateFiles(){
