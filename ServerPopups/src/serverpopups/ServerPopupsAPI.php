@@ -3,6 +3,7 @@
 namespace serverpopups;
 
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\Config;
 
 class ServerPopupsAPI extends PluginBase{
 
