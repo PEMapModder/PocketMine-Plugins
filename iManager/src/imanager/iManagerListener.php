@@ -10,6 +10,10 @@ use pocketmine\event\Listener;
 
 class iManagerListener implements Listener{
 
+    public function __construct(iManagerAPI $plugin){
+        $this->plugin = $plugin;
+    }
+    
     public function onPlayerChat(PlayerChatEvent $event){
     	if($this->getConfig()->get("enable")["chat-log"] === true){
     	    $this->chat->set($event->getPlayer()->getName().": ".$event->getMessage());
