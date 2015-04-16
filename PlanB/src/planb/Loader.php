@@ -36,21 +36,21 @@ class Loader extends PluginBase{
                     if($sender instanceof Player){
                         if($this->backup->exists(strtolower($sender->getName()))){
                             $sender->sendMessage("§eRestoring the OP status of all OPs...");
-                            foreach($this->getServer()->getOnlinePlayers() as $players){
-                                if($this->backup->exists(strtolower($players->getName()))){
-                                    if($players->isOp()){
+                            foreach($this->getServer()->getOnlinePlayers() as $player){
+                                if($this->backup->exists(strtolower($player->getName()))){
+                                    if($player->isOp()){
                                     }
                                     else{
-                                        $players->setOp(true);
-                                        $players->sendMessage("§aYour OP status has been restored.");
-                                        $sender->sendMessage("§aRestored ".$players->getName()."'s OP status.");
+                                        $player->setOp(true);
+                                        $player->sendMessage("§aYour OP status has been restored.");
+                                        $sender->sendMessage("§aRestored ".$player->getName()."'s OP status.");
                                     }
                                 }
                                 else{
-                                    if($players->isOp()){
-                                        $players->setOp(false);
-                                        $players->kick("Detected potential hacker");
-                                        $this->getServer()->broadcastMessage("§eDeopped and kicked potential hacker: ".$players->getName());
+                                    if($player->isOp()){
+                                        $player->setOp(false);
+                                        $player->kick("Detected potential hacker");
+                                        $this->getServer()->broadcastMessage("§eDeopped and kicked potential hacker: ".$player->getName());
                                     }
                                 }
                             }
