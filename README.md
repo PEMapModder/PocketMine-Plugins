@@ -4,7 +4,9 @@ MIT. Please note that not all the plugins here may be released on the PocketMine
 plugins will work, for the fact that I don't always test them thoroughly.
 
 ### Plugins:
+* DamageEdit
 * DoMath
+* FoodEffects
 * GearUp
 * GlobalShield
 * GoTroll
@@ -13,11 +15,11 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * MyTag
 * NewCurrency
 * PlanB
+* ServerPopups
 * SpreadFreeze
 * iManager
 
 ### To-do:
 * Fix any bugs if found
 * Make `.phar` files lighter
-* Make more plugins
 * Split `Loader.php` into multiple files
