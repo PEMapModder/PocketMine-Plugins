@@ -33,18 +33,14 @@ class MyTagAPI extends PluginBase{
             $this->settings->setNested("enable.auto-set", true);
             $this->settings->set("op-prefix", "[Staff]");
             $this->settings->set("preferred-economy", "NewCurrency");
+            $this->settings->save();
         }
         if(!file_exists($this->getDataFolder()."tag.yml")){
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
             $this->tag->save();
         }
     }
-    
-    public function saveFiles(){
-        $this->settings->save();
-        $this->tag->save();
-    }
-    
+
     public function updateFiles(){
         if($this->settings->get("version") === $this->getDescription()->getVersion()){
 
