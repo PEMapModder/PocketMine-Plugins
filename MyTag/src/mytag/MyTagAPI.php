@@ -11,15 +11,11 @@ class MyTagAPI extends PluginBase{
     public $tag;
     
     public function onEnable(){
-    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    $this->listener = new MyTagListener($this);
-            $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
-            $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
-    	}
-    	else{
-    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
-    	    $this->getPluginLoader()->disablePlugin($this);
-    	}
+    	$this->listener = new MyTagListener($this);
+        $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
+        $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+    	$this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
+    	$this->getPluginLoader()->disablePlugin($this);
     }
     
     public function onDisable(){
