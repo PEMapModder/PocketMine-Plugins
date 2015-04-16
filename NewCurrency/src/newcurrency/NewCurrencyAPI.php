@@ -15,6 +15,7 @@ class NewCurrencyAPI extends PluginBase{
     	if(!is_dir($this->getDataFolder())){
     	    mkdir($this->getDataFolder());
     	}
+    	$this->createFiles();
         $this->listener = new NewCurrencyListener($this);
         $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -32,7 +33,7 @@ class NewCurrencyAPI extends PluginBase{
     	}
     	if(!file_exists($this->getDataFolder()."settings.yml")){
     	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
-    	    $this->settings->set("version", 1.0.0);
+    	    $this->settings->set("version", "1.0.0");
     	    $this->settings->save();
     	}
     }
