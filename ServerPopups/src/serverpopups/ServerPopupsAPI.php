@@ -15,10 +15,17 @@ class ServerPopupsAPI extends PluginBase{
       
     }
     
-    public function saveFiles(){
+    public function createFiles(){
+        if(!is_dir($this->getDataFolder())){
+            mkdir($this->getDataFolder());
+        }
         if(!file_exists($this->getDataFolder()."settings.yml")){
             $this->saveResource("settings.yml");
         }
+    }
+    
+    public function saveFiles(){
+        
     }
     
     public function updateFiles(){
@@ -26,8 +33,8 @@ class ServerPopupsAPI extends PluginBase{
     }
     
     public function broadcastPopup($message){
-        foreach($this->getServer()->getOnlinePlayers() as $players){
-            $players->sendPopup($message);
+        foreach($this->getServer()->getOnlinePlayers() as $player){
+            $player->sendPopup($message);
         }
     }
 }
