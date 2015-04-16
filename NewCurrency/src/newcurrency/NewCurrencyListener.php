@@ -18,7 +18,7 @@ class NewCurrencyListener implements Listener{
             
         }
         else{
-            if($this->plugin->getDataFolder()."settings.yml"->getNested("enable.auto-register") === true){
+            if($this->plugin->getResource("settings.yml")->getNested("enable.auto-register") === true){
             	$this->plugin->register(strtolower($event->getPlayer()->getName()));
             	$this->plugin->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to NewCurrency at NewCurrency\\account.yml");
             }
