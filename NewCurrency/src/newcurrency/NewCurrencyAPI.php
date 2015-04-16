@@ -34,7 +34,7 @@ class NewCurrencyAPI extends PluginBase{
     	    $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
     	}
     	if(!file_exists($this->getDataFolder()."settings.yml")){
-    	    $this->saveResource("settings.yml");
+    	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
     	}
     }
     
