@@ -48,7 +48,9 @@ class iManagerAPI extends PluginBase implements Listener{
     	    $this->ip->save();
     	}
     	if(!file_exists($this->getDataFolder()."settings.yml")){
-    	    $this->saveResource("settings.yml");	
+    	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
+    	    $this->settings->set("version", $this->getDescription()->getVersion());
+    	    $this->settings->save();
     	}
     }
     
