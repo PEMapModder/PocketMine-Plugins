@@ -35,24 +35,16 @@ class iManagerAPI extends PluginBase implements Listener{
     }
     
     public function saveFiles(){
-    	if(file_exists($this->getDataFolder()."chat.txt")){
-    	}
-    	else{
+    	if(!file_exists($this->getDataFolder()."chat.txt")){
     	    $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
     	}
-    	if(file_exists($this->getDataFolder()."exempt.txt")){
-    	}
-    	else{
+    	if(!file_exists($this->getDataFolder()."exempt.txt")){
     	    $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
     	}
-    	if(file_exists($this->getDataFolder()."ip.txt")){
-    	}
-    	else{
+    	if(!file_exists($this->getDataFolder()."ip.txt")){
     	    $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
     	}
-    	if(file_exists($this->getDataFolder()."settings.yml")){
-    	}
-    	else{
+    	if(!file_exists($this->getDataFolder()."settings.yml")){
     	    $this->saveResource("settings.yml");	
     	}
     }
