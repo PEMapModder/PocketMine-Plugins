@@ -12,7 +12,6 @@ class NewCurrencyAPI extends PluginBase{
     public $account;
     
     public function onEnable(){
-        $this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    @mkdir($this->getDataFolder());
             $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
@@ -32,7 +31,7 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function saveFiles(){
-    	
+    	$this->saveResource("currency.yml");
     }
     
     public function updateFiles(){
