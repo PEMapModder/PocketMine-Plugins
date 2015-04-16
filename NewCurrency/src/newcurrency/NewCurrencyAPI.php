@@ -31,7 +31,11 @@ class NewCurrencyAPI extends PluginBase{
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function createFiles(){
+    public function saveFiles(){
+    	
+    }
+    
+    public function updateFiles(){
     	
     }
     
