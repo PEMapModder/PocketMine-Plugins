@@ -3,15 +3,8 @@
 namespace mytag;
 
 use mytag\MyTagListener;
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
-use pocketmine\event\player\PlayerChatEvent;
-use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerQuitEvent;
-use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use pocketmine\Player;
 
 class MyTagAPI extends PluginBase implements Listener{
     
@@ -45,7 +38,7 @@ class MyTagAPI extends PluginBase implements Listener{
         
     }
     
-    public function saveNameTag(Player $player){
-        
+    public function saveNameTag($name){
+
     }
 }
