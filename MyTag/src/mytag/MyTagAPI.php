@@ -11,7 +11,6 @@ class MyTagAPI extends PluginBase{
     public $tag;
     
     public function onEnable(){
-    	$this->saveDefaultConfig();
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    @mkdir($this->getDataFolder());
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
@@ -31,7 +30,9 @@ class MyTagAPI extends PluginBase{
     }
     
     public function createFiles(){
-        
+        if(!file_exists($this->getDataFolder()."settings.yml")){
+            $this->saveResource("settings.yml");
+        }
     }
     
     public function updateFiles(){
