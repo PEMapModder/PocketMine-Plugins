@@ -83,8 +83,8 @@ class iManagerCommand implements CommandExecutor{
     	    	} 
     	    	if(strtolower($args[0]) === "addresslist"){
 		    $sender->sendMessage("§eIP address and port of all players that are currently online:");
-		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getAddress()."§e:§a".$players->getPort());
+		    foreach($this->getServer()->getOnlinePlayers() as $player){
+		    	$sender->sendMessage("§e> §b".$player->getName()." §e- §c".$player->getAddress()."§e:§a".$player->getPort());
 		    }
 		    return true;
     	    	}
@@ -93,12 +93,12 @@ class iManagerCommand implements CommandExecutor{
     	    	    	if(is_numeric($args[1])){
     	    	    	    if($args[1] > 0){
     	    	    	    	$sender->sendMessage("§eBurning everyone without EXEMPT status in the server...");
-    	    	    	    	foreach($this->getServer()->getOnlinePlayers() as $players){
-    	    	    	    	    if($this->exempt->exists(strtolower($players->getName()))){
+    	    	    	    	foreach($this->getServer()->getOnlinePlayers() as $player){
+    	    	    	    	    if($this->exempt->exists(strtolower($player->getName()))){
     	    	    	    	    }
     	    	    	    	    else{
-    	    	    	    	        $players->setOnFire($args[1]);
-    	    	    	    	        $players->sendMessage("You have been set on fire for ".$args[1]." seconds!");
+    	    	    	    	        $player->setOnFire($args[1]);
+    	    	    	    	        $player->sendMessage("You have been set on fire for ".$args[1]." seconds!");
     	    	    	    	    }
     	    	    	        }
     	    	    	    }
@@ -185,22 +185,22 @@ class iManagerCommand implements CommandExecutor{
     	    	}
     	    	if(strtolower($args[0]) === "deopall"){
     	    	    $sender->sendMessage("§eRevoking OP status of everyone in the server...");
-    	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
-    	    	    	$players->setOp(false);
+    	    	    foreach($this->getServer()->getOnlinePlayers() as $player){
+    	    	    	$player->setOp(false);
     	    	    }
     	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "gamemodelist"){
 		    $sender->sendMessage("§eGamemode of all players that are currently online:");
-		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getGamemode());
+		    foreach($this->getServer()->getOnlinePlayers() as $player){
+		    	$sender->sendMessage("§e> §b".$player->getName()." §e- §c".$player->getGamemode());
 		    }	
 		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "healthlist"){
 		    $sender->sendMessage("§eHealth of all players that are currently online:");
-		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §e- §c".$players->getHealth()."§e/§a".$players->getMaxHealth());
+		    foreach($this->getServer()->getOnlinePlayers() as $player){
+		    	$sender->sendMessage("§e> §b".$player->getName()." §e- §c".$player->getHealth()."§e/§a".$player->getMaxHealth());
 		    }	
 		    return true;
     	    	}
@@ -383,54 +383,54 @@ class iManagerCommand implements CommandExecutor{
     	    	}
     	    	if(strtolower($args[0]) === "kickall"){
 		    $sender->sendMessage("§eKicking everyone without EXEMPT status from the server...");
-		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	if($this->exempt->exists(strtolower($players->getName()))){
+		    foreach($this->getServer()->getOnlinePlayers() as $player){
+		    	if($this->exempt->exists(strtolower($player->getName()))){
 		    	}
 		    	else{
-		    	    $players->kick();
+		    	    $player->kick();
 		    	}
 		    }
 		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "killall"){
 		    $sender->sendMessage("§eKilling everyone without EXEMPT status in the server...");
-		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	if($this->exempt->exists(strtolower($players->getName()))){
+		    foreach($this->getServer()->getOnlinePlayers() as $player){
+		    	if($this->exempt->exists(strtolower($player->getName()))){
 		    	}
 		    	else{
-		    	    $players->kill();
+		    	    $player->kill();
 		    	}
 		    }	
 		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "moneylist"){
 		    $sender->sendMessage("§eAmount of money of all players that are currently online");
-		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §f- ");
+		    foreach($this->getServer()->getOnlinePlayers() as $player){
+		    	$sender->sendMessage("§e> §b".$player->getName()." §f- ");
 			//To-do
 		    }	
 		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "opall"){
     	    	    $sender->sendMessage("§eGranting OP status to everyone in the server...");
-    	    	    foreach($this->getServer()->getOnlinePlayers() as $players){
-    	    	    	$players->setOp(true);
+    	    	    foreach($this->getServer()->getOnlinePlayers() as $player){
+    	    	    	$player->setOp(true);
     	    	    }
     	    	    return true;
     	    	}
     	    	if(strtolower($args[0]) === "oplist"){
 		    $sender->sendMessage("§eOPs that are currently online:");
-		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	if($players->isOp()){
-		    	    $sender->sendMessage("§e> §b".$players->getName());
+		    foreach($this->getServer()->getOnlinePlayers() as $player){
+		    	if($player->isOp()){
+		    	    $sender->sendMessage("§e> §b".$player->getName());
 		    	}
 		    }	
 		    return true;
     	    	}
     	    	if(strtolower($args[0]) === "poslist"){
 		    $sender->sendMessage("§eLocation of all players that are currently online:");
-		    foreach($this->getServer()->getOnlinePlayers() as $players){
-		    	$sender->sendMessage("§e> §b".$players->getName()." §e- X: §c".$players->getFloorX()." §eY: §9".$players->getFloorY()." §eZ: §a".$players->getFloorZ()." §eLevel: §d".$players->getLevel()->getName()." §eYaw: §6".$players->getYaw()." §ePitch: §6".$players->getPitch());
+		    foreach($this->getServer()->getOnlinePlayers() as $player){
+		    	$sender->sendMessage("§e> §b".$player->getName()." §e- X: §c".$player->getFloorX()." §eY: §9".$player->getFloorY()." §eZ: §a".$player->getFloorZ()." §eLevel: §d".$player->getLevel()->getName()." §eYaw: §6".$player->getYaw()." §ePitch: §6".$player->getPitch());
 		    }	
 		    return true;
     	    	}
