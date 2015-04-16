@@ -8,7 +8,7 @@ description: Send popups to the players!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerPopups
 commands:
  serverpopups:
-  description:
+  description: Shows all the sub-commands for /serverpopups
   usage: /serverpopups <sub-command> [parameter]
   permission: serverpopups.command.serverpopups
   aliases: [sp]
