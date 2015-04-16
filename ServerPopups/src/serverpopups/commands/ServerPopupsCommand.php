@@ -13,6 +13,12 @@ class ServerPopupsCommand implements CommandExecutor{
         if(strtolower($command->getName()) === "serverpopups"){
             if(isset($args[0])){
                 if(strtolower($args[0]) === "broadcast"){
+                    if(isset($args[1])){
+                        
+                    }
+                    else{
+                        
+                    }
                     return true;
                 }
                 if(strtolower($args[0]) === "help"){
