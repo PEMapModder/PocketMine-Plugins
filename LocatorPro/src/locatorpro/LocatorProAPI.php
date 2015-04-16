@@ -96,4 +96,16 @@ class LocatorProAPI extends PluginBase{
             }
         }
     }
+    
+    public function createFiles(){
+        
+    }
+    
+    public function updateFiles(){
+        
+    }
+    
+    public function savePosition($x, $y, $z, $yaw, $pitch, $level){
+        
+    }
 }
