@@ -6,7 +6,7 @@ use mytag\MyTagListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
-class MyTagAPI extends PluginBase implements Listener{
+class MyTagAPI extends PluginBase{
     
     public $tag;
     
@@ -30,7 +30,7 @@ class MyTagAPI extends PluginBase implements Listener{
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function saveFiles(){
+    public function createFiles(){
         
     }
     
