@@ -11,7 +11,6 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * GlobalShield
 * GoTroll
 * LocatorPro
-* MyChat
 * MyTag
 * NewCurrency
 * PlanB
