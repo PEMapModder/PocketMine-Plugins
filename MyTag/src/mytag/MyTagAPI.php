@@ -38,7 +38,8 @@ class MyTagAPI extends PluginBase implements Listener{
         
     }
     
-    public function saveNameTag($name){
-
+    public function saveNameTag($name, $tag){
+        $this->tag->set($name, $tag);
+        $this->tag->save();
     }
 }
