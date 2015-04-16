@@ -31,7 +31,9 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function saveFiles(){
-    	$this->saveResource("currency.yml");
+    	if(!file_exists($this->getDataFolder()."settings.yml")){
+    	    $this->saveResource("settings.yml");
+    	}
     }
     
     public function updateFiles(){
