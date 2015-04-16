@@ -9,4 +9,9 @@ use serverpopups\ServerPopupsAPI;
 
 class ServerPopupsCommand implements CommandExecutor{
 
+    public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+        if(strtolower($command->getName()) === "serverpopups"){
+          
+        }
+    }
 }
