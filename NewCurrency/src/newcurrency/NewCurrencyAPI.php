@@ -39,6 +39,7 @@ class NewCurrencyAPI extends PluginBase{
 	    $this->settings->set("default", 100);
 	    $this->settings->set("name", "coins");
 	    $this->settings->set("symbol", "$");
+	    $this->settings->save();
     	}
     }
     
