@@ -45,7 +45,11 @@ class iManagerAPI extends PluginBase implements Listener{
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function createFiles(){
+    public function saveFiles(){
+    	
+    }
+    
+    public function updateFiles(){
     	
     }
     
