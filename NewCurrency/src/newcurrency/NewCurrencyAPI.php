@@ -34,6 +34,7 @@ class NewCurrencyAPI extends PluginBase{
     	if(!file_exists($this->getDataFolder()."settings.yml")){
     	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
     	    $this->settings->set("version", "1.0.0");
+    	    $this->settings->setNested("enable.auto-register", true);
     	    $this->settings->save();
     	}
     }
