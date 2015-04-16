@@ -4,7 +4,7 @@ namespace globalshield;
 
 use pocketmine\plugin\PluginBase;
 
-class Loader extends PluginBase implements Listener{
+class GlobalShieldLoader extends PluginBase implements Listener{
     
     public function onEnable(){
     	$this->saveDefaultConfig();
