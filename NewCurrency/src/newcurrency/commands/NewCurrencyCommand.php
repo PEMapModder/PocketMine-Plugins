@@ -10,6 +10,10 @@ use pocketmine\Player;
 
 class NewCurrencyCommand implements CommandExecutor{
 
+    public function __construct(NewCurrencyAPI $plugin){
+        $this->plugin = $plugin;
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "newcurrency"){
             if(isset($args[0])){
