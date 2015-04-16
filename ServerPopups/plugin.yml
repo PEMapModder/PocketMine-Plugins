@@ -1,0 +1,8 @@
+name: ServerPopups
+main: serverpopups\Loader
+version: 1.0.0
+api: 1.12.0
+load: POSTWORLD
+author: Gamecrafter
+description: Send popups to the players!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerPopups
