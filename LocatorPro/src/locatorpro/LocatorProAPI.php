@@ -4,17 +4,13 @@ namespace locatorpro;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerMoveEvent;
-use pocketmine\event\player\PlayerRespawnEvent;
-use pocketmine\event\Listener;
 use pocketmine\level\Location;
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Player;
 
-class Loader extends PluginBase implements Listener{
+class LocatorProAPI extends PluginBase{
     
     public $pos;
     
@@ -99,28 +95,5 @@ class Loader extends PluginBase implements Listener{
                 }
             }
         }
-    }
-    
-    public function onPlayerJoin(PlayerJoinEvent $event){
-        if($this->pos->exists($event->getPlayer()->getName())){
-            
-        }
-        else{
-            $this->pos->set($event->getPlayer()->getName());
-            $this->getServer()->getLogger()->notice("Registered ".$event->getPlayer()->getName()." to LocatorPro at LocatorPro\\pos.yml");
-        }
-    }
-    
-    public function onPlayerMove(PlayerMoveEvent $event){
-        if($event->getPlayer()->getFloorY() < $this->getConfig()->get("limit")["minimum-y"]){
-            
-        }
-        if($event->getPlayer()->getFloor() > $this->getConfig()->get("limit")["maximum-y"]){
-            
-        }
-    }
-    
-    public function onPlayerRespawn(PlayerRespawnEvent $event){
-        $event->getPlayer()->teleport(new Location($this->getConfig()->get("spawn")["x"], $this->getConfig()->get("spawn")["y"], $this->getConfig()->get("spawn")["z"], $this->getConfig()->get("spawn")["yaw"], $this->getConfig()->get("spawn")["pitch"], $this->getConfig()->get("spawn")["level"]);)
     }
 }
