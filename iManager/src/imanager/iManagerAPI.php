@@ -52,8 +52,15 @@ class iManagerAPI extends PluginBase implements Listener{
     	}
     }
     
-    public function updateFiles(){
+    public function saveFiles(){
     	
+    }
+    
+    public function updateFiles(){
+    	if(!$this->getResource("settings.yml")->get("version") === $this->getDescription()->getVersion()){
+    	    unlink($this->getResource("settings.yml"));
+    	    $this->saveResource("settings.yml");
+    	}
     }
     
     public function isAddressWhitelisted($address){
