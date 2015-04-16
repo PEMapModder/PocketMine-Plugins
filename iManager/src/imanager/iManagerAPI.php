@@ -32,6 +32,9 @@ class iManagerAPI extends PluginBase implements Listener{
     }
     
     public function createFiles(){
+    	if(is_dir($this->getDataFolder())){
+    	    mkdir($this->getDataFolder());
+    	}
     	if(!file_exists($this->getDataFolder()."chat.txt")){
     	    $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
     	    $this->chat->save();
