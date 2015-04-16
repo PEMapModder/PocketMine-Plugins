@@ -6,7 +6,7 @@ use pocketmine\event\Listener;
 
 class GlobalShieldListener implements Listener{
 
-public function onBlockBreak(BlockBreakEvent $event){
+    public function onBlockBreak(BlockBreakEvent $event){
     }
     
     public function onBlockPlace(BlockPlaceEvent $event){
