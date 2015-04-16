@@ -11,15 +11,11 @@ class iManagerAPI extends PluginBase{
     public $chat, $exempt, $ip;
 
     public function onEnable(){
-    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    $this->listener = new iManagerListener($this);
-            $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
-	    $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
-    	}
-    	else{
-    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
-    	    $this->getPluginLoader()->disablePlugin($this);
-    	}
+    	$this->listener = new iManagerListener($this);
+        $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
+	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+    	$this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
+    	$this->getPluginLoader()->disablePlugin($this);
     }
     
     public function onDisable(){
@@ -43,9 +39,9 @@ class iManagerAPI extends PluginBase{
     	if(!file_exists($this->getDataFolder()."settings.yml")){
     	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
     	    $this->settings->set("version", $this->getDescription()->getVersion());
-    	    $this->settings->setNested("enable.chat-log", true);
     	    $this->settings->setNested("enable.ip-whitelist", false);
     	    $this->settings->setNested("enable.log-commands", true);
+    	    $this->settings->setNested("enable.save-chat", true);
     	    $this->settings->set("preferred-economy", "NewCurrency");
     	    $this->settings->save();
     	}
