@@ -57,9 +57,9 @@ class iManagerAPI extends PluginBase implements Listener{
     }
     
     public function updateFiles(){
-    	if(!$this->getResource("settings.yml")->get("version") === $this->getDescription()->getVersion()){
-    	    unlink($this->getResource("settings.yml"));
-    	    $this->saveResource("settings.yml");
+    	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
+    	    unlink($this->getDataFolder."settings.yml");
+    	    $this->createFiles();
     	}
     }
     
