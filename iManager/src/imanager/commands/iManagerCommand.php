@@ -10,6 +10,10 @@ use pocketmine\Player;
 
 class iManagerCommand implements CommandExecutor{
 
+    public function __construct(iManagerAPI $plugin){
+    	$this->plugin = $plugin;
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
     	if(strtolower($command->getName()) === "imanager"){
     	    if(isset($args[0])){
