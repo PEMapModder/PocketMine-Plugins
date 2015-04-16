@@ -10,6 +10,10 @@ use pocketmine\event\Listener;
 
 class MyTagListener implements Listener{
 
+    public function __construct(MyTagAPI $plugin){
+    	$this->plugin = $plugin;
+    }
+    
     public function onPlayerChat(PlayerChatEvent $event){
     	//To-do
     }
