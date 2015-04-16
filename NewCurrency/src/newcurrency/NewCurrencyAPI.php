@@ -14,7 +14,6 @@ class NewCurrencyAPI extends PluginBase{
     public function onEnable(){
     	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
     	    @mkdir($this->getDataFolder());
-            $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
             $this->listener = new NewCurrencyListener($this);
             $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
             $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -31,6 +30,9 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function saveFiles(){
+    	if(!file_exists($this->getDataFolder()."account.yml")){
+    	    $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
+    	}
     	if(!file_exists($this->getDataFolder()."settings.yml")){
     	    $this->saveResource("settings.yml");
     	}
