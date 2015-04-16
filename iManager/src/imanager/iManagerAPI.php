@@ -47,15 +47,10 @@ class iManagerAPI extends PluginBase{
     	    $this->settings->setNested("enable.ip-whitelist", false);
     	    $this->settings->setNested("enable.log-commands", true);
     	    $this->settings->set("preferred-economy", "NewCurrency");
+    	    $this->settings->save();
     	}
     }
-    
-    public function saveFiles(){
-    	$this->chat->save();
-    	$this->exempt->save();
-    	$this->ip->save();
-    }
-    
+
     public function updateFiles(){
     	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
     	    unlink($this->getDataFolder."settings.yml");
