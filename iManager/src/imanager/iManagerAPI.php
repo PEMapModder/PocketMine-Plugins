@@ -3,15 +3,8 @@
 namespace imanager;
 
 use imanager\iManagerListener;
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
-use pocketmine\event\player\PlayerChatEvent;
-use pocketmine\event\player\PlayerCommandPreprocessEvent;
-use pocketmine\event\player\PlayerPreLoginEvent;
-use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use pocketmine\Player;
 
 class iManagerAPI extends PluginBase implements Listener{
 
