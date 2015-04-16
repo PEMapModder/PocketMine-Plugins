@@ -60,10 +60,6 @@ class NewCurrencyAPI extends PluginBase{
 
     }
     
-    public function getDefault(){
-
-    }
-    
     public function decreaseBalance($player, $amount){
         
     }
