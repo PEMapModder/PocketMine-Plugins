@@ -1,0 +1,8 @@
+name: FoodEffects
+main: foodeffects\
+version: 1.0.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: What will happen the next time a player eats something?
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/FoodEffects
