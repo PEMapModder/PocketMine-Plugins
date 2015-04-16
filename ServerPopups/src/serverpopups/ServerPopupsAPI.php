@@ -14,7 +14,7 @@ class ServerPopupsAPI extends PluginBase{
     }
     
     public function onDisable(){
-      
+        $this->saveFiles();
     }
     
     public function createFiles(){
