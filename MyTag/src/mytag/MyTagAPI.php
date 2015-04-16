@@ -46,7 +46,9 @@ class MyTagAPI extends PluginBase{
     }
     
     public function updateFiles(){
-        
+        if($this->settings->get("version") === $this->getDescription()->getVersion()){
+
+        }
     }
     
     public function saveNameTag($player, $tag){
