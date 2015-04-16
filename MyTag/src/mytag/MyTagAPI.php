@@ -31,12 +31,12 @@ class MyTagAPI extends PluginBase{
     }
     
     public function createFiles(){
+        if(!file_exists($this->getDataFolder()."settings.yml")){
+            $this->saveResource("settings.yml");
+        }
         if(!file_exists($this->getDataFolder()."tag.yml")){
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
             $this->tag->save();
-        }
-        if(!file_exists($this->getDataFolder()."settings.yml")){
-            $this->saveResource("settings.yml");
         }
     }
     
