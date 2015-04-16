@@ -12,16 +12,12 @@ class NewCurrencyAPI extends PluginBase{
     public $account;
     
     public function onEnable(){
-    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    @mkdir($this->getDataFolder());
-            $this->listener = new NewCurrencyListener($this);
-            $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
-            $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+    	if(!is_dir($this->getDataFolder())){
+    	    mkdir($this->getDataFolder());
     	}
-    	else{
-    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
-    	    $this->getPluginLoader()->disablePlugin($this);
-    	}
+        $this->listener = new NewCurrencyListener($this);
+        $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
+        $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
@@ -29,7 +25,7 @@ class NewCurrencyAPI extends PluginBase{
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function saveFiles(){
+    public function createFiles(){
     	if(!file_exists($this->getDataFolder()."account.yml")){
     	    $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
     	}
