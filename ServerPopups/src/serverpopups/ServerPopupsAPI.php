@@ -15,7 +15,9 @@ class ServerPopupsAPI extends PluginBase{
     }
     
     public function saveFiles(){
-        
+        if(!file_exists($this->getDataFolder()."settings.yml")){
+            $this->saveResource("settings.yml");
+        }
     }
     
     public function updateFiles(){
