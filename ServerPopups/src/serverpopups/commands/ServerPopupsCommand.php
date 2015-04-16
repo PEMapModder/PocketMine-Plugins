@@ -22,6 +22,7 @@ class ServerPopupsCommand implements CommandExecutor{
                     return true;
                 }
                 if(strtolower($args[0]) === "help"){
+                    $sender->sendMessage("ServerPopups commands");
                     return true;
                 }
                 if(strtolower($args[0]) === "send"){
@@ -30,6 +31,7 @@ class ServerPopupsCommand implements CommandExecutor{
                 return false;
             }
             else{
+                $sender->sendMessage("ServerPopups commands");
                 return true;
             }
         }
