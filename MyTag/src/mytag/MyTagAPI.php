@@ -8,10 +8,8 @@ use pocketmine\utils\Config;
 
 class MyTagAPI extends PluginBase{
     
-    public $settings;
-    
-    public $tag;
-    
+    public $settings, $tag;
+
     public function onEnable(){
     	$this->listener = new MyTagListener($this);
         $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
