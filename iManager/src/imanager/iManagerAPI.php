@@ -39,10 +39,9 @@ class iManagerAPI extends PluginBase implements Listener{
     
     public function saveFiles(){
     	if(file_exists($this->getDataFolder()."settings.yml")){
-    		
     	}
     	else{
-    		
+    	    $this->saveResource("settings.yml");	
     	}
     }
     
