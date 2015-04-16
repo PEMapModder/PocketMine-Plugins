@@ -15,7 +15,7 @@ class ServerPopupsAPI extends PluginBase{
     }
     
     public function onDisable(){
-	    $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
+	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function createFiles(){
