@@ -1,0 +1,8 @@
+name: DamageEdit
+main: damageedit\
+version: 1.0.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Change the ways players can be damaged!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/DamageEdit
