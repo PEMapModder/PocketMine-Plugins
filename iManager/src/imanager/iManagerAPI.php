@@ -6,7 +6,7 @@ use imanager\iManagerListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
-class iManagerAPI extends PluginBase implements Listener{
+class iManagerAPI extends PluginBase{
 
     public $chat, $exempt, $ip;
 
