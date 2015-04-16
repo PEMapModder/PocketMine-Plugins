@@ -34,7 +34,7 @@ class iManagerAPI extends PluginBase implements Listener{
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function saveFiles(){
+    public function createFiles(){
     	if(!file_exists($this->getDataFolder()."chat.txt")){
     	    $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
     	}
