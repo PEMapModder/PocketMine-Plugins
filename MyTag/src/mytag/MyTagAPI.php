@@ -8,18 +8,20 @@ use pocketmine\utils\Config;
 
 class MyTagAPI extends PluginBase{
     
+    public $settings;
+    
     public $tag;
     
     public function onEnable(){
     	$this->listener = new MyTagListener($this);
         $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
+        $this->createFiles;
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     	$this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
-    	$this->getPluginLoader()->disablePlugin($this);
     }
     
     public function onDisable(){
-    	$this->tag->save();
+    	$this->saveFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -28,7 +30,9 @@ class MyTagAPI extends PluginBase{
             mkdir($this->getDataFolder());
         }
         if(!file_exists($this->getDataFolder()."settings.yml")){
-            $this->saveResource("settings.yml");
+            $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
+            $this->settings->set("version", $this->getDescription()->getVersion());
+            $this->settings->save();
         }
         if(!file_exists($this->getDataFolder()."tag.yml")){
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
@@ -37,6 +41,7 @@ class MyTagAPI extends PluginBase{
     }
     
     public function saveFiles(){
+        $this->settings->save();
         $this->tag->save();
     }
     
