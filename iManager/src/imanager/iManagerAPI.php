@@ -11,6 +11,7 @@ class iManagerAPI extends PluginBase{
     public $chat, $exempt, $ip, $settings;
 
     public function onEnable(){
+    	$this->createFiles();
     	$this->listener = new iManagerListener($this);
         $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
 	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
