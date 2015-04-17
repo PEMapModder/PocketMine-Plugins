@@ -9,6 +9,6 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/ServerPopups
 commands:
  serverpopups:
   description: Shows all the sub-commands for /serverpopups
-  usage: /serverpopups <sub-command> [parameter]
+  usage: /serverpopups <sub-command> [parameters]
   permission: serverpopups.command.serverpopups
   aliases: [sp]
