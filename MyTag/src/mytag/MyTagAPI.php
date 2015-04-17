@@ -15,7 +15,6 @@ class MyTagAPI extends PluginBase{
         $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
         $this->createFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
-    	$this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
     }
     
     public function onDisable(){
