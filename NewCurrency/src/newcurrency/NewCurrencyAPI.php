@@ -24,7 +24,7 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function createFiles(){
-    	if(!is_dir($this->getDataFolder())){
+    	if(!file_exists($this->getDataFolder())){
     	    mkdir($this->getDataFolder());
     	}
     	if(!file_exists($this->getDataFolder()."account.yml")){
