@@ -9,7 +9,7 @@ use pocketmine\Player;
 
 class NewCurrencyAPI extends PluginBase{
 
-    public $account;
+    public $account, $settings;
     
     public function onEnable(){
     	$this->createFiles();
@@ -29,9 +29,11 @@ class NewCurrencyAPI extends PluginBase{
     	}
     	if(!file_exists($this->getDataFolder()."account.yml")){
     	    $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
+    	    $this->account->save();
+    	    $this->getServer()->getLogger()->notice("Created new file: MyTag\\account.yml");
     	}
     	if(!file_exists($this->getDataFolder()."settings.yml")){
-	    $this->settings = new Config($this->getDataFolder()."setting.yml", Config::YAML);
+	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
 	    $this->settings->set("version", $this->getDescription()->getVersion());
 	    $this->settings->setNested("enable.auto-register", true);
 	    $this->settings->setNested("enable.name", true);
@@ -40,6 +42,7 @@ class NewCurrencyAPI extends PluginBase{
 	    $this->settings->set("name", "coins");
 	    $this->settings->set("symbol", "$");
 	    $this->settings->save();
+	    $this->getServer()->getLogger()->notice("Created new file: NewCurrency\\settings.yml");
     	}
     }
     
@@ -47,6 +50,7 @@ class NewCurrencyAPI extends PluginBase{
     	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
     	    unlink($this->getDataFolder()."settings.yml");
     	    $this->createFiles();
+    	    $this->getServer()->getLogger()->warning("Updated file: MyCurrency\\settings.yml");
     	}
     }
     
