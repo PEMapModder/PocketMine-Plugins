@@ -17,15 +17,8 @@ use pocketmine\plugin\PluginBase;
 class Loader extends PluginBase implements Listener{
     
     public function onEnable(){
-    	$this->saveDefaultConfig();
-    	if($this->getConfig()->get("version") === $this->getDescription()->getVersion()){
-    	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-            $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
-    	}
-    	else{
-    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
-    	    $this->getPluginLoader()->disablePlugin($this);
-    	}
+    	$this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
@@ -33,7 +26,7 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function createFiles(){
-        if(!is_dir($this->getDataFolder())){
+        if(!file_exists($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
         if(!file_exists($this->getDataFolder()."settings.yml")){
