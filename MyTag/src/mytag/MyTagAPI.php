@@ -18,7 +18,6 @@ class MyTagAPI extends PluginBase{
     }
     
     public function onDisable(){
-    	$this->saveFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
