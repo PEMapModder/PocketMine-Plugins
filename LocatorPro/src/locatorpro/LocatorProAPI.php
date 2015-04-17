@@ -13,7 +13,6 @@ class LocatorProAPI extends PluginBase{
     public $pos, $settings;
     
     public function onEnable(){
-        $this->pos = new Config($this->getDataFolder()."pos.yml", Config::YAML);
     	$this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
@@ -28,11 +27,14 @@ class LocatorProAPI extends PluginBase{
         }
         if(!file_exists($this->getDataFolder()."pos.yml")){
             $this->pos = new Config($this->getDataFolder()."pos.yml", Config::YAML);
+            $this->pos->save();
+            $this->getServer()->getLogger()->notice("Created new file: LocatorPro\\pos.yml");
         }
         if(!file_exists($this->getDataFolder()."settings.yml")){
             $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
             $this->settings->set("version", $this->getDescription()->getVersion());
             $this->settings->save();
+            $this->getServer()->getLogger()->notice("Created new file: LocatorPro\\settings.yml");
         }
     }
     
@@ -40,6 +42,7 @@ class LocatorProAPI extends PluginBase{
         if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
             unlink($this->getDataFolder()."settings.yml");
             $this->createFiles();
+            $this->getServer()->getLogger()->warning("Updated file: LocatorPro\\settings.yml");
         }
     }
     
