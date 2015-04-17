@@ -13,7 +13,7 @@ class LocatorProAPI extends PluginBase{
     public $pos, $settings;
     
     public function onEnable(){
-    	$this->getServer()->getPluginManager()->registerEvents($this, $this);
+    	$this->createFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
