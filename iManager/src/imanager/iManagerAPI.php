@@ -26,12 +26,18 @@ class iManagerAPI extends PluginBase{
     	}
     	if(!file_exists($this->getDataFolder()."chat.txt")){
     	    $this->chat = new Config($this->getDataFolder()."chat.txt", Config::ENUM);
+    	    $this->chat->save();
+    	    $this->getServer()->getLogger()->notice("Created new file: iManager\\chat.txt");
     	}
     	if(!file_exists($this->getDataFolder()."exempt.txt")){
     	    $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
+    	    $this->exempt->save();
+    	    $this->getServer()->getLogger()->notice("Created new file: iManager\\exempt.txt");
     	}
     	if(!file_exists($this->getDataFolder()."ip.txt")){
     	    $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
+    	    $this->ip->save();
+    	    $this->getServer()->getLogger()->notice("Created new file: iManager\\ip.txt");
     	}
     	if(!file_exists($this->getDataFolder()."settings.yml")){
     	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
@@ -41,6 +47,7 @@ class iManagerAPI extends PluginBase{
     	    $this->settings->setNested("enable.save-chat", true);
     	    $this->settings->set("preferred-economy", "NewCurrency");
     	    $this->settings->save();
+    	    $this->getServer()->getLogger()->notice("Created new file: iManager\\settings.yml");
     	}
     }
 
@@ -48,6 +55,7 @@ class iManagerAPI extends PluginBase{
     	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
     	    unlink($this->getDataFolder."settings.yml");
     	    $this->createFiles();
+    	    $this->getServer()->getLogger()->notice("Updated file: iManager\\settings.yml");
     	}
     }
     
