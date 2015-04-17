@@ -12,12 +12,15 @@ class MyTagAPI extends PluginBase{
 
     public function onEnable(){
         $this->createFiles();
+        $this->openFiles();
+        $this->updateFiles();
     	$this->listener = new MyTagListener($this);
         $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
+        $this->closeFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
