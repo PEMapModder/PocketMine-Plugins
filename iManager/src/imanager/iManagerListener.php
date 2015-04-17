@@ -15,22 +15,23 @@ class iManagerListener implements Listener{
     }
     
     public function onPlayerChat(PlayerChatEvent $event){
-    	if($this->getConfig()->get("enable")["chat-log"] === true){
-    	    $this->chat->set($event->getPlayer()->getName().": ".$event->getMessage());
+    	if($this->plugin->settings->getNested("enable.save-chat") === true){
+    	    $this->plugin->chat->set($event->getPlayer()->getName().": ".$event->getMessage());
+    	    $this->plugin->chat->save();
     	}
     }
     
     public function onPlayerCommandPreprocess(PlayerCommandPreprocessEvent $event){
-    	if($this->getConfig()->get("enable")["log-commands"] === true){
+    	if($this->plugin->settings->getNested("enable.log-commands") === true){
     	    if($event->getMessage()[0] === "/"){
-    	    	$this->getServer()->getLogger()->notice($event->getPlayer()->getName()." issued command: ".$event->getMessage());
+    	    	$this->plugin->getServer()->getLogger()->notice($event->getPlayer()->getName()." issued command: ".$event->getMessage());
     	    }
     	}
     }
     
     public function onPlayerPreLogin(PlayerPreLoginEvent $event){
-    	if($this->getConfig()->get("enable")["ip-whitelist"] === true){
-    	    if($this->ip->exists(strtolower($event->getPlayer()->getAddress()))){
+    	if($this->plugin->settings->getNested("enable.ip-whitelist") === true){
+    	    if($this->plugin->ip->exists(strtolower($event->getPlayer()->getAddress()))){
     	    }
     	    else{
     	    	$event->setCancelled();
