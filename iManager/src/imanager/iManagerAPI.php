@@ -56,7 +56,7 @@ class iManagerAPI extends PluginBase{
     	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
     	    unlink($this->getDataFolder."settings.yml");
     	    $this->createFiles();
-    	    $this->getServer()->getLogger()->notice("Updated file: iManager\\settings.yml");
+    	    $this->getServer()->getLogger()->warning("Updated file: iManager\\settings.yml");
     	}
     }
     
