@@ -13,13 +13,15 @@ class NewCurrencyAPI extends PluginBase{
     
     public function onEnable(){
     	$this->createFiles();
+    	$this->openFiles();
+    	$this->updateFiles();
         $this->listener = new NewCurrencyListener($this);
         $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-	$this->account->save();
+	$this->closeFiles();
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
