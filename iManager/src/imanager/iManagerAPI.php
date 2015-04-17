@@ -53,10 +53,10 @@ class iManagerAPI extends PluginBase{
     }
     
     public function openFiles(){
-        fopen($this->getDataFolder()."chat.txt");
-        fopen($this->getDataFolder()."exempt.txt");
-        fopen($this->getDataFolder()."ip.txt");
-        fopen($this->getDataFolder()."tag.yml");
+        fopen($this->getDataFolder()."chat.txt", "a");
+        fopen($this->getDataFolder()."exempt.txt", "a+");
+        fopen($this->getDataFolder()."ip.txt", "a+");
+        fopen($this->getDataFolder()."settings.yml", "r");
     }
         
     public function closeFiles(){
