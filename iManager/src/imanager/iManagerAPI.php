@@ -8,7 +8,7 @@ use pocketmine\utils\Config;
 
 class iManagerAPI extends PluginBase{
 
-    public $chat, $exempt, $ip;
+    public $chat, $exempt, $ip, $settings;
 
     public function onEnable(){
     	$this->listener = new iManagerListener($this);
