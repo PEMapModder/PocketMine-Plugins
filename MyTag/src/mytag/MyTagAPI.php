@@ -33,10 +33,12 @@ class MyTagAPI extends PluginBase{
             $this->settings->set("op-prefix", "[Staff]");
             $this->settings->set("preferred-economy", "NewCurrency");
             $this->settings->save();
+            $this->getServer()->getLogger()->warning("Created new file: MyTag\\settings.yml");
         }
         if(!file_exists($this->getDataFolder()."tag.yml")){
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
             $this->tag->save();
+            $this->getServer()->getLogger()->warning("Created new file: MyTag\\tag.yml");
         }
     }
 
@@ -44,6 +46,7 @@ class MyTagAPI extends PluginBase{
         if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
             unlink($this->getDataFolder()."settings.yml");
             $this->createFiles();
+            $this->getServer()->getLogger()->notice("Updated MyTag settings to ".$this->getDescription()->getVersion());
         }
     }
     
