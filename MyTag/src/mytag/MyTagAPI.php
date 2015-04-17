@@ -62,6 +62,10 @@ class MyTagAPI extends PluginBase{
         }
     }
     
+    public function getSavedNameTag($player){
+        return $this->tag->get($player);
+    }
+    
     public function saveNameTag($player, $tag){
         $this->tag->set($player, $tag);
         $this->tag->save();
