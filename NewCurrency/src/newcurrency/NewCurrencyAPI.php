@@ -46,6 +46,16 @@ class NewCurrencyAPI extends PluginBase{
     	}
     }
     
+    public function openFiles(){
+        fopen($this->getDataFolder()."account.yml");
+        fopen($this->getDataFolder()."settings.yml");
+    }
+        
+    public function closeFiles(){
+        fclose($this->getDataFolder()."account.yml");
+        fclose($this->getDataFolder()."settings.yml");
+    }
+    
     public function updateFiles(){
     	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
     	    unlink($this->getDataFolder()."settings.yml");
