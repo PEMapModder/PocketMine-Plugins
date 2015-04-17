@@ -12,12 +12,15 @@ class iManagerAPI extends PluginBase{
 
     public function onEnable(){
     	$this->createFiles();
+    	$this->openFiles();
+    	$this->updateFiles();
     	$this->listener = new iManagerListener($this);
         $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
 	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
+    	$this->closeFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
