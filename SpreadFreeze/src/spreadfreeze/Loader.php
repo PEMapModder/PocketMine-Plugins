@@ -2,26 +2,20 @@
 
 namespace spreadfreeze;
 
-use pocketmine\block\Grass;
-use pocketmine\block\Lava;
-use pocketmine\block\Mycelium;
-use pocketmine\block\Podzol;
-use pocketmine\block\Water;
-use pocketmine\event\block\BlockGrowEvent;
-use pocketmine\event\block\BlockSpreadEvent;
-use pocketmine\event\block\BlockUpdateEvent;
-use pocketmine\event\block\LeavesDecayEvent;
-use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\Config;
 
-class Loader extends PluginBase implements Listener{
+class Loader extends PluginBase{
     
     public function onEnable(){
-    	$this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->createFiles();
+        $this->openFiles();
+        $this->updateFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
+        $this->closeFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -38,7 +32,7 @@ class Loader extends PluginBase implements Listener{
     }
     
     public function openFiles(){
-        fopen($this->getDataFolder()."settings.yml");
+        fopen($this->getDataFolder()."settings.yml", "r");
     }
     
     public function closeFiles(){
