@@ -11,9 +11,9 @@ class MyTagAPI extends PluginBase{
     public $settings, $tag;
 
     public function onEnable(){
+        $this->createFiles();
     	$this->listener = new MyTagListener($this);
         $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
-        $this->createFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
