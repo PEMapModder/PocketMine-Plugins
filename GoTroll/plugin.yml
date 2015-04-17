@@ -9,6 +9,6 @@ website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GoTroll
 commands:
  gotroll:
   description: Shows all the sub-commands for /gotroll
-  usage: /gotroll <sub-command> [parameter]
+  usage: /gotroll <sub-command> [parameters]
   permission: gotroll.command.troll
   aliases: [gt]
