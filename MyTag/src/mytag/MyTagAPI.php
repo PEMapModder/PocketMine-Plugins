@@ -41,6 +41,16 @@ class MyTagAPI extends PluginBase{
         }
     }
 
+    public function openFiles(){
+        fopen($this->getDataFolder()."settings.yml");
+        fopen($this->getDataFolder()."tag.yml");
+    }
+        
+    public function closeFiles(){
+        fclose($this->getDataFolder()."settings.yml");
+        fclose($this->getDataFolder()."tag.yml");
+    }
+    
     public function updateFiles(){
         if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
             unlink($this->getDataFolder()."settings.yml");
