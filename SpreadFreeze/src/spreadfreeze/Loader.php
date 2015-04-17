@@ -37,42 +37,19 @@ class Loader extends PluginBase implements Listener{
         }
     }
     
+    public function openFiles(){
+        fopen($this->getDataFolder()."settings.yml");
+    }
+    
+    public function closeFiles(){
+        fclose($this->getDataFolder()."settings.yml");
+    }
+    
     public function updateFiles(){
         if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
             unlink($this->getDataFolder()."settings.yml");
             $this->createFiles();
             $this->getServer()->getLogger()->warning("Updated file: SpreadFreeze\\settings.yml");
         }
-    }
-    
-    public function onBlockGrow(BlockGrowEvent $event){
-        
-    }
-    
-    public function onBlockSpread(BlockSpreadEvent $event){
-        if($event->getBlock() instanceof Grass && $this->getConfig()->get("enable")["spread"]["grass"] === false){
-            $event->setCancelled();
-        }
-        if($event->getBlock() instanceof Mycelium && $this->getConfig()->get("enable")["spread"]["mycelium"] === false){
-            $event->setCancelled();
-        }
-        if($event->getBlock() instanceof Podzol && $this->getConfig()->get("enable")["spread"]["podzol"] === false){
-            $event->setCancelled();
-        }
-    }
-    
-    public function onBlockUpdate(BlockUpdateEvent $event){
-        if($event->getBlock() instanceof Lava && $this->getConfig()->get("enable")["spread"]["lava"] === false){
-            $event->setCancelled();
-        }
-        if($event->getBlock() instanceof Water && $this->getConfig()->get("enable")["spread"]["water"] === false){
-            $event->setCancelled();
-        }
-        else{
-        }
-    }
-    
-    public function onLeavesDecay(LeavesDecayEvent $event){
-        
     }
 }
