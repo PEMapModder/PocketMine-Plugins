@@ -51,7 +51,21 @@ class iManagerAPI extends PluginBase{
     	    $this->getServer()->getLogger()->notice("Created new file: iManager\\settings.yml");
     	}
     }
-
+    
+    public function openFiles(){
+        fopen($this->getDataFolder()."chat.txt");
+        fopen($this->getDataFolder()."exempt.txt");
+        fopen($this->getDataFolder()."ip.txt");
+        fopen($this->getDataFolder()."tag.yml");
+    }
+        
+    public function closeFiles(){
+        fclose($this->getDataFolder()."chat.txt");
+        fclose($this->getDataFolder()."exempt.txt");
+        fclose($this->getDataFolder()."ip.txt");
+        fclose($this->getDataFolder()."settings.yml");
+    }
+    
     public function updateFiles(){
     	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
     	    unlink($this->getDataFolder."settings.yml");
