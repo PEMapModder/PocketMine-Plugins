@@ -26,6 +26,7 @@ class ServerPopupsAPI extends PluginBase{
             $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
             $this->settings->set("version", $this->getDescription()->getVersion());
             $this->settings->save();
+            $this->getServer()->getLogger()->notice("Created new file: ServerPopups\\settings.yml");
         }
     }
     
@@ -33,6 +34,7 @@ class ServerPopupsAPI extends PluginBase{
         if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
             unlink($this->getDataFolder()."settings.yml");
             $this->createFiles();
+            $this->getServer()->getLogger()->warning("Updated file: ServerPopups\\settings.yml");
         }
     }
     
