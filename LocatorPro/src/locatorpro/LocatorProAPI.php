@@ -13,12 +13,9 @@ class LocatorProAPI extends PluginBase{
     public $pos, $settings;
     
     public function onEnable(){
-            $this->pos = new Config($this->getDataFolder()."pos.yml", Config::YAML);
-    	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-            $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
-    	    $this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDesrcription()->getFullName()."is outdated.");
-    	    $this->getPluginLoader()->disablePlugin($this);
-    	}
+        $this->pos = new Config($this->getDataFolder()."pos.yml", Config::YAML);
+    	$this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
