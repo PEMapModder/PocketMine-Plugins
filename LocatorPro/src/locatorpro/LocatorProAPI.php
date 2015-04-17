@@ -2,6 +2,7 @@
 
 namespace locatorpro;
 
+use locatorpro\LocatorProListener;
 use pocketmine\level\Location;
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
@@ -16,6 +17,7 @@ class LocatorProAPI extends PluginBase{
     	$this->createFiles();
     	$this->openFiles();
     	$this->updateFiles();
+    	$this->listener = new LocatorProListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
