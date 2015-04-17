@@ -45,7 +45,7 @@ class MyTagAPI extends PluginBase{
         if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
             unlink($this->getDataFolder()."settings.yml");
             $this->createFiles();
-            $this->getServer()->getLogger()->warning("Updated MyTag settings to v".$this->getDescription()->getVersion());
+            $this->getServer()->getLogger()->warning("Updated file: MyTag\\settings.yml");
         }
     }
     
