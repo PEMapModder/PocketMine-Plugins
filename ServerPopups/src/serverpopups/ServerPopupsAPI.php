@@ -11,10 +11,13 @@ class ServerPopupsAPI extends PluginBase{
     
     public function onEnable(){
         $this->createFiles();
+        $this->openFiles();
+        $this->updateFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
+    	$this->closeFiles();
 	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -31,7 +34,7 @@ class ServerPopupsAPI extends PluginBase{
     }
     
     public function openFiles(){
-        fopen($this->getDataFolder()."settings.yml");
+        fopen($this->getDataFolder()."settings.yml", "r");
     }
         
     public function closeFiles(){
