@@ -38,6 +38,16 @@ class LocatorProAPI extends PluginBase{
         }
     }
     
+    public function openFiles(){
+        fopen($this->getDataFolder()."pos.yml");
+        fopen($this->getDataFolder()."settings.yml");
+    }
+    
+    public function closeFiles(){
+        fclose($this->getDataFolder()."pos.yml");
+        fclose($this->getDataFolder()."settings.yml");
+    }
+    
     public function updateFiles(){
         if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
             unlink($this->getDataFolder()."settings.yml");
