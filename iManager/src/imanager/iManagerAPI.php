@@ -14,8 +14,6 @@ class iManagerAPI extends PluginBase{
     	$this->listener = new iManagerListener($this);
         $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
 	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
-    	$this->getServer()->getLogger()->warning("Your configuration file for ".$this->getDescription()->getFullName()." is outdated.");
-    	$this->getPluginLoader()->disablePlugin($this);
     }
     
     public function onDisable(){
