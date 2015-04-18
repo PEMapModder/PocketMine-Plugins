@@ -15,4 +15,8 @@ class TimeEditAPI extends PluginBase{
     public function onDisable(){
       
     }
+    
+    public function getActualTime(){
+        return date("h:i:s");
+    }
 }
