@@ -5,6 +5,7 @@ namespace timeedit\commands;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
+use pocketmine\Player;
 use timeedit\TimeEditAPI;
 
 class TimeEditCommand implements CommandExecutor{
@@ -22,19 +23,38 @@ class TimeEditCommand implements CommandExecutor{
                 }
                 if(strtolower($args[0]) === "info"){
                     
+                    return true;
                 }
                 if(strtolower($args[0]) === "lock"){
-                    
+                    if(isset($args[1])){
+                        
+                    }
+                    else{
+                        
+                    }
+                    return true;
                 }
                 if(strtolower($args[0]) === "real"){
                     $sender->sendMessage("Current time: ".$this->plugin->getActualTime());
                     return true;
                 }
                 if(strtolower($args[0]) === "set"){
-                    
+                    if(isset($args[1])){
+                        
+                    }
+                    else{
+                        $sender->sendMessage("");
+                    }
+                    return true;
                 }
                 if(strtolower($args[0]) === "unlock"){
-                    
+                    if(isset($args[1])){
+                        
+                    }
+                    else{
+                        
+                    }
+                    return true;
                 }
                 return false;
             }
