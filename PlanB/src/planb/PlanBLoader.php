@@ -8,7 +8,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Player;
 
-class Loader extends PluginBase{
+class PlanBLoader extends PluginBase{
     
     public $backup;
     
