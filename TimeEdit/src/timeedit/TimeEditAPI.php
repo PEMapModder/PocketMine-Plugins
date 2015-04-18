@@ -9,7 +9,7 @@ class TimeEditAPI extends PluginBase{
 
     public function onEnable(){
         $this->listener = new TimeEditListener($this);
-        $this->getCommand("timeedit")->setExecutor(new commands\)
+        $this->getCommand("timeedit")->setExecutor(new commands\TimeEditCommand($this));
     }
     
     public function onDisable(){
