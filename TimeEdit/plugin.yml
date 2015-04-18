@@ -6,3 +6,9 @@ load: POSTWORLD
 author: Gamecrafter
 description: Edit the time for your worlds!
 website: https://github.com/Gamecrafter/Small-Plugins/tree/master/TimeEdit
+commands:
+ timeedit:
+  description: Shows all the sub-commands for /timeedit
+  usage: /timeedit <sub-command> [parameters]
+  permission: timeedit.command.timeedit
+  aliases: [te]
