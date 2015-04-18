@@ -16,6 +16,7 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * PlanB
 * ServerPopups
 * SpreadFreeze
+* TimeEdit
 * iManager
 
 ### To-do:
