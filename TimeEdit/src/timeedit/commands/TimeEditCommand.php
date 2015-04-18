@@ -9,7 +9,7 @@ use timeedit\TimeEditAPI;
 
 class TimeEditCommand implements CommandExecutor{
 
-    public function onCommand(CommandSender $sender, Command $command, $label, array $args{
+    public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "timeedit"){
         
         }
