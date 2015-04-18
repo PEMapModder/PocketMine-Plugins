@@ -14,12 +14,10 @@ commands:
   aliases: [pb]
 permissions:
  planb:
-  default: false
+  default: true
   children:
    planb.command:
-    default: false
+    default: true
     children:
-     planb.command.help:
+     planb.command.planb:
       default: true
-     planb.command.restore:
-      default: notop
