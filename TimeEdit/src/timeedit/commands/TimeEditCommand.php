@@ -19,6 +19,12 @@ class TimeEditCommand implements CommandExecutor{
             if(isset($args[0])){
                 if(strtolower($args[0]) === "help"){
                     $sender->sendMessage("TimeEdit commands");
+                    $sender->sendMessage("/timeedit help -");
+                    $sender->sendMessage("/timeedit info -");
+                    $sender->sendMessage("/timeedit lock -");
+                    $sender->sendMessage("/timeedit real-");
+                    $sender->sendMessage("/timeedit set -");
+                    $sender->sendMessage("/timeedit unlock -");
                     return true;
                 }
                 if(strtolower($args[0]) === "info"){
@@ -27,7 +33,12 @@ class TimeEditCommand implements CommandExecutor{
                 }
                 if(strtolower($args[0]) === "lock"){
                     if(isset($args[1])){
-                        
+                        if(is_numeric($args[1])){
+                            
+                        }
+                        else{
+                            
+                        }
                     }
                     else{
                         
@@ -51,7 +62,12 @@ class TimeEditCommand implements CommandExecutor{
                 }
                 if(strtolower($args[0]) === "unlock"){
                     if(isset($args[1])){
-                        
+                        if(is_numeric($args[1])){
+                            
+                        }
+                        else{
+                            
+                        }
                     }
                     else{
                         
@@ -62,6 +78,12 @@ class TimeEditCommand implements CommandExecutor{
             }
             else{
                 $sender->sendMessage("TimeEdit commands");
+                $sender->sendMessage("/timeedit help -");
+                $sender->sendMessage("/timeedit info -");
+                $sender->sendMessage("/timeedit lock -");
+                $sender->sendMessage("/timeedit real-");
+                $sender->sendMessage("/timeedit set -");
+                $sender->sendMessage("/timeedit unlock -");
                 return true;
             }
         }
