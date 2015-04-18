@@ -107,7 +107,7 @@ class iManagerCommand implements CommandExecutor{
     	    	    	        }
     	    	    	    }
     	    	    	    else{
-    	    	    	    	$sender->sendMessage("§cTime value must be greater than zero.");
+    	    	    	    	$sender->sendMessage("§cTime value must be greater than 0.");
     	    	    	    }
     	    	    	}
     	    	    	else{
