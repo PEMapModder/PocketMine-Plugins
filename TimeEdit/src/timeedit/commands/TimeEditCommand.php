@@ -22,6 +22,10 @@ class TimeEditCommand implements CommandExecutor{
                 if(strtolower($args[0]) === "lock"){
                     
                 }
+                if(strtolower($args[0]) === "real"){
+                    $sender->sendMessage("Current time: ".$this->plugin->getActualTime());
+                    return true;
+                }
                 if(strtolower($args[0]) === "set"){
                     
                 }
