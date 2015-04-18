@@ -35,6 +35,7 @@ class TimeEditCommand implements CommandExecutor{
                     return true;
                 }
                 if(strtolower($args[0]) === "real"){
+                    $sender->sendMessage("Current date: ".$this->plugin->getActualDate());
                     $sender->sendMessage("Current time: ".$this->plugin->getActualTime());
                     return true;
                 }
