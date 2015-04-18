@@ -1,5 +1,5 @@
 name: PlanB
-main: planb\Loader
+main: planb\PlanBLoader
 version: 1.0.0
 api: 1.10.0
 load: POSTWORLD
