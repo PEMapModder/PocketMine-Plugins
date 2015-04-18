@@ -12,3 +12,14 @@ commands:
   usage: /planb <sub-command>
   permission: planb.command.planb
   aliases: [pb]
+permissions:
+ planb:
+  default: false
+  children:
+   planb.command:
+    default: false
+    children:
+     planb.command.help:
+      default: true
+     planb.command.restore:
+      default: notop
