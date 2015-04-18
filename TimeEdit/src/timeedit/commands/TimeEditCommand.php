@@ -53,10 +53,21 @@ class TimeEditCommand implements CommandExecutor{
                 }
                 if(strtolower($args[0]) === "set"){
                     if(isset($args[1])){
-                        
+                        if(is_numeric($args[1])){
+                            if($args[1] > 24000 || $args[1] < 0){
+                                $sender->sendMessage("§cTime value has to be greater than 0 and less than 24000.");
+                            }
+                            else{
+                                $this->getServer()->getLevel()->setTime($args[1]);
+                                $sender->sendMessage("Set level time to ".$args[1].".");
+                            }
+                        }
+                        else{
+                            $sender->sendMessage("§cTime value must be in numerical form.");
+                        }
                     }
                     else{
-                        $sender->sendMessage("");
+                        $sender->sendMessage("§cPlease specify a time value.");
                     }
                     return true;
                 }
