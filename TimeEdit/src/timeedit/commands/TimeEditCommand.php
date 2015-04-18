@@ -54,12 +54,29 @@ class TimeEditCommand implements CommandExecutor{
                 if(strtolower($args[0]) === "set"){
                     if(isset($args[1])){
                         if(is_numeric($args[1])){
-                            if($args[1] > 24000 || $args[1] < 0){
-                                $sender->sendMessage("§cTime value has to be greater than 0 and less than 24000.");
+                            if(isset($args[2])){
+                                $level = $this->getServer()->getLevelByName($args[2]);
+                                if($level !== null){
+                                    if($args[1] > 24000 || $args[1] < 0){
+                                        $sender->sendMessage("§cTime value has to be greater than 0 and less than 24000.");
+                                    }
+                                    else{
+                                        $this->getServer()->getLevelByName($level)->setTime($args[1]);
+                                        $sender->sendMessage("Set level time to ".$args[1]." on level ".$level->getName());
+                                    }
+                                }
+                                else{
+                                    $sender->sendMessage("§cPlease specify a valid level.");
+                                }
                             }
                             else{
-                                $this->getServer()->getLevel()->setTime($args[1]);
-                                $sender->sendMessage("Set level time to ".$args[1].".");
+                                if($args[1] > 24000 || $args[1] < 0){
+                                    $sender->sendMessage("§cTime value has to be greater than 0 and less than 24000.");
+                                }
+                                else{
+                                    $this->getServer()->getLevel()->setTime($args[1]);
+                                    $sender->sendMessage("Set level time to ".$args[1].".");
+                                }
                             }
                         }
                         else{
