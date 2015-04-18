@@ -1,0 +1,8 @@
+name: TimeEdit
+main: timeedit\TimeEditAPI
+version: 1.0.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Edit the time for your worlds!
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/TimeEdit
