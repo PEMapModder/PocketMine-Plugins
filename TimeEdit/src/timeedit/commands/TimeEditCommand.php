@@ -9,6 +9,10 @@ use timeedit\TimeEditAPI;
 
 class TimeEditCommand implements CommandExecutor{
 
+    public function __construct(TimeEditAPI $plugin){
+        $this->plugin = $plugin;
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "timeedit"){
             if(isset($args[0])){
