@@ -57,8 +57,11 @@ class TimeEditCommand implements CommandExecutor{
                             if(isset($args[2])){
                                 $level = $this->getServer()->getLevelByName($args[2]);
                                 if($level !== null){
-                                    if($args[1] > 24000 || $args[1] < 0){
-                                        $sender->sendMessage("§cTime value has to be greater than 0 and less than 24000.");
+                                    if($args[1] > 24000){
+                                        $sender->sendMessage("§cTime value has to be less than 24000.");
+                                    }
+                                    elseif($args[1] < 0){
+                                        $sender->sendMessage("§cTime value has to be greater than 0.");
                                     }
                                     else{
                                         $this->getServer()->getLevelByName($level)->setTime($args[1]);
@@ -70,12 +73,20 @@ class TimeEditCommand implements CommandExecutor{
                                 }
                             }
                             else{
-                                if($args[1] > 24000 || $args[1] < 0){
-                                    $sender->sendMessage("§cTime value has to be greater than 0 and less than 24000.");
+                                if($sender instanceof Player){
+                                    if($args[1] > 24000){
+                                        $sender->sendMessage("§cTime value has to be less than 24000.");
+                                    }
+                                    elseif($args[1] < 0){
+                                        $sender->sendMessage("§cTime value has to be greater than 0.");
+                                    }
+                                    else{
+                                        $sender->getLevel()->setTime($args[1]);
+                                        $sender->sendMessage("Set level time to ".$args[1].".");
+                                    }
                                 }
                                 else{
-                                    $this->getServer()->getLevel()->setTime($args[1]);
-                                    $sender->sendMessage("Set level time to ".$args[1].".");
+                                    $sender->sendMessage("§cPlease run this command in-game.");
                                 }
                             }
                         }
