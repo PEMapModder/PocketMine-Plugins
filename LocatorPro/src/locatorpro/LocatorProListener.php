@@ -2,10 +2,16 @@
 
 namespace locatorpro;
 
+use locatorpro\LocatorPro;
 use pocketmine\event\Listener;
 
 class LocatorProListener implements Listener{
 
+    public function __construct(LocatorProAPI $plugin){
+        $this->plugin = $plugin;
+        $this->plugin->getServer()->getPluginManager()->registerEvents($this, $this->plugin);
+    }
+    
     public function onPlayerJoin(PlayerJoinEvent $event){
         if($this->pos->exists($event->getPlayer()->getName())){
             
