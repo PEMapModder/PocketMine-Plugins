@@ -16,12 +16,4 @@ class TimeEditAPI extends PluginBase{
     public function onDisable(){
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
-    
-    public function getActualDate(){
-        return date("Y-m-d");
-    }
-    
-    public function getActualTime(){
-        return date("h:i:s");
-    }
 }
