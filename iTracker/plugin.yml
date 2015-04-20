@@ -1,0 +1,23 @@
+name: iTracker
+main: itracker\iTrackerAPI
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: Track players and find 
+website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iTracker
+commands:
+ itracker:
+  description: Shows all the sub-commands for /itracker
+  usage: /itracker <sub-command> [parameters]
+  permission: itracker.command.itracker
+  aliases: [it]
+permissions:
+ itracker:
+  default: op
+  children:
+   itracker.itracker:
+    default: op
+    children:
+     itracker.command.itracker:
+      default: op
