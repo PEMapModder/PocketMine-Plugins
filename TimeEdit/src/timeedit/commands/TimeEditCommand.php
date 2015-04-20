@@ -55,7 +55,7 @@ class TimeEditCommand implements CommandExecutor{
                     if(isset($args[1])){
                         if(is_numeric($args[1])){
                             if(isset($args[2])){
-                                $level = $this->getServer()->getLevelByName($args[2]);
+                                $level = $this->plugin->getServer()->getLevelByName($args[2]);
                                 if($level !== null){
                                     if($args[1] > 24000){
                                         $sender->sendMessage("§cTime value has to be less than 24000.");
@@ -64,7 +64,7 @@ class TimeEditCommand implements CommandExecutor{
                                         $sender->sendMessage("§cTime value has to be greater than 0.");
                                     }
                                     else{
-                                        $this->getServer()->getLevelByName($level)->setTime($args[1]);
+                                        $this->plugin->getServer()->getLevelByName($level)->setTime($args[1]);
                                         $sender->sendMessage("Set level time to ".$args[1]." on level ".$level->getName());
                                     }
                                 }
