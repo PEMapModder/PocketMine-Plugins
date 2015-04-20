@@ -7,15 +7,10 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
 class iTrackerAPI extends PluginBase{
-
-    public $chat, $exempt, $ip, $settings;
     
     public function onEnable(){
-    	$this->createFiles();
-    	$this->openFiles();
-    	$this->updateFiles();
-    	$this->listener = new iManagerListener($this);
-        $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
+    	$this->listener = new iTrackerListener($this);
+        $this->getCommand("itracker")->setExecutor(new commands\iTrackerCommand($this));
 	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
