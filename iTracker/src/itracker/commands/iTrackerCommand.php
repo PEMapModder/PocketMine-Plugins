@@ -16,10 +16,14 @@ class iTrackerCommand implements CommandExecutor{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "itracker"){
             if(isset($args[0])){
-                
+                if(strtolower($args[0]) === "help"){
+                    $sender->sendMessage("iTracker commands");
+                    return true;
+                }
             }
             else{
-                
+                $sender->sendMessage("iTracker commands");
+                return true;
             }
         }
     }
