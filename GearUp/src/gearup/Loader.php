@@ -13,11 +13,11 @@ use pocketmine\Player;
 class Loader extends PluginBase{
 
     public function onEnable(){
-        $this->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
+        $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
+        $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
