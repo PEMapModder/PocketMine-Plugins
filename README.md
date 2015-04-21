@@ -7,7 +7,6 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * DamageEdit
 * DoMath
 * EffectsPro
-* FoodEffects
 * GearUp
 * GlobalShield
 * GoTroll
