@@ -18,7 +18,6 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * SpreadFreeze
 * TimeEdit
 * iManager
-* iTracker
 
 ### To-do:
 * API functions for some plugins
