@@ -3,6 +3,9 @@
 namespace locatorpro;
 
 use locatorpro\LocatorPro;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\event\Listener;
 
 class LocatorProListener implements Listener{
