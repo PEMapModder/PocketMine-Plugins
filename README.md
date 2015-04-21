@@ -6,6 +6,7 @@ plugins will work, for the fact that I don't always test them thoroughly.
 ### Plugins:
 * DamageEdit
 * DoMath
+* EffectsPro
 * FoodEffects
 * GearUp
 * GlobalShield
