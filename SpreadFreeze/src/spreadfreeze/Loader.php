@@ -9,13 +9,11 @@ class Loader extends PluginBase{
     
     public function onEnable(){
         $this->createFiles();
-        $this->openFiles();
         $this->updateFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        $this->closeFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -29,14 +27,6 @@ class Loader extends PluginBase{
             $this->settings->save();
             $this->getServer()->getLogger()->notice("Created new file: SpreadFreeze\\settings.yml");
         }
-    }
-    
-    public function openFiles(){
-        fopen($this->getDataFolder()."settings.yml", "r");
-    }
-    
-    public function closeFiles(){
-        fclose($this->getDataFolder()."settings.yml");
     }
     
     public function updateFiles(){
