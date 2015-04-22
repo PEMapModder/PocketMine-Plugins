@@ -13,7 +13,6 @@ class iManagerAPI extends PluginBase{
 
     public function onEnable(){
     	$this->createFiles();
-    	$this->openFiles();
     	$this->updateFiles();
     	$this->command = new iManagerCommand($this);
     	$this->listener = new iManagerListener($this);
@@ -21,7 +20,6 @@ class iManagerAPI extends PluginBase{
     }
     
     public function onDisable(){
-    	$this->closeFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -54,20 +52,6 @@ class iManagerAPI extends PluginBase{
     	    $this->settings->save();
     	    $this->getServer()->getLogger()->notice("Created new file: iManager\\settings.yml");
     	}
-    }
-    
-    public function openFiles(){
-        fopen($this->getDataFolder()."chat.txt", "a");
-        fopen($this->getDataFolder()."exempt.txt", "a+");
-        fopen($this->getDataFolder()."ip.txt", "a+");
-        fopen($this->getDataFolder()."settings.yml", "r");
-    }
-        
-    public function closeFiles(){
-        fclose($this->getDataFolder()."chat.txt");
-        fclose($this->getDataFolder()."exempt.txt");
-        fclose($this->getDataFolder()."ip.txt");
-        fclose($this->getDataFolder()."settings.yml");
     }
     
     public function updateFiles(){
