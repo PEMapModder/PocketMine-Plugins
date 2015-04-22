@@ -12,6 +12,7 @@ class TimeEditCommand implements CommandExecutor{
 
     public function __construct(TimeEditAPI $plugin){
         $this->plugin = $plugin;
+        $this->plugin->getCommand("timeedit")->setExecutor($this);
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
