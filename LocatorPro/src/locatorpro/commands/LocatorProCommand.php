@@ -12,6 +12,7 @@ class LocatorProCommand implements CommandExecutor{
 
     public function __construct(LocatorProAPI $plugin){
         $this->plugin = $plugin;
+        $this->plugin->getCommand("locatorpro")->setExecutor($this);
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
