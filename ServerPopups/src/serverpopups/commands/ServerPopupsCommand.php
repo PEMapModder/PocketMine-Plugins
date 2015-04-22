@@ -18,7 +18,7 @@ class ServerPopupsCommand implements CommandExecutor{
             if(isset($args[0])){
                 if(strtolower($args[0]) === "broadcast"){
                     if(isset($args[1])){
-                        
+                        $this->plugin->broadcastPopup(array_slice($args, 2));
                     }
                     else{
                         
