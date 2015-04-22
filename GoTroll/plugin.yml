@@ -5,7 +5,7 @@ api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
 description: Troll players in the server and make them mad!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GoTroll
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/GoTroll
 commands:
  gotroll:
   description: Shows all the sub-commands for /gotroll

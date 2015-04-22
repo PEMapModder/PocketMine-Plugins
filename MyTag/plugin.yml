@@ -5,7 +5,7 @@ api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
 description: Players get to control what is on their name tag!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/MyTag
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/MyTag
 commands:
  mytag:
   description: Shows all the sub-commands for /mytag

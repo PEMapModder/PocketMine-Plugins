@@ -5,7 +5,7 @@ api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: Manage your server like never before!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/iManager
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/iManager
 commands:
  imanager:
   description: Shows all the sub-commands for /imanager

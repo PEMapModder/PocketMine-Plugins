@@ -5,7 +5,7 @@ api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
 description: Disable/enable certain things in certain levels!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/GlobalShield
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/GlobalShield
 permissions:
  globalshield:
   default: op

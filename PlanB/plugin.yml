@@ -5,7 +5,7 @@ api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
 description: Hackers can't cripple your server anymore!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/PlanB
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/PlanB
 commands:
  planb:
   description: Shows all the sub-commands for /planb

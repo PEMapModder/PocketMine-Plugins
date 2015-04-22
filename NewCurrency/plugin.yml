@@ -5,7 +5,7 @@ api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: A virtual currency system for your server!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/NewCurrency
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/NewCurrency
 commands:
  newcurrency:
   description: Shows all the sub-commands for /newcurrency

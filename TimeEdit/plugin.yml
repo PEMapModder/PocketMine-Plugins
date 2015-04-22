@@ -5,7 +5,7 @@ api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
 description: Edit the time for your worlds!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/TimeEdit
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/TimeEdit
 commands:
  timeedit:
   description: Shows all the sub-commands for /timeedit

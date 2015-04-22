@@ -5,7 +5,7 @@ api: 1.10.0
 load: STARTUP
 author: Gamecrafter
 description: It's easy to do math now!
-website: https://github.com/Gamecrafter/Small-Plugins/tree/master/DoMath
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/DoMath
 commands:
  domath:
   description:
