@@ -2,6 +2,7 @@
 
 namespace newcurrency;
 
+use newcurrency\commands\NewCurrencyCommand;
 use newcurrency\NewCurrencyListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
@@ -15,8 +16,8 @@ class NewCurrencyAPI extends PluginBase{
     	$this->createFiles();
     	$this->openFiles();
     	$this->updateFiles();
+    	$this->command = new NewCurrencyCommmand($this);
         $this->listener = new NewCurrencyListener($this);
-        $this->getCommand("newcurrency")->setExecutor(new commands\NewCurrencyCommand($this));
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
