@@ -4,6 +4,8 @@ namespace serverpopups;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use serverpopups\commands\ServerPopupsCommand;
+use serverpopups\ServerPopupsListener;
 
 class ServerPopupsAPI extends PluginBase{
 
@@ -13,6 +15,8 @@ class ServerPopupsAPI extends PluginBase{
         $this->createFiles();
         $this->openFiles();
         $this->updateFiles();
+        $this->command = new ServerPopupsCommand($this);
+        $this->listener = new ServerPopupsListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
