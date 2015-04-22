@@ -11,6 +11,7 @@ class ServerPopupsCommand implements CommandExecutor{
 
     public function __construct(ServerPopupsAPI $plugin){
         $this->plugin = $plugin;
+        $this->plugin->getCommand("serverpopups")->setExecutor($this);
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
