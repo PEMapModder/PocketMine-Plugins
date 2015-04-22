@@ -12,6 +12,7 @@ class MyTagCommand implements CommandExecutor{
 
     public function __construct(MyTagAPI $plugin){
     	$this->plugin = $plugin;
+    	$this->plugin->getCommand("mytag")->setExecutor($this);
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
