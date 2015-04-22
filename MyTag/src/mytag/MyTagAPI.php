@@ -2,6 +2,7 @@
 
 namespace mytag;
 
+use mytag\commands\MyTagCommand;
 use mytag\MyTagListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
@@ -14,8 +15,8 @@ class MyTagAPI extends PluginBase{
         $this->createFiles();
         $this->openFiles();
         $this->updateFiles();
+        $this->command = new MyTagCommand($this);
     	$this->listener = new MyTagListener($this);
-        $this->getCommand("mytag")->setExecutor(new commands\MyTagCommand($this));
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
