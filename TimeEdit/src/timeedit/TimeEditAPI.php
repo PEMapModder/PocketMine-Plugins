@@ -3,13 +3,14 @@
 namespace timeedit;
 
 use pocketmine\plugin\PluginBase;
+use timeedit\commands\TimeEditCommand;
 use timeedit\TimeEditListener;
 
 class TimeEditAPI extends PluginBase{
 
     public function onEnable(){
+        $this->command = new TimeEditCommand($this);
         $this->listener = new TimeEditListener($this);
-        $this->getCommand("timeedit")->setExecutor(new commands\TimeEditCommand($this));
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
