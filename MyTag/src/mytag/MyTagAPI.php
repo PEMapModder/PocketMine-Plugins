@@ -13,7 +13,6 @@ class MyTagAPI extends PluginBase{
 
     public function onEnable(){
         $this->createFiles();
-        $this->openFiles();
         $this->updateFiles();
         $this->command = new MyTagCommand($this);
     	$this->listener = new MyTagListener($this);
@@ -21,7 +20,6 @@ class MyTagAPI extends PluginBase{
     }
     
     public function onDisable(){
-        $this->closeFiles();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -45,16 +43,6 @@ class MyTagAPI extends PluginBase{
         }
     }
 
-    public function openFiles(){
-        fopen($this->getDataFolder()."settings.yml", "r");
-        fopen($this->getDataFolder()."tag.yml", "a+");
-    }
-        
-    public function closeFiles(){
-        fclose($this->getDataFolder()."settings.yml");
-        fclose($this->getDataFolder()."tag.yml");
-    }
-    
     public function updateFiles(){
         if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
             unlink($this->getDataFolder()."settings.yml");
