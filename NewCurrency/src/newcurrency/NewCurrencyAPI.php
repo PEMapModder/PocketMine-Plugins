@@ -14,7 +14,6 @@ class NewCurrencyAPI extends PluginBase{
     
     public function onEnable(){
     	$this->createFiles();
-    	$this->openFiles();
     	$this->updateFiles();
     	$this->command = new NewCurrencyCommmand($this);
         $this->listener = new NewCurrencyListener($this);
@@ -22,7 +21,6 @@ class NewCurrencyAPI extends PluginBase{
     }
     
     public function onDisable(){
-	$this->closeFiles();
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -47,16 +45,6 @@ class NewCurrencyAPI extends PluginBase{
 	    $this->settings->save();
 	    $this->getServer()->getLogger()->notice("Created new file: NewCurrency\\settings.yml");
     	}
-    }
-    
-    public function openFiles(){
-        fopen($this->getDataFolder()."account.yml", "a+");
-        fopen($this->getDataFolder()."settings.yml", "r");
-    }
-        
-    public function closeFiles(){
-        fclose($this->getDataFolder()."account.yml");
-        fclose($this->getDataFolder()."settings.yml");
     }
     
     public function updateFiles(){
