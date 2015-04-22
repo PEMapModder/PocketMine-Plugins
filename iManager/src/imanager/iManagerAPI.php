@@ -2,6 +2,7 @@
 
 namespace imanager;
 
+use imanager\commands\iManagerCommand;
 use imanager\iManagerListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
@@ -14,8 +15,8 @@ class iManagerAPI extends PluginBase{
     	$this->createFiles();
     	$this->openFiles();
     	$this->updateFiles();
+    	$this->command = new iManagerCommand($this);
     	$this->listener = new iManagerListener($this);
-        $this->getCommand("imanager")->setExecutor(new commands\iManagerCommand($this));
 	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
