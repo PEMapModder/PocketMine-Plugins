@@ -9,7 +9,6 @@ class GlobalShieldLoader extends PluginBase implements Listener{
     
     public function onEnable(){
         $this->listener = new GlobalShieldListener($this);
-    	$this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
