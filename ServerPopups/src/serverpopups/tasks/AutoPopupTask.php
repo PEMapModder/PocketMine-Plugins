@@ -5,7 +5,7 @@ namespace serverpopups\tasks;
 use pocketmine\scheduler\PluginTask;
 use serverpopups\ServerPopupsAPI;
 
-class RepeatPopupTask extends PluginTask{
+class AutoPopupTask extends PluginTask{
 
     public function __construct(ServerPopupsAPI $plugin){
         $this->plugin = $plugin;
