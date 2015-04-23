@@ -7,4 +7,11 @@ use timeedit\TimeEditAPI;
 
 class TellTimeTask extends PluginTask{
 
+    public function __construct(TimeEditAPI $plugin){
+        $this->plugin = $plugin;
+    }
+    
+    public function onRun($currentTick){
+      
+    }
 }
