@@ -34,7 +34,7 @@ class iManagerListener implements Listener{
     	    if($this->plugin->ip->exists(strtolower($event->getPlayer()->getAddress()))){
     	    }
     	    else{
-    	    	$event->setCancelled();
+    	    	$event->setCancelled(true);
     	    }
     	}
     }
