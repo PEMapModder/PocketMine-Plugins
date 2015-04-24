@@ -1,0 +1,8 @@
+name: ServerEXP
+main: serverexp\ServerEXPAPI
+version: 1.0.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Players rank up with the amount of EXP they have!
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/ServerEXP
