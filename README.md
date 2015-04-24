@@ -14,6 +14,7 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * MyTag
 * NewCurrency
 * PlanB
+* ServerEXP
 * ServerPopups
 * SpreadFreeze
 * TimeEdit
