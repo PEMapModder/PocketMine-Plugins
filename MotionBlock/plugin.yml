@@ -1,0 +1,8 @@
+name: MotionBlock
+main: motionblock\MotionBlockAPI
+version: 1.0.0
+api: 1.10.0
+load: POSTWORLD
+author: Gamecrafter
+description: Walk over a block, what will happen?
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/MotionBlock
