@@ -20,7 +20,7 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * iManager
 
 ### To-do:
-* API functions for some plugins
+* Add API functions for some plugins
 * Fix any bugs if found
 * Make `.phar` files lighter
 * Split `Loader.php` into multiple files
