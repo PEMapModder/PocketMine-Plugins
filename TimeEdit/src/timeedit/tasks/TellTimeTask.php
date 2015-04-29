@@ -12,6 +12,6 @@ class TellTimeTask extends PluginTask{
     }
     
     public function onRun($currentTick){
-        
+        $this->plugin->getServer()->broadcastMessage();
     }
 }
