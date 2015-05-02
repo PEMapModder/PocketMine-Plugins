@@ -6,7 +6,6 @@ plugins will work, for the fact that I don't always test them thoroughly.
 ### Plugins:
 * DoMath
 * EffectsPro
-* GearUp
 * GlobalShield
 * LocatorPro
 * MotionBlock
