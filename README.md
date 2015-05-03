@@ -8,6 +8,7 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * EffectsPro
 * GlobalShield
 * LocatorPro
+* MoreFun
 * MotionBlock
 * MyTag
 * NewCurrency
