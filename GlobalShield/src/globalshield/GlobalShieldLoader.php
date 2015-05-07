@@ -5,7 +5,7 @@ namespace globalshield;
 use globalshield\GlobalShieldListener;
 use pocketmine\plugin\PluginBase;
 
-class GlobalShieldLoader extends PluginBase implements Listener{
+class GlobalShieldLoader extends PluginBase{
     
     public function onEnable(){
         $this->listener = new GlobalShieldListener($this);
