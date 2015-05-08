@@ -17,9 +17,18 @@ class ServerPopupsCommand implements CommandExecutor{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "serverpopups"){
             if(isset($args[0])){
-                if(strtolower($args[0]) === "broadcast"){
+                if(strtolower($args[0]) === "broadcastpopup"){
                     if(isset($args[1])){
                         $this->plugin->broadcastPopup(array_slice($args, 2));
+                    }
+                    else{
+                        
+                    }
+                    return true;
+                }
+                if(strtolower($args[0]) === "broadcasttip"){
+                    if(isset($args[1])){
+                        $this->plugin->broadcastTip(array_slice($args, 2));
                     }
                     else{
                         
@@ -30,7 +39,10 @@ class ServerPopupsCommand implements CommandExecutor{
                     $sender->sendMessage("ServerPopups commands");
                     return true;
                 }
-                if(strtolower($args[0]) === "send"){
+                if(strtolower($args[0]) === "sendpopup"){
+                    return true;
+                }
+                if(strtolower($args[0]) === "sendtip"){
                     return true;
                 }
                 return false;
