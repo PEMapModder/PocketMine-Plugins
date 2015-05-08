@@ -48,4 +48,10 @@ class ServerPopupsAPI extends PluginBase{
             $player->sendPopup($message);
         }
     }
+    
+    public function broadcastTip($message){
+    	foreach($this->getServer()->getOnlinePlayers() as $player){
+    	    $player->sendTip($message);
+    	}
+    }
 }
