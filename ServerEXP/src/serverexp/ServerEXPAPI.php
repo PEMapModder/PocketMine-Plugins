@@ -15,19 +15,19 @@ class ServerEXPAPI extends PluginBase{
       
     }
     
-    public function getEXP($player){
+    public function getEXP(Player $player){
       
     }
     
-    public function decreaseEXP($player){
+    public function decreaseEXP(Player $player, $amount){
       
     }
     
-    public function increaseEXP($player){
+    public function increaseEXP(Player $player, $amount){
       
     }
     
-    public function setEXP($player){
+    public function setEXP(Player $player, $amount){
       
     }
 }
