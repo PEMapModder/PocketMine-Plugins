@@ -1,16 +1,16 @@
 <?php
 
-namespace timeedit;
+namespace timeessentials;
 
 use pocketmine\plugin\PluginBase;
-use timeedit\commands\TimeEditCommand;
-use timeedit\TimeEditListener;
+use timeessentials\commands\TimeEssentialsCommand;
+use timeessentials\TimeEssentialsListener;
 
-class TimeEditAPI extends PluginBase{
+class TimeEssentialsAPI extends PluginBase{
 
     public function onEnable(){
-        $this->command = new TimeEditCommand($this);
-        $this->listener = new TimeEditListener($this);
+        $this->command = new TimeEssentialsCommand($this);
+        $this->listener = new TimeEssentialsListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
