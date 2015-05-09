@@ -1,14 +1,14 @@
-name: TimeEdit
-main: timeedit\TimeEditAPI
+name: TimeEssentials
+main: timeessentials\TimeEssentialsAPI
 version: 1.0.0
 api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
 description: Edit the time for your worlds!
-website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/TimeEdit
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/TimeEssentials
 commands:
- timeedit:
-  description: Shows all the sub-commands for /timeedit
-  usage: /timeedit <sub-command> [parameters]
-  permission: timeedit.command.timeedit
+ timeessentials:
+  description: Shows all the sub-commands for /timeessentials
+  usage: /timeessentials <sub-command> [parameters]
+  permission: timeessentials.command.timeessentials
   aliases: [te]
