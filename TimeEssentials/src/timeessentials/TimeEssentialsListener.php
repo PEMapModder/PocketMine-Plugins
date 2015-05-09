@@ -1,11 +1,11 @@
 <?php
 
-namespace timeedit;
+namespace timeessentials;
 
 use pocketmine\event\Listener;
-use timeedit\TimeEditAPI;
+use timeessentials\TimeEssentialsAPI;
 
-class TimeEditListener implements Listener{
+class TimeEssentialsListener implements Listener{
 
     public function __construct(TimeEditAPI $plugin){
         $this->plugin = $plugin;
