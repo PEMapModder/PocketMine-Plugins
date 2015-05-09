@@ -1,13 +1,13 @@
 <?php
 
-namespace timeedit\tasks;
+namespace timeessentials\tasks;
 
 use pocketmine\scheduler\PluginTask;
-use timeedit\TimeEditAPI;
+use timeessentials\TimeEssentialsAPI;
 
 class TellTimeTask extends PluginTask{
 
-    public function __construct(TimeEditAPI $plugin){
+    public function __construct(TimeEssentialsAPI $plugin){
         $this->plugin = $plugin;
     }
     
