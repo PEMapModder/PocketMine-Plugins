@@ -1,31 +1,31 @@
 <?php
 
-namespace timeedit\commands;
+namespace timeessentials\commands;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
-use timeedit\TimeEditAPI;
+use timeessentials\TimeEssentialsAPI;
 
 class TimeEditCommand implements CommandExecutor{
 
-    public function __construct(TimeEditAPI $plugin){
+    public function __construct(TimeEssentialsAPI $plugin){
         $this->plugin = $plugin;
-        $this->plugin->getCommand("timeedit")->setExecutor($this);
+        $this->plugin->getCommand("timeessentials")->setExecutor($this);
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-        if(strtolower($command->getName()) === "timeedit"){
+        if(strtolower($command->getName()) === "timeessentials"){
             if(isset($args[0])){
                 if(strtolower($args[0]) === "help"){
-                    $sender->sendMessage("TimeEdit commands");
-                    $sender->sendMessage("/timeedit help -");
-                    $sender->sendMessage("/timeedit info -");
-                    $sender->sendMessage("/timeedit lock -");
-                    $sender->sendMessage("/timeedit real-");
-                    $sender->sendMessage("/timeedit set -");
-                    $sender->sendMessage("/timeedit unlock -");
+                    $sender->sendMessage("TimeEssentials commands");
+                    $sender->sendMessage("/timeessentials help -");
+                    $sender->sendMessage("/timeessentials info -");
+                    $sender->sendMessage("/timeessentials lock -");
+                    $sender->sendMessage("/timeessentials real-");
+                    $sender->sendMessage("/timeessentials set -");
+                    $sender->sendMessage("/timeessentials unlock -");
                     return true;
                 }
                 if(strtolower($args[0]) === "info"){
@@ -117,13 +117,13 @@ class TimeEditCommand implements CommandExecutor{
                 return false;
             }
             else{
-                $sender->sendMessage("TimeEdit commands");
-                $sender->sendMessage("/timeedit help -");
-                $sender->sendMessage("/timeedit info -");
-                $sender->sendMessage("/timeedit lock -");
-                $sender->sendMessage("/timeedit real-");
-                $sender->sendMessage("/timeedit set -");
-                $sender->sendMessage("/timeedit unlock -");
+                $sender->sendMessage("TimeEssentials commands");
+                $sender->sendMessage("/timeessentials help -");
+                $sender->sendMessage("/timeessentials info -");
+                $sender->sendMessage("/timeessentials lock -");
+                $sender->sendMessage("/timeessentials real-");
+                $sender->sendMessage("/timeessentials set -");
+                $sender->sendMessage("/timeessentials unlock -");
                 return true;
             }
         }
