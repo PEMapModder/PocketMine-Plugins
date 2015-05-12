@@ -33,7 +33,14 @@ class ServerHelpLoader extends PluginBase implements Listener{
                 }
             }
             else{
-                
+                if(isset($this->getConfig()->getNested("help.1")){
+                    foreach($this->getConfig()->getNested("help.1") as $message){
+                        $event->getPlayer()->sendMessage($message);
+                    }
+                }
+                else{
+                    $event->getPlayer()->sendMessage($this->getConfig()->get("on-error-message"));
+                }
             }
         }
     }
