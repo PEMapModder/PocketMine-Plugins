@@ -21,7 +21,20 @@ class ServerHelpLoader extends PluginBase implements Listener{
     public function onPlayerCommandPreprocess(PlayerCommandPreprocess $event){
         $command = explode(" ", strtolower($event->getMessage()));
         if($command[0] === "/help"){
-          
+            $event->setCancelled(true);
+            if(isset($command[1])){
+                if(isset($this->getConfig()->getNested("help.".$command[1]))){
+                    foreach($this->getConfig()->getNested("help.".$command[1]) as $message){
+                        $event->getPlayer()->sendMessage($message);
+                    }
+                }
+                else{
+                    $event->getPlayer()->sendMessage($this->getConfig()->get("on-error-message"));
+                }
+            }
+            else{
+                
+            }
         }
     }
 }
