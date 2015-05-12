@@ -1,0 +1,8 @@
+name: ServerHelp
+main: serverhelp\ServerHelpLoader
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: Customize what is shown to players on /help!
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/ServerHelp
