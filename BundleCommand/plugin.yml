@@ -1,0 +1,8 @@
+name: BundleCommand
+main: bundlecommand\BundleCommandLoader
+version: 1.0.0
+api: 1.10.0
+load: STARTUP
+author: Gamecrafter
+description: Run one command to run multiple commands!
+website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/BundleCommand
