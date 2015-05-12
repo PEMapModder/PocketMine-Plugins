@@ -4,6 +4,7 @@ namespace serverexp;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\Player;
 
 class ServerEXPAPI extends PluginBase{
 
