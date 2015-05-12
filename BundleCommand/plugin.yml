@@ -6,3 +6,9 @@ load: STARTUP
 author: Gamecrafter
 description: Run one command to run multiple commands!
 website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/BundleCommand
+commands:
+ bundlecommand:
+  description:
+  usage: /bundlecommand [parameters]
+  permission: bundlecommand.command.bundlecommand
+  aliases: [bc]
