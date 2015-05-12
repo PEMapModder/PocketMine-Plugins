@@ -4,7 +4,7 @@ version: 1.0.0
 api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
-description: Blow up everything when you touch a block!
+description: TNTs are so retro!
 website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/FistBlaster
 commands:
  fistblaster:
