@@ -19,7 +19,7 @@ class ServerPopupsCommand implements CommandExecutor{
             if(isset($args[0])){
                 if(strtolower($args[0]) === "broadcastpopup"){
                     if(isset($args[1])){
-                        $this->plugin->broadcastPopup(array_slice($args, 1));
+                        $this->plugin->broadcastPopup(implode(" ", array_slice($args, 1)));
                     }
                     else{
                         
@@ -28,7 +28,7 @@ class ServerPopupsCommand implements CommandExecutor{
                 }
                 if(strtolower($args[0]) === "broadcasttip"){
                     if(isset($args[1])){
-                        $this->plugin->broadcastTip(array_slice($args, 1));
+                        $this->plugin->broadcastTip(implode(" ", array_slice($args, 1)));
                     }
                     else{
                         
