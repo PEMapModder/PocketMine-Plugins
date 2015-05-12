@@ -4,6 +4,7 @@ MIT. Please note that not all the plugins here may be released on the PocketMine
 plugins will work, for the fact that I don't always test them thoroughly.
 
 ### Plugins:
+* BundleCommand
 * DoMath
 * EffectsPro
 * FistBlaster
