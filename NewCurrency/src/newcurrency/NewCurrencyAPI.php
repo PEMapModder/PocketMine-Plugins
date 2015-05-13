@@ -13,7 +13,7 @@ class NewCurrencyAPI extends PluginBase{
     public $account, $settings;
     
     public function onEnable(){
-    	$this->createFiles();
+    	$this->saveFiles();
     	$this->command = new NewCurrencyCommmand($this);
         $this->listener = new NewCurrencyListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -23,7 +23,7 @@ class NewCurrencyAPI extends PluginBase{
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function createFiles(){
+    public function saveFiles(){
     	if(!file_exists($this->getDataFolder())){
     	    mkdir($this->getDataFolder());
     	}
