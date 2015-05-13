@@ -47,7 +47,7 @@ class iManagerAPI extends PluginBase{
     	return $this->ip->exists($address);
     }
     
-    public function isExempted($player){
+    public function isPlayerExempted($player){
     	return $this->exempt->exists($player);
     }
 }
