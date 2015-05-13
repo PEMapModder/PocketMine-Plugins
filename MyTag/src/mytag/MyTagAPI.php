@@ -26,6 +26,9 @@ class MyTagAPI extends PluginBase{
         if(!file_exists($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
+        if(!file_exists($this->getDataFolder()."config.yml")){
+            $this->saveDefaultConfig();
+        }
         if(!file_exists($this->getDataFolder()."tag.yml")){
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
             $this->tag->save();
