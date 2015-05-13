@@ -1,1 +1,5 @@
 #Configuration file for iManager v1.2.0
+enable:
+ ip-whitelist: false
+ log-command: true
+ save-chat: true
