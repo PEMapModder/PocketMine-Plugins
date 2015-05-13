@@ -1,6 +1,6 @@
 name: PlanB
 main: planb\PlanBLoader
-version: 1.0.0
+version: 1.1.0
 api: 1.10.0
 load: POSTWORLD
 author: Gamecrafter
@@ -8,8 +8,8 @@ description: Hackers can't cripple your server anymore!
 website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/PlanB
 commands:
  planb:
-  description: Shows all the sub-commands for /planb
-  usage: /planb <sub-command>
+  description:
+  usage: /planb
   permission: planb.command.planb
   aliases: [pb]
 permissions:
