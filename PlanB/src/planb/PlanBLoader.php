@@ -10,8 +10,6 @@ use pocketmine\Player;
 
 class PlanBLoader extends PluginBase{
     
-    public $backup;
-    
     public function onEnable(){
         $this->saveFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
