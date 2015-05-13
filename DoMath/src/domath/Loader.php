@@ -2,9 +2,10 @@
 
 namespace domath;
 
+use domath\command\DoMathCommand;
 use pocketmine\plugin\PluginBase;
 
-class Loader extends PluginBase{
+class DoMathLoader extends PluginBase{
     
     public function onEnable(){
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
