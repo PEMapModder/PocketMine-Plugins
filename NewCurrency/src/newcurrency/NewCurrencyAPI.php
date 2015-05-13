@@ -2,7 +2,7 @@
 
 namespace newcurrency;
 
-use newcurrency\commands\NewCurrencyCommand;
+use newcurrency\command\NewCurrencyCommand;
 use newcurrency\NewCurrencyListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
