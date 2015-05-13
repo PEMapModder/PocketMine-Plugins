@@ -25,7 +25,12 @@ class BundleCommandLoader extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "bundlecommand"){
             if(isset($args[0])){
-                
+                if($this->getConfig()->getNested("bundle.".strtolower($args[0])) !== null){
+                    
+                }
+                else{
+                    
+                }
             }
             else{
                 
