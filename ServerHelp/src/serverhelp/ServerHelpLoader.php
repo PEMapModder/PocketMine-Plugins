@@ -9,13 +9,17 @@ use pocketmine\plugin\PluginBase;
 class ServerHelpLoader extends PluginBase implements Listener{
 
     public function onEnable(){
-        $this->saveDefaultConfig();
+        $this->saveFiles();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
+    }
+    
+    public function saveFiles(){
+        
     }
     
     public function onPlayerCommandPreprocess(PlayerCommandPreprocess $event){
