@@ -1,6 +1,6 @@
 <?php
 
-namespace effectspro\tasks;
+namespace effectspro\task;
 
 use pocketmine\scheduler\PluginTask;
 
