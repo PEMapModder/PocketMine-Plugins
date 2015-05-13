@@ -1,6 +1,6 @@
 <?php
 
-namespace mytag\commands;
+namespace mytag\command;
 
 use mytag\MyTagAPI;
 use pocketmine\command\Command;
