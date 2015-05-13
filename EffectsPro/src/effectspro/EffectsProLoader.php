@@ -2,6 +2,7 @@
 
 namespace effectspro;
 
+use effectspro\task\AutoEffectTask;
 use pocketmine\plugin\PluginBase;
 
 class EffectsProLoader extends PluginBase{
