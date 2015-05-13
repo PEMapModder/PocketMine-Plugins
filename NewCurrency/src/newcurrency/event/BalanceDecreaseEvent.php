@@ -1,6 +1,6 @@
 <?php
 
-namespace newcurrency\events;
+namespace newcurrency\event;
 
 class BalanceDecreaseEvent{
 
