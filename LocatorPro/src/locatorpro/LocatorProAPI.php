@@ -34,12 +34,6 @@ class LocatorProAPI extends PluginBase{
             $this->pos->save();
             $this->getServer()->getLogger()->notice("Created new file: LocatorPro\\pos.yml");
         }
-        if(!file_exists($this->getDataFolder()."settings.yml")){
-            $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
-            $this->settings->set("version", $this->getDescription()->getVersion());
-            $this->settings->save();
-            $this->getServer()->getLogger()->notice("Created new file: LocatorPro\\settings.yml");
-        }
     }
 
     public function saveLocation($x, $y, $z, $yaw, $pitch, $level){
