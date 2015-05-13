@@ -16,13 +16,18 @@ class BundleCommandLoader extends PluginBase{
         
     }
     
-    public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-        if(strtolower($command->getName()) === "bundlecommand"){
-          
-        }
-    }
-    
     public function saveFiles(){
         
+    }
+    
+    public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+        if(strtolower($command->getName()) === "bundlecommand"){
+            if(isset($args[0])){
+                
+            }
+            else{
+                
+            }
+        }
     }
 }
