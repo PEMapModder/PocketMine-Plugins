@@ -19,7 +19,9 @@ class ServerHelpLoader extends PluginBase implements Listener{
     }
     
     public function saveFiles(){
-        
+        if(!file_exists($this->getDataFolder()."config.yml")){
+            $this->saveDefaultConfig();
+        }
     }
     
     public function onPlayerCommandPreprocess(PlayerCommandPreprocess $event){
