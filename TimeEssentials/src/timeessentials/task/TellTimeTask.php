@@ -1,6 +1,6 @@
 <?php
 
-namespace timeessentials\tasks;
+namespace timeessentials\task;
 
 use pocketmine\scheduler\PluginTask;
 use timeessentials\TimeEssentialsAPI;
