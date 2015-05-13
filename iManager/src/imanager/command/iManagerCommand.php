@@ -1,6 +1,6 @@
 <?php
 
-namespace imanager\commands;
+namespace imanager\command;
 
 use imanager\iManagerAPI;
 use pocketmine\command\Command;
