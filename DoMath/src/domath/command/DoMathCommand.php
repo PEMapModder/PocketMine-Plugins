@@ -1,6 +1,6 @@
 <?php
 
-namespace domath\commands;
+namespace domath\command;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
