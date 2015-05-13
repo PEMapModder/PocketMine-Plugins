@@ -1,6 +1,6 @@
 <?php
 
-namespace timeessentials\commands;
+namespace timeessentials\command;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
