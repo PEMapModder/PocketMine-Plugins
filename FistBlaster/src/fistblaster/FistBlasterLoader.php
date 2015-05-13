@@ -27,7 +27,9 @@ class FistBlasterLoader extends PluginBase implements Listener{
     }
     
     public function saveFiles(){
-    	
+    	if(!file_exists($this->getDataFolder()."config.yml")){
+    	    $this->saveDefaultConfig();
+    	}
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
