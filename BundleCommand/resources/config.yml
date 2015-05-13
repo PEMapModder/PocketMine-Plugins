@@ -1,5 +1,7 @@
 #Configuration file for BundleCommand v1.0.0
 bundle:
  lockdown:
- - imanager kickall
- - stop
+  default: true
+  commands:
+  - imanager kickall
+  - stop
