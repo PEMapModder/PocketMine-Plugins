@@ -25,6 +25,11 @@ class FistBlasterLoader extends PluginBase implements Listener{
     	unset($this->fistblaster);
 	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
+    
+    public function saveFiles(){
+    	
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "fistblaster"){
             if($sender instanceof Player){
@@ -55,9 +60,5 @@ class FistBlasterLoader extends PluginBase implements Listener{
         if(isset($this->fistblaster[$event->getPlayer()->getName()])){
             unset($this->fistblaster[$event->getPlayer()->getName()]);
         }
-    }
-    
-    public function saveFiles(){
-    	
     }
 }
