@@ -30,9 +30,7 @@ class PlanBLoader extends PluginBase{
                     $sender->sendMessage("§eRestoring the OP status of all OPs...");
                     foreach($this->getServer()->getOnlinePlayers() as $player){
                         if($this->backup->exists(strtolower($player->getName()))){
-                            if($player->isOp()){
-                            }
-                            else{
+                            if(!$player->isOp()){
                                 $player->setOp(true);
                                 $player->sendMessage("§aYour OP status has been restored.");
                                 $sender->sendMessage("§aRestored ".$player->getName()."'s OP status.");
