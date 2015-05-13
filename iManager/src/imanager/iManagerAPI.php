@@ -13,7 +13,6 @@ class iManagerAPI extends PluginBase{
 
     public function onEnable(){
     	$this->createFiles();
-    	$this->updateFiles();
     	$this->command = new iManagerCommand($this);
     	$this->listener = new iManagerListener($this);
 	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -53,15 +52,7 @@ class iManagerAPI extends PluginBase{
     	    $this->getServer()->getLogger()->notice("Created new file: iManager\\settings.yml");
     	}
     }
-    
-    public function updateFiles(){
-    	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
-    	    unlink($this->getDataFolder."settings.yml");
-    	    $this->createFiles();
-    	    $this->getServer()->getLogger()->warning("Updated file: iManager\\settings.yml");
-    	}
-    }
-    
+
     public function isAddressWhitelisted($address){
     	return $this->ip->exists($address);
     }
