@@ -9,11 +9,15 @@ use pocketmine\Player;
 class ServerEXPAPI extends PluginBase{
 
     public function onEnable(){
-      
+        $this->saveFiles();
     }
     
     public function onDisable(){
       
+    }
+    
+    public function saveFiles(){
+        
     }
     
     public function getEXP(Player $player){
