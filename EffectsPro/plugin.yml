@@ -1,5 +1,5 @@
 name: EffectsPro
-main: effectspro\
+main: effectspro\EffectsProLoader
 version: 1.0.0
 api: 1.12.0
 load: POSTWORLD
