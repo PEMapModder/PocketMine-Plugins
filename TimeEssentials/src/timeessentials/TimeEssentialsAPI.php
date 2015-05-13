@@ -9,6 +9,7 @@ use timeessentials\TimeEssentialsListener;
 class TimeEssentialsAPI extends PluginBase{
 
     public function onEnable(){
+        $this->saveFiles();
         $this->command = new TimeEssentialsCommand($this);
         $this->listener = new TimeEssentialsListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -16,5 +17,9 @@ class TimeEssentialsAPI extends PluginBase{
     
     public function onDisable(){
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
+    }
+    
+    public function saveFiles(){
+        
     }
 }
