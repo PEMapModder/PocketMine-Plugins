@@ -2,7 +2,7 @@
 
 namespace mytag;
 
-use mytag\commands\MyTagCommand;
+use mytag\command\MyTagCommand;
 use mytag\MyTagListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
