@@ -1,1 +1,4 @@
 #Configuration file for ServerEXP v1.0.0
+enable:
+ auto-register: true
+default: 0
