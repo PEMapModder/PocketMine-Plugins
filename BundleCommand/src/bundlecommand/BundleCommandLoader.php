@@ -4,6 +4,7 @@ namespace bundlecommand;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\permission\Permission;
 use pocketmine\plugin\PluginBase;
 
 class BundleCommandLoader extends PluginBase{
