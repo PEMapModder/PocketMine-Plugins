@@ -1,6 +1,9 @@
 #Configuration file for ServerHelp v1.0.0
 help:
  1:
- - "Showing page 1 of 1"
+ - "Showing page 1 of 2"
  - "/command - Command description"
+ 2:
+ - "Showing page 2 of 2"
+ - "/anothercommand - Another command description"
 on-error-message: "Sorry, that page could not be found!"
