@@ -18,7 +18,6 @@ class PlanBLoader extends PluginBase{
     }
     
     public function onDisable(){
-        $this->backup->save();
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -30,6 +29,7 @@ class PlanBLoader extends PluginBase{
             $this->backup = new Config($this->getDataFolder()."backup.txt", Config::ENUM);   
         }
     }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "planb"){
             if($sender instanceof Player){
