@@ -15,7 +15,7 @@ class LocatorProAPI extends PluginBase{
     public $pos, $settings;
     
     public function onEnable(){
-    	$this->createFiles();
+    	$this->saveFiles();
     	$this->command = new LocatorProCommand($this);
     	$this->listener = new LocatorProListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -25,7 +25,7 @@ class LocatorProAPI extends PluginBase{
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function createFiles(){
+    public function saveFiles(){
         if(!is_dir($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
