@@ -13,7 +13,6 @@ class MyTagAPI extends PluginBase{
 
     public function onEnable(){
         $this->createFiles();
-        $this->updateFiles();
         $this->command = new MyTagCommand($this);
     	$this->listener = new MyTagListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -43,14 +42,6 @@ class MyTagAPI extends PluginBase{
         }
     }
 
-    public function updateFiles(){
-        if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
-            unlink($this->getDataFolder()."settings.yml");
-            $this->createFiles();
-            $this->getServer()->getLogger()->warning("Updated file: MyTag\\settings.yml");
-        }
-    }
-    
     public function getSavedNameTag($player){
         return $this->tag->get($player);
     }
