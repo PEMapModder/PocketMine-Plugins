@@ -3,7 +3,7 @@
 namespace timeessentials;
 
 use pocketmine\plugin\PluginBase;
-use timeessentials\commands\TimeEssentialsCommand;
+use timeessentials\command\TimeEssentialsCommand;
 use timeessentials\TimeEssentialsListener;
 
 class TimeEssentialsAPI extends PluginBase{
