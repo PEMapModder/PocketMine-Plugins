@@ -12,7 +12,7 @@ class iManagerAPI extends PluginBase{
     public $chat, $exempt, $ip, $settings;
 
     public function onEnable(){
-    	$this->createFiles();
+    	$this->saveFiles();
     	$this->command = new iManagerCommand($this);
     	$this->listener = new iManagerListener($this);
 	$this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -22,7 +22,7 @@ class iManagerAPI extends PluginBase{
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function createFiles(){
+    public function saveFiles(){
     	if(!file_exists($this->getDataFolder())){
     	    mkdir($this->getDataFolder());
     	}
