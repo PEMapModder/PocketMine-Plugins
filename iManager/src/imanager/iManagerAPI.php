@@ -41,16 +41,6 @@ class iManagerAPI extends PluginBase{
     	    $this->ip->save();
     	    $this->getServer()->getLogger()->notice("Created new file: iManager\\ip.txt");
     	}
-    	if(!file_exists($this->getDataFolder()."settings.yml")){
-    	    $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
-    	    $this->settings->set("version", $this->getDescription()->getVersion());
-    	    $this->settings->setNested("enable.ip-whitelist", false);
-    	    $this->settings->setNested("enable.log-commands", true);
-    	    $this->settings->setNested("enable.save-chat", true);
-    	    $this->settings->set("preferred-economy", "NewCurrency");
-    	    $this->settings->save();
-    	    $this->getServer()->getLogger()->notice("Created new file: iManager\\settings.yml");
-    	}
     }
 
     public function isAddressWhitelisted($address){
