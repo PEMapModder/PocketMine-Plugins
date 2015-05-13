@@ -14,7 +14,6 @@ class NewCurrencyAPI extends PluginBase{
     
     public function onEnable(){
     	$this->createFiles();
-    	$this->updateFiles();
     	$this->command = new NewCurrencyCommmand($this);
         $this->listener = new NewCurrencyListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -44,14 +43,6 @@ class NewCurrencyAPI extends PluginBase{
 	    $this->settings->set("symbol", "$");
 	    $this->settings->save();
 	    $this->getServer()->getLogger()->notice("Created new file: NewCurrency\\settings.yml");
-    	}
-    }
-    
-    public function updateFiles(){
-    	if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
-    	    unlink($this->getDataFolder()."settings.yml");
-    	    $this->createFiles();
-    	    $this->getServer()->getLogger()->warning("Updated file: MyCurrency\\settings.yml");
     	}
     }
     
