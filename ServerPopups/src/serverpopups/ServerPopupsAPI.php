@@ -12,7 +12,7 @@ class ServerPopupsAPI extends PluginBase{
     public $settings;
     
     public function onEnable(){
-        $this->createFiles();
+        $this->saveFiles();
         $this->command = new ServerPopupsCommand($this);
         $this->listener = new ServerPopupsListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -22,7 +22,7 @@ class ServerPopupsAPI extends PluginBase{
 	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function createFiles(){
+    public function saveFiles(){
         if(!file_exists($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
