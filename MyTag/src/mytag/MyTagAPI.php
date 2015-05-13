@@ -26,15 +26,6 @@ class MyTagAPI extends PluginBase{
         if(!file_exists($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
-        if(!file_exists($this->getDataFolder()."settings.yml")){
-            $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
-            $this->settings->set("version", $this->getDescription()->getVersion());
-            $this->settings->setNested("enable.auto-set", true);
-            $this->settings->set("op-prefix", "[Staff]");
-            $this->settings->set("preferred-economy", "NewCurrency");
-            $this->settings->save();
-            $this->getServer()->getLogger()->notice("Created new file: MyTag\\settings.yml");
-        }
         if(!file_exists($this->getDataFolder()."tag.yml")){
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
             $this->tag->save();
