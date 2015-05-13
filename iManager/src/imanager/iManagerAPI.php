@@ -2,7 +2,7 @@
 
 namespace imanager;
 
-use imanager\commands\iManagerCommand;
+use imanager\command\iManagerCommand;
 use imanager\iManagerListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
