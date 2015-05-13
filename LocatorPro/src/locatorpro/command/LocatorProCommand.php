@@ -1,6 +1,6 @@
 <?php
 
-namespace locatorpro;
+namespace locatorpro\command;
 
 use locatorpro\LocatorProAPI;
 use pocketmine\command\Command;
