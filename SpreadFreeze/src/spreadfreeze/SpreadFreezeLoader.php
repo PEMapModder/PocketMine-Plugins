@@ -17,8 +17,8 @@ class SpreadFreezeLoader extends PluginBase{
     }
     
     public function saveFiles(){
-        if(!file_exists($this->getDataFolder())){
-            mkdir($this->getDataFolder());
+        if(!file_exists($this->getDataFolder()."config.yml")){
+            $this->saveDefaultConfig();
         }
     }
 }
