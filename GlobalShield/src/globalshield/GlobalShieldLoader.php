@@ -18,6 +18,8 @@ class GlobalShieldLoader extends PluginBase{
     }
     
     public function saveFiles(){
-        
+        if(!file_exists($this->getDataFolder()."config.yml")){
+            $this->saveDefaultConfig();
+        }
     }
 }
