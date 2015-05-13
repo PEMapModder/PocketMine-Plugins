@@ -16,7 +16,6 @@ class LocatorProAPI extends PluginBase{
     
     public function onEnable(){
     	$this->createFiles();
-    	$this->updateFiles();
     	$this->command = new LocatorProCommand($this);
     	$this->listener = new LocatorProListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -42,15 +41,7 @@ class LocatorProAPI extends PluginBase{
             $this->getServer()->getLogger()->notice("Created new file: LocatorPro\\settings.yml");
         }
     }
-    
-    public function updateFiles(){
-        if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
-            unlink($this->getDataFolder()."settings.yml");
-            $this->createFiles();
-            $this->getServer()->getLogger()->warning("Updated file: LocatorPro\\settings.yml");
-        }
-    }
-    
+
     public function saveLocation($x, $y, $z, $yaw, $pitch, $level){
         
     }
