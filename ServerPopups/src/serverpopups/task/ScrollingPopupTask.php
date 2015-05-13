@@ -1,6 +1,6 @@
 <?php
 
-namespace serverpopups\tasks;
+namespace serverpopups\task;
 
 use pocketmine\scheduler\PluginTask;
 use serverpopups\ServerPopupsAPI;
