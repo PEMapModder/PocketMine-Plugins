@@ -13,8 +13,7 @@ class PlanBLoader extends PluginBase{
     public $backup;
     
     public function onEnable(){
-    	@mkdir($this->getDataFolder());
-        $this->backup = new Config($this->getDataFolder()."backup.txt", Config::ENUM);
+        $this->saveFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -23,6 +22,14 @@ class PlanBLoader extends PluginBase{
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
+    public function saveFiles(){
+        if(!is_dir($this->getDataFolder())){
+            mkdir($this->getDataFolder());
+        }
+        if(!file_exists($this->getDataFolder()."backup.txt")){
+            $this->backup = new Config($this->getDataFolder()."backup.txt", Config::ENUM);   
+        }
+    }
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "planb"){
             if($sender instanceof Player){
