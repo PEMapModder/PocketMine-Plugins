@@ -29,6 +29,9 @@ class LocatorProAPI extends PluginBase{
         if(!is_dir($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
+        if(!file_exists($this->getDataFolder()."config.yml")){
+            $this->saveDefaultConfig();
+        }
         if(!file_exists($this->getDataFolder()."pos.yml")){
             $this->pos = new Config($this->getDataFolder()."pos.yml", Config::YAML);
             $this->pos->save();
