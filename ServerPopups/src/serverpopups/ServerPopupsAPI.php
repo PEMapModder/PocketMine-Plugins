@@ -4,7 +4,7 @@ namespace serverpopups;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use serverpopups\commands\ServerPopupsCommand;
+use serverpopups\command\ServerPopupsCommand;
 use serverpopups\ServerPopupsListener;
 
 class ServerPopupsAPI extends PluginBase{
