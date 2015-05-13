@@ -1,6 +1,6 @@
 <?php
 
-namespace serverpopups\commands;
+namespace serverpopups\command;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
