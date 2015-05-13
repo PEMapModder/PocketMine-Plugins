@@ -5,3 +5,8 @@ bundle:
   commands:
   - imanager kickall
   - stop
+ party:
+  default: op
+  commands:
+  - give {player} 264
+  - newcurrency add {player} 1000
