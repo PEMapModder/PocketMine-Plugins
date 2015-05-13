@@ -26,12 +26,6 @@ class ServerPopupsAPI extends PluginBase{
         if(!file_exists($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
-        if(!file_exists($this->getDataFolder()."settings.yml")){
-            $this->settings = new Config($this->getDataFolder()."settings.yml", Config::YAML);
-            $this->settings->set("version", $this->getDescription()->getVersion());
-            $this->settings->save();
-            $this->getServer()->getLogger()->notice("Created new file: ServerPopups\\settings.yml");
-        }
     }
     
     public function broadcastPopup($message){
