@@ -24,6 +24,10 @@ class BundleCommandLoader extends PluginBase{
         }
     }
     
+    public function createPermissions(){
+        
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "bundlecommand"){
             if(isset($args[0])){
