@@ -11,10 +11,11 @@ class BundleCommandLoader extends PluginBase{
 
     public function onEnable(){
         $this->saveFiles();
+        $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function onDisable(){
-        
+        $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
     public function saveFiles(){
