@@ -5,10 +5,10 @@ namespace spreadfreeze;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
-class Loader extends PluginBase{
+class SpreadFreezeLoader extends PluginBase{
     
     public function onEnable(){
-        $this->createFiles();
+        $this->saveFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -16,7 +16,7 @@ class Loader extends PluginBase{
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
-    public function createFiles(){
+    public function saveFiles(){
         if(!file_exists($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
