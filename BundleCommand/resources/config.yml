@@ -9,4 +9,4 @@ bundle:
   default: op
   commands:
   - give {player} 264
-  - newcurrency add {player} 1000
+  - newcurrency give {player} 1000
