@@ -12,3 +12,12 @@ commands:
   usage: /bundlecommand [parameters]
   permission: bundlecommand.command.bundlecommand
   aliases: [bc]
+permissions:
+ bundlecommand:
+  default: op
+  children:
+   bundlecommand.command:
+    default: op
+    children:
+     bundlecommand.command.bundlecommand:
+      default: 
