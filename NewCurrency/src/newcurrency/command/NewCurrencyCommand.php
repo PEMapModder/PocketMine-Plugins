@@ -1,6 +1,6 @@
 <?php
 
-namespace newcurrency\commands;
+namespace newcurrency\command;
 
 use newcurrency\NewCurrencyAPI;
 use pocketmine\command\Command;
