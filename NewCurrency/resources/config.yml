@@ -1,1 +1,8 @@
 #Configuration file for NewCurrency v1.0.0
+enable:
+ auto-register: true
+ show-name: true
+ show-symbol: false
+default: 100
+name: "coins"
+symbol: "$"
