@@ -17,7 +17,9 @@ class ServerEXPAPI extends PluginBase{
     }
     
     public function saveFiles(){
-        
+        if(!file_exists($this->getDataFolder()."config.yml")){
+            $this->saveDefaultConfig();
+        }
     }
     
     public function getEXP(Player $player){
