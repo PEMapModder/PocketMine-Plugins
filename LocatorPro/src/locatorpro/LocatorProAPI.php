@@ -2,7 +2,7 @@
 
 namespace locatorpro;
 
-use locatorpro\commands\LocatorProCommand;
+use locatorpro\command\LocatorProCommand;
 use locatorpro\LocatorProListener;
 use pocketmine\level\Location;
 use pocketmine\math\Vector3;
