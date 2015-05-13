@@ -13,7 +13,6 @@ class ServerPopupsAPI extends PluginBase{
     
     public function onEnable(){
         $this->createFiles();
-        $this->updateFiles();
         $this->command = new ServerPopupsCommand($this);
         $this->listener = new ServerPopupsListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
@@ -32,14 +31,6 @@ class ServerPopupsAPI extends PluginBase{
             $this->settings->set("version", $this->getDescription()->getVersion());
             $this->settings->save();
             $this->getServer()->getLogger()->notice("Created new file: ServerPopups\\settings.yml");
-        }
-    }
-    
-    public function updateFiles(){
-        if(!$this->settings->get("version") === $this->getDescription()->getVersion()){
-            unlink($this->getDataFolder()."settings.yml");
-            $this->createFiles();
-            $this->getServer()->getLogger()->warning("Updated file: ServerPopups\\settings.yml");
         }
     }
     
