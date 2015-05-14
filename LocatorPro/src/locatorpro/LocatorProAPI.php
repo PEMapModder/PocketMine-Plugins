@@ -29,13 +29,15 @@ class LocatorProAPI extends PluginBase{
         if(!is_dir($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
-        if(!file_exists($this->getDataFolder()."config.yml")){
+        if(file_exists($this->getDataFolder()."config.yml")){
+
+        }
+        else{
             $this->saveDefaultConfig();
         }
-        if(!file_exists($this->getDataFolder()."pos.yml")){
-            $this->pos = new Config($this->getDataFolder()."pos.yml", Config::YAML);
-            $this->pos->save();
-            $this->getServer()->getLogger()->notice("Created new file: LocatorPro\\pos.yml");
+        if(!file_exists($this->getDataFolder()."location.yml")){
+            $this->location = new Config($this->getDataFolder()."location.yml", Config::YAML);
+            $this->location->save();
         }
     }
 
