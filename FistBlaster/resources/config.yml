@@ -1,4 +1,6 @@
 #Configuration file for FistBlaster v1.0.0
 enable:
+ explode-on-damage: true
+ explode-on-interact: true
 size: 10
 #Sets the explosion size
