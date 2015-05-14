@@ -19,7 +19,10 @@ class BundleCommandLoader extends PluginBase{
     }
     
     public function saveFiles(){
-        if(!file_exists($this->getDataFolder()."config.yml")){
+        if(file_exists($this->getDataFolder()."config.yml")){
+            
+        }
+        else{
             $this->saveDefaultConfig();
         }
     }
