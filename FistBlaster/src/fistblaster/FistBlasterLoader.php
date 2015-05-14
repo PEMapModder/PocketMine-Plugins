@@ -64,7 +64,9 @@ class FistBlasterLoader extends PluginBase implements Listener{
     }
     
     public function onEntityDamage(EntityDamageEvent $event){
-    	
+    	if($event->getCause() === 1){
+    	    
+    	}
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
