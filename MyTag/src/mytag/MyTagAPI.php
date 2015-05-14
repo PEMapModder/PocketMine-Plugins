@@ -10,7 +10,7 @@ use pocketmine\Player;
 
 class MyTagAPI extends PluginBase{
     
-    public $settings, $tag;
+    public  $tag;
 
     public function onEnable(){
         $this->saveFiles();
