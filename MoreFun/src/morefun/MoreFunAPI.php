@@ -15,6 +15,14 @@ class MoreFunAPI extends PluginBase{
       
     }
     
+    public function getFrozenPlayers(){
+      
+    }
+    
+    public function getInventoryLockedPlayers(){
+      
+    }
+    
     public function setPlayerFreeze(Player $player, $value){
         if($value === true){
           
