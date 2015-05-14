@@ -43,16 +43,20 @@ class FistBlasterLoader extends PluginBase implements Listener{
     	}
     }
     
+    public function getBlasters(){
+    	return $this->fistblaster;
+    }
+    
     public function isBlasterEnabled(Player $player){
-    	return in_array($player->getName(), $this->fistblaster);	
+    	return in_array($player->getName(), $this->getBlasters());	
     }
     
     public function setPlayerBlaster(Player $player, $value){
     	if($value === true){
-    	    $this->fistblaster[$player->getName()] = true;
+    	    $this->getBlasters()[$player->getName()] = true;
     	}
     	else{
-    	    unset($this->fistblaster[$player->getName()]);
+    	    unset($this->getBlasters()[$player->getName()]);
     	}
     }
     
