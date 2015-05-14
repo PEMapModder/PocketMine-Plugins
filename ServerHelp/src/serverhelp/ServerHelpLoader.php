@@ -35,7 +35,7 @@ class ServerHelpLoader extends PluginBase implements Listener{
                     }
                 }
                 else{
-                    $event->getPlayer()->sendMessage($this->getConfig()->getNested("message.on-error"));
+                    $event->getPlayer()->sendMessage($this->getConfig()->getNested("message.error"));
                 }
             }
             else{
@@ -45,7 +45,7 @@ class ServerHelpLoader extends PluginBase implements Listener{
                     }
                 }
                 else{
-                    $event->getPlayer()->sendMessage($this->getConfig()->getNested("message.on-error"));
+                    $event->getPlayer()->sendMessage($this->getConfig()->getNested("message.error"));
                 }
             }
         }
