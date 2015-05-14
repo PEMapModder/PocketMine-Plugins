@@ -23,7 +23,6 @@ class FistBlasterLoader extends PluginBase implements Listener{
     }
    
     public function onDisable(){
-    	unset($this->fistblaster);
 	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
     
@@ -44,6 +43,10 @@ class FistBlasterLoader extends PluginBase implements Listener{
     	}
     }
     
+    public function isBlasterEnabled(Player $player){
+    	return in_array($player->getName(), $this->fistblaster);	
+    }
+    
     public function setPlayerBlaster(Player $player, $value){
     	if($value === true){
     	    $this->fistblaster[$player->getName()] = true;
@@ -56,12 +59,12 @@ class FistBlasterLoader extends PluginBase implements Listener{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "fistblaster"){
             if($sender instanceof Player){
-                if(isset($this->fistblaster[$sender->getName()])){
-                    unset($this->fistblaster[$sender->getName()]);
+                if($this->isBlasterEnabled($sender)){
+                    $this->setPlayerBlaster($sender, false);
                     $sender->sendMessage($this->getConfig()->getNested("message.blaster-disable"));
                 }
                 else{
-                    $this->fistblaster[$sender->getName()] = true;
+                    $this->setPlayerBlaster($sender, true);
                     $sender->sendMessage($this->getConfig()->getNested("message.blaster-enable"));
                 }
             }
@@ -79,15 +82,15 @@ class FistBlasterLoader extends PluginBase implements Listener{
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
-        if(isset($this->fistblaster[$event->getPlayer()->getName()])){
+        if($this->isBlasterEnabled($event->getPlayer())){
             $explosion = new Explosion(new Position($event->getBlock()->getX(), $event->getBlock()->getY(), $event->getBlock()->getZ(), $event->getBlock()->getLevel()), $this->getConfig()->get("size"));
 	    $explosion->explode();
         }
     }
     
     public function onPlayerQuit(PlayerQuitEvent $event){
-        if(isset($this->fistblaster[$event->getPlayer()->getName()])){
-            unset($this->fistblaster[$event->getPlayer()->getName()]);
+        if($this->isBlasterEnabled($event->getPlayer())){
+            $this->setPlayerBlaster($event->getPlayer(), false);
         }
     }
 }
