@@ -28,7 +28,9 @@ class LocatorProAPI extends PluginBase{
             mkdir($this->getDataFolder());
         }
         if(file_exists($this->getDataFolder()."config.yml")){
-
+            if(!is_bool($this->getConfig()->getNested("enable.auto-register"))){
+                $this->getConfig()->setNested("enable-auto-register", true);
+            }
         }
         else{
             $this->saveDefaultConfig();
