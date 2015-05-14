@@ -4,3 +4,6 @@ enable:
  interact-explosion: true
 size: 10
 #Sets the explosion size
+message:
+ blaster-disable: "Blaster disabled! You will no longer blow things up."
+ blaster-enable: "Blaster enabled! Touch something to blow it up!"
