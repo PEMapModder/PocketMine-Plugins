@@ -15,9 +15,10 @@ use pocketmine\Player;
 
 class FistBlasterLoader extends PluginBase implements Listener{
 
+    public $fistblaster = array();
+    
     public function onEnable(){
     	$this->saveFiles();
-        $this->fistblaster = array();
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
