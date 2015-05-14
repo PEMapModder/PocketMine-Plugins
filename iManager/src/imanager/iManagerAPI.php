@@ -55,6 +55,10 @@ class iManagerAPI extends PluginBase{
     	}
     }
 
+    public function getChatLog(){
+    	return $this->chat;
+    }
+    
     public function getExempts(){
     	return $this->exempt;
     }
@@ -69,5 +73,10 @@ class iManagerAPI extends PluginBase{
     
     public function isExempted(Player $player){
     	return isset($this->getExempts()->get(strtolower($player->getName())));
+    }
+    
+    public function saveMessage(Player $player, $message){
+    	$this->getChatLog()->set(date("H:i:s")." ".$player->getName().": ".$message);
+    	$this->getChatLog()->save();
     }
 }
