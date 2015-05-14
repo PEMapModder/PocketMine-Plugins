@@ -11,7 +11,7 @@ use pocketmine\Player;
 
 class LocatorProAPI extends PluginBase{
     
-    public $location, $settings;
+    public $location;
     
     public function onEnable(){
     	$this->saveFiles();
