@@ -3,6 +3,7 @@
 namespace globalshield;
 
 use globalshield\GlobalShieldListener;
+use pocketmine\level\Level;
 use pocketmine\plugin\PluginBase;
 
 class GlobalShieldLoader extends PluginBase{
@@ -21,5 +22,9 @@ class GlobalShieldLoader extends PluginBase{
         if(!file_exists($this->getDataFolder()."config.yml")){
             $this->saveDefaultConfig();
         }
+    }
+    
+    public function isLevelProtected(Level $level){
+        
     }
 }
