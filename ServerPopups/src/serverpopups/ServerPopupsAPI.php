@@ -8,8 +8,6 @@ use serverpopups\command\ServerPopupsCommand;
 use serverpopups\ServerPopupsListener;
 
 class ServerPopupsAPI extends PluginBase{
-
-    public $settings;
     
     public function onEnable(){
         $this->saveFiles();
