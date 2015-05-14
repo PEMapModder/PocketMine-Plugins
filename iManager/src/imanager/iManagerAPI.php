@@ -10,7 +10,7 @@ use pocketmine\Player;
 
 class iManagerAPI extends PluginBase{
 
-    public $chat, $exempt, $ip, $settings;
+    public $chat, $exempt, $ip;
 
     public function onEnable(){
     	$this->saveFiles();
