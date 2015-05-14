@@ -43,17 +43,14 @@ class iManagerAPI extends PluginBase{
     	if(!file_exists($this->getDataFolder()."chat.log")){
     	    $this->chat = new Config($this->getDataFolder()."chat.log", Config::ENUM);
     	    $this->chat->save();
-    	    $this->getServer()->getLogger()->notice("Created new file: iManager\\chat.log");
     	}
     	if(!file_exists($this->getDataFolder()."exempt.txt")){
     	    $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
     	    $this->exempt->save();
-    	    $this->getServer()->getLogger()->notice("Created new file: iManager\\exempt.txt");
     	}
     	if(!file_exists($this->getDataFolder()."ip.txt")){
     	    $this->ip = new Config($this->getDataFolder()."ip.txt", Config::ENUM);
     	    $this->ip->save();
-    	    $this->getServer()->getLogger()->notice("Created new file: iManager\\ip.txt");
     	}
     }
 
