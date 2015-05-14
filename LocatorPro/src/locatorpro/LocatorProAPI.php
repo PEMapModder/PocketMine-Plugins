@@ -46,7 +46,7 @@ class LocatorProAPI extends PluginBase{
         return $this->location;
     }
     
-    public function savePlayerLocation(Location $location){
+    public function savePlayerLocation(Player $player, Location $location){
         
     }
 }
