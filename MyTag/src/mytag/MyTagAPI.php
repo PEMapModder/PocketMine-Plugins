@@ -6,6 +6,7 @@ use mytag\command\MyTagCommand;
 use mytag\MyTagListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\Player;
 
 class MyTagAPI extends PluginBase{
     
@@ -26,7 +27,12 @@ class MyTagAPI extends PluginBase{
         if(!file_exists($this->getDataFolder())){
             mkdir($this->getDataFolder());
         }
-        if(!file_exists($this->getDataFolder()."config.yml")){
+        if(file_exists($this->getDataFolder()."config.yml")){
+            if(!is_bool($this->getConfig()->getNested("enable.auto-set"))){
+                $this->getConfig()->setNested("enable-auto-set", true);
+            }
+        }
+        else{
             $this->saveDefaultConfig();
         }
         if(!file_exists($this->getDataFolder()."tag.yml")){
@@ -36,12 +42,12 @@ class MyTagAPI extends PluginBase{
         }
     }
 
-    public function getSavedNameTag($player){
-        return $this->tag->get($player);
+    public function getSavedNameTag(Player $player){
+        return $this->tag->get(strtolower($player->getName()));
     }
     
-    public function saveNameTag($player, $tag){
-        $this->tag->set($player, $tag);
+    public function saveNameTag(Player $player){
+        $this->tag->set(strtolower($player->getName()), $player->getNameTag());
         $this->tag->save();
     }
 }
