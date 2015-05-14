@@ -7,6 +7,9 @@ use pocketmine\Player;
 
 class MoreFunAPI extends PluginBase{
   
+    public $freeze = array();
+    public $lock = array();
+    
     public function onEnable(){
       
     }
