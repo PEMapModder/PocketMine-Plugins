@@ -4,6 +4,7 @@ namespace fistblaster;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\Listener;
@@ -49,6 +50,10 @@ class FistBlasterLoader extends PluginBase implements Listener{
             }
             return true;
         }
+    }
+    
+    public function onEntityDamage(EntityDamageEvent $event){
+    	
     }
     
     public function onPlayerInteract(PlayerInteractEvent $event){
