@@ -66,6 +66,19 @@ class NewCurrencyAPI extends PluginBase{
 
     }
     
+    public function isRegistered(Player $player){
+	return $this->account->exists(strtolower($player->getName()));
+    }
+    
+    public function setRegistered(Player $player, $value){
+	if($value === true){
+		
+	}
+	else{
+		
+	}
+    }
+    
     public function getBalance(Player $player){
 
     }
@@ -80,18 +93,5 @@ class NewCurrencyAPI extends PluginBase{
     
     public function setBalance(Player $player, $amount){
         
-    }
-    
-    public function isRegistered(Player $player){
-	return $this->account->exists(strtolower($player->getName()));
-    }
-    
-    public function setRegistered(Player $player, $value){
-	if($value === true){
-		
-	}
-	else{
-		
-	}
     }
 }
