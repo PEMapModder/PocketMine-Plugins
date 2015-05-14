@@ -1,1 +1,3 @@
 #Configuration file for TimeEssentials v1.0.0
+enable:
+ tell-time: true
