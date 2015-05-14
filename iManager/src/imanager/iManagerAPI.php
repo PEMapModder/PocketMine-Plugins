@@ -6,6 +6,7 @@ use imanager\command\iManagerCommand;
 use imanager\iManagerListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\Player;
 
 class iManagerAPI extends PluginBase{
 
@@ -54,11 +55,19 @@ class iManagerAPI extends PluginBase{
     	}
     }
 
-    public function isAddressWhitelisted($address){
-    	return $this->ip->exists($address);
+    public function getExempts(){
+    	return $this->exempt;
     }
     
-    public function isPlayerExempted($player){
-    	return $this->exempt->exists($player);
+    public function getAddressWhitelist(){
+    	return $this->ip;
+    }
+    
+    public function isAddressWhitelisted($address){
+    	return isset($this->getAddressWhitelist()->get($address));
+    }
+    
+    public function isExempted(Player $player){
+    	return isset($this->getExempts()->get(strtolower($player->getName())));
     }
 }
