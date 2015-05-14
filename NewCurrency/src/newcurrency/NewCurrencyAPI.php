@@ -66,33 +66,32 @@ class NewCurrencyAPI extends PluginBase{
 
     }
     
-    public function getBalance($player){
+    public function getBalance(Player $player){
 
     }
     
-    public function decreaseBalance($player, $amount){
+    public function decreaseBalance(Player $player, $amount){
         
     }
     
-    public function increaseBalance($player, $amount){
+    public function increaseBalance(Player $player, $amount){
         
     }
     
-    public function setBalance($player, $amount){
+    public function setBalance(Player $player, $amount){
         
     }
     
-    public function isRegistered($player){
-	return $this->account->exists($player);
+    public function isRegistered(Player $player){
+	return $this->account->exists(strtolower($player->getName()));
     }
     
-    public function register($player){
-        $this->account->set($player, $this->getDefault());
-	$this->account->save();
-    }
-    
-    public function unregister($player){
-        $this->account->remove($player);
-	$this->account->save();
+    public function setRegistered(Player $player, $value){
+	if($value === true){
+		
+	}
+	else{
+		
+	}
     }
 }
