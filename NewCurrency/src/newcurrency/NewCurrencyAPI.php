@@ -10,7 +10,7 @@ use pocketmine\Player;
 
 class NewCurrencyAPI extends PluginBase{
 
-    public $account, $settings;
+    public $account;
     
     public function onEnable(){
     	$this->saveFiles();
