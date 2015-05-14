@@ -4,15 +4,13 @@ namespace locatorpro;
 
 use locatorpro\command\LocatorProCommand;
 use locatorpro\LocatorProListener;
-use pocketmine\level\Location;
-use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\Player;
 
 class LocatorProAPI extends PluginBase{
     
-    public $pos, $settings;
+    public $location, $settings;
     
     public function onEnable(){
     	$this->saveFiles();
@@ -41,7 +39,7 @@ class LocatorProAPI extends PluginBase{
         }
     }
 
-    public function saveLocation($x, $y, $z, $yaw, $pitch, $level){
+    public function savePlayerLocation(Player $player){
         
     }
 }
