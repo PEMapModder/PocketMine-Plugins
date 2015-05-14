@@ -49,11 +49,11 @@ class FistBlasterLoader extends PluginBase implements Listener{
             if($sender instanceof Player){
                 if(isset($this->fistblaster[$sender->getName()])){
                     unset($this->fistblaster[$sender->getName()]);
-                    $sender->sendMessage("§aYou will now no longer blow up blocks you touch.");
+                    $sender->sendMessage($this->getConfig()->getNested("message.blaster-disable"));
                 }
                 else{
                     $this->fistblaster[$sender->getName()] = true;
-                    $sender->sendMessage("§aYou will now blow up all blocks you touch.");
+                    $sender->sendMessage($this->getConfig()->getNested("message.blaster-enable"));
                 }
             }
             else{
