@@ -16,10 +16,20 @@ class MoreFunAPI extends PluginBase{
     }
     
     public function setPlayerFreeze(Player $player, $value){
-      
+        if($value === true){
+          
+        }
+        else{
+          
+        }
     }
     
     public function setPlayerInventoryLock(Player $player, $value){
-      
+        if($value === true){
+          
+        }
+        else{
+          
+        }
     }
 }
