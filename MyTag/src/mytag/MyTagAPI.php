@@ -38,7 +38,6 @@ class MyTagAPI extends PluginBase{
         if(!file_exists($this->getDataFolder()."tag.yml")){
             $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
             $this->tag->save();
-            $this->getServer()->getLogger()->notice("Created new file: MyTag\\tag.yml");
         }
     }
 
