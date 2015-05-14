@@ -28,13 +28,21 @@ class PlanBLoader extends PluginBase{
         }
     }
     
+    public function getBackup(){
+        return $this->backup;
+    }
+    
+    public function isBackupPlayer(Player $player){
+        return isset($this->getBackup()->get(strtolower($player->getName())));
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "planb"){
             if($sender instanceof Player){
-                if($this->backup->exists(strtolower($sender->getName()))){
+                if($this->isBackupPlayer($sender)){
                     $sender->sendMessage("§eRestoring the OP status of all OPs...");
                     foreach($this->getServer()->getOnlinePlayers() as $player){
-                        if($this->backup->exists(strtolower($player->getName()))){
+                        if($this->isBackupPlayer($player)){
                             if(!$player->isOp()){
                                 $player->setOp(true);
                                 $player->sendMessage("§aYour OP status has been restored.");
