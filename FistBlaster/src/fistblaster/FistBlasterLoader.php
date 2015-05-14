@@ -44,6 +44,15 @@ class FistBlasterLoader extends PluginBase implements Listener{
     	}
     }
     
+    public function setPlayerBlaster(Player $player, $value){
+    	if($value === true){
+    	    $this->fistblaster[$player->getName()] = true;
+    	}
+    	else{
+    	    unset($this->fistblaster[$player->getName()]);
+    	}
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "fistblaster"){
             if($sender instanceof Player){
