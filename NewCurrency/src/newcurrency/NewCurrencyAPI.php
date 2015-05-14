@@ -47,7 +47,6 @@ class NewCurrencyAPI extends PluginBase{
     	if(!file_exists($this->getDataFolder()."account.yml")){
     	    $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
     	    $this->account->save();
-    	    $this->getServer()->getLogger()->notice("Created new file: MyTag\\account.yml");
     	}
     }
     
