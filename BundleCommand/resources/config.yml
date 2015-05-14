@@ -10,3 +10,5 @@ bundle:
   commands:
   - give {player} 264
   - newcurrency give {player} 1000
+message:
+ error: "Sorry, that command bundle could not be found!"
