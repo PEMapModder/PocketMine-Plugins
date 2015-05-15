@@ -1,4 +1,4 @@
-# PocketMine-Plugins
+#PocketMine-Plugins
 
 [![Join the chat at https://gitter.im/Gamecrafter/PocketMine-Plugins](https://badges.gitter.im/Join%20Chat.svg)](https://gitt
 er.im/Gamecrafter/PocketMine-Plugins?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -7,7 +7,7 @@ A collection of Gamecrafter's plugins for `Alpha_1.4` and `Alpha_1.5`. Every plu
 MIT. Please note that not all the plugins here may be released on the PocketMine plugin repository. Also note that not all the
 plugins will work, for the fact that I don't always test them thoroughly.
 
-### Plugins:
+###Plugins:
 * BundleCommand
 * DoMath
 * EffectsPro
@@ -26,7 +26,7 @@ plugins will work, for the fact that I don't always test them thoroughly.
 * TimeEssentials
 * iManager
 
-### To-do:
+###To-do:
 * Add API functions for some plugins
 * Fix any bugs if found
 * Make `.phar` files lighter
