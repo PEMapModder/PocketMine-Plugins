@@ -3,8 +3,6 @@
 er.im/Gamecrafter/PocketMine-Plugins?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-
-
 [![Issues](http://img.shields.io/github/issues/Gamecrafter/PocketMine-Plugins.svg)](
 https://github.com/Gamecrafter/PocketMine-Plugins/issues)
 
