@@ -2,9 +2,9 @@
 [![Join the chat at https://gitter.im/Gamecrafter/PocketMine-Plugins](https://badges.gitter.im/Join%20Chat.svg)](https://gitt
 er.im/Gamecrafter/PocketMine-Plugins?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Issues](http://img.shields.io/github/issues/Gamecrafter/PocketMine-Plugins.svg)](
 https://github.com/Gamecrafter/PocketMine-Plugins/issues)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 A collection of Gamecrafter's plugins for `Alpha_1.4` and `Alpha_1.5`. Every plugin in this repository is licensed under
 MIT. Please note that not all the plugins here may be released on the PocketMine plugin repository. Also note that not all the
