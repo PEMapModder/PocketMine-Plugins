@@ -34,8 +34,8 @@ Main command: **imanager**, **im**
 |imanager.command.imanager|op|
 
 ###Versions:
-|String|Date|
-|------|----|
+|String|Release Date|
+|------|------------|
 |1.0.0||
 |1.1.0||
 |1.2.0||
