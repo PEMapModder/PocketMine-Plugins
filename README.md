@@ -30,6 +30,7 @@ the plugins will work, for the fact that I don't always test them thoroughly.
 * iManager
 
 |Name|Released|
+|----|--------|
 
 ###To-do:
 * Add API functions for some plugins
