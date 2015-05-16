@@ -14,4 +14,7 @@ Disable/enable certain things in certain levels!
 |globalshield.action.interact|op|
 |globalshield.action.place|op|
 
-###Versions:
+###Releases:
+|Version|Release Date|
+|-------|------------|
+|1.0.0|April 3, 2015|
