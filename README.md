@@ -29,8 +29,9 @@ the plugins will work, for the fact that I don't always test them thoroughly.
 * TimeEssentials
 * iManager
 
-|Name|Released|
-|----|--------|
+|Name|Version|Released|
+|----|-------|--------|
+|BundleCommand|1.0.0|no
 
 ###To-do:
 * Add API functions for some plugins
