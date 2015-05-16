@@ -3,3 +3,11 @@
 </p>
 #GlobalShield
 Disable/enable certain things in certain levels!
+
+###Permissions:
+|Permission|Default|
+|----------|:-------:|
+|globalshield.action.break|op|
+|globalshield.action.break|op|
+|globalshield.action.break|op|
+|globalshield.action.break|op|
