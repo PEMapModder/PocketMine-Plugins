@@ -12,6 +12,6 @@ Main command: **mytag**, **mt**
 
 ###Releases:
 |Version|Release Date|
-|-------|------------|
+|:-------:|------------|
 |1.0.0|March 1, 2015|
 |1.1.0|April 12, 2015|
