@@ -30,13 +30,13 @@ class iManagerAPI extends PluginBase{
     	    mkdir($this->getDataFolder());
     	}
     	if(file_exists($this->getDataFolder()."config.yml")){
-    	    if(!is_bool($this->getConfig()->getNested("enable.ip-whitelist"))){
+    	    if(!isset($this->getConfig()->getNested("enable.ip-whitelist") || !is_bool($this->getConfig()->getNested("enable.ip-whitelist"))){
     	    	$this->getConfig()->setNested("enable.ip-whitelist", false);
     	    }
-    	    if(!is_bool($this->getConfig()->getNested("enable.log-command"))){
+    	    if((!isset($this->getConfig()->getNested("enable.log-command") || !is_bool($this->getConfig()->getNested("enable.log-command"))){
     	    	$this->getConfig()->setNested("enable.log-command", true);
     	    }
-    	    if(!is_bool($this->getConfig()->getNested("enable.save-chat"))){
+    	    if((!isset($this->getConfig()->getNested("enable.save-chat") || !is_bool($this->getConfig()->getNested("enable.save-chat"))){
     	    	$this->getConfig()->setNested("enable.save-chat", true);
     	    }
     	}
