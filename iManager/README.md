@@ -5,6 +5,7 @@
 Manage your server like never before!
 
 ###Commands:
+/imanager or /im
 |Name|Description|
 |----|-----------|
 |/imanager addexempt|Adds a player's name to exempt.txt|
@@ -13,7 +14,7 @@ Manage your server like never before!
 |/imanager burnall|Burns all the players without EXEMPT status in the server|
 |/imanager delexempt|Removes a player's name from exempt.txt|
 |/imanager delip|Removes a player's IP address from ip.txt|
-
+|/imanager deopall|Revokes all the player's OP status
 ###Permissions:
 |Name|Default|
 |----|:-------:|
