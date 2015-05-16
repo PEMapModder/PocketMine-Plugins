@@ -3,7 +3,7 @@
 
 ![Forks](https://img.shields.io/github/forks/Gamecrafter/PocketMine-Plugins.svg)
  [![Issues](http://img.shields.io/github/issues-raw/Gamecrafter/PocketMine-Plugins.svg)](https://github.com/Gamecrafter/Pock
- etMine-Plugins/issues)
+etMine-Plugins/issues)
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
 ![Stars](https://img.shields.io/github/stars/Gamecrafter/PocketMine-Plugins.svg)
 
