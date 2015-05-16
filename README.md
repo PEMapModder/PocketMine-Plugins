@@ -29,6 +29,8 @@ the plugins will work, for the fact that I don't always test them thoroughly.
 * TimeEssentials
 * iManager
 
+|Name|Released|
+
 ###To-do:
 * Add API functions for some plugins
 * Fix any bugs if found
