@@ -3,7 +3,7 @@
 
 ![Forks](https://img.shields.io/github/forks/Gamecrafter/PocketMine-Plugins.svg)
 ![Issues](https://img.shields.io/github/issues-raw/Gamecrafter/PocketMine-Plugins.svg)
-![MIT license](https://img.shields.io/license/Gamecrafter/PocketMine-Plugins.svg)
+![MIT license](https://img.shields.io/badge/license-MIT-red.svg)
 ![Stars](https://img.shields.io/github/stars/Gamecrafter/PocketMine-Plugins.svg)
 
 A collection of Gamecrafter's plugins for `Alpha_1.4` and `Alpha_1.5`. Every plugin in this repository is licensed under
