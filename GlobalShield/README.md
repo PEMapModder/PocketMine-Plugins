@@ -16,5 +16,5 @@ Disable/enable certain things in certain levels!
 
 ###Releases:
 |Version|Release Date|
-|-------|------------|
+|:-------:|------------|
 |1.0.0|April 3, 2015|
