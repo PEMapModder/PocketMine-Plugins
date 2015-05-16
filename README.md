@@ -1,6 +1,5 @@
 #PocketMine-Plugins
-[![Join the chat at https://gitter.im/Gamecrafter/PocketMine-Plugins](https://badges.gitter.im/Join%20Chat.svg)](https://git
-er.im/Gamecrafter/PocketMine-Plugins?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/Gamecrafter/PocketMine-Plugins](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Gamecrafter/PocketMine-Plugins?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![Forks](https://img.shields.io/github/forks/Gamecrafter/PocketMine-Plugins.svg)
 ![Issues](https://img.shields.io/github/issues/Gamecrafter/PocketMine-Plugins.svg)
