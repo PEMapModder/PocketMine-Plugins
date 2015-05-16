@@ -10,6 +10,8 @@ Main command: **planb**, **pb**
 |Sub-command|Description|
 |-----------|-----------|
 
+###Permissions:
+
 ###Releases:
 |Version|Release Date|
 |-------|------------|
