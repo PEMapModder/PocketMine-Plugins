@@ -21,7 +21,7 @@ class BundleCommandLoader extends PluginBase{
     public function saveFiles(){
         if(file_exists($this->getDataFolder()."config.yml")){
             if($this->getConfig()->get("version") !== $this->getDescription()->getVersion()){
-		$this->getServer()->getLogger()->warning("Detected an outdated configuration file for ".$this->getDescription()->getName());
+		$this->getServer()->getLogger()->warning("An outdated configuration file for ".$this->getDescription()->getName()." was detected.");
 		if($this->getConfig()->getNested("enable.auto-update") === true){
 		    $this->saveResource("config.yml", true);
                     $this->getServer()->getLogger()->warning("Successfully updated the configuration file for ".$this->getDescription()->getName()." to v".$this->getDescription()->getVersion().".");
