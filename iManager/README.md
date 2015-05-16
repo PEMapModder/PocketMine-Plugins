@@ -5,7 +5,7 @@
 Manage your server like never before!
 
 ###Commands:
-iManager main command: **imanager**, **im**
+Main command: **imanager**, **im**
 
 |Sub-command|Description|
 |----|-----------|
