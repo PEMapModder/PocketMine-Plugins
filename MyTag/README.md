@@ -10,6 +10,8 @@ Main command: **mytag**, **mt**
 |Sub-command|Description|
 |-----------|-----------|
 
+###Permissions:
+
 ###Releases:
 |Version|Release Date|
 |:-------:|------------|
