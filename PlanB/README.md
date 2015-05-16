@@ -14,5 +14,5 @@ Main command: **planb**, **pb**
 
 ###Releases:
 |Version|Release Date|
-|-------|------------|
+|:-------:|------------|
 |1.0.0|April 29, 2015|
