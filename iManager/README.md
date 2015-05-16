@@ -1,2 +1,2 @@
 #iManager
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Icon](https://raw.githubusercontent.com/Gamecrafter/PocketMine-Plugins/master/iManager/images/icon.png)
