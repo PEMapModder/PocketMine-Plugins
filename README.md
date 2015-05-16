@@ -2,7 +2,7 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Gamecrafter/PocketMine-Plugins?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![Forks](https://img.shields.io/github/forks/Gamecrafter/PocketMine-Plugins.svg)
-![Issues](https://img.shields.io/github/issues/Gamecrafter/PocketMine-Plugins.svg)
+![Issues](https://img.shields.io/github/issues-raw/Gamecrafter/PocketMine-Plugins.svg)
 ![MIT license](https://img.shields.io/badge/license-MIT-red.svg)
 ![Stars](https://img.shields.io/github/stars/Gamecrafter/PocketMine-Plugins.svg)
 
