@@ -11,35 +11,24 @@ MIT. Please note that not all the plugins here may be released on the PocketMine
 the plugins will work, for the fact that I don't always test them thoroughly.
 
 ###Plugins:
-* BundleCommand
-* DoMath
-* EffectsPro
-* FistBlaster
-* GlobalShield
-* LocatorPro
-* MoreFun
-* MotionBlock
-* MyTag
-* NewCurrency
-* PlanB
-* ServerEXP
-* ServerHelp
-* ServerPopups
-* SpreadFreeze
-* TimeEssentials
-* iManager
-
-|Name|Version string|Released|
-|----|-------|--------|
-|BundleCommand|1.0.0|no
-|DoMath|1.0.0|no
-|EffectsPro|1.0.0|no
-|FistBlaster|1.0.0|no
-|GlobalShield|1.1.0|yes
-|LocatorPro|1.0.0|no
-|MoreFun|1.0.0|no
-|MotionBlock|1.0.0|no
-|MyTag|1.2.0|no
+|Name|Version|
+|----|-------|
+|BundleCommand|1.0.0|
+|DoMath|1.0.0|
+|EffectsPro|1.0.0|
+|FistBlaster|1.0.0|
+|GlobalShield|1.1.0|
+|LocatorPro|1.0.0|
+|MoreFun|1.0.0|
+|MotionBlock|1.0.0|
+|MyTag|1.2.0|
+|NewCurrency|1.0.0|
+|PlanB|1.1.0|
+|ServerEXP|1.0.0|
+|ServerHelp|1.0.0|
+|SpreadFreeze|1.0.0|
+|TimeEssentials|1.0.0|
+|iManager|1.2.0
 
 ###To-do:
 * Add API functions for some plugins
