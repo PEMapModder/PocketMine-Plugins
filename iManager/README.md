@@ -10,7 +10,7 @@ Manage your server like never before!
 
 ###Permissions:
 |Name|Default|
-|----|-------|
+|----|:-------:|
 |imanager.command.imanager|op|
 
 ###Versions:
