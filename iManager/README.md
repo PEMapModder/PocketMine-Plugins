@@ -6,6 +6,7 @@ Manage your server like never before!
 
 ###Commands:
 Main command: imanager, im
+
 |Sub-command|Description|
 |----|-----------|
 |addexempt|Adds a player's name to exempt.txt|
