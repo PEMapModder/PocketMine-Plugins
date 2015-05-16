@@ -6,6 +6,7 @@ Manage your server like never before!
 
 ###Commands:
 /imanager or /im
+
 |Name|Description|
 |----|-----------|
 |/imanager addexempt|Adds a player's name to exempt.txt|
