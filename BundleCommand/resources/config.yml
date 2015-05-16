@@ -1,4 +1,6 @@
 #Configuration file for BundleCommand v1.0.0
+enable:
+ auto-update: true
 bundle:
  lockdown:
   default: true
