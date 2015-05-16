@@ -28,7 +28,7 @@ the plugins will work, for the fact that I don't always test them thoroughly.
 |ServerHelp|1.0.0|
 |SpreadFreeze|1.0.0|
 |TimeEssentials|1.0.0|
-|iManager|1.2.0
+|iManager|1.2.0|
 
 ###To-do:
 * Add API functions for some plugins
