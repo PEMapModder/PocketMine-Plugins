@@ -1,7 +1,7 @@
 #PocketMine-Plugins
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Gamecrafter/PocketMine-Plugins?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[![Forks](https://img.shields.io/github/forks/Gamecrafter/PocketMine-Plugins.svg)](https://github.com/Gamecrafter/PocketMine-Plugins/networks)
+[![Forks](https://img.shields.io/github/forks/Gamecrafter/PocketMine-Plugins.svg)](https://github.com/Gamecrafter/PocketMine-Plugins/network)
 [![Issues](http://img.shields.io/github/issues-raw/Gamecrafter/PocketMine-Plugins.svg)](https://github.com/Gamecrafter/PocketMine-Plugins/issues)
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
 [![Stars](https://img.shields.io/github/stars/Gamecrafter/PocketMine-Plugins.svg)](https://github.com/Gamecrafter/PocketMine-Plugins/stargazers)
