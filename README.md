@@ -4,7 +4,7 @@
 ![Forks](https://img.shields.io/github/forks/Gamecrafter/PocketMine-Plugins.svg)
 [![Issues](http://img.shields.io/github/issues-raw/Gamecrafter/PocketMine-Plugins.svg)](https://github.com/Gamecrafter/PocketMine-Plugins/issues)
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
-![Stars](https://img.shields.io/github/stars/Gamecrafter/PocketMine-Plugins.svg)
+[![Stars](https://img.shields.io/github/stars/Gamecrafter/PocketMine-Plugins.svg)](https://github.com/Gamecrafter/PocketMine-Plugins/stargazers)
 
 A collection of Gamecrafter's plugins for `Alpha_1.4` and `Alpha_1.5`. Every plugin in this repository is licensed under
 MIT. Please note that not all the plugins here may be released on the PocketMine plugin repository. Also note that not all
