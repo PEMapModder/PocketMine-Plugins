@@ -33,9 +33,8 @@ Main command: **imanager**, **im**
 |----|:-------:|
 |imanager.command.imanager|op|
 
-###Versions:
-|String|Release Date|
-|------|------------|
-|1.0.0||
-|1.1.0||
-|1.2.0||
+###Releases:
+|Version|Release Date|
+|-------|------------|
+|1.0.0|March 17, 2015|
+|1.1.0|April 8, 2015|
