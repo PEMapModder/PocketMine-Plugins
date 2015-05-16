@@ -11,7 +11,7 @@ MIT. Please note that not all the plugins here may be released on the PocketMine
 the plugins will work, for the fact that I don't always test them thoroughly.
 
 ###Plugins:
-|Name|Version|Released|
+|Name|Version|Compiled|
 |----|:-------:|:--------:|
 |BundleCommand|1.0.0|no|
 |DoMath|1.0.0|no|
