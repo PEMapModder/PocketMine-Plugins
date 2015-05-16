@@ -29,9 +29,17 @@ the plugins will work, for the fact that I don't always test them thoroughly.
 * TimeEssentials
 * iManager
 
-|Name|Version|Released|
+|Name|Version string|Released|
 |----|-------|--------|
 |BundleCommand|1.0.0|no
+|DoMath|1.0.0|no
+|EffectsPro|1.0.0|no
+|FistBlaster|1.0.0|no
+|GlobalShield|1.1.0|yes
+|LocatorPro|1.0.0|no
+|MoreFun|1.0.0|no
+|MotionBlock|1.0.0|no
+|MyTag|1.2.0|no
 
 ###To-do:
 * Add API functions for some plugins
