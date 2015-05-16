@@ -8,6 +8,7 @@ Disable/enable certain things in certain levels!
 |Name|Default|
 |----|:-------:|
 |globalshield.action.break|op|
+|globalshield.action.bypass|op|
 |globalshield.action.empty|op|
 |globalshield.action.fill|op|
 |globalshield.action.interact|op|
