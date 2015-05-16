@@ -35,6 +35,6 @@ Main command: **imanager**, **im**
 
 ###Releases:
 |Version|Release Date|
-|-------|------------|
+|:-------:|------------|
 |1.0.0|March 17, 2015|
 |1.1.0|April 8, 2015|
