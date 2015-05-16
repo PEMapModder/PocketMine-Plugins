@@ -1,4 +1,6 @@
 #Configuration file for FistBlaster v1.0.0
+version: 1.0.0
+#Do not edit the version string, it is used for internal purposes
 enable:
  damage-explosion: true
  interact-explosion: true
