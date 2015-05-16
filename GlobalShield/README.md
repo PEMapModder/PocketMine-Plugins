@@ -5,9 +5,10 @@
 Disable/enable certain things in certain levels!
 
 ###Permissions:
-|Permission|Default|
-|----------|:-------:|
+|Name|Default|
+|----|:-------:|
 |globalshield.action.break|op|
-|globalshield.action.break|op|
-|globalshield.action.break|op|
-|globalshield.action.break|op|
+|globalshield.action.empty|op|
+|globalshield.action.fill|op|
+|globalshield.action.interact|op|
+|globalshield.action.place|op|
