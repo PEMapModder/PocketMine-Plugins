@@ -1,5 +1,5 @@
 name: LocatorPro
-main: locatorpro\Loader
+main: locatorpro\LocatorProAPI
 version: 1.0.0
 api: 1.10.0
 load: POSTWORLD
