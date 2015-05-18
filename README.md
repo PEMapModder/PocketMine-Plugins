@@ -35,5 +35,5 @@ the plugins will work, for the fact that I don't always test them thoroughly.
 * Fix any bugs if found
 * Make `.phar` files lighter
 * Split `Loader.php` into multiple files
-* Update CONTRIBUTING.md
+* Update `CONTRIBUTING.md`
 * Update plugins to `Alpha 1.5`
