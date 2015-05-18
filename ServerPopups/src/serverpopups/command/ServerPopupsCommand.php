@@ -40,9 +40,31 @@ class ServerPopupsCommand implements CommandExecutor{
                     return true;
                 }
                 if(strtolower($args[0]) === "sendpopup"){
+                    if(isset($args[1])){
+                        if(isset($args[2])){
+                            
+                        }
+                        else{
+                            
+                        }
+                    }
+                    else{
+                        
+                    }
                     return true;
                 }
                 if(strtolower($args[0]) === "sendtip"){
+                    if(isset($args[1])){
+                        if(isset($args[2])){
+                            
+                        }
+                        else{
+                            
+                        }
+                    }
+                    else{
+                        
+                    }
                     return true;
                 }
                 return false;
