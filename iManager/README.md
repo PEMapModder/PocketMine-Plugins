@@ -13,11 +13,13 @@ Main command: **imanager**, **im**
 |addip|Adds a player's IP address to ip.txt|
 |addresslist|Lists every player's IP address and port|
 |burnall|Burns all the players without EXEMPT status in the server|
+|damageall||
 |delexempt|Removes a player's name from exempt.txt|
 |delip|Removes a player's IP address from ip.txt|
 |deopall|Revokes all the player's OP status|
 |gamemodelist|Lists every player's gamemode|
 |giveall||
+|healall||
 |healthlist|Lists every player's health|
 |help|Shows all the sub-commands for /imanager|
 |info|Gets all the information about a player|
@@ -27,6 +29,7 @@ Main command: **imanager**, **im**
 |oplist|Lists all the online OPs|
 |poslist|Lists every player's coordinates, level, and face direction|
 |server|Shows all the information about the server|
+|tpall||
 
 ###Permissions:
 |Name|Default|
