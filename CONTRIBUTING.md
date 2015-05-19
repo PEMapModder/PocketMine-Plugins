@@ -9,5 +9,7 @@ When contributing to this repository, please make sure you are following the gui
 
 ###Pull Requests
 - Do not spam pull requests. You will be blocked from this repository if you do so.
+- Please put only one feature per pull request.
 
 ###Syntax
+- Indents must be 4 spaces.
