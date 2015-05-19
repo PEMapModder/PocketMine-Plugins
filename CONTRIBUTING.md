@@ -4,7 +4,7 @@ When contributing to this repository, please make sure you are following the gui
 ###Issues
 - Do not spam issues. You will be blocked from this repository if you do so.
 - Make sure the issue has not been reported yet.
-- Name the issues accordingly. If it is a issue about the repository itself, name it `Repository: Your issue here`. If it about a specific plugin, name it `PluginName vVersionHere: Your issue here`.
+- Name the issues accordingly. If it is a issue about the repository itself, name it `Repository: Your issue here`. If it about a specific plugin, name it `PluginName vVersionString: Your issue here`. We will rename it if we believe it is too vague.
 - Please check if the issue you want to report, or anything similar to the issue, has been reported yet.
 - Please make sure it is one of the plugins in this repository that caused the crash before reporting it.
 
