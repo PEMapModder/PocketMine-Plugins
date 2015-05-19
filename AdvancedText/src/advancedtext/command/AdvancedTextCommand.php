@@ -1,13 +1,13 @@
 <?php
 
-namespace serverpopups\command;
+namespace advancedtext\command;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
 use advancedtext\AdvancedTextAPI;
 
-class ServerPopupsCommand implements CommandExecutor{
+class AdvancedTextCommand implements CommandExecutor{
 
     public function __construct(AdvancedTextAPI $plugin){
         $this->plugin = $plugin;
@@ -70,7 +70,7 @@ class ServerPopupsCommand implements CommandExecutor{
                 return false;
             }
             else{
-                $sender->sendMessage("ServerPopups commands");
+                $sender->sendMessage("AdvancedText commands");
                 return true;
             }
         }
