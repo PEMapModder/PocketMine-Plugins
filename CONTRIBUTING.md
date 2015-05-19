@@ -12,6 +12,23 @@ When contributing to this repository, please make sure you are following the gui
 - Please put only one feature per pull request.
 
 ###Syntax
+- Code must be using proper syntax.
+- Ending brackets for control structures must not be on the same line as the next control structure.
+```php
+//Correct
+public function checkPlayerName(Player $player){
+    if($player->getName() === "Player"){
+    }
+    else{
+    }
+}
+//Incorrect
+public function checkPlayerName(Player $player){
+    if($player->getName() === "Player"){
+    }else{
+    }
+}
+```
 - Files must not have an `?>` at the end.
 - Indents must be exactly 4 spaces.
 ```php
@@ -27,7 +44,7 @@ public function getPlayerName(Player $player){
 - Long arrays must be split over multiple lines.
 ```php
 //Correct
-public function storePlayerNames(){
+public function storeNames(){
     $names = array(
         "Notch",
         "Player",
@@ -36,7 +53,7 @@ public function storePlayerNames(){
     );
 }
 //Incorrect
-public function storePlayerNames(){
+public function storeNames(){
     $names = array("Notch", "Player", "Steve", "Test");
 }
 ```
