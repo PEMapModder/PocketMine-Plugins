@@ -63,7 +63,7 @@ class LocatorProCommand implements CommandExecutor{
                 }
                 if(strtolower($args[0]) === "help"){
                     $sender->sendMessage("§bLocatorPro commands");
-                    $sender->sendMessage("/locatorpro back -")
+                    $sender->sendMessage("/locatorpro back -");
                     $sender->sendMessage("/locatorpro help -");
                     $sender->sendMessage("/locatorpro pos -");
                     $sender->sendMessage("/locatorpro save -");
