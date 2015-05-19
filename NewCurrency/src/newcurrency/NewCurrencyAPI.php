@@ -28,15 +28,6 @@ class NewCurrencyAPI extends PluginBase{
     	    mkdir($this->getDataFolder());
     	}
         if(file_exists($this->getDataFolder()."config.yml")){
-            if(!is_bool($this->getConfig()->getNested("enable.auto-register"))){
-            	$this->getConfig()->setNested("enable.auto-register", true);
-            }
-            if(!is_bool($this->getConfig()->getNested("enable.show-name"))){
-            	$this->getConfig()->setNested("enable.show-name", true);
-            }
-            if(!is_bool($this->getConfig()->getNested("enable.show-symbol"))){
-            	$this->getConfig()->setNested("enable.show-symbol", false);
-            }
             if(!is_numeric($this->getConfig()->get("default"))){
             	$this->getConfig()->set("default", 100);
             }
