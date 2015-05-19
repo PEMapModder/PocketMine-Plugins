@@ -12,13 +12,13 @@ When contributing to this repository, please make sure you are following the gui
 - Please put only one feature per pull request.
 
 ###Syntax
+- Files must not have an `?>` at the end.
 - Indents must be exactly 4 spaces.
 ```php
 //Correct
 public function getPlayerName(Player $player){
     return $player->getName();
 }
-
 //Incorrect
 public function getPlayerName(Player $player){
         return $player->getName();
@@ -30,13 +30,25 @@ public function getPlayerName(Player $player){
 public function storePlayerNames(){
     $names = array(
         "Notch",
+        "Player",
         "Steve",
         "Test"
     );
 }
-
 //Incorrect
 public function storePlayerNames(){
-    $names = array("Notch", "Steve", "Test");
+    $names = array("Notch", "Player", "Steve", "Test");
 }
 ```
+- Opening braces must stay on the same line and must not have spaces before them.
+```php
+//Correct
+public function onEnable(){
+}
+//Incorrect
+public function onEnable()
+{
+}
+//Also incorrect
+public function onEnable() {
+}
