@@ -1,11 +1,11 @@
 <?php
 
-namespace serverpopups;
+namespace advancedtext;
 
 use pocketmine\event\Listener;
-use serverpopups\ServerPopupsAPI;
+use advancedtext\AdvancedTextAPI;
 
-class ServerPopupsListener implements Listener{
+class AdvancedTextListener implements Listener{
 
     public function __construct(ServerPopupsAPI $plugin){
         $this->plugin = $plugin;
