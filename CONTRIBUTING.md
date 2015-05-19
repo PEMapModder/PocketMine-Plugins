@@ -11,4 +11,3 @@ When contributing to this repository, please make sure you are following the gui
 - Do not spam pull requests. You will be blocked from this repository if you do so.
 
 ###Syntax
-- Standard indents must be **4** spaces.
