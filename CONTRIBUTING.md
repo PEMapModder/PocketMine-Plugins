@@ -12,4 +12,4 @@ When contributing to this repository, please make sure you are following the gui
 - Please put only one feature per pull request.
 
 ###Syntax
-- Indents must be 4 spaces.
+- Indents must be exactly 4 spaces.
