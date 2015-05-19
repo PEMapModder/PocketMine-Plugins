@@ -1,1 +1,4 @@
 #Contributing
+###Issues
+
+###Pull Requests
