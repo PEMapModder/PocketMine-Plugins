@@ -13,3 +13,8 @@ When contributing to this repository, please make sure you are following the gui
 
 ###Syntax
 - Indents must be exactly 4 spaces.
+```php
+public function getPlayerName(Player $player){
+    return $player->getName();
+}
+```
