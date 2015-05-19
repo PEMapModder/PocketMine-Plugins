@@ -14,6 +14,7 @@ the plugins will work, for the fact that I don't always test them thoroughly.
 ###Plugins:
 |Name|Version|Submitted|
 |----|:-------:|:---------:|
+|AdvancedText|1.0.0|no|
 |BundleCommand|1.0.0|no|
 |DoMath|1.0.0|no|
 |EffectsPro|1.0.0|no|
