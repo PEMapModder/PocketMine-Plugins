@@ -37,4 +37,8 @@ class AdvancedTextAPI extends PluginBase{
     	    $player->sendTip($message);
     	}
     }
+    
+    public function createTextParticle($message){
+    	
+    }
 }
