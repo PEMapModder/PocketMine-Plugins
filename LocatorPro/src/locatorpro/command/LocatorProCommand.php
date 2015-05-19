@@ -59,6 +59,7 @@ class LocatorProCommand implements CommandExecutor{
                         }
                         else{
                             $sender->sendMessage("§cPlease run this command in-game.");
+                        }
                     }   
                 }
                 if(strtolower($args[0]) === "help"){
