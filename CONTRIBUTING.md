@@ -1,5 +1,5 @@
 #Contributing
-When contributing to this repository, please be sure to follow the guidelines.
+When contributing to this repository, please make sure you are following the guidelines.
 
 ###Issues
 - Do not spam issues. You will be blocked from this repository if you do so.
@@ -11,3 +11,4 @@ When contributing to this repository, please be sure to follow the guidelines.
 - Do not spam pull requests. You will be blocked from this repository if you do so.
 
 ###Syntax
+- Standard indents must be **four** spaces.
