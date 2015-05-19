@@ -18,6 +18,7 @@ When contributing to this repository, please make sure you are following the gui
 public function getPlayerName(Player $player){
     return $player->getName();
 }
+
 //Incorrect
 public function getPlayerName(Player $player){
         return $player->getName();
