@@ -1,13 +1,13 @@
 <?php
 
-namespace serverpopups\task;
+namespace advancedtext\task;
 
 use pocketmine\scheduler\PluginTask;
-use serverpopups\ServerPopupsAPI;
+use advancedtext\AdvancedTextAPI;
 
 class ScrollingPopupTask extends PluginTask{
 
-    public function __construct(ServerPopupsAPI $plugin){
+    public function __construct(AdvancedTextAPI $plugin){
         $this->plugin = $plugin;
     }
     
