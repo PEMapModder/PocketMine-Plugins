@@ -4,6 +4,7 @@ When contributing to this repository, please make sure you are following the gui
 ###Issues
 - Do not spam issues. You will be blocked from this repository if you do so.
 - Make sure the issue has not been reported yet.
+- Name the issues accordingly. If it is a issue about the repository itself, name it `Repository: Your issue here`. If it about a specific plugin, name it `PluginName vVersionHere: Your issue here`.
 - Please check if the issue you want to report, or anything similar to the issue, has been reported yet.
 - Please make sure it is one of the plugins in this repository that caused the crash before reporting it.
 
@@ -13,6 +14,12 @@ When contributing to this repository, please make sure you are following the gui
 
 ###Syntax
 - Code must be using proper syntax.
+```php
+//Correct
+echo "Hello, this is a string using proper syntax!";
+//Incorrect
+echo "Hello, this is a string using improper syntax!'
+```
 - Ending brackets for control structures must not be on the same line as the next control structure.
 ```php
 //Correct
@@ -70,4 +77,4 @@ public function onEnable()
 public function onEnable() {
 }
 ```
-- Strings must be double quotes`""`, but use single quotes`''` only when it is necessary.
+- Strings must be double quotes `""`, but use single quotes `''` only when it is necessary.
