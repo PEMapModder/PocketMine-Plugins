@@ -24,3 +24,19 @@ public function getPlayerName(Player $player){
         return $player->getName();
 }
 ```
+- Long arrays must be split over multiple lines.
+```php
+//Correct
+public function storePlayerNames(){
+    $names = array(
+        "Notch",
+        "Steve",
+        "Test"
+    );
+}
+
+//Incorrect
+public function storePlayerNames(){
+    $names = array("Notch", "Steve", "Test");
+}
+```
