@@ -1,18 +1,18 @@
 <?php
 
-namespace serverpopups;
+namespace advancedtext;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use serverpopups\command\ServerPopupsCommand;
-use serverpopups\ServerPopupsListener;
+use advancedtext\command\AdvancedTextCommand;
+use advancedtext\AdvancedTextListener;
 
-class ServerPopupsAPI extends PluginBase{
+class AdvancedTextAPI extends PluginBase{
     
     public function onEnable(){
         $this->saveFiles();
-        $this->command = new ServerPopupsCommand($this);
-        $this->listener = new ServerPopupsListener($this);
+        $this->command = new AdvancedTextCommand($this);
+        $this->listener = new AdvancedTextListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
     
