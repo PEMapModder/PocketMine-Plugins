@@ -70,4 +70,4 @@ public function onEnable()
 public function onEnable() {
 }
 ```
-- Strings must be double quotes(`""`), but use single quotes(`''`) only when it is necessary.
+- Strings must be double quotes`""`, but use single quotes`''` only when it is necessary.
