@@ -21,9 +21,7 @@ class TimeEssentialsAPI extends PluginBase{
     
     public function saveFiles(){
         if(file_exists($this->getDataFolder()."config.yml")){
-            if(!is_bool($this->getConfig()->getNested("enable.tell-time"))){
-                $this->getConfig()->setNested("enable.tell-time", true);
-            }
+            
         }
         else{
             $this->saveDefaultConfig();
