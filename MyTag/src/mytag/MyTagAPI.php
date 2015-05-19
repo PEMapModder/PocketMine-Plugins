@@ -28,9 +28,7 @@ class MyTagAPI extends PluginBase{
             mkdir($this->getDataFolder());
         }
         if(file_exists($this->getDataFolder()."config.yml")){
-            if(!is_bool($this->getConfig()->getNested("enable.auto-set"))){
-                $this->getConfig()->setNested("enable-auto-set", true);
-            }
+
         }
         else{
             $this->saveDefaultConfig();
