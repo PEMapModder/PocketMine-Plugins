@@ -11,7 +11,7 @@ use pocketmine\Player;
 class iManagerAPI extends PluginBase{
 
     public $chat;
-    public $exempt;
+    public $exempts;
     public $ip;
 
     public function onEnable(){
@@ -39,8 +39,8 @@ class iManagerAPI extends PluginBase{
     	    $this->chat = new Config($this->getDataFolder()."chat.log", Config::ENUM);
     	    $this->chat->save();
     	}
-    	if(!file_exists($this->getDataFolder()."exempt.txt")){
-    	    $this->exempt = new Config($this->getDataFolder()."exempt.txt", Config::ENUM);
+    	if(!file_exists($this->getDataFolder()."exempts.txt")){
+    	    $this->exempt = new Config($this->getDataFolder()."exempts.txt", Config::ENUM);
     	    $this->exempt->save();
     	}
     	if(!file_exists($this->getDataFolder()."ip.txt")){
@@ -54,7 +54,7 @@ class iManagerAPI extends PluginBase{
     }
     
     public function getExempts(){
-    	return $this->exempt;
+    	return $this->exempts;
     }
     
     public function getAddressWhitelist(){
@@ -62,11 +62,11 @@ class iManagerAPI extends PluginBase{
     }
     
     public function isAddressWhitelisted($address){
-    	return isset($this->getAddressWhitelist()->get($address));
+    	return $this->getAddressWhitelist()->get($address);
     }
     
     public function isExempted(Player $player){
-    	return isset($this->getExempts()->get(strtolower($player->getName())));
+    	return $this->getExempts()->get(strtolower($player->getName()));
     }
     
     public function saveMessage(Player $player, $message){
