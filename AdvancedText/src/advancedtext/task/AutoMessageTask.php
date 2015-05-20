@@ -10,4 +10,8 @@ class AutoMessageTask extends PluginTask{
     public function __construct(AdvancedTextAPI $plugin){
         $this->plugin = $plugin;
     }
+    
+    public function onRun($currentTick){
+        
+    }
 }
