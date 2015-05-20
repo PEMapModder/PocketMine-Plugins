@@ -2,10 +2,10 @@
 
 namespace advancedtext\command;
 
+use advancedtext\AdvancedTextAPI;
 use pocketmine\command\Command;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
-use advancedtext\AdvancedTextAPI;
 
 class AdvancedTextCommand implements CommandExecutor{
 
