@@ -4,3 +4,12 @@ version: 1.0.0
 enable:
  auto-update: true
  #Set to true to enable automatic overwriting of this file when the plugin is updated
+message:
+ interval:
+ messages:
+popup:
+ interval:
+ messages:
+tip:
+ interval:
+ messages:
