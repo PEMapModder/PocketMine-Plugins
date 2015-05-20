@@ -18,11 +18,9 @@ class NewCurrencyAPI extends PluginBase{
         $this->listener = new NewCurrencyListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function onDisable(){
       	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function saveFiles(){
     	if(!file_exists($this->getDataFolder())){
     	    mkdir($this->getDataFolder());
@@ -40,27 +38,21 @@ class NewCurrencyAPI extends PluginBase{
     	    $this->account->save();
     	}
     }
-    
     public function getCurrencyName(){
 
     }
-    
     public function getCurrencySymbol(){
 
     }
-    
     public function getMinimumAmount(){
 
     }
-    
     public function getMaximumAmount(){
 
     }
-    
     public function isRegistered(Player $player){
 	return $this->account->exists(strtolower($player->getName()));
     }
-    
     public function setRegistered(Player $player, $value){
 	if($value === true){
 		
@@ -69,25 +61,20 @@ class NewCurrencyAPI extends PluginBase{
 		
 	}
     }
-    
     public function getAccounts(){
     	return $this->accounts;
     }
-    
     public function getAccount(Player $player){
 	return $this->getAccounts()->get(strtolower($player->getName()));
     }
-    
     public function decreaseBalance(Player $player, $amount){
         $this->getAccounts()->set($this->getAccount($player), $this->getAccount($player) - $amount);
         $this->getAccounts()->save();
     }
-    
     public function increaseBalance(Player $player, $amount){
         $this->getAccounts()->set($this->getAccount($player), $this->getAccount($player) + $amount);
         $this->getAccounts()->save();  
     }
-    
     public function setBalance(Player $player, $amount){
         $this->getAccounts()->set($this->getAccount($player), $amount);
         $this->getAccounts()->save();
