@@ -10,7 +10,7 @@ use pocketmine\Player;
 
 class MyTagAPI extends PluginBase{
     
-    public $tag;
+    public $nametags;
 
     public function onEnable(){
         $this->saveFiles();
@@ -33,14 +33,14 @@ class MyTagAPI extends PluginBase{
         else{
             $this->saveDefaultConfig();
         }
-        if(!file_exists($this->getDataFolder()."tag.yml")){
-            $this->tag = new Config($this->getDataFolder()."tag.yml", Config::YAML);
+        if(!file_exists($this->getDataFolder()."nametags.yml")){
+            $this->tag = new Config($this->getDataFolder()."nametags.yml", Config::YAML);
             $this->tag->save();
         }
     }
 
     public function getNameTags(){
-        return $this->tag;
+        return $this->nametags;
     }
     
     public function getSavedNameTag(Player $player){
