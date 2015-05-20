@@ -13,6 +13,9 @@ class MyTagListener implements Listener{
     public function __construct(MyTagAPI $plugin){
     	$this->plugin = $plugin;
     }
+    public function getPlugin(){
+        return $this->plugin;
+    }
     public function onPlayerChat(PlayerChatEvent $event){
     	//To-do
     }
