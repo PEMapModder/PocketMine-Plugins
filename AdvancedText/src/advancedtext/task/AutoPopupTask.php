@@ -11,11 +11,9 @@ class AutoPopupTask extends PluginTask{
         parent::__construct($plugin);
         $this->plugin = $plugin;
     }
-    
     public function getPlugin(){
         return $this->plugin;
     }
-    
     public function onRun($currentTick){
         $messages = $this->getPlugin()->getConfig()->getNested("popup.messages");
         $key = array_rand($messages, 1);
