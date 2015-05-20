@@ -10,7 +10,7 @@ use pocketmine\Player;
 
 class NewCurrencyAPI extends PluginBase{
 
-    public $account;
+    public $accounts;
     
     public function onEnable(){
     	$this->saveFiles();
@@ -35,8 +35,8 @@ class NewCurrencyAPI extends PluginBase{
         else{
             $this->saveDefaultConfig();
         }
-    	if(!file_exists($this->getDataFolder()."account.yml")){
-    	    $this->account = new Config($this->getDataFolder()."account.yml", Config::YAML);
+    	if(!file_exists($this->getDataFolder()."accounts.yml")){
+    	    $this->account = new Config($this->getDataFolder()."accounts.yml", Config::YAML);
     	    $this->account->save();
     	}
     }
@@ -49,11 +49,11 @@ class NewCurrencyAPI extends PluginBase{
 
     }
     
-    public function getMinimumBalance(){
+    public function getMinimumAmount(){
 
     }
     
-    public function getMaximumBalance(){
+    public function getMaximumAmount(){
 
     }
     
@@ -70,19 +70,26 @@ class NewCurrencyAPI extends PluginBase{
 	}
     }
     
-    public function getBalance(Player $player){
-
+    public function getAccounts(){
+    	return $this->accounts;
+    }
+    
+    public function getAccount(Player $player){
+	return $this->getAccounts()->get(strtolower($player->getName()));
     }
     
     public function decreaseBalance(Player $player, $amount){
-        
+        $this->getAccounts()->set($this->getAccount($player), $this->getAccount($player) - $amount);
+        $this->getAccounts()->save();
     }
     
     public function increaseBalance(Player $player, $amount){
-        
+        $this->getAccounts()->set($this->getAccount($player), $this->getAccount($player) + $amount);
+        $this->getAccounts()->save();  
     }
     
     public function setBalance(Player $player, $amount){
-        
+        $this->getAccounts()->set($this->getAccount($player), $amount);
+        $this->getAccounts()->save();
     }
 }
