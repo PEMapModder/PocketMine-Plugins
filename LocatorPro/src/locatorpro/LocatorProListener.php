@@ -14,15 +14,12 @@ class LocatorProListener implements Listener{
         $this->plugin = $plugin;
         $this->plugin->getServer()->getPluginManager()->registerEvents($this, $this->plugin);
     }
-    
     public function onPlayerJoin(PlayerJoinEvent $event){
 
     }
-    
     public function onPlayerMove(PlayerMoveEvent $event){
 
     }
-    
     public function onPlayerRespawn(PlayerRespawnEvent $event){
         
     }
