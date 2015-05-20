@@ -11,7 +11,6 @@ class TimeEssentialsListener implements Listener{
         $this->plugin = $plugin;
         $this->getPlugin()->getServer()->getPluginManager()->registerEvents($this, $this->plugin);
     }
-    
     public function getPlugin(){
         return $this->plugin;
     }
