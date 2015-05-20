@@ -7,7 +7,15 @@ use pocketmine\command\CommandExecutor;
 use pocketmine\command\CommandSender;
 
 class DoMathCommand implements CommandExecutor{
-
+    
+    public function __construct(DoMathAPI $plugin){
+        $this->plugin = $plugin;
+    }
+    
+    public function getPlugin(){
+        return $this->plugin;
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "domath"){
             if(isset($args[0])){
