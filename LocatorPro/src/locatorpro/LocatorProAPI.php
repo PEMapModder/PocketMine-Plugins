@@ -19,11 +19,9 @@ class LocatorProAPI extends PluginBase{
     	$this->listener = new LocatorProListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function onDisable(){
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function saveFiles(){
         if(!is_dir($this->getDataFolder())){
             mkdir($this->getDataFolder());
@@ -39,11 +37,9 @@ class LocatorProAPI extends PluginBase{
             $this->location->save();
         }
     }
-
     public function getSavedLocations(){
         return $this->location;
     }
-    
     public function savePlayerLocation(Player $player, Location $location){
         
     }
