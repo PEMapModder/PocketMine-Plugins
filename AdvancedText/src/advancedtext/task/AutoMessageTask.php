@@ -12,11 +12,9 @@ class AutoMessageTask extends PluginTask{
         $this->plugin = $plugin;
         $this->getPlugin()->getServer()->getScheduler()->scheduleRepeatingTask($this, );
     }
-    
     public function getPlugin(){
         return $this->plugin;
     }
-    
     public function onRun($currentTick){
         $message = $this->getPlugin()->getConfig()->getNested("message.messages");
         $key = array_rand($message, 1);
