@@ -1,8 +1,0 @@
-#Configuration file for ServerEXP v1.0.0
-version: 1.0.0
-#Do not edit the version string, it is used for internal purposes
-enable:
- auto-register: true
- auto-update: true
- #Set to true to enable automatic overwriting of this file when the plugin is updated
-default: 0
