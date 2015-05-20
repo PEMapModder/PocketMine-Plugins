@@ -8,6 +8,7 @@ use pocketmine\scheduler\PluginTask;
 class AutoPopupTask extends PluginTask{
 
     public function __construct(AdvancedTextAPI $plugin){
+        parent::__construct($plugin);
         $this->plugin = $plugin;
     }
     
