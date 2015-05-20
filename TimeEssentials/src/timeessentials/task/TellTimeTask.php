@@ -11,11 +11,9 @@ class TellTimeTask extends PluginTask{
         parent::__construct($plugin);
         $this->plugin = $plugin;
     }
-    
     public function getPlugin(){
         return $this->plugin;
     }
-    
     public function onRun($currentTick){
         $this->getPlugin()->getServer()->broadcastMessage(date("H:i:s"));
     }
