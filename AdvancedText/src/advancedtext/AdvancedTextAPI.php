@@ -40,7 +40,7 @@ class AdvancedTextAPI extends PluginBase{
     	}
     }
     
-    public function createFloatingTextParticle(Vector3 $vector, $text, $title){
+    public function createFloatingText(Vector3 $vector, $text, $title){
     	$particle = new FloatingTextParticle($vector, $text, $title);
     }
 }
