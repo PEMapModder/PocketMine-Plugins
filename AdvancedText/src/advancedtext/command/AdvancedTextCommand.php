@@ -13,11 +13,9 @@ class AdvancedTextCommand implements CommandExecutor{
         $this->plugin = $plugin;
         $this->getPlugin()->getCommand("advancedtext")->setExecutor($this);
     }
-    
     public function getPlugin(){
         return $this->plugin;
     }
-    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "advancedtext"){
             if(isset($args[0])){
