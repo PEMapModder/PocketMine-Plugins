@@ -2,9 +2,9 @@
 
 namespace advancedtext;
 
+use advancedtext\AdvancedTextAPI;
 use pocketmine\event\block\SignChangeEvent;
 use pocketmine\event\Listener;
-use advancedtext\AdvancedTextAPI;
 
 class AdvancedTextListener implements Listener{
 
