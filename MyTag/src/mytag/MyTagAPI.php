@@ -18,11 +18,9 @@ class MyTagAPI extends PluginBase{
     	$this->listener = new MyTagListener($this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function onDisable(){
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function saveFiles(){
         if(!file_exists($this->getDataFolder())){
             mkdir($this->getDataFolder());
@@ -38,15 +36,12 @@ class MyTagAPI extends PluginBase{
             $this->tag->save();
         }
     }
-
     public function getNameTags(){
         return $this->nametags;
     }
-    
     public function getSavedNameTag(Player $player){
         return $this->getNameTags()->get(strtolower($player->getName()));
     }
-    
     public function saveNameTag(Player $player){
         $this->getNameTags()->set(strtolower($player->getName()), $player->getNameTag());
         $this->getNameTags()->save();
