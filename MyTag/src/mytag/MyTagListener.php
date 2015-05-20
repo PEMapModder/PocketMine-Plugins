@@ -13,11 +13,9 @@ class MyTagListener implements Listener{
     public function __construct(MyTagAPI $plugin){
     	$this->plugin = $plugin;
     }
-    
     public function onPlayerChat(PlayerChatEvent $event){
     	//To-do
     }
-    
     public function onPlayerJoin(PlayerJoinEvent $event){
     	if($this->plugin->settings->getNested("enable.auto-set") === true){
     	    if($this->plugin->tag->exists(strtolower($event->getPlayer()->getName()))){
@@ -30,7 +28,6 @@ class MyTagListener implements Listener{
     	    }
     	}
     }
-	
     public function onPlayerQuit(PlayerQuitEvent $event){
     	if($this->plugin->settings->getNested("enable.auto-set") === true){
     	    if($this->plugin->tag->exists(strtolower($event->getPlayer()->getName()))){
