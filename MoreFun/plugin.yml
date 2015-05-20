@@ -1,8 +1,0 @@
-name: MoreFun
-main: morefun\MoreFunAPI
-version: 1.0.0
-api: 1.10.0
-load: POSTWORLD
-author: Gamecrafter
-description: Everyone in your server will be amused!
-website: https://github.com/Gamecrafter/PocketMine-Plugins/tree/master/MoreFun
