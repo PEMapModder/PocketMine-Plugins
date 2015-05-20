@@ -17,6 +17,8 @@ class AutoTipTask extends PluginTask{
     }
     
     public function onRun($currentTick){
-      
+        $messages = $this->getPlugin()->getConfig()->getNested("tip.messages");
+        $key = array_rand($messages, 1);
+        $message = $messages[$key];
     }
 }
