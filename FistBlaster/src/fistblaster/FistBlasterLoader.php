@@ -22,11 +22,9 @@ class FistBlasterLoader extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
-   
     public function onDisable(){
 	$this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function saveFiles(){
     	if(file_exists($this->getDataFolder()."config.yml")){
     	    if(!is_numeric($this->getConfig()->get("size"))){
@@ -37,15 +35,12 @@ class FistBlasterLoader extends PluginBase implements Listener{
     	    $this->saveDefaultConfig();
     	}
     }
-    
     public function getBlasters(){
     	return $this->fistblaster;
     }
-    
     public function isBlasterEnabled(Player $player){
     	return in_array($player->getName(), $this->getBlasters());	
     }
-    
     public function setPlayerBlaster(Player $player, $value){
     	if($value === true){
     	    $this->getBlasters()[$player->getName()] = true;
@@ -54,7 +49,6 @@ class FistBlasterLoader extends PluginBase implements Listener{
     	    unset($this->getBlasters()[$player->getName()]);
     	}
     }
-    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "fistblaster"){
             if($sender instanceof Player){
@@ -73,20 +67,17 @@ class FistBlasterLoader extends PluginBase implements Listener{
             return true;
         }
     }
-    
     public function onEntityDamage(EntityDamageEvent $event){
     	if($event->getCause() === 1){
     	    
     	}
     }
-    
     public function onPlayerInteract(PlayerInteractEvent $event){
         if($this->isBlasterEnabled($event->getPlayer())){
             $explosion = new Explosion(new Position($event->getBlock()->getX(), $event->getBlock()->getY(), $event->getBlock()->getZ(), $event->getBlock()->getLevel()), $this->getConfig()->get("size"));
 	    $explosion->explode();
         }
     }
-    
     public function onPlayerQuit(PlayerQuitEvent $event){
         if($this->isBlasterEnabled($event->getPlayer())){
             $this->setPlayerBlaster($event->getPlayer(), false);
