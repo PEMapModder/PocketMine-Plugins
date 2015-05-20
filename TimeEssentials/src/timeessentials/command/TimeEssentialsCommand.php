@@ -14,11 +14,9 @@ class TimeEditCommand implements CommandExecutor{
         $this->plugin = $plugin;
         $this->getPlugin()->getCommand("timeessentials")->setExecutor($this);
     }
-    
     public function getPlugin(){
         return $this->plugin;
     }
-    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "timeessentials"){
             if(isset($args[0])){
