@@ -11,6 +11,10 @@ class ScrollingPopupTask extends PluginTask{
         $this->plugin = $plugin;
     }
     
+    public function getPlugin(){
+        return $this->plugin;
+    }
+    
     public function onRun($currentTick){
         //To-do
     }
