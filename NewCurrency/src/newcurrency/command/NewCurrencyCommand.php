@@ -12,9 +12,11 @@ class NewCurrencyCommand implements CommandExecutor{
 
     public function __construct(NewCurrencyAPI $plugin){
         $this->plugin = $plugin;
-        $this->plugin->getCommand("newcurrency")->setExecutor($this);
+        $this->getPlugin()->getCommand("newcurrency")->setExecutor($this);
     }
-    
+    public function getPlugin(){
+        return $this->plugin;
+    }
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "newcurrency"){
             if(isset($args[0])){
