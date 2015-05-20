@@ -3,6 +3,7 @@
 namespace globalshield;
 
 use globalshield\GlobalShieldListener;
+use pocketmine\item\Item;
 use pocketmine\level\Level;
 use pocketmine\plugin\PluginBase;
 
@@ -22,6 +23,10 @@ class GlobalShieldAPI extends PluginBase{
         if(!file_exists($this->getDataFolder()."config.yml")){
             $this->saveDefaultConfig();
         }
+    }
+    
+    public function isItemBannedInLevel(Item $item, Level $level){
+        return in_array($item->getId(), $this->getConfig()->getNested("level.".strtolower($level->getName())."items"));
     }
     
     public function isLevelProtected(Level $level){
