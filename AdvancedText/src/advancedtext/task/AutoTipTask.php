@@ -2,8 +2,8 @@
 
 namespace advancedtext\task;
 
-use pocketmine\task\PluginTask;
 use advancedtext\AdvancedTextAPI;
+use pocketmine\scheduler\PluginTask;
 
 class AutoTipTask extends PluginTask{
 
