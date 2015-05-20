@@ -14,6 +14,10 @@ class iManagerListener implements Listener{
         $this->plugin = $plugin;
     }
     
+    public function getPlugin(){
+        return $this->plugin;
+    }
+    
     public function onPlayerChat(PlayerChatEvent $event){
     	if($this->plugin->settings->getNested("enable.save-chat") === true){
     	    $this->plugin->chat->set($event->getPlayer()->getName().": ".$event->getMessage());
