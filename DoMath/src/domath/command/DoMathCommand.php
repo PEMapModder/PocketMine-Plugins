@@ -10,6 +10,7 @@ class DoMathCommand implements CommandExecutor{
     
     public function __construct(DoMathAPI $plugin){
         $this->plugin = $plugin;
+        $this->getPlugin()->getCommand("domath")->setExecutor($this);
     }
     
     public function getPlugin(){
