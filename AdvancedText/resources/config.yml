@@ -11,7 +11,7 @@ message:
 popup:
  interval: 40
  messages:
- - "If you get this popup, it means you are playing on Minecraft: PE 0.11.0!"
+ - "If you get this popup, it means you are playing Minecraft PE on 0.11.0!"
 tip:
  interval: 30
  messages:
