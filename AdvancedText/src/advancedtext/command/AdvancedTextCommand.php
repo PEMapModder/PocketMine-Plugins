@@ -22,6 +22,12 @@ class AdvancedTextCommand implements CommandExecutor{
         if(strtolower($command->getName()) === "advancedtext"){
             if(isset($args[0])){
                 if(strtolower($args[0]) === "broadcastmessage"){
+                    if(isset($args[1])){
+                        $this->getPlugin()->getServer()->broadcastMessage(implode(" ", array_slice($args, 1)));
+                    }
+                    else{
+                        
+                    }
                     return true;
                 }
                 if(strtolower($args[0]) === "broadcastpopup"){
