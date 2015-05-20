@@ -14,7 +14,6 @@ class LocatorProCommand implements CommandExecutor{
         $this->plugin = $plugin;
         $this->plugin->getCommand("locatorpro")->setExecutor($this);
     }
-    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "locatorpro"){
             if(isset($args[0])){
