@@ -12,9 +12,11 @@ class MyTagCommand implements CommandExecutor{
 
     public function __construct(MyTagAPI $plugin){
     	$this->plugin = $plugin;
-    	$this->plugin->getCommand("mytag")->setExecutor($this);
+    	$this->getPlugin()->getCommand("mytag")->setExecutor($this);
     }
-    
+    public function getPlugin(){
+    	return $this->plugin;
+    }
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
     	if($sender instanceof Player){
     	    if(strtolower($command->getName()) === "mytag"){
