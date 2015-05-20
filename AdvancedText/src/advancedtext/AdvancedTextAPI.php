@@ -41,7 +41,7 @@ class AdvancedTextAPI extends PluginBase{
     	}
     }
     
-    public function createFloatingText(Vector3 $vector, $text, $title){
-    	$level->addParticle(new FloatingTextParticle($vector, $text, $title), $this->getServer()->getOnlinePlayers());
+    public function createFloatingText(Player $player, Vector3 $vector, $text, $title){
+    	$player->getLevel()->addParticle(new FloatingTextParticle($vector, $text, $title), $this->getServer()->getOnlinePlayers());
     }
 }
