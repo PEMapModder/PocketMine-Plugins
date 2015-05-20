@@ -17,6 +17,9 @@ class AdvancedTextCommand implements CommandExecutor{
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "advancedtext"){
             if(isset($args[0])){
+                if(strtolower($args[0]) === "broadcastmessage"){
+                    return true;
+                }
                 if(strtolower($args[0]) === "broadcastpopup"){
                     if(isset($args[1])){
                         $this->plugin->broadcastPopup(implode(" ", array_slice($args, 1)));
@@ -36,7 +39,10 @@ class AdvancedTextCommand implements CommandExecutor{
                     return true;
                 }
                 if(strtolower($args[0]) === "help"){
-                    $sender->sendMessage("ServerPopups commands");
+                    $sender->sendMessage("AdvancedText commands");
+                    return true;
+                }
+                if(strtolower($args[0]) === "sendmessage"){
                     return true;
                 }
                 if(strtolower($args[0]) === "sendpopup"){
