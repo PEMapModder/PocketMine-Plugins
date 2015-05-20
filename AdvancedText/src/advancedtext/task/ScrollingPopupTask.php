@@ -2,8 +2,8 @@
 
 namespace advancedtext\task;
 
-use pocketmine\scheduler\PluginTask;
 use advancedtext\AdvancedTextAPI;
+use pocketmine\scheduler\PluginTask;
 
 class ScrollingPopupTask extends PluginTask{
 
