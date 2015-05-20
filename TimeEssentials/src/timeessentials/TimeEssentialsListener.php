@@ -9,6 +9,10 @@ class TimeEssentialsListener implements Listener{
 
     public function __construct(TimeEditAPI $plugin){
         $this->plugin = $plugin;
-        $this->plugin->getServer()->getPluginManager()->registerEvents($this, $this->plugin);
+        $this->getPlugin()->getServer()->getPluginManager()->registerEvents($this, $this->plugin);
+    }
+    
+    public function getPlugin(){
+        return $this->plugin;
     }
 }
