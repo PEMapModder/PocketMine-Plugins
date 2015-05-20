@@ -35,6 +35,6 @@ class LocatorProListener implements Listener{
     }
     
     public function onPlayerRespawn(PlayerRespawnEvent $event){
-        $event->getPlayer()->teleport(new Location($this->getConfig()->get("spawn")["x"], $this->getConfig()->get("spawn")["y"], $this->getConfig()->get("spawn")["z"], $this->getConfig()->get("spawn")["yaw"], $this->getConfig()->get("spawn")["pitch"], $this->getConfig()->get("spawn")["level"]);)
+        $event->getPlayer()->teleport(new Location($this->getConfig()->get("spawn")["x"], $this->getConfig()->get("spawn")["y"], $this->getConfig()->get("spawn")["z"], $this->getConfig()->get("spawn")["yaw"], $this->getConfig()->get("spawn")["pitch"], $this->getConfig()->get("spawn")["level"]);
     }
 }
