@@ -29,12 +29,6 @@ class FistBlasterLoader extends PluginBase implements Listener{
     
     public function saveFiles(){
     	if(file_exists($this->getDataFolder()."config.yml")){
-    	    if(!is_bool($this->getConfig()->getNested("enable.damage-explosion"))){
-    	    	$this->getConfig()->setNested("enable.damage-explosion", true);
-    	    }
-    	    if(!is_bool($this->getConfig()->getNested("enable.interact-explosion"))){
-    	    	$this->getConfig()->setNested("enable.interact-explosion", true);
-    	    }
     	    if(!is_numeric($this->getConfig()->get("size"))){
     	    	$this->getConfig()->set("size", 10);
     	    }
@@ -66,11 +60,11 @@ class FistBlasterLoader extends PluginBase implements Listener{
             if($sender instanceof Player){
                 if($this->isBlasterEnabled($sender)){
                     $this->setPlayerBlaster($sender, false);
-                    $sender->sendMessage($this->getConfig()->getNested("message.blaster-disable"));
+                    $sender->sendMessage($this->getConfig()->getNested("language.blaster-disable"));
                 }
                 else{
                     $this->setPlayerBlaster($sender, true);
-                    $sender->sendMessage($this->getConfig()->getNested("message.blaster-enable"));
+                    $sender->sendMessage($this->getConfig()->getNested("language.blaster-enable"));
                 }
             }
             else{
