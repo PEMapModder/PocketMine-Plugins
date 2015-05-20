@@ -11,7 +11,6 @@ class GlobalShieldListener implements Listener{
         $this->plugin = $plugin;
         $this->getPlugin()->getServer()->getPluginManager()->registerEvents($this, $this->getPlugin());
     }
-    
     public function getPlugin(){
         return $this->plugin;
     }
