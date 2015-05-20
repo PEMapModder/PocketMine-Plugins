@@ -6,7 +6,7 @@ use globalshield\GlobalShieldListener;
 use pocketmine\level\Level;
 use pocketmine\plugin\PluginBase;
 
-class GlobalShieldLoader extends PluginBase{
+class GlobalShieldAPI extends PluginBase{
     
     public function onEnable(){
         $this->saveFiles();
