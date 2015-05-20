@@ -7,8 +7,6 @@
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
 [![Stars](https://img.shields.io/github/stars/Gamecrafter/PocketMine-Plugins.svg)](https://github.com/Gamecrafter/PocketMine-Plugins/stargazers)
 
-A collection of Gamecrafter's plugins for `Alpha_1.4` and `Alpha_1.5`. Please note that not all the plugins here may be
-released on the PocketMine plugin repository. If you want to help out, take a look at `CONTRIBUTING.md` before doing so.
 ```
 The MIT License (MIT)
 
@@ -32,6 +30,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+A collection of Gamecrafter's plugins for `Alpha_1.4` and `Alpha_1.5`. Please note that not all the plugins here may be
+released on the PocketMine plugin repository. If you want to help out, take a look at `CONTRIBUTING.md` before doing so.
+
 ###Plugins:
 |Name|Version|Submitted|
 |----|:-------:|:---------:|
