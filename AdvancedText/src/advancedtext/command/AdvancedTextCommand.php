@@ -11,7 +11,7 @@ class AdvancedTextCommand implements CommandExecutor{
 
     public function __construct(AdvancedTextAPI $plugin){
         $this->plugin = $plugin;
-        $this->plugin->getCommand("advancedtext")->setExecutor($this);
+        $this->getPlugin()->getCommand("advancedtext")->setExecutor($this);
     }
     
     public function getPlugin(){
