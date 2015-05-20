@@ -18,6 +18,8 @@ class AutoMessageTask extends PluginTask{
     }
     
     public function onRun($currentTick){
-        
+        $message = $this->getPlugin()->getConfig()->getNested("message.messages");
+        $key = array_rand($message, 1);
+        $message = $messages[$key];
     }
 }
