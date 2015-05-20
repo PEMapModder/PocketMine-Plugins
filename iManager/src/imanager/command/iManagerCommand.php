@@ -12,7 +12,11 @@ class iManagerCommand implements CommandExecutor{
 
     public function __construct(iManagerAPI $plugin){
     	$this->plugin = $plugin;
-    	$this->plugin->getCommand("imanager")->setExecutor($this);
+    	$this->getPlugin()->getCommand("imanager")->setExecutor($this);
+    }
+    
+    public function getPlugin(){
+        return $this->plugin;
     }
     
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
