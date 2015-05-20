@@ -2,13 +2,13 @@
 
 namespace advancedtext;
 
+use advancedtext\command\AdvancedTextCommand;
+use advancedtext\AdvancedTextListener;
 use pocketmine\level\particle\FloatingTextParticle;
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
-use advancedtext\command\AdvancedTextCommand;
-use advancedtext\AdvancedTextListener;
 
 class AdvancedTextAPI extends PluginBase{
     
