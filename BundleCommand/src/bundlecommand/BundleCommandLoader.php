@@ -13,11 +13,9 @@ class BundleCommandLoader extends PluginBase{
         $this->saveFiles();
         $this->getServer()->getLogger()->info("§aEnabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function onDisable(){
         $this->getServer()->getLogger()->info("§cDisabling ".$this->getDescription()->getFullName()."...");
     }
-    
     public function saveFiles(){
         if(file_exists($this->getDataFolder()."config.yml")){
             if($this->getConfig()->get("version") !== $this->getDescription()->getVersion()){
@@ -32,11 +30,9 @@ class BundleCommandLoader extends PluginBase{
             $this->saveDefaultConfig();
         }
     }
-    
     public function createPermissions(){
         
     }
-    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "bundlecommand"){
             if(isset($args[0])){
