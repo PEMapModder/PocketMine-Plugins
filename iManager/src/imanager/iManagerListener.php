@@ -13,18 +13,15 @@ class iManagerListener implements Listener{
     public function __construct(iManagerAPI $plugin){
         $this->plugin = $plugin;
     }
-    
     public function getPlugin(){
         return $this->plugin;
     }
-    
     public function onPlayerChat(PlayerChatEvent $event){
     	if($this->plugin->settings->getNested("enable.save-chat") === true){
     	    $this->plugin->chat->set($event->getPlayer()->getName().": ".$event->getMessage());
     	    $this->plugin->chat->save();
     	}
     }
-    
     public function onPlayerCommandPreprocess(PlayerCommandPreprocessEvent $event){
     	if($this->plugin->settings->getNested("enable.log-commands") === true){
     	    if($event->getMessage()[0] === "/"){
@@ -32,7 +29,6 @@ class iManagerListener implements Listener{
     	    }
     	}
     }
-    
     public function onPlayerPreLogin(PlayerPreLoginEvent $event){
     	if($this->plugin->settings->getNested("enable.ip-whitelist") === true){
     	    if($this->plugin->ip->exists(strtolower($event->getPlayer()->getAddress()))){
