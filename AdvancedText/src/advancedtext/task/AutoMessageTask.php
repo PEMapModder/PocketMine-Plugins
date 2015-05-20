@@ -11,6 +11,10 @@ class AutoMessageTask extends PluginTask{
         $this->plugin = $plugin;
     }
     
+    public function getPlugin(){
+        return $this->plugin;
+    }
+    
     public function onRun($currentTick){
         
     }
