@@ -32,7 +32,8 @@ SOFTWARE.
 ```
 
 A collection of Gamecrafter's plugins for `Alpha_1.4` and `Alpha_1.5`. Please note that not all the plugins here may be
-released on the PocketMine plugin repository. If you want to help out, take a look at `CONTRIBUTING.md` before doing so.
+released on the PocketMine plugin repository. If you want to help out, please take a look at `CONTRIBUTING.md` before doing
+so.
 
 ###Plugins:
 |Name|Version|Submitted|
