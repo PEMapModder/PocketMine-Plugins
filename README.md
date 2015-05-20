@@ -45,12 +45,10 @@ so.
 |FistBlaster|1.0.0|no|
 |GlobalShield|1.1.0|yes|
 |LocatorPro|1.0.0|no|
-|MoreFun|1.0.0|no|
 |MotionBlock|1.0.0|no|
 |MyTag|1.2.0|yes|
 |NewCurrency|1.0.0|no|
 |PlanB|1.1.0|yes|
-|ServerEXP|1.0.0|no|
 |ServerHelp|1.0.0|no|
 |SpreadFreeze|1.0.0|no|
 |TimeEssentials|1.0.0|no|
