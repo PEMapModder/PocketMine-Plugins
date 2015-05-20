@@ -2,6 +2,8 @@
 
 namespace advancedtext;
 
+use pocketmine\level\particle\FloatingTextParticle;
+use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use advancedtext\command\AdvancedTextCommand;
@@ -38,7 +40,7 @@ class AdvancedTextAPI extends PluginBase{
     	}
     }
     
-    public function createTextParticle($message){
-    	
+    public function createFloatingTextParticle(Vector3 $vector, $text, $title){
+    	$particle = new FloatingTextParticle($vector, $text, $title);
     }
 }
