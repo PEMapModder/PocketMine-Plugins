@@ -14,6 +14,10 @@ class AdvancedTextCommand implements CommandExecutor{
         $this->plugin->getCommand("advancedtext")->setExecutor($this);
     }
     
+    public function getPlugin(){
+        return $this->plugin;
+    }
+    
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
         if(strtolower($command->getName()) === "advancedtext"){
             if(isset($args[0])){
@@ -22,7 +26,7 @@ class AdvancedTextCommand implements CommandExecutor{
                 }
                 if(strtolower($args[0]) === "broadcastpopup"){
                     if(isset($args[1])){
-                        $this->plugin->broadcastPopup(implode(" ", array_slice($args, 1)));
+                        $this->getPlugin()->broadcastPopup(implode(" ", array_slice($args, 1)));
                     }
                     else{
                         
@@ -31,7 +35,7 @@ class AdvancedTextCommand implements CommandExecutor{
                 }
                 if(strtolower($args[0]) === "broadcasttip"){
                     if(isset($args[1])){
-                        $this->plugin->broadcastTip(implode(" ", array_slice($args, 1)));
+                        $this->getPlugin()->broadcastTip(implode(" ", array_slice($args, 1)));
                     }
                     else{
                         
